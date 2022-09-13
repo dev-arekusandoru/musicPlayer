@@ -1,0 +1,13 @@
+.artist {
+    margin-bottom: 40px;
+    text-align: center;
+}
+.artist-img img {
+    height: 300px;
+    border-radius: 20px;
+}
+.artist-name {
+    padding-top: 7px;
+    font-size: 20px;
+
+}
