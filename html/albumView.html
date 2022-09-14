@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Browse Songs</title>
+    <title>Album Title</title>
 
     <!-- Custom fonts for this template-->
     <link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -19,8 +19,7 @@
 
     <!-- Custom styles for this template-->
     <link href="/css/sb-admin-2.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/browseDivStyles.css">
+    <link rel="stylesheet" href="/css/albumView.css">
 
 </head>
 
@@ -45,7 +44,7 @@
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item">
-            <a class="nav-link" href="/html/library.html">
+            <a class="nav-link" href="library.html">
                 <i class="fas fa-folder-open    "></i>
                 <span>My Library</span></a>
         </li>
@@ -57,15 +56,14 @@
 
         <!-- Divider -->
         <hr class="sidebar-divider">
-
         <!-- Find Music Heading -->
         <div class="sidebar-heading">
             Find Music
         </div>
 
         <!-- Nav Item - Utilities Collapse Menu -->
-        <li class="nav-item active">
-            <a class="nav-link" href="/html/explore.html">
+        <li class="nav-item">
+            <a class="nav-link" href="explore.html">
                 <i class="fas fa-compass"></i>
                 <span>Explore</span></a>
         </li>
@@ -80,9 +78,9 @@
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Browse All:</h6>
-                    <a class="collapse-item" href="/html/browse_artists.html">Artists</a>
-                    <a class="collapse-item" href="/html/browse_albums.html">Albums</a>
-                    <a class="collapse-item" href="/html/browse_songs.html">Songs</a>
+                    <a class="collapse-item" href="browse_artists.html">Artists</a>
+                    <a class="collapse-item" href="browse_albums.html">Albums</a>
+                    <a class="collapse-item" href="browse_songs.html">Songs</a>
                 </div>
             </div>
         </li>
@@ -171,12 +169,8 @@
                                 Profile
                             </a>
                             <a class="dropdown-item" href="#">
-                                <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                Settings
-                            </a>
-                            <a class="dropdown-item" href="#">
-                                <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                Activity Log
+                                <i class="fas fa-folder-open fa-sm fa-fw mr-2 text-gray-400"></i>
+                                My Library
                             </a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
@@ -193,24 +187,22 @@
 
             <!-- Begin Page Content -->
             <div class="container-fluid">
-
-                <!-- Page Heading -->
-                <h1 class="h3 mb-4 text-gray-800">Browse All Songs:</h1>
-
-                <!--Page Content-->
-                <div class="row pl-3 justify-content-around">
-                    <div class="content">
-                        <div class="content-img">
-                            <img class="img-fluid" src="/img/album-imgs/testing-asap-rocky.jpeg">
-                        </div>
-                        <h1>Distorted Records</h1>
+                <div class="album-header row">
+                    <div class="col-sm-3 pl-0 ml-3">
+                        <img class="artwork" src="/img/album-imgs/testing-asap-rocky.jpeg" alt="">
                     </div>
-                    <div class="content">
-                        <div class="content-img">
-                            <img class="img-fluid" src="/img/album-imgs/testing-asap-rocky.jpeg">
-                        </div>
-                        <h1>A$AP Forever REMIX</h1>
-                        <h2>TESTING</h2>
+                    <div class="album-metadata col-sm-3" style="height: 300px;">
+                        <h1 sty>TESTING</h1>
+                        <h2>A$AP Rocky</h2>
+                        <h6>HIP-HOP/RAP • 2018</h6>
+                    </div>
+                </div>
+                <div class="album-tracklist row">
+                    <div class="col-sm-12">
+                        <ul>
+                            <li>Distored Records</li>
+                            <li>A$AP Forever REMIX</li>
+                        </ul>
                     </div>
                 </div>
 
@@ -224,7 +216,7 @@
         <footer class="sticky-footer bg-white">
             <div class="container my-auto">
                 <div class="copyright text-center my-auto">
-                    <span>Copyright &copy; Tau Tech 2022</span>
+                    <span>Copyright &copy; Your Website 2020</span>
                 </div>
             </div>
         </footer>
