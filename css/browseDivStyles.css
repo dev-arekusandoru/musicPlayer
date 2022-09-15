@@ -11,6 +11,11 @@ body {
     height: 300px;
     border-radius: 20px;
 }
+.content-img img:hover {
+    cursor: pointer;
+}
+
+
 
 .content h1 {
     padding-top: 7px;
