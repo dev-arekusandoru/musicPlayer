@@ -6,6 +6,7 @@ body {
     border-radius: 7px;
 }
 
+
 .album-metadata h1 {
     color: black;
     font-size: 30px;
@@ -39,7 +40,7 @@ body {
 .album-tracklist ul li {
     height: 50px;
     line-height: 50px;
-    color: rgb(45, 45, 45);
+    color: rgb(235, 235, 235);
     border-bottom: 1px solid darkgray;
 }
 #end-tracklist {
