@@ -8,17 +8,22 @@ body {
 
 
 .album-metadata h1 {
-    color: black;
+    color: rgb(235, 235, 235);
     font-size: 30px;
     margin-top: 5px;
     margin-bottom: 0;
 }
 .album-metadata h2 {
-    color: black;
-    font-size: 26px;
+    color: #4e73df;
+    font-size: 23px;
     margin-top: 0;
     margin-bottom: 10px;
 }
+.album-metadata h2:hover {
+    cursor: pointer;
+}
+
+
 .album-metadata h6 {
     font-size: 14px;
 }
