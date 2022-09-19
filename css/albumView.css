@@ -29,10 +29,7 @@ body {
 }
 
 .album-tracklist {
-    margin-top: 15px;
-    margin-left: 5px;
-    margin-right: 5px;
-    margin-bottom: 30px;
+    margin: 15px 5px 30px;
     border-radius: 10px;
 }
 
@@ -43,11 +40,27 @@ body {
 }
 
 .album-tracklist ul li {
+    padding-top: 7px;
     height: 50px;
-    line-height: 50px;
     color: rgb(235, 235, 235);
     border-bottom: 1px solid darkgray;
 }
+
+.item h1 {
+    line-height: 16px;
+    font-size: 18px;
+
+}
+.item p {
+    line-height: 10px;
+    font-size: 12px;
+}
+.item a {
+    padding-left: 12px;
+    float: right;
+}
+
+
 #end-tracklist {
     border-bottom: none;
 }
