@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Explore</title>
+    <title>My Profile</title>
 
     <!-- Custom fonts for this template-->
     <link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -19,6 +19,9 @@
 
     <!-- Custom styles for this template-->
     <link href="/css/sb-admin-2.min.css" rel="stylesheet">
+
+    <!-- Custom style sheet to change -->
+    <link href="/css/profile.css" rel="stylesheet">
 
 </head>
 
@@ -188,7 +191,54 @@
             <div class="container-fluid">
 
                 <!-- Page Heading -->
-                <h1 class="h3 mb-4 text-gray-800">Blank Page</h1>
+                <img class="artwork, float-left, pfp" src="/img/pfp/blank.png" alt="">
+                <h1>Account Name</h1>
+
+                <button class="open-button, pfpbutton" onclick="openForm()">Change Password</button>
+
+                <div class="form-popup" id="myForm">
+                    <form class="form-container">
+                        <label for="oldpw"><b>Old password</b></label>
+                        <input type="password" placeholder="Enter old password" name="oldpw" required>
+
+                        <label for="newpw"><b>New password</b></label>
+                        <input type="password" placeholder="Enter new password" name="newpw" required>
+
+                        <button type="submit" class="btn">Change</button>
+                        <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
+                    </form>
+                </div>
+
+                <script>
+                    function openForm() {
+                        document.getElementById("myForm").style.display = "block";
+                    }
+                    function closeForm() {
+                        document.getElementById("myForm").style.display = "none";
+                    }
+                </script>
+
+                <br> <br>
+                <table class="table table-hover">
+                    <tbody>
+                        <tr>
+                            <th>Songs Uploaded:</th>
+                            <th>15</th>
+                        </tr>
+                        <tr>
+                            <th>Artists Uploaded:</th>
+                            <th>8</th>
+                        </tr>
+                        <tr>
+                            <th>Album Uploaded:</th>
+                            <th>1</th>
+                        </tr>
+                        <tr>
+                            <th>Playlist Created:</th>
+                            <th>0</th>
+                        </tr>
+                    </tbody>
+                </table>
 
             </div>
             <!-- /.container-fluid -->
