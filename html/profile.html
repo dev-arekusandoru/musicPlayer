@@ -191,10 +191,17 @@
             <div class="container-fluid">
 
                 <!-- Page Heading -->
-                <img class="artwork, float-left, pfp" src="/img/pfp/blank.png" alt="">
+                <img class="artwork float-left pfp" src="/img/pfp/blank.png">
                 <h1>Account Name</h1>
 
-                <button class="open-button pfpbutton" onclick="openForm()">Change Password</button>
+                <div class="buttons">
+                    <!-- Change Password -->
+                    <button class="open-button pfpbutton" onclick="openForm()">Change Password</button>
+
+                    <!--Upload PFP Image -->
+                    <input type="file" id="imgupload" style="display:none"/>
+                    <label for='imgupload'> <button id="OpenImgUpload">Profile Picture Upload</button></label>
+                </div>
 
                 <div class="form-popup" id="myForm">
                     <form class="form-container">
@@ -218,7 +225,7 @@
                     }
                 </script>
 
-                <br> <br>
+                <br><br><br><br>
                 <table class="table table-hover">
                     <tbody>
                         <tr>
