@@ -32,8 +32,48 @@ body {
 .content-title {
     color: rgb(235, 235, 235);
 }
+.artist-rating {
+    color: #EBEBEB;
+}
+
 
 .content h2 {
     font-size: 12px;
     color: dimgrey;
+}
+
+.comments {
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.comment {
+    border-radius: 15px;
+    width: 48%;
+    margin-bottom: 20px;
+}
+
+.comment-header {
+    background-color: #444444;
+    padding: 7px 0 5px 7px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+.comment-body {
+    padding: 5px 5px 0px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border: 1px solid #444444;
+    color: rgb(235, 235, 235);
+}
+
+.comment h1 {
+    font-size: 24px;
+    color: rgb(235, 235, 235);
+    margin-bottom: 0;
+}
+.comment h2 {
+    font-size: 16px;
+    color: rgb(235, 235, 235);
+    margin-bottom: 0;
 }
