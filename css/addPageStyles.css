@@ -1,0 +1,41 @@
+.add-label {
+    color: #EBEBEB;
+    font-size: 20px;
+    margin-bottom: 0 ;
+}
+.add-input {
+    width: 200px;
+    height: 30px;
+    background-color: #222222;
+    border-radius: 7px;
+    border: 1px solid;
+    border-image: linear-gradient(45deg, #4e73df, #6f42c1) 1;
+    color: #EBEBEB;
+    padding-left: 2px;
+}
+.add-input:focus {
+    outline: none;
+}
+
+.add-submit {
+    margin-top: 10px;
+    text-align: center;
+    line-height: 40px;
+    width: 130px;
+    height: 40px;
+    background-color: #4e73df;
+    border-radius: 7px;
+    color: #EBEBEB;
+    transition: 0.3s ease all;
+}
+
+.add-submit:hover {
+    background-color: #6f42c1;
+}
+.add-content {
+    margin-left: 2px;
+}
+
+.add-dropdown {
+
+}
