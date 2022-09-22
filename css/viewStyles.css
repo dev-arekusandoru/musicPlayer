@@ -6,7 +6,7 @@ body {
     border-radius: 7px;
 }
 
-
+/*album metadata styles*/
 .album-metadata h1 {
     color: rgb(235, 235, 235);
     font-size: 30px;
@@ -19,10 +19,12 @@ body {
     margin-top: 0;
     margin-bottom: 10px;
 }
-.album-metadata h2:hover {
-    cursor: pointer;
+.album-metadata h3 {
+    font-size: 20px;
+    color: #EBEBEB;
 }
 
+/*add music button*/
 .add-music-button {
     color: #4e73df;
     transition: 0.1s ease all;
@@ -49,7 +51,7 @@ body {
 }
 
 .album-tracklist ul li {
-    padding-top: 7px;
+    padding-top: 12px;
     height: 50px;
     color: rgb(235, 235, 235);
     border-bottom: 1px solid darkgray;
