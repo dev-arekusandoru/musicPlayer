@@ -2,24 +2,24 @@
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Playlist Title</title>
+    <title>Browse Artists</title>
 
     <!-- Custom fonts for this template-->
-    <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
             href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
             rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="../css/sb-admin-2.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/albumView.css">
+    <link href="/css/sb-admin-2.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/browseDivStyles.css">
 
 </head>
 
@@ -70,16 +70,33 @@
 
         <!-- Nav Item - Browse Music Menu -->
         <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-               aria-expanded="true" aria-controls="collapseTwo">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseOne"
+               aria-expanded="true" aria-controls="collapseOne">
                 <i class="fas fa-th-large"></i>
                 <span>Browse All</span>
             </a>
-            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Browse All:</h6>
-                    <a class="collapse-item" href="../html/browse_artists.html">Artists</a>
-                    <a class="collapse-item" href="../html/browse_albums.html">Albums</a>
+                    <a class="collapse-item active" href="../html/browseArtists.html">Artists</a>
+                    <a class="collapse-item" href="browseAlbums.html">Albums</a>
+                </div>
+            </div>
+        </li>
+
+        <!-- Nav Item - Add Music Menu -->
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+               aria-expanded="true" aria-controls="collapseTwo">
+                <i class="fas fa-music"></i>
+                <span>Add Music</span>
+            </a>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <h6 class="collapse-header">Add Music:</h6>
+                    <a class="collapse-item" href="../html/addArtist.html">Artist</a>
+                    <a class="collapse-item" href="../html/addAlbum.html">Album</a>
+                    <a class="collapse-item" href="../html/addSong.html">Song</a>
                 </div>
             </div>
         </li>
@@ -187,41 +204,58 @@
 
             <!-- Begin Page Content -->
             <div class="container-fluid">
-                <div class="album-header row">
-                    <div class="col-sm-3 pl-0 ml-3">
-                        <img class="artwork" src="/img/album-imgs/testing-asap-rocky.jpeg" alt="">
+
+                <!-- Page Heading -->
+                <h1 class="h3 mb-4 content-title">Browse All Artists:</h1>
+                <!--Page Content-->
+                <div class="row pl-3 pr-3 justify-content-around">
+                    <div class="content">
+                        <div class="content-img">
+                            <img class="img-fluid" src="/img/artist-imgs/Asap-Rocky.jpg" alt="A$AP Rocky">
+                        </div>
+                        <h1>A$AP Rocky</h1>
                     </div>
-                    <div class="album-metadata col-sm-3" style="height: 300px;">
-                        <h1>TESTING</h1>
-                        <h2>User</h2>
-                        <h6>Here the user will add a description of the playlist if so desired.</h6>
-                        <a href="#">Add Song</a>
+                    <div class="content">
+                        <div class="content-img">
+                            <img class="img-fluid" src="/img/artist-imgs/Andy-Mineo.jpg" alt="The Beatles">
+                        </div>
+                        <h1>Andy Mineo</h1>
                     </div>
-                </div>
-                <div class="album-tracklist row">
-                    <div class="col-sm-12">
-                        <ul>
-                            <li class="row item">
-                                <div class="col-sm-11">
-                                    <h1>Distorted Records</h1>
-                                    <p>A$AP Rocky • TESTING</p>
-                                </div>
-                                <div class="col-sm-1">
-                                    <a href="../html/albumView.html"><i class="fa fa-folder"></i></a>
-                                    <a href=""><i class="fa fa-plus"></i></a>
-                                </div>
-                            </li>
-                            <li class="row item" id="end-tracklist">
-                                <div class="col-sm-11">
-                                    <h1>Purity</h1>
-                                    <p>A$AP Rocky - TESTING</p>
-                                </div>
-                                <div class="col-sm-1">
-                                    <a href="../html/albumView.html"><i class="fa fa-folder"></i></a>
-                                    <a href=""><i class="fa fa-plus"></i></a>
-                                </div>
-                            </li>
-                        </ul>
+                    <div class="content">
+                        <div class="content-img">
+                            <img class="img-fluid" src="/img/artist-imgs/Arctic-Monkeys.jpeg" alt="The Beatles">
+                        </div>
+                        <h1>Arctic Monkeys</h1>
+                    </div>
+                    <div class="content">
+                        <div class="content-img">
+                            <img class="img-fluid" src="/img/artist-imgs/Baby-Keem.jpeg" alt="The Beatles">
+                        </div>
+                        <h1>Baby Keem</h1>
+                    </div>
+                    <div class="content">
+                        <div class="content-img">
+                            <img class="img-fluid" src="/img/artist-imgs/Backseat-Lovers.PNG" alt="The Beatles">
+                        </div>
+                        <h1>The Backseat Lovers</h1>
+                    </div>
+                    <div class="content">
+                        <div class="content-img">
+                            <img class="img-fluid" src="/img/artist-imgs/Bad-Bunny.jpeg" alt="The Beatles">
+                        </div>
+                        <h1>Bad Bunny</h1>
+                    </div>
+                    <div class="content">
+                        <div class="content-img">
+                            <img class="img-fluid" src="/img/artist-imgs/the-beatles.jpg" alt="The Beatles">
+                        </div>
+                        <h1>The Beatles</h1>
+                    </div>
+                    <div class="content">
+                        <a class="content-img" href="viewAlbum.html">
+                            <img class="img-fluid" src="/img/artist-imgs/Gorillaz.jpeg" alt="">
+                        </a>
+                        <h1>Gorillaz</h1>
                     </div>
                 </div>
 
@@ -235,7 +269,7 @@
         <footer class="sticky-footer bg-darker">
             <div class="container my-auto">
                 <div class="copyright text-center my-auto">
-                    <span>Copyright &copy; Tau Tech 2020</span>
+                    <span>Copyright &copy; Tau Tech 2022</span>
                 </div>
             </div>
         </footer>
@@ -266,7 +300,7 @@
             <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
             <div class="modal-footer">
                 <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                <a class="btn btn-primary" href="login.html">Logout</a>
+                <a class="btn btn-primary" href="userLogin.html">Logout</a>
             </div>
         </div>
     </div>
