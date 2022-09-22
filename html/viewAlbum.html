@@ -19,7 +19,7 @@
 
     <!-- Custom styles for this template-->
     <link href="../css/sb-admin-2.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/albumView.css">
+    <link rel="stylesheet" href="/css/viewStyles.css">
     <link rel="stylesheet" href="/css/browseDivStyles.css">
 
 </head>
@@ -71,16 +71,33 @@
 
         <!-- Nav Item - Browse Music Menu -->
         <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-               aria-expanded="true" aria-controls="collapseTwo">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseOne"
+               aria-expanded="true" aria-controls="collapseOne">
                 <i class="fas fa-th-large"></i>
                 <span>Browse All</span>
             </a>
-            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Browse All:</h6>
                     <a class="collapse-item" href="browseArtists.html">Artists</a>
                     <a class="collapse-item" href="browseAlbums.html">Albums</a>
+                </div>
+            </div>
+        </li>
+
+        <!-- Nav Item - Add Music Menu -->
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+               aria-expanded="true" aria-controls="collapseTwo">
+                <i class="fas fa-music"></i>
+                <span>Add Music</span>
+            </a>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <h6 class="collapse-header">Add Music:</h6>
+                    <a class="collapse-item" href="../html/addArtist.html">Artist</a>
+                    <a class="collapse-item" href="../html/addAlbum.html">Album</a>
+                    <a class="collapse-item" href="../html/addSong.html">Song</a>
                 </div>
             </div>
         </li>
@@ -196,12 +213,20 @@
                         <h1>TESTING</h1>
                         <h2>A$AP Rocky</h2>
                         <h6>HIP-HOP/RAP • 2018</h6>
+                        <a class="mb-7 add-music-button" href="../html/addSong.html">Edit Album Details</a><br>
+                        <a class="mb-7 add-music-button" href="../html/addSong.html">Add Song</a>
                     </div>
                 </div>
                 <div class="album-tracklist row">
                     <div class="col-sm-12">
                         <ul>
-                            <li>1. Distored Records</li>
+                            <li class="row item">
+                                <h1>1. Distorted Records</h1>
+                                <div class="col-sm-1">
+                                    <a href="viewAlbum.html"><i class="fa fa-folder"></i></a>
+                                    <a href=""><i class="fa fa-eye"></i></a>
+                                </div>
+                            </li>
                             <li>2. A$AP Forever REMIX</li>
                             <li>3. Tony Tone</li>
                             <li>4. Fukk Sleep</li>
@@ -220,6 +245,7 @@
                     </div>
                 </div>
 
+                <!--Start Album comment section-->
                 <div class="content-splitter"></div>
                 <h1 class="h3 content-title">Reviews:</h1>
                 <div class="row comments justify-content-around">
@@ -284,9 +310,12 @@
 
                     </div>
                 </div>
+                <!--Add comment button-->
                 <div class="row add-comment justify-content-center mb-5">
-                    <a href="../html/addComment.html" class="add-comment-button">Add Comment</a>
+                    <a href="../html/addComment.html" class="add-comment-button">Add Review</a>
                 </div>
+                <!--Start Album comment section-->
+
 
             </div>
             <!-- /.container-fluid -->

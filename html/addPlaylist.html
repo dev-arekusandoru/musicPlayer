@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Playlist Title</title>
+    <title>Create Playlist</title>
 
     <!-- Custom fonts for this template-->
     <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -19,7 +19,11 @@
 
     <!-- Custom styles for this template-->
     <link href="../css/sb-admin-2.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/viewStyles.css">
+
+    <!-- Custom style sheet to change -->
+    <link href="../css/browseDivStyles.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/addPageStyles.css">
+
 
 </head>
 
@@ -181,8 +185,8 @@
                         <!-- Dropdown - User Information -->
                         <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                              aria-labelledby="userDropdown">
-                            <a class="dropdown-item" href="#">
-                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                            <a class="dropdown-item active" href="#">
+                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400 active"></i>
                                 Profile
                             </a>
                             <a class="dropdown-item" href="#">
@@ -204,44 +208,28 @@
 
             <!-- Begin Page Content -->
             <div class="container-fluid">
-                <div class="album-header row">
-                    <div class="col-sm-3 pl-0 ml-3">
-                        <img class="artwork" src="/img/empty-playlist.jpg" alt="">
+                <!-- Page Heading -->
+                <div class="row ml-1">
+                    <h1 class="content-title">Create Playlist</h1>
+                </div>
+                <div class="row">
+                    <div class="add-img-div">
+                        <img class="add-img" src="/img/pfp/blank.png" alt="">
+                        <input type="file" id="myFile" name="filename">
                     </div>
-                    <div class="album-metadata col-sm-3" style="height: 300px;">
-                        <h1>TESTING</h1>
-                        <h2>User</h2>
-                        <h6>Here the user will add a description of the playlist if so desired.</h6>
-                        <a class="mb-7 add-music-button" href="../html/addSong.html">Edit Playlist Details</a><br>
-                        <a class="mb-7 add-music-button" href="../html/addSong.html">Add Song</a>
+                    <div class="add-content-div">
+                        <label class="add-label" for="playlist-name">Playlist Name:</label>
+                        <br>
+                        <input class="add-input" id="playlist-name" type="text"/>
+                        <br>
+                        <label class="add-label" for="playlist-description">Description:</label>
+                        <br>
+                        <textarea class="add-input" style="height: 100px; resize: none;" id="playlist-description" ></textarea>
+
+                        <form class="add-submit" type="submit" value="Submit">Submit</form>
                     </div>
                 </div>
-                <div class="album-tracklist row">
-                    <div class="col-sm-12">
-                        <ul>
-                            <li class="row item">
-                                <div class="col-sm-11">
-                                    <h1>Distorted Records</h1>
-                                    <p>A$AP Rocky • TESTING</p>
-                                </div>
-                                <div class="col-sm-1">
-                                    <a href="viewAlbum.html"><i class="fa fa-folder"></i></a>
-                                    <a href=""><i class="fa fa-eye"></i></a>
-                                </div>
-                            </li>
-                            <li class="row item" id="end-tracklist">
-                                <div class="col-sm-10">
-                                    <h1>Purity</h1>
-                                    <p>A$AP Rocky - TESTING</p>
-                                </div>
-                                <div class="col-sm-2">
-                                    <a href="viewAlbum.html"><i class="fa fa-folder"></i></a>
-                                    <a href=""><i class="fa fa-eye"></i></a>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+
 
             </div>
             <!-- /.container-fluid -->
@@ -253,7 +241,7 @@
         <footer class="sticky-footer bg-darker">
             <div class="container my-auto">
                 <div class="copyright text-center my-auto">
-                    <span>Copyright &copy; Tau Tech 2020</span>
+                    <span>Copyright &copy; Tau Tech 2022</span>
                 </div>
             </div>
         </footer>

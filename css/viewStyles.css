@@ -23,6 +23,15 @@ body {
     cursor: pointer;
 }
 
+.add-music-button {
+    color: #4e73df;
+    transition: 0.1s ease all;
+}
+.add-music-button:hover {
+    text-decoration: none;
+    color: #6f42c1;
+}
+
 
 .album-metadata h6 {
     font-size: 14px;

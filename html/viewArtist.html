@@ -70,17 +70,34 @@
         </li>
 
         <!-- Nav Item - Browse Music Menu -->
-        <li class="nav-item active">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-               aria-expanded="true" aria-controls="collapseTwo">
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseOne"
+               aria-expanded="true" aria-controls="collapseOne">
                 <i class="fas fa-th-large"></i>
                 <span>Browse All</span>
             </a>
-            <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Browse All:</h6>
                     <a class="collapse-item" href="browseArtists.html">Artists</a>
-                    <a class="collapse-item active" href="browseAlbums.html">Albums</a>
+                    <a class="collapse-item" href="browseAlbums.html">Albums</a>
+                </div>
+            </div>
+        </li>
+
+        <!-- Nav Item - Add Music Menu -->
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+               aria-expanded="true" aria-controls="collapseTwo">
+                <i class="fas fa-music"></i>
+                <span>Add Music</span>
+            </a>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <h6 class="collapse-header">Add Music:</h6>
+                    <a class="collapse-item" href="../html/addArtist.html">Artist</a>
+                    <a class="collapse-item" href="../html/addAlbum.html">Album</a>
+                    <a class="collapse-item" href="../html/addSong.html">Song</a>
                 </div>
             </div>
         </li>
@@ -190,8 +207,9 @@
             <div class="container-fluid">
 
                 <!-- Page Heading -->
-                <h1 class="h3 mb-4 content-title">A$AP Rocky:</h1>
-                <h2 class="artist-rating">Average Album Rating: 5/5</h2>
+                <h1 class="h3 mb-0 content-title">A$AP Rocky:</h1>
+                <h2 class="mb-1 artist-rating">Average Album Rating: 5/5</h2>
+                <a class="mb-7 add-music-button" href="../html/addAlbum.html">Add Album</a>
                 <!--Page Content-->
                 <div class="row pl-3 pr-3 justify-content-around">
                     <div class="content">
