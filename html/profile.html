@@ -211,15 +211,17 @@
                 <img class="artwork, float-left, pfp" src="/img/pfp/blank.png" alt="">
                 <h1>Account Name</h1>
 
+                <!-- change password button-->
                 <button class="open-button pfpbutton" onclick="openForm()">Change Password</button>
 
+                <!-- change password popup -->
                 <div class="form-popup" id="myForm">
                     <form class="form-container">
                         <label for="oldpw"><b>Old password</b></label>
-                        <input type="password" placeholder="Enter old password" name="oldpw" required>
+                        <input type="password" placeholder="Enter old password" id="oldpw" name="oldpw" required>
 
                         <label for="newpw"><b>New password</b></label>
-                        <input type="password" placeholder="Enter new password" name="newpw" required>
+                        <input type="password" placeholder="Enter new password" id="newpw" name="newpw" required>
 
                         <button type="submit" class="btn">Change</button>
                         <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
