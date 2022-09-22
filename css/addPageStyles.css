@@ -1,8 +1,11 @@
+/*label style*/
 .add-label {
     color: #EBEBEB;
     font-size: 20px;
     margin-bottom: 0 ;
 }
+
+/*input style*/
 .add-input {
     width: 200px;
     height: 30px;
@@ -17,6 +20,7 @@
     outline: none;
 }
 
+/*submit button style*/
 .add-submit {
     margin-top: 10px;
     text-align: center;
@@ -28,14 +32,27 @@
     color: #EBEBEB;
     transition: 0.3s ease all;
 }
-
 .add-submit:hover {
     background-color: #6f42c1;
 }
-.add-content {
-    margin-left: 2px;
+
+/*add image style*/
+.add-img-div {
+    margin-left: 20px;
+    width: 250px;
+    justify-content: center;
+}
+.add-img {
+    height: 250px;
+    margin-bottom: 15px;
 }
 
+/*content submission style*/
+.add-content-div {
+    margin-left: 10px;
+}
+
+/*dropdown style*/
 .add-dropdown {
 
 }
