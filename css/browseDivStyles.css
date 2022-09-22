@@ -54,16 +54,19 @@ body {
 }
 
 .comment-header {
-    background-color: #444444;
+    background-image: linear-gradient(to bottom right, #4e73df, #6f42c1);
     padding: 7px 0 5px 7px;
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
+    border: 1px solid #EBEBEB;
+    border-bottom: none;
 }
 .comment-body {
     padding: 5px 5px 0px;
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
-    border: 1px solid #444444;
+    border: 1px solid #EBEBEB;
+    border-top: none;
     color: rgb(235, 235, 235);
 }
 
@@ -76,4 +79,22 @@ body {
     font-size: 16px;
     color: rgb(235, 235, 235);
     margin-bottom: 0;
+}
+
+.add-comment-button {
+    border-radius: 10px;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    background-color: #4e73df;
+    color: #EBEBEB;
+
+    transition: 0.3s ease all;
+}
+.add-comment-button:hover {
+    color: #EBEBEB;
+    background-color: #6f42c1;
+    text-decoration: none;
+    transition: 0.3s ease all;
 }
