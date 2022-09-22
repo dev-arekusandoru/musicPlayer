@@ -2,6 +2,7 @@ body {
     font-family: Nunito, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
+/*content splitter style*/
 .content-splitter {
     height: 10px;
     width: 100%;
@@ -9,12 +10,14 @@ body {
     border-top: 1px solid rgb(235, 235, 235);
 }
 
+/*main content div style*/
 .content {
     margin-bottom: 40px;
     margin-right: 20px;
     text-align: center;
 }
 
+/*album cover art style*/
 .content-img img {
     height: 250px;
     border-radius: 20px;
@@ -23,6 +26,7 @@ body {
     cursor: pointer;
 }
 
+/*content metadata and info styling*/
 .content-title {
     color: rgb(235, 235, 235);
 }
@@ -37,12 +41,11 @@ body {
     color: dimgrey;
 }
 
+/*artist rating text format*/
 .artist-rating {
     color: #EBEBEB;
     font-size: 18px;
 }
-
-
 
 /*Comment styling*/
 .comments {
