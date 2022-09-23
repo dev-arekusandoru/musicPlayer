@@ -178,7 +178,7 @@
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="mr-2 d-none d-lg-inline text-gray-600 small">User</span>
                             <img class="img-profile rounded-circle"
-                                 src="img/undraw_profile.svg">
+                                 src="/img/pfp/blank.png">
                         </a>
                         <!-- Dropdown - User Information -->
                         <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -208,11 +208,17 @@
             <div class="container-fluid">
 
                 <!-- Page Heading -->
-                <img class="artwork, float-left, pfp" src="/img/pfp/blank.png" alt="">
+                <img class="artwork float-left pfp" src="/img/pfp/blank.png">
                 <h1>Account Name</h1>
 
-                <!-- change password button-->
-                <button class="open-button pfpbutton" onclick="openForm()">Change Password</button>
+                <div class="buttons">
+                    <!-- Change Password -->
+                    <button class="open-button pfpbutton" onclick="openForm()">Change Password</button>
+
+                    <!--Upload PFP Image -->
+                    <input type="file" id="imgupload" style="display:none"/>
+                    <label for='imgupload'> <button id="OpenImgUpload">Profile Picture Upload</button></label>
+                </div>
 
                 <!-- change password popup -->
                 <div class="form-popup" id="myForm">
@@ -237,7 +243,7 @@
                     }
                 </script>
 
-                <br> <br>
+                <br><br><br><br>
                 <table class="table table-hover">
                     <tbody>
                         <tr>

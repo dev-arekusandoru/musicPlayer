@@ -2,7 +2,7 @@ h1{
    display: inline-block;
    position: relative;
    color:#F8F0E3;
-   padding: 1em;
+   margin: 1em;
 }
 
 .table {
@@ -10,7 +10,8 @@ h1{
 }
 
 .pfpbutton{
-   display:block;
+   position: relative;
+   display: block;
 }
 
 tr{
@@ -85,4 +86,9 @@ tr{
 /* Add some hover effects to buttons */
 .form-container .btn:hover, .open-button:hover {
    opacity: 1;
+}
+
+.buttons{
+   display: block;
+   margin-left: 30px;
 }
