@@ -4,7 +4,7 @@ body {
 
 /*album arwork style*/
 .artwork {
-    max-height: 300px;
+    height: 300px;
     border-radius: 7px;
 }
 
@@ -15,11 +15,16 @@ body {
     margin-top: 5px;
     margin-bottom: 0;
 }
-.album-metadata h2 {
+.album-metadata a {
     color: #4e73df;
     font-size: 23px;
     margin-top: 0;
     margin-bottom: 10px;
+    transition: 0.1s ease all;
+}
+.album-metadata a:hover {
+    text-decoration: none;
+    color: #6f42c1;
 }
 .album-metadata h3 {
     font-size: 20px;

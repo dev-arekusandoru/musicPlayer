@@ -15,6 +15,10 @@ body {
     margin-bottom: 40px;
     margin-right: 20px;
     text-align: center;
+    text-decoration: none;
+}
+.content:hover {
+    text-decoration: none;
 }
 
 /*album cover art style*/
