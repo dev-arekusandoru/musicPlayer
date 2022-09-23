@@ -13,7 +13,8 @@ body {
 /*main content div style*/
 .content {
     margin-bottom: 40px;
-    margin-right: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
     text-align: center;
     text-decoration: none;
 }
