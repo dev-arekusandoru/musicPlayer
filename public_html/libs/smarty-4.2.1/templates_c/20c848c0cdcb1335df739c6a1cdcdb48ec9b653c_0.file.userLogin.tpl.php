@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-09-29 10:56:53
+/* Smarty version 4.2.1, created on 2022-09-29 11:09:48
   from '/Users/Arekusandoru/PhpStormProjects/musicPlayer/public_html/templates/userLogin.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_6335b2353dbc22_58321312',
+  'unifunc' => 'content_6335b53cbcdb51_24619249',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '20c848c0cdcb1335df739c6a1cdcdb48ec9b653c' => 
     array (
       0 => '/Users/Arekusandoru/PhpStormProjects/musicPlayer/public_html/templates/userLogin.tpl',
-      1 => 1664463412,
+      1 => 1664464188,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6335b2353dbc22_58321312 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6335b53cbcdb51_24619249 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -74,14 +74,14 @@ function content_6335b2353dbc22_58321312 (Smarty_Internal_Template $_smarty_tpl)
                                             <input type="password" class="form-control form-control-user"
                                                 id="exampleInputPassword" placeholder="Password">
                                         </div>
-                                        <div class="form-group">
+                                       <!-- <div class="form-group">
                                             <div class="custom-control custom-checkbox small">
                                                 <input type="checkbox" class="custom-control-input" id="customCheck">
                                                 <label class="custom-control-label" for="customCheck">Remember
                                                     Me</label>
                                             </div>
-                                        </div>
-                                        <a href="../html/explore.html" class="btn btn-primary btn-user btn-block">
+                                        </div>-->
+                                        <a href="/html/explore.html" class="btn btn-primary btn-user btn-block">
                                             Login
                                         </a>
                                         <hr>
@@ -111,7 +111,7 @@ function content_6335b2353dbc22_58321312 (Smarty_Internal_Template $_smarty_tpl)
 
     </div>
 
-    <!-- Bootstrap core JavaScript-->
+    <!-- Bootstrap core JavaScript
     <?php echo '<script'; ?>
  src="../public_html/vendor/jquery/jquery.min.js"><?php echo '</script'; ?>
 >
