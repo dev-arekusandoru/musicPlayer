@@ -1,23 +1,19 @@
 <?php
 /**
  * @var $smarty
+ * @var $pdo
+ *
  */
 include "../private_html/config.php";
-include PRIVATE_PATH. "functions.php";
+include PRIVATE_PATH . "functions.php";
+include PRIVATE_PATH . "dbConfig.php";
 
 if(isset($_POST['email'])) {
-    $servername = "localhost";
-    $username = "username";
-    $password = "password";
-
-// Create connection
-    $conn = new mysqli($servername, $username, $password);
-
-// Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
-    echo "Connected successfully";
+    $sql = "SELECT * FROM User WHERE Email = :email";
+    $stmt = $pdo->prepare($sql);
+    $stmt->bindParam(":email", $_POST['email']);
+    $stmt->execute();
+    $user = $stmt->fetch(PDO::FETCH_ASSOC);
 }
 
 
