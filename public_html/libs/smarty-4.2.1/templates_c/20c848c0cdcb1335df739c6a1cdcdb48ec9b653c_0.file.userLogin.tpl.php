@@ -1,4 +1,27 @@
-<!DOCTYPE html>
+<?php
+/* Smarty version 4.2.1, created on 2022-09-29 10:56:53
+  from '/Users/Arekusandoru/PhpStormProjects/musicPlayer/public_html/templates/userLogin.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '4.2.1',
+  'unifunc' => 'content_6335b2353dbc22_58321312',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '20c848c0cdcb1335df739c6a1cdcdb48ec9b653c' => 
+    array (
+      0 => '/Users/Arekusandoru/PhpStormProjects/musicPlayer/public_html/templates/userLogin.tpl',
+      1 => 1664463412,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_6335b2353dbc22_58321312 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -89,15 +112,24 @@
     </div>
 
     <!-- Bootstrap core JavaScript-->
-    <script src="../public_html/vendor/jquery/jquery.min.js"></script>
-    <script src="../public_html/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <?php echo '<script'; ?>
+ src="../public_html/vendor/jquery/jquery.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="../public_html/vendor/bootstrap/js/bootstrap.bundle.min.js"><?php echo '</script'; ?>
+>
 
     <!-- Core plugin JavaScript-->
-    <script src="../public_html/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <?php echo '<script'; ?>
+ src="../public_html/vendor/jquery-easing/jquery.easing.min.js"><?php echo '</script'; ?>
+>
 
     <!-- Custom scripts for all pages-->
-    <script src="../public_html/js/sb-admin-2.min.js"></script>
+    <?php echo '<script'; ?>
+ src="../public_html/js/sb-admin-2.min.js"><?php echo '</script'; ?>
+>
 
 </body>
 
-</html>
+</html><?php }
+}
