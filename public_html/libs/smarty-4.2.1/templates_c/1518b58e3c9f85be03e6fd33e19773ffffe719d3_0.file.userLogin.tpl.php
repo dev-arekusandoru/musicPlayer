@@ -1,4 +1,27 @@
-<!DOCTYPE html>
+<?php
+/* Smarty version 4.2.1, created on 2022-10-04 11:35:23
+  from '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/userLogin.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '4.2.1',
+  'unifunc' => 'content_633c52bb525632_58987741',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '1518b58e3c9f85be03e6fd33e19773ffffe719d3' => 
+    array (
+      0 => '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/userLogin.tpl',
+      1 => 1664897722,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_633c52bb525632_58987741 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -51,13 +74,13 @@
                                         <input type="password" class="form-control form-control-user"
                                                name="password" placeholder="Password">
                                     </div>
-                                    {*<div class="form-group">
+                                    <div class="form-group">
                                         <div class="custom-control custom-checkbox small">
                                             <input type="checkbox" class="custom-control-input" id="customCheck">
                                             <label class="custom-control-label" for="customCheck">Remember
                                                 Me</label>
                                         </div>
-                                    </div>*}
+                                    </div>
                                     <button type="submit" class="btn btn-primary btn-user btn-block">
                                         Login
                                     </button>
@@ -82,15 +105,24 @@
 </div>
 
 <!-- Bootstrap core JavaScript
-<script src="../public_html/vendor/jquery/jquery.min.js"></script>
-<script src="../public_html/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<?php echo '<script'; ?>
+ src="../public_html/vendor/jquery/jquery.min.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="../public_html/vendor/bootstrap/js/bootstrap.bundle.min.js"><?php echo '</script'; ?>
+>
 
 <!-- Core plugin JavaScript-->
-<script src="../public_html/vendor/jquery-easing/jquery.easing.min.js"></script>
+<?php echo '<script'; ?>
+ src="../public_html/vendor/jquery-easing/jquery.easing.min.js"><?php echo '</script'; ?>
+>
 
 <!-- Custom scripts for all pages-->
-<script src="../public_html/js/sb-admin-2.min.js"></script>
+<?php echo '<script'; ?>
+ src="../public_html/js/sb-admin-2.min.js"><?php echo '</script'; ?>
+>
 
 </body>
 
-</html>
+</html><?php }
+}
