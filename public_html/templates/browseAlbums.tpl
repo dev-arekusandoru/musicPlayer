@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Create Playlist</title>
+    <title>Browse Albums</title>
 
     <!-- Custom fonts for this template-->
     <link href="/public_html/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -19,11 +19,7 @@
 
     <!-- Custom styles for this template-->
     <link href="/public_html/css/sb-admin-2.min.css" rel="stylesheet">
-
-    <!-- Custom style sheet to change -->
-    <link href="/public_html/css/browseDivStyles.css" rel="stylesheet">
-    <link rel="stylesheet" href="/public_html/css/addPageStyles.css">
-
+    <link rel="stylesheet" href="/public_html/css/browseDivStyles.css">
 
 </head>
 
@@ -79,11 +75,11 @@
                 <i class="fas fa-th-large"></i>
                 <span>Browse All</span>
             </a>
-            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionSidebar">
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Browse All:</h6>
-                    <a class="collapse-item" href="browseArtists.html">Artists</a>
-                    <a class="collapse-item" href="browseAlbums.html">Albums</a>
+                    <a class="collapse-item" href="browseArtists.tpl">Artists</a>
+                    <a class="collapse-item active" href="../public_html/templates/browseAlbums.html">Albums</a>
                 </div>
             </div>
         </li>
@@ -185,8 +181,8 @@
                         <!-- Dropdown - User Information -->
                         <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                              aria-labelledby="userDropdown">
-                            <a class="dropdown-item active" href="#">
-                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400 active"></i>
+                            <a class="dropdown-item" href="#">
+                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                 Profile
                             </a>
                             <a class="dropdown-item" href="#">
@@ -208,29 +204,21 @@
 
             <!-- Begin Page Content -->
             <div class="container-fluid">
+
                 <!-- Page Heading -->
-                <div class="row ml-1">
-                    <h1 class="content-title">Create Playlist</h1>
-                </div>
-                <!-- Add Playlist form content -->
-                <div class="row">
-                    <div class="add-img-div">
-                        <img class="add-img" src="/public_html/img/pfp/blank.png" alt="">
-                        <input type="file" id="myFile" name="filename">
-                    </div>
-                    <div class="add-content-div">
-                        <label class="add-label" for="playlist-name">Playlist Name:</label>
-                        <br>
-                        <input class="add-input" id="playlist-name" type="text"/>
-                        <br>
-                        <label class="add-label" for="playlist-description">Description:</label>
-                        <br>
-                        <textarea class="add-input" style="height: 100px; resize: none;" id="playlist-description" ></textarea>
+                <h1 class="h3 mb-4 content-title">Browse All Albums:</h1>
 
-                        <form class="add-submit" type="submit" value="Submit">Submit</form>
-                    </div>
+                <!--Page Content-->
+                <div class="row pl-3 pr-3 justify-content-around">
+                    <!-- album content divs-->
+                    <a class="content" href="../public_html/templates/viewAlbum.html">
+                        <div class="content-img">
+                            <img class="img-fluid" src="/public_html/img/album-imgs/testing-asap-rocky.jpeg" alt="The Beatles">
+                        </div>
+                        <h1>TESTING</h1>
+                        <h2>A$AP Rocky • 2018</h2>
+                    </a>
                 </div>
-
 
             </div>
             <!-- /.container-fluid -->

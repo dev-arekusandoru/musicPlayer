@@ -2,13 +2,14 @@
 <html lang="en">
 
 <head>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Browse Artists</title>
+    <title>Artist Name</title>
 
     <!-- Custom fonts for this template-->
     <link href="/public_html/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -74,11 +75,11 @@
                 <i class="fas fa-th-large"></i>
                 <span>Browse All</span>
             </a>
-            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionSidebar">
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Browse All:</h6>
-                    <a class="collapse-item active" href="../public_html/templates/browseArtists.html">Artists</a>
-                    <a class="collapse-item" href="browseAlbums.html">Albums</a>
+                    <a class="collapse-item" href="browseArtists.tpl">Artists</a>
+                    <a class="collapse-item" href="browseAlbums.tpl">Albums</a>
                 </div>
             </div>
         </li>
@@ -205,58 +206,91 @@
             <div class="container-fluid">
 
                 <!-- Page Heading -->
-                <h1 class="h3 mb-4 content-title">Browse All Artists:</h1>
+                <!-- Artist Information -->
+                <h1 class="h3 mb-0 content-title">A$AP Rocky:</h1>
+                <h2 class="mb-1 artist-rating">Average Album Rating: 5/5</h2>
+                <a class="mb-7 add-music-button" href="../public_html/templates/addAlbum.html">Add Album</a>
                 <!--Page Content-->
+                <!-- Artist Discography  -->
                 <div class="row pl-3 pr-3 justify-content-around">
-                    <!-- artist content divs-->
-                    <a class="content" href="../public_html/templates/viewArtist.html">
+                    <a class="content" href="../public_html/templates/viewAlbum.html">
                         <div class="content-img">
-                            <img class="img-fluid" src="/public_html/img/artist-imgs/Asap-Rocky.jpg" alt="A$AP Rocky">
+                            <img class="img-fluid" src="/public_html/img/album-imgs/testing-asap-rocky.jpeg" alt="The Beatles">
                         </div>
-                        <h1>A$AP Rocky</h1>
+                        <h1>TESTING</h1>
+                        <h2>A$AP Rocky • 2018</h2>
                     </a>
-                    <a class="content" href="#">
-                        <div class="content-img">
-                            <img class="img-fluid" src="/public_html/img/artist-imgs/Andy-Mineo.jpg" alt="The Beatles">
+                </div>
+
+                <div class="content-splitter"></div>
+
+                <!--Artist Comments-->
+                <h1 class="h3 content-title">Reviews:</h1>
+                <div class="row comments justify-content-around">
+                    <div class="comment">
+                        <div class="comment-header">
+                            <h1>User</h1>
+                            <h2>Rating: 5/5</h2>
                         </div>
-                        <h1>Andy Mineo</h1>
-                    </a>
-                    <a class="content" href="#">
-                        <div class="content-img">
-                            <img class="img-fluid" src="/public_html/img/artist-imgs/Arctic-Monkeys.jpeg" alt="The Beatles">
+                        <div class="comment-body">
+                            <p>This is where users will leave the details of their reviews,
+                                explaining why they did or didn't like a particular song/album/playlist.
+                                The user will also be able to edit their comments and delete them at any point</p>
                         </div>
-                        <h1>Arctic Monkeys</h1>
-                    </a>
-                    <a class="content" href="#">
-                        <div class="content-img">
-                            <img class="img-fluid" src="/public_html/img/artist-imgs/Baby-Keem.jpeg" alt="The Beatles">
+
+                    </div>
+                    <div class="comment">
+                        <div class="comment-header">
+                            <h1>User</h1>
+                            <h2>Rating: 5/5</h2>
                         </div>
-                        <h1>Baby Keem</h1>
-                    </a>
-                    <a class="content" href="#">
-                        <div class="content-img">
-                            <img class="img-fluid" src="/public_html/img/artist-imgs/Backseat-Lovers.PNG" alt="The Beatles">
+                        <div class="comment-body">
+                            <p>This is where users will leave the details of their reviews,
+                                explaining why they did or didn't like a particular song/album/playlist.
+                                The user will also be able to edit their comments and delete them at any point</p>
                         </div>
-                        <h1>The Backseat Lovers</h1>
-                    </a>
-                    <a class="content" href="#">
-                        <div class="content-img">
-                            <img class="img-fluid" src="/public_html/img/artist-imgs/Bad-Bunny.jpeg" alt="The Beatles">
+
+                    </div>
+                    <div class="comment">
+                        <div class="comment-header">
+                            <h1>User</h1>
+                            <h2>Rating: 5/5</h2>
                         </div>
-                        <h1>Bad Bunny</h1>
-                    </a>
-                    <a class="content" href="#">
-                        <div class="content-img">
-                            <img class="img-fluid" src="/public_html/img/artist-imgs/the-beatles.jpg" alt="The Beatles">
+                        <div class="comment-body">
+                            <p>This is where users will leave the details of their reviews,
+                                explaining why they did or didn't like a particular song/album/playlist.
+                                The user will also be able to edit their comments and delete them at any point</p>
                         </div>
-                        <h1>The Beatles</h1>
-                    </a>
-                    <a class="content" href="#">
-                        <div class="content-img">
-                            <img class="img-fluid" src="/public_html/img/artist-imgs/Gorillaz.jpeg" alt="">
+
+                    </div>
+                    <div class="comment">
+                        <div class="comment-header">
+                            <h1>User</h1>
+                            <h2>Rating: 5/5</h2>
                         </div>
-                        <h1>Gorillaz</h1>
-                    </a>
+                        <div class="comment-body">
+                            <p>This is where users will leave the details of their reviews,
+                                explaining why they did or didn't like a particular song/album/playlist.
+                                The user will also be able to edit their comments and delete them at any point</p>
+                        </div>
+
+                    </div>
+                    <div class="comment">
+                        <div class="comment-header">
+                            <h1>User</h1>
+                            <h2>Rating: 5/5</h2>
+                        </div>
+                        <div class="comment-body">
+                            <p>This is where users will leave the details of their reviews,
+                                explaining why they did or didn't like a particular song/album/playlist.
+                                The user will also be able to edit their comments and delete them at any point</p>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- Add Comment Button -->
+                <div class="row add-comment justify-content-center mb-5">
+                    <a href="../public_html/templates/addComment.html" class="add-comment-button">Add Review</a>
                 </div>
 
             </div>

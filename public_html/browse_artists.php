@@ -1,5 +1,8 @@
 <?php
-
+/**
+ * @var $smarty
+ *
+ */
 include "../private_html/config.php";
-include_once PRIVATE_PATH . "dbConfig.php";
 
+$smarty->display("browseArtists.tpl");

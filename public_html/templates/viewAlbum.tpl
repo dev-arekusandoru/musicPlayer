@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Explore</title>
+    <title>Album Title</title>
 
     <!-- Custom fonts for this template-->
     <link href="/public_html/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -19,7 +19,12 @@
 
     <!-- Custom styles for this template-->
     <link href="/public_html/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="/public_html/css/starRating.css" rel="stylesheet">
+    <link rel="stylesheet" href="/public_html/css/viewStyles.css">
     <link rel="stylesheet" href="/public_html/css/browseDivStyles.css">
+
+    <script src="https://kit.fontawesome.com/125fe29883.js" crossorigin="anonymous"></script>
+
 
 </head>
 
@@ -43,7 +48,7 @@
         <hr class="sidebar-divider my-0">
 
         <!-- Nav Item - Dashboard -->
-        <li class="nav-item active">
+        <li class="nav-item">
             <a class="nav-link" href="../public_html/templates/library.html">
                 <i class="fas fa-folder-open    "></i>
                 <span>My Library</span></a>
@@ -78,8 +83,8 @@
             <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Browse All:</h6>
-                    <a class="collapse-item" href="browseArtists.html">Artists</a>
-                    <a class="collapse-item" href="browseAlbums.html">Albums</a>
+                    <a class="collapse-item" href="browseArtists.tpl">Artists</a>
+                    <a class="collapse-item" href="browseAlbums.tpl">Albums</a>
                 </div>
             </div>
         </li>
@@ -185,7 +190,7 @@
                                 <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                 Profile
                             </a>
-                            <a class="dropdown-item active" href="#">
+                            <a class="dropdown-item" href="#">
                                 <i class="fas fa-folder-open fa-sm fa-fw mr-2 text-gray-400"></i>
                                 My Library
                             </a>
@@ -204,176 +209,169 @@
 
             <!-- Begin Page Content -->
             <div class="container-fluid">
-
-                <!-- Page Heading -->
-                <!-- Artists Heading -->
-                <h1 class="h3 mb-4 content-title">My Artists:</h1>
-                <!--Artists Content-->
-                <div class="row pl-3 pr-3 justify-content-around">
-                    <!-- artist content divs-->
-                    <div class="content">
-                        <div class="content-img">
-                            <img class="img-fluid" src="/public_html/img/artist-imgs/Asap-Rocky.jpg" alt="A$AP Rocky">
-                        </div>
-                        <h1>A$AP Rocky</h1>
+                <!-- Album header like metadata and stuff -->
+                <div class="album-header row">
+                    <div class="col-sm-3 pl-0 ml-3">
+                        <img class="artwork" src="/public_html/img/album-imgs/testing-asap-rocky.jpeg" alt="">
                     </div>
-                    <div class="content">
-                        <div class="content-img">
-                            <img class="img-fluid" src="/public_html/img/artist-imgs/Andy-Mineo.jpg" alt="The Beatles">
-                        </div>
-                        <h1>Andy Mineo</h1>
-                    </div>
-                    <div class="content">
-                        <div class="content-img">
-                            <img class="img-fluid" src="/public_html/img/artist-imgs/Arctic-Monkeys.jpeg" alt="The Beatles">
-                        </div>
-                        <h1>Arctic Monkeys</h1>
-                    </div>
-                    <div class="content">
-                        <div class="content-img">
-                            <img class="img-fluid" src="/public_html/img/artist-imgs/Baby-Keem.jpeg" alt="The Beatles">
-                        </div>
-                        <h1>Baby Keem</h1>
-                    </div>
-                    <div class="content">
-                        <div class="content-img">
-                            <img class="img-fluid" src="/public_html/img/artist-imgs/Backseat-Lovers.PNG" alt="The Beatles">
-                        </div>
-                        <h1>The Backseat Lovers</h1>
-                    </div>
-                    <div class="content">
-                        <div class="content-img">
-                            <img class="img-fluid" src="/public_html/img/artist-imgs/Bad-Bunny.jpeg" alt="The Beatles">
-                        </div>
-                        <h1>Bad Bunny</h1>
-                    </div>
-                    <div class="content">
-                        <div class="content-img">
-                            <img class="img-fluid" src="/public_html/img/artist-imgs/the-beatles.jpg" alt="The Beatles">
-                        </div>
-                        <h1>The Beatles</h1>
-                    </div>
-                    <div class="content">
-                        <a class="content-img" href="viewAlbum.html">
-                            <img class="img-fluid" src="/public_html/img/artist-imgs/Gorillaz.jpeg" alt="">
-                        </a>
-                        <h1>Gorillaz</h1>
-                    </div>
-                    <div class="content">
-                        <a class="content-img" href="viewAlbum.html">
-                            <img class="img-fluid" src="/public_html/img/artist-imgs/LivingTombstoneIcon.jpg" alt="">
-                        </a>
-                        <h1>The Living Tombstone</h1>
-                    </div>
-                    <div class="content">
-                        <a class="content-img" href="viewAlbum.html">
-                            <img class="img-fluid" src="/public_html/img/artist-imgs/TallyHall.jpg" alt="">
-                        </a>
-                        <h1>Tally Hall</h1>
-                    </div>
-                </div>
-
-                <!--Content Splitter-->
-                <div class="content-splitter ml-1"></div>
-
-                <!-- Albums Heading -->
-                <h1 class="h3 mb-4 content-title">My Albums:</h1>
-                <!--Albums Content-->
-                <div class="row pl-3 pr-3 justify-content-around">
-                    <!-- album content divs-->
-                    <div class="content">
-                        <div class="content-img">
-                            <img class="img-fluid" src="/public_html/img/album-imgs/testing-asap-rocky.jpeg" alt="The Beatles">
-                        </div>
+                    <div class="album-metadata col-sm-3" style="height: 300px;">
                         <h1>TESTING</h1>
-                        <h2>A$AP Rocky • 2018</h2>
+                        <a href="../public_html/templates/viewArtist.html">A$AP Rocky</a>
+                        <h6>HIP-HOP/RAP • 2018</h6>
+                        <h3>Rating: 5/5</h3>
+                        <a class="mb-7 add-music-button" href="../public_html/templates/addSong.html" style="font-size: 16px;">Edit Album Details</a><br>
+                        <a class="mb-7 add-music-button" href="../public_html/templates/addSong.html" style="font-size: 16px;">Add Song</a>
                     </div>
-                    <div class="content">
-                        <div class="content-img">
-                            <img class="img-fluid" src="/public_html/img/artist-imgs/Gorillaz.jpeg" alt="">
-                        </div>
-                        <h1>Cracker Island</h1>
-                        <h2>Gorillaz • 2023</h2>
-                    </div>
-                    <div class="content">
-                        <div class="content-img">
-                            <img class="img-fluid" src="/public_html/img/album-imgs/MMMM.jpg" alt="The Beatles">
-                        </div>
-                        <h1>Marvin's Marvelous...</h1>
-                        <h2>Tally Hall • 2005</h2>
-                    </div>
-                    <div class="content">
-                        <div class="content-img">
-                            <img class="img-fluid" src="/public_html/img/album-imgs/ZeroOne.jpg" alt="The Beatles">
-                        </div>
-                        <h1>zero_one</h1>
-                        <h2>The Living Tombstone • 2020</h2>
-                    </div>
-                    <div class="content">
-                        <div class="content-img">
-                            <img class="img-fluid" src="/public_html/img/album-imgs/AbbeyRoad.jpg" alt="The Beatles">
-                        </div>
-                        <h1>Abbey Road</h1>
-                        <h2>The Beatles • 1969</h2>
-                    </div>
-                    <div class="content">
-                        <div class="content-img">
-                            <img class="img-fluid" src="/public_html/img/album-imgs/MMMM.jpg" alt="The Beatles">
-                        </div>
-                        <h1>Marvin's Marvelous...</h1>
-                        <h2>Tally Hall • 2005</h2>
-                    </div>
-                    <div class="content">
-                        <div class="content-img">
-                            <img class="img-fluid" src="/public_html/img/album-imgs/ZeroOne.jpg" alt="The Beatles">
-                        </div>
-                        <h1>zero_one</h1>
-                        <h2>The Living Tombstone • 2020</h2>
-                    </div>
-                    <div class="content">
-                        <div class="content-img">
-                            <img class="img-fluid" src="/public_html/img/album-imgs/AbbeyRoad.jpg" alt="The Beatles">
-                        </div>
-                        <h1>Abbey Road</h1>
-                        <h2>The Beatles • 1969</h2>
+                    <div class="col-sm-6"></div>
+                </div>
+                <!-- Album body like song names -->
+                <div class="album-tracklist row">
+                    <div class="col-sm-12">
+                        <ul>
+                            <li>1. Distorted Records</li>
+                            <li>2. A$AP Forever REMIX</li>
+                            <li>3. Tony Tone</li>
+                            <li>4. Fukk Sleep</li>
+                            <li>5. Praise The Lord(Da Shine)</li>
+                            <li>6. CALLDROPS</li>
+                            <li>7. Buck Shots</li>
+                            <li>8. Gunz N Butter</li>
+                            <li>9. Brotha Man</li>
+                            <li>10. OG Beeper</li>
+                            <li>11. Kids Turned Out Fine</li>
+                            <li>12. Hun43rd</li>
+                            <li>13. Changes</li>
+                            <li>14. Black Tux, White Collar</li>
+                            <li id="end-tracklist">15. Purity</li>
+                        </ul>
                     </div>
                 </div>
 
-                <!--Content Splitter-->
-                <div class="content-splitter ml-1"></div>
+                <div class="content-splitter"></div>
 
-                <!-- Playlists Heading -->
-                <h1 class="h3 content-title">My Playlists:</h1>
-                <a class="mb-4" href="../public_html/templates/addPlaylist.html">Create new</a>
-                <!--Playlist Content-->
-                <div class="row pl-3 pr-3 justify-content-around">
-                    <!-- playlist content divs-->
-                    <a class="content" href="../public_html/templates/viewPlaylist.html">
-                        <div class="content-img">
-                            <img class="img-fluid" src="/public_html/img/empty-playlist.jpg" alt="The Beatles">
+                <!--Start Album comment section-->
+                <h1 class="h3 content-title">Reviews:</h1>
+                <div class="row comments justify-content-around">
+                    <!-- all the comments -->
+                    <div class="comment">
+                        <div class="comment-header">
+                            <h1>User</h1>
+                            <h2>Rating: 5/5</h2>
                         </div>
-                        <h1>User's Playlist</h1>
-                        <h2>User • 3 Songs</h2>
-                    </a>
+                        <div class="comment-body">
+                            <p>This is where users will leave the details of their reviews,
+                                explaining why they did or didn't like a particular song/album/playlist.
+                            The user will also be able to edit their comments and delete them at any point</p>
+                        </div>
 
-                    <div class="content">
-                        <div class="content-img">
-                            <img class="img-fluid" src="/public_html/img/empty-playlist.jpg" alt="">
-                        </div>
-                        <h1>User's Playlist</h1>
-                        <h2>User • 43 Songs</h2>
                     </div>
-
-                    <div class="content">
-                        <div class="content-img">
-                            <img class="img-fluid" src="/public_html/img/empty-playlist.jpg" alt="The Beatles">
+                    <div class="comment">
+                        <div class="comment-header">
+                            <h1>User</h1>
+                            <h2>Rating: 5/5</h2>
                         </div>
-                        <h1>User's Playlist</h1>
-                        <h2>User • 15 Songs</h2>
+                        <div class="comment-body">
+                            <p>This is where users will leave the details of their reviews,
+                                explaining why they did or didn't like a particular song/album/playlist.
+                                The user will also be able to edit their comments and delete them at any point</p>
+                        </div>
+
+                    </div>
+                    <div class="comment">
+                        <div class="comment-header">
+                            <h1>User</h1>
+                            <h2>Rating: 5/5</h2>
+                        </div>
+                        <div class="comment-body">
+                            <p>This is where users will leave the details of their reviews,
+                                explaining why they did or didn't like a particular song/album/playlist.
+                                The user will also be able to edit their comments and delete them at any point</p>
+                        </div>
+
+                    </div>
+                    <div class="comment">
+                        <div class="comment-header">
+                            <h1>User</h1>
+                            <h2>Rating: 5/5</h2>
+                        </div>
+                        <div class="comment-body">
+                            <p>This is where users will leave the details of their reviews,
+                                explaining why they did or didn't like a particular song/album/playlist.
+                                The user will also be able to edit their comments and delete them at any point</p>
+                        </div>
+
+                    </div>
+                    <div class="comment">
+                        <div class="comment-header">
+                            <h1>User</h1>
+                            <h2>Rating: 5/5</h2>
+                        </div>
+                        <div class="comment-body">
+                            <p>This is where users will leave the details of their reviews,
+                                explaining why they did or didn't like a particular song/album/playlist.
+                                The user will also be able to edit their comments and delete them at any point</p>
+                        </div>
+
                     </div>
                 </div>
 
+                <!--Add review  button-->
+                <div class="row add-comment justify-content-center mb-5">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                        Add Review
+                    </button>
+                </div>
 
+                <!-- Review Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="reviewModalLabel">Write Review</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+<!--                                        <label for="recipient-name" class="col-form-label">Rating:</label>-->
+<!--                                        <input type="text" class="form-control" id="recipient-name">-->
+<!--                                        Beginning Star Rating-->
+                                        <span class="rating_stars rating_0">
+                                          <span class='s' data-low='0.5' data-high='1'><i class="fa fa-star-o"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star"></i></span>
+                                          <span class='s' data-low='1.5' data-high='2'><i class="fa fa-star-o"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star"></i></span>
+                                          <span class='s' data-low='2.5' data-high='3'><i class="fa fa-star-o"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star"></i></span>
+                                          <span class='s' data-low='3.5' data-high='4'><i class="fa fa-star-o"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star"></i></span>
+                                          <span class='s' data-low='4.5' data-high='5'><i class="fa fa-star-o"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star"></i></span>
+
+                                          <span class='r r0_5' data-rating='1' data-value='0.5'></span>
+                                          <span class='r r1' data-rating='1' data-value='1'></span>
+                                          <span class='r r1_5' data-rating='15' data-value='1.5'></span>
+                                          <span class='r r2' data-rating='2' data-value='2'></span>
+                                          <span class='r r2_5' data-rating='25' data-value='2.5'></span>
+                                          <span class='r r3' data-rating='3' data-value='3'></span>
+                                          <span class='r r3_5' data-rating='35' data-value='3.5'></span>
+                                          <span class='r r4' data-rating='4' data-value='4'></span>
+                                          <span class='r r4_5' data-rating='45' data-value='4.5'></span>
+                                          <span class='r r5' data-rating='5' data-value='5'></span>
+                                        </span>
+<!--                                        End Star Rating-->
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="message-text" class="col-form-label">Review:</label>
+                                        <textarea class="form-control" id="message-text"></textarea>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-primary">Submit Review</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End Album comment section-->
             </div>
             <!-- /.container-fluid -->
 
@@ -384,7 +382,7 @@
         <footer class="sticky-footer bg-darker">
             <div class="container my-auto">
                 <div class="copyright text-center my-auto">
-                    <span>Copyright &copy; Tau Tech 2022</span>
+                    <span>Copyright &copy; Your Website 2020</span>
                 </div>
             </div>
         </footer>
@@ -430,6 +428,7 @@
 
 <!-- Custom scripts for all pages-->
 <script src="/public_html/js/sb-admin-2.min.js"></script>
+<script src="starRating.js"></script>
 
 </body>
 

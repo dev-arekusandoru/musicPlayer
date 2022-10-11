@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Artist Name</title>
+    <title>Playlist Title</title>
 
     <!-- Custom fonts for this template-->
     <link href="/public_html/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -19,7 +19,7 @@
 
     <!-- Custom styles for this template-->
     <link href="/public_html/css/sb-admin-2.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/public_html/css/browseDivStyles.css">
+    <link rel="stylesheet" href="/public_html/css/viewStyles.css">
 
 </head>
 
@@ -78,8 +78,8 @@
             <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Browse All:</h6>
-                    <a class="collapse-item" href="browseArtists.html">Artists</a>
-                    <a class="collapse-item" href="browseAlbums.html">Albums</a>
+                    <a class="collapse-item" href="browseArtists.tpl">Artists</a>
+                    <a class="collapse-item" href="browseAlbums.tpl">Albums</a>
                 </div>
             </div>
         </li>
@@ -204,93 +204,45 @@
 
             <!-- Begin Page Content -->
             <div class="container-fluid">
-
-                <!-- Page Heading -->
-                <!-- Artist Information -->
-                <h1 class="h3 mb-0 content-title">A$AP Rocky:</h1>
-                <h2 class="mb-1 artist-rating">Average Album Rating: 5/5</h2>
-                <a class="mb-7 add-music-button" href="../public_html/templates/addAlbum.html">Add Album</a>
-                <!--Page Content-->
-                <!-- Artist Discography  -->
-                <div class="row pl-3 pr-3 justify-content-around">
-                    <a class="content" href="../public_html/templates/viewAlbum.html">
-                        <div class="content-img">
-                            <img class="img-fluid" src="/public_html/img/album-imgs/testing-asap-rocky.jpeg" alt="The Beatles">
-                        </div>
+                <!-- Playlist Information -->
+                <div class="album-header row">
+                    <div class="col-sm-3 pl-0 ml-3">
+                        <img class="artwork" src="/public_html/img/empty-playlist.jpg" alt="">
+                    </div>
+                    <div class="album-metadata col-sm-3" style="height: 300px;">
                         <h1>TESTING</h1>
-                        <h2>A$AP Rocky • 2018</h2>
-                    </a>
-                </div>
-
-                <div class="content-splitter"></div>
-
-                <!--Artist Comments-->
-                <h1 class="h3 content-title">Reviews:</h1>
-                <div class="row comments justify-content-around">
-                    <div class="comment">
-                        <div class="comment-header">
-                            <h1>User</h1>
-                            <h2>Rating: 5/5</h2>
-                        </div>
-                        <div class="comment-body">
-                            <p>This is where users will leave the details of their reviews,
-                                explaining why they did or didn't like a particular song/album/playlist.
-                                The user will also be able to edit their comments and delete them at any point</p>
-                        </div>
-
-                    </div>
-                    <div class="comment">
-                        <div class="comment-header">
-                            <h1>User</h1>
-                            <h2>Rating: 5/5</h2>
-                        </div>
-                        <div class="comment-body">
-                            <p>This is where users will leave the details of their reviews,
-                                explaining why they did or didn't like a particular song/album/playlist.
-                                The user will also be able to edit their comments and delete them at any point</p>
-                        </div>
-
-                    </div>
-                    <div class="comment">
-                        <div class="comment-header">
-                            <h1>User</h1>
-                            <h2>Rating: 5/5</h2>
-                        </div>
-                        <div class="comment-body">
-                            <p>This is where users will leave the details of their reviews,
-                                explaining why they did or didn't like a particular song/album/playlist.
-                                The user will also be able to edit their comments and delete them at any point</p>
-                        </div>
-
-                    </div>
-                    <div class="comment">
-                        <div class="comment-header">
-                            <h1>User</h1>
-                            <h2>Rating: 5/5</h2>
-                        </div>
-                        <div class="comment-body">
-                            <p>This is where users will leave the details of their reviews,
-                                explaining why they did or didn't like a particular song/album/playlist.
-                                The user will also be able to edit their comments and delete them at any point</p>
-                        </div>
-
-                    </div>
-                    <div class="comment">
-                        <div class="comment-header">
-                            <h1>User</h1>
-                            <h2>Rating: 5/5</h2>
-                        </div>
-                        <div class="comment-body">
-                            <p>This is where users will leave the details of their reviews,
-                                explaining why they did or didn't like a particular song/album/playlist.
-                                The user will also be able to edit their comments and delete them at any point</p>
-                        </div>
-
+                        <h2>User</h2>
+                        <h6>Here the user will add a description of the playlist if so desired.</h6>
+                        <a class="mb-7 add-music-button" href="../public_html/templates/addSong.html">Edit Playlist Details</a><br>
+                        <a class="mb-7 add-music-button" href="../public_html/templates/addSong.html">Add Song</a>
                     </div>
                 </div>
-                <!-- Add Comment Button -->
-                <div class="row add-comment justify-content-center mb-5">
-                    <a href="../public_html/templates/addComment.html" class="add-comment-button">Add Review</a>
+                <!-- Playlist Tracklist -->
+                <div class="album-tracklist row">
+                    <div class="col-sm-12">
+                        <ul>
+                            <li class="row item">
+                                <div class="col-sm-11">
+                                    <h1>Distorted Records</h1>
+                                    <p>A$AP Rocky • TESTING</p>
+                                </div>
+                                <div class="col-sm-1">
+                                    <a href="viewAlbum.tpl"><i class="fa fa-folder"></i></a>
+                                    <a href=""><i class="fa fa-eye"></i></a>
+                                </div>
+                            </li>
+                            <li class="row item" id="end-tracklist">
+                                <div class="col-sm-10">
+                                    <h1>Purity</h1>
+                                    <p>A$AP Rocky - TESTING</p>
+                                </div>
+                                <div class="col-sm-2">
+                                    <a href="viewAlbum.tpl"><i class="fa fa-folder"></i></a>
+                                    <a href=""><i class="fa fa-eye"></i></a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
 
             </div>
@@ -303,7 +255,7 @@
         <footer class="sticky-footer bg-darker">
             <div class="container my-auto">
                 <div class="copyright text-center my-auto">
-                    <span>Copyright &copy; Tau Tech 2022</span>
+                    <span>Copyright &copy; Tau Tech 2020</span>
                 </div>
             </div>
         </footer>

@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Add Artist</title>
+    <title>Add Album</title>
 
     <!-- Custom fonts for this template-->
     <link href="/public_html/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -82,8 +82,8 @@
             <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Browse All:</h6>
-                    <a class="collapse-item" href="browseArtists.html">Artists</a>
-                    <a class="collapse-item" href="browseAlbums.html">Albums</a>
+                    <a class="collapse-item" href="browseArtists.tpl">Artists</a>
+                    <a class="collapse-item" href="browseAlbums.tpl">Albums</a>
                 </div>
             </div>
         </li>
@@ -98,12 +98,13 @@
             <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Add Music:</h6>
-                    <a class="collapse-item active" href="../public_html/templates/addArtist.html">Artist</a>
+                    <a class="collapse-item" href="../public_html/templates/addArtist.html">Artist</a>
                     <a class="collapse-item" href="../public_html/templates/addAlbum.html">Album</a>
-                    <a class="collapse-item" href="../public_html/templates/addSong.html">Song</a>
+                    <a class="collapse-item active" href="../public_html/templates/addSong.html">Song</a>
                 </div>
             </div>
         </li>
+
 
         <!-- Divider -->
         <hr class="sidebar-divider d-none d-md-block">
@@ -210,18 +211,35 @@
             <div class="container-fluid">
                 <!-- Page Heading -->
                 <div class="row ml-1">
-                    <h1 class="content-title">Add Artist</h1>
+                    <h1 class="content-title">Add Song</h1>
                 </div>
-                <!-- Add Artist forms and stuff-->
-                <div class="row">
-                    <div class="add-img-div">
+                <!-- Add song form content-->
+                <div class="row add-content">
+                    <div class="col-sm-2.5 ">
                         <img class="add-img" src="/public_html/img/pfp/blank.png" alt="">
-                        <input type="file" id="myFile" name="filename">
                     </div>
-                    <div class="add-content-div">
-                        <label class="add-label" for="artist-name">Artist Name:</label>
+                    <div class="col">
+                        <label class="add-label" for="select-artist">Artist Name:</label>
                         <br>
-                        <input class="add-input" id="artist-name" type="text"/>
+                        <select required name="select-artist" class="add-dropdown" id="select-artist">
+                            <option>A$AP Rocky</option>
+                            <option>Andy Mineo</option>
+                            <option>Arctic Monkeys</option>
+                            <option>Baby Keem</option>
+                            <option>The Backseat Lovers</option>
+                            <option>Bad Bunny</option>
+                        </select>
+                        <br>
+                        <label class="add-label" for="select-album">Album Name:</label>
+                        <br>
+                        <select required name="select-album" class="add-dropdown" id="select-album">
+                            <option>Testing</option>
+                        </select>
+                        <br>
+                        <label class="add-label" for="song-name">Song Name:</label>
+                        <br>
+                        <input class="add-input" id="song-name" type="text"/>
+
                         <form class="add-submit" type="submit" value="Submit">Submit</form>
                     </div>
                 </div>

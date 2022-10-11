@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Playlist Title</title>
+    <title>My Profile</title>
 
     <!-- Custom fonts for this template-->
     <link href="/public_html/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -19,7 +19,9 @@
 
     <!-- Custom styles for this template-->
     <link href="/public_html/css/sb-admin-2.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/public_html/css/viewStyles.css">
+
+    <!-- Custom style sheet to change -->
+    <link href="/public_html/css/profile.css" rel="stylesheet">
 
 </head>
 
@@ -48,7 +50,7 @@
                 <i class="fas fa-folder-open    "></i>
                 <span>My Library</span></a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item active">
             <a class="nav-link" href="../public_html/templates/profile.html">
                 <i class="fas fa-user fa-tachometer-alt"></i>
                 <span>My Profile</span></a>
@@ -78,8 +80,8 @@
             <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Browse All:</h6>
-                    <a class="collapse-item" href="browseArtists.html">Artists</a>
-                    <a class="collapse-item" href="browseAlbums.html">Albums</a>
+                    <a class="collapse-item" href="browseArtists.tpl">Artists</a>
+                    <a class="collapse-item" href="browseAlbums.tpl">Albums</a>
                 </div>
             </div>
         </li>
@@ -181,8 +183,8 @@
                         <!-- Dropdown - User Information -->
                         <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                              aria-labelledby="userDropdown">
-                            <a class="dropdown-item" href="#">
-                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                            <a class="dropdown-item active" href="#">
+                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400 active"></i>
                                 Profile
                             </a>
                             <a class="dropdown-item" href="#">
@@ -204,46 +206,64 @@
 
             <!-- Begin Page Content -->
             <div class="container-fluid">
-                <!-- Playlist Information -->
-                <div class="album-header row">
-                    <div class="col-sm-3 pl-0 ml-3">
-                        <img class="artwork" src="/public_html/img/empty-playlist.jpg" alt="">
-                    </div>
-                    <div class="album-metadata col-sm-3" style="height: 300px;">
-                        <h1>TESTING</h1>
-                        <h2>User</h2>
-                        <h6>Here the user will add a description of the playlist if so desired.</h6>
-                        <a class="mb-7 add-music-button" href="../public_html/templates/addSong.html">Edit Playlist Details</a><br>
-                        <a class="mb-7 add-music-button" href="../public_html/templates/addSong.html">Add Song</a>
-                    </div>
+
+                <!-- Page Heading -->
+                <img class="artwork float-left pfp" src="/public_html/img/pfp/blank.png">
+                <h1>Account Name</h1>
+
+                <div class="buttons">
+                    <!-- Change Password -->
+                    <button class="open-button pfpbutton" onclick="openForm()">Change Password</button>
+
+                    <!--Upload PFP Image -->
+                    <input type="file" id="imgupload" style="display:none"/>
+                    <label for='imgupload'> <button id="OpenImgUpload">Profile Picture Upload</button></label>
                 </div>
-                <!-- Playlist Tracklist -->
-                <div class="album-tracklist row">
-                    <div class="col-sm-12">
-                        <ul>
-                            <li class="row item">
-                                <div class="col-sm-11">
-                                    <h1>Distorted Records</h1>
-                                    <p>A$AP Rocky • TESTING</p>
-                                </div>
-                                <div class="col-sm-1">
-                                    <a href="viewAlbum.html"><i class="fa fa-folder"></i></a>
-                                    <a href=""><i class="fa fa-eye"></i></a>
-                                </div>
-                            </li>
-                            <li class="row item" id="end-tracklist">
-                                <div class="col-sm-10">
-                                    <h1>Purity</h1>
-                                    <p>A$AP Rocky - TESTING</p>
-                                </div>
-                                <div class="col-sm-2">
-                                    <a href="viewAlbum.html"><i class="fa fa-folder"></i></a>
-                                    <a href=""><i class="fa fa-eye"></i></a>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
+
+                <!-- change password popup -->
+                <div class="form-popup" id="myForm">
+                    <form class="form-container">
+                        <label for="oldpw"><b>Old password</b></label>
+                        <input type="password" placeholder="Enter old password" id="oldpw" name="oldpw" required>
+
+                        <label for="newpw"><b>New password</b></label>
+                        <input type="password" placeholder="Enter new password" id="newpw" name="newpw" required>
+
+                        <button type="submit" class="btn">Change</button>
+                        <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
+                    </form>
                 </div>
+
+                <script>
+                    function openForm() {
+                        document.getElementById("myForm").style.display = "block";
+                    }
+                    function closeForm() {
+                        document.getElementById("myForm").style.display = "none";
+                    }
+                </script>
+
+                <br><br><br><br>
+                <table class="table table-hover">
+                    <tbody>
+                        <tr>
+                            <th>Songs Uploaded:</th>
+                            <th>15</th>
+                        </tr>
+                        <tr>
+                            <th>Artists Uploaded:</th>
+                            <th>8</th>
+                        </tr>
+                        <tr>
+                            <th>Album Uploaded:</th>
+                            <th>1</th>
+                        </tr>
+                        <tr>
+                            <th>Playlist Created:</th>
+                            <th>0</th>
+                        </tr>
+                    </tbody>
+                </table>
 
             </div>
             <!-- /.container-fluid -->
@@ -255,7 +275,7 @@
         <footer class="sticky-footer bg-darker">
             <div class="container my-auto">
                 <div class="copyright text-center my-auto">
-                    <span>Copyright &copy; Tau Tech 2020</span>
+                    <span>Copyright &copy; Your Website 2020</span>
                 </div>
             </div>
         </footer>
