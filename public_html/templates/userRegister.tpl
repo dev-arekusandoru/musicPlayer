@@ -19,6 +19,7 @@
 
     <!-- Custom styles for this template-->
     <link href="/public_html/css/sb-admin-2.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/125fe29883.js" crossorigin="anonymous"></script>
 
 </head>
 

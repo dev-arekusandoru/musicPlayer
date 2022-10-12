@@ -23,7 +23,7 @@
     <!-- Custom style sheet to change -->
     <link href="/public_html/css/browseDivStyles.css" rel="stylesheet">
     <link rel="stylesheet" href="/public_html/css/addPageStyles.css">
-
+    <script src="https://kit.fontawesome.com/125fe29883.js" crossorigin="anonymous"></script>
 
 </head>
 

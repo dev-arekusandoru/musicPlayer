@@ -22,6 +22,8 @@
 
     <!-- Custom style sheet to change -->
     <link href="/public_html/css/profile.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/125fe29883.js" crossorigin="anonymous"></script>
+
 
 </head>
 
