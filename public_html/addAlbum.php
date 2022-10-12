@@ -5,4 +5,4 @@
  */
 include "../private_html/config.php";
 
-$smarty->display("profile.tpl");
+$smarty->display("addAlbum.tpl");
