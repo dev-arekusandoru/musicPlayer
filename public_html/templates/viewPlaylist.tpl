@@ -205,6 +205,14 @@
 
             <!-- Begin Page Content -->
             <div class="container-fluid">
+
+                <!--Delete button -->
+                <div class="float-right relative-top">
+                    <a href="">
+                        <img src="../img/trashcan.png" alt="white trash can image" height="30" width="30">
+                    </a>
+                </div>
+
                 <!-- Playlist Information -->
                 <div class="album-header row">
                     <div class="col-sm-3 pl-0 ml-3">
@@ -227,20 +235,62 @@
                                     <h1>Distorted Records</h1>
                                     <p>A$AP Rocky • TESTING</p>
                                 </div>
-                                <div class="col-sm-1">
-                                    <a href="viewAlbum.tpl"><i class="fa fa-folder"></i></a>
-                                    <a href=""><i class="fa fa-eye"></i></a>
-                                </div>
-                            </li>
-                            <li class="row item" id="end-tracklist">
-                                <div class="col-sm-10">
-                                    <h1>Purity</h1>
-                                    <p>A$AP Rocky - TESTING</p>
-                                </div>
-                                <div class="col-sm-2">
-                                    <a href="viewAlbum.tpl"><i class="fa fa-folder"></i></a>
-                                    <a href=""><i class="fa fa-eye"></i></a>
-                                </div>
+
+                                <!-- Topbar Navbar -->
+                                <ul class="navbar-nav ml-auto">
+
+                                    <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                                    <li class="nav-item dropdown no-arrow d-sm-none">
+                                        <!-- Dropdown - Messages -->
+                                        <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                             aria-labelledby="searchDropdown0">
+                                            <form class="form-inline mr-auto w-100 navbar-search">
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control bg-light border-0 small"
+                                                           placeholder="Search music..." aria-label="Search"
+                                                           aria-describedby="basic-addon2">
+                                                    <div class="input-group-append">
+                                                        <button class="btn btn-primary" type="button">
+                                                            <i class="fas fa-search fa-sm"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </li>
+
+                                    <div class="topbar-divider d-none d-sm-block"></div>
+
+                                    <!-- Nav Item - Song Information -->
+                                    <li class="nav-item dropdown no-arrow">
+                                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown0" role="button"
+                                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">. . .</span>
+                                        </a>
+                                        <!-- Dropdown - Song Information -->
+                                        <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                             aria-labelledby="userDropdown0">
+                                            <a class="dropdown-item" href="#">
+                                                <i class="fas fa-folder-open fa-sm fa-fw mr-2 text-gray-400"></i>
+                                                View Comments
+                                            </a>
+                                            <a class="dropdown-item" href="viewArtist.html">
+                                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                                View Artist
+                                            </a>
+                                            <a class="dropdown-item" href="addSong.html">
+                                                <i class="fas fa-folder-open fa-sm fa-fw mr-2 text-gray-400"></i>
+                                                Add to playlist
+                                            </a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                                <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                                Delete
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                                
                             </li>
                         </ul>
                     </div>
