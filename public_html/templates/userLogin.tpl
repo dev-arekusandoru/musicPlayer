@@ -64,10 +64,10 @@
                                 </form method>
                                 <hr>
                                 <div class="text-center">
-                                    <a class="small" href="userForgotPassword.html">Forgot Password?</a>
+                                    <a class="small" href="userForgotPassword.tpl">Forgot Password?</a>
                                 </div>
                                 <div class="text-center">
-                                    <a class="small" href="userRegister.html">Create an Account!</a>
+                                    <a class="small" href="userRegister.tpl">Create an Account!</a>
                                 </div>
                             </div>
                         </div>
@@ -86,10 +86,10 @@
 <script src="../public_html/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 <!-- Core plugin JavaScript-->
-<script src="../public_html/vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="/public_html/vendor/jquery-easing/jquery.easing.min.js"></script>
 
 <!-- Custom scripts for all pages-->
-<script src="../public_html/js/sb-admin-2.min.js"></script>
+<script src="/public_html/js/sb-admin-2.min.js"></script>
 
 </body>
 

@@ -2,13 +2,14 @@
 <html lang="en">
 
 <head>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Browse Artists</title>
+    <title>Playlist Title</title>
 
     <!-- Custom fonts for this template-->
     <link href="/public_html/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -18,7 +19,8 @@
 
     <!-- Custom styles for this template-->
     <link href="/public_html/css/sb-admin-2.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/public_html/css/browseDivStyles.css">
+    <link rel="stylesheet" href="/public_html/css/viewStyles.css">
+    <script src="https://kit.fontawesome.com/125fe29883.js" crossorigin="anonymous"></script>
 
 </head>
 
@@ -74,11 +76,11 @@
                 <i class="fas fa-th-large"></i>
                 <span>Browse All</span>
             </a>
-            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionSidebar">
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Browse All:</h6>
-                    <a class="collapse-item active" href="../public_html/templates/browseArtists.html">Artists</a>
-                    <a class="collapse-item" href="browseAlbums.html">Albums</a>
+                    <a class="collapse-item" href="browseArtists.tpl">Artists</a>
+                    <a class="collapse-item" href="browseAlbums.tpl">Albums</a>
                 </div>
             </div>
         </li>
@@ -203,60 +205,45 @@
 
             <!-- Begin Page Content -->
             <div class="container-fluid">
-
-                <!-- Page Heading -->
-                <h1 class="h3 mb-4 content-title">Browse All Artists:</h1>
-                <!--Page Content-->
-                <div class="row pl-3 pr-3 justify-content-around">
-                    <!-- artist content divs-->
-                    <a class="content" href="../public_html/templates/viewArtist.html">
-                        <div class="content-img">
-                            <img class="img-fluid" src="/public_html/img/artist-imgs/Asap-Rocky.jpg" alt="A$AP Rocky">
-                        </div>
-                        <h1>A$AP Rocky</h1>
-                    </a>
-                    <a class="content" href="#">
-                        <div class="content-img">
-                            <img class="img-fluid" src="/public_html/img/artist-imgs/Andy-Mineo.jpg" alt="The Beatles">
-                        </div>
-                        <h1>Andy Mineo</h1>
-                    </a>
-                    <a class="content" href="#">
-                        <div class="content-img">
-                            <img class="img-fluid" src="/public_html/img/artist-imgs/Arctic-Monkeys.jpeg" alt="The Beatles">
-                        </div>
-                        <h1>Arctic Monkeys</h1>
-                    </a>
-                    <a class="content" href="#">
-                        <div class="content-img">
-                            <img class="img-fluid" src="/public_html/img/artist-imgs/Baby-Keem.jpeg" alt="The Beatles">
-                        </div>
-                        <h1>Baby Keem</h1>
-                    </a>
-                    <a class="content" href="#">
-                        <div class="content-img">
-                            <img class="img-fluid" src="/public_html/img/artist-imgs/Backseat-Lovers.PNG" alt="The Beatles">
-                        </div>
-                        <h1>The Backseat Lovers</h1>
-                    </a>
-                    <a class="content" href="#">
-                        <div class="content-img">
-                            <img class="img-fluid" src="/public_html/img/artist-imgs/Bad-Bunny.jpeg" alt="The Beatles">
-                        </div>
-                        <h1>Bad Bunny</h1>
-                    </a>
-                    <a class="content" href="#">
-                        <div class="content-img">
-                            <img class="img-fluid" src="/public_html/img/artist-imgs/the-beatles.jpg" alt="The Beatles">
-                        </div>
-                        <h1>The Beatles</h1>
-                    </a>
-                    <a class="content" href="#">
-                        <div class="content-img">
-                            <img class="img-fluid" src="/public_html/img/artist-imgs/Gorillaz.jpeg" alt="">
-                        </div>
-                        <h1>Gorillaz</h1>
-                    </a>
+                <!-- Playlist Information -->
+                <div class="album-header row">
+                    <div class="col-sm-3 pl-0 ml-3">
+                        <img class="artwork" src="/public_html/img/empty-playlist.jpg" alt="">
+                    </div>
+                    <div class="album-metadata col-sm-3" style="height: 300px;">
+                        <h1>TESTING</h1>
+                        <h2>User</h2>
+                        <h6>Here the user will add a description of the playlist if so desired.</h6>
+                        <a class="mb-7 add-music-button" href="../public_html/templates/addSong.html">Edit Playlist Details</a><br>
+                        <a class="mb-7 add-music-button" href="../public_html/templates/addSong.html">Add Song</a>
+                    </div>
+                </div>
+                <!-- Playlist Tracklist -->
+                <div class="album-tracklist row">
+                    <div class="col-sm-12">
+                        <ul>
+                            <li class="row item">
+                                <div class="col-sm-11">
+                                    <h1>Distorted Records</h1>
+                                    <p>A$AP Rocky • TESTING</p>
+                                </div>
+                                <div class="col-sm-1">
+                                    <a href="viewAlbum.tpl"><i class="fa fa-folder"></i></a>
+                                    <a href=""><i class="fa fa-eye"></i></a>
+                                </div>
+                            </li>
+                            <li class="row item" id="end-tracklist">
+                                <div class="col-sm-10">
+                                    <h1>Purity</h1>
+                                    <p>A$AP Rocky - TESTING</p>
+                                </div>
+                                <div class="col-sm-2">
+                                    <a href="viewAlbum.tpl"><i class="fa fa-folder"></i></a>
+                                    <a href=""><i class="fa fa-eye"></i></a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
 
             </div>
@@ -269,7 +256,7 @@
         <footer class="sticky-footer bg-darker">
             <div class="container my-auto">
                 <div class="copyright text-center my-auto">
-                    <span>Copyright &copy; Tau Tech 2022</span>
+                    <span>Copyright &copy; Tau Tech 2020</span>
                 </div>
             </div>
         </footer>

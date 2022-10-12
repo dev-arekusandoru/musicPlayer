@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Playlist Title</title>
+    <title>Create Playlist</title>
 
     <!-- Custom fonts for this template-->
     <link href="/public_html/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -19,7 +19,11 @@
 
     <!-- Custom styles for this template-->
     <link href="/public_html/css/sb-admin-2.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/public_html/css/viewStyles.css">
+
+    <!-- Custom style sheet to change -->
+    <link href="/public_html/css/browseDivStyles.css" rel="stylesheet">
+    <link rel="stylesheet" href="/public_html/css/addPageStyles.css">
+
 
 </head>
 
@@ -78,8 +82,8 @@
             <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Browse All:</h6>
-                    <a class="collapse-item" href="browseArtists.html">Artists</a>
-                    <a class="collapse-item" href="browseAlbums.html">Albums</a>
+                    <a class="collapse-item" href="browseArtists.tpl">Artists</a>
+                    <a class="collapse-item" href="browseAlbums.tpl">Albums</a>
                 </div>
             </div>
         </li>
@@ -181,8 +185,8 @@
                         <!-- Dropdown - User Information -->
                         <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                              aria-labelledby="userDropdown">
-                            <a class="dropdown-item" href="#">
-                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                            <a class="dropdown-item active" href="#">
+                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400 active"></i>
                                 Profile
                             </a>
                             <a class="dropdown-item" href="#">
@@ -204,101 +208,29 @@
 
             <!-- Begin Page Content -->
             <div class="container-fluid">
-                <!-- Delete Icon -->
-                <div class="float-right relative-top">
-                    <a href="">
-                        <img src="../img/trashcan2.png" alt="trash can" height="30" width="30">
-                    </a>
+                <!-- Page Heading -->
+                <div class="row ml-1">
+                    <h1 class="content-title">Create Playlist</h1>
                 </div>
-
-                <!-- Playlist Information -->
-                <div class="album-header row">
-                    <div class="col-sm-3 pl-0 ml-3">
-                        <img class="artwork" src="/public_html/img/empty-playlist.jpg" alt="">
+                <!-- Add Playlist form content -->
+                <div class="row">
+                    <div class="add-img-div">
+                        <img class="add-img" src="/public_html/img/pfp/blank.png" alt="">
+                        <input type="file" id="myFile" name="filename">
                     </div>
-                    <div class="album-metadata col-sm-3" style="height: 300px;">
-                        <h1>TESTING</h1>
-                        <h2>User</h2>
-                        <h6>Here the user will add a description of the playlist if so desired.</h6>
-                        <a class="mb-7 add-music-button" href="../public_html/templates/addSong.html">Edit Playlist Details</a><br>
-                        <a class="mb-7 add-music-button" href="../public_html/templates/addSong.html">Add Song</a>
-                    </div>
-                </div>
-                <!-- Playlist Tracklist -->
-                <div class="album-tracklist row">
-                    <div class="col-sm-12">
-                        <ul>
-                            <li class="row item">
-                                <div class="col-sm-12">
-                                    <h1>Distorted Records</h1>
-                                    <p>A$AP Rocky • TESTING</p>
-                                    <!-- Topbar Navbar -->
-                                    <ul class="navbar-nav ml-auto">
+                    <div class="add-content-div">
+                        <label class="add-label" for="playlist-name">Playlist Name:</label>
+                        <br>
+                        <input class="add-input" id="playlist-name" type="text"/>
+                        <br>
+                        <label class="add-label" for="playlist-description">Description:</label>
+                        <br>
+                        <textarea class="add-input" style="height: 100px; resize: none;" id="playlist-description" ></textarea>
 
-                                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-                                        <li class="nav-item dropdown no-arrow d-sm-none">
-                                            <!-- Dropdown - Messages -->
-                                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                                                 aria-labelledby="searchDropdown">
-                                                <form class="form-inline mr-auto w-100 navbar-search">
-                                                    <div class="input-group">
-                                                        <input type="text" class="form-control bg-light border-0 small"
-                                                               placeholder="Search music..." aria-label="Search"
-                                                               aria-describedby="basic-addon2">
-                                                        <div class="input-group-append">
-                                                            <button class="btn btn-primary" type="button">
-                                                                <i class="fas fa-search fa-sm"></i>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </li>
-
-                                        <div class="topbar-divider d-none d-sm-block"></div>
-
-                                        <!-- Nav Item - Song Information -->
-                                        <li class="nav-item dropdown no-arrow">
-                                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                               <span class="mr-2 d-none d-lg-inline text-gray-600 small">. . .</span>
-                                            </a>
-                                            <!-- Dropdown - Song Information -->
-                                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                                 aria-labelledby="userDropdown">
-                                                <a class="dropdown-item" href="#">
-                                                    <i class="fas fa-folder-open fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                    View Comments
-                                                </a>
-                                                <a class="dropdown-item" href="viewArtist.html">
-                                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                    View Artist
-                                                </a>
-                                                <a class="dropdown-item" href="addSong.html">
-                                                    <i class="fas fa-folder-open fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                    Add to playlist
-                                                </a>
-                                                <div class="dropdown-divider"></div>
-                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                    Delete
-                                                </a>
-                                            </div>
-                                        </li>
-
-                                    </ul>
-
-                                </div>
-                            </li>
-                            <li class="row item" id="end-tracklist">
-                                <div class="col-sm-12">
-                                    <h1>Purity</h1>
-                                    <p>A$AP Rocky - TESTING</p>
-                                </div>
-                            </li>
-                        </ul>
+                        <form class="add-submit" type="submit" value="Submit">Submit</form>
                     </div>
                 </div>
+
 
             </div>
             <!-- /.container-fluid -->
@@ -310,7 +242,7 @@
         <footer class="sticky-footer bg-darker">
             <div class="container my-auto">
                 <div class="copyright text-center my-auto">
-                    <span>Copyright &copy; Tau Tech 2020</span>
+                    <span>Copyright &copy; Tau Tech 2022</span>
                 </div>
             </div>
         </footer>

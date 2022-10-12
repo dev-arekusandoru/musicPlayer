@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Album Title</title>
+    <title>Add Artist</title>
 
     <!-- Custom fonts for this template-->
     <link href="/public_html/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -19,8 +19,11 @@
 
     <!-- Custom styles for this template-->
     <link href="/public_html/css/sb-admin-2.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/public_html/css/viewStyles.css">
-    <link rel="stylesheet" href="/public_html/css/browseDivStyles.css">
+
+    <!-- Custom style sheet to change -->
+    <link href="/public_html/css/browseDivStyles.css" rel="stylesheet">
+    <link rel="stylesheet" href="/public_html/css/addPageStyles.css">
+    <script src="https://kit.fontawesome.com/125fe29883.js" crossorigin="anonymous"></script>
 
 </head>
 
@@ -79,8 +82,8 @@
             <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Browse All:</h6>
-                    <a class="collapse-item" href="browseArtists.html">Artists</a>
-                    <a class="collapse-item" href="browseAlbums.html">Albums</a>
+                    <a class="collapse-item" href="browseArtists.tpl">Artists</a>
+                    <a class="collapse-item" href="browseAlbums.tpl">Albums</a>
                 </div>
             </div>
         </li>
@@ -92,10 +95,10 @@
                 <i class="fas fa-music"></i>
                 <span>Add Music</span>
             </a>
-            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Add Music:</h6>
-                    <a class="collapse-item" href="../public_html/templates/addArtist.html">Artist</a>
+                    <a class="collapse-item active" href="../public_html/templates/addArtist.html">Artist</a>
                     <a class="collapse-item" href="../public_html/templates/addAlbum.html">Album</a>
                     <a class="collapse-item" href="../public_html/templates/addSong.html">Song</a>
                 </div>
@@ -182,8 +185,8 @@
                         <!-- Dropdown - User Information -->
                         <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                              aria-labelledby="userDropdown">
-                            <a class="dropdown-item" href="#">
-                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                            <a class="dropdown-item active" href="#">
+                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400 active"></i>
                                 Profile
                             </a>
                             <a class="dropdown-item" href="#">
@@ -205,117 +208,25 @@
 
             <!-- Begin Page Content -->
             <div class="container-fluid">
-                <!-- Album header like metadata and stuff -->
-                <div class="album-header row">
-                    <div class="col-sm-3 pl-0 ml-3">
-                        <img class="artwork" src="/public_html/img/album-imgs/testing-asap-rocky.jpeg" alt="">
-                    </div>
-                    <div class="album-metadata col-sm-3" style="height: 300px;">
-                        <h1>TESTING</h1>
-                        <a href="../public_html/templates/viewArtist.html">A$AP Rocky</a>
-                        <h6>HIP-HOP/RAP • 2018</h6>
-                        <h3>Rating: 5/5</h3>
-                        <a class="mb-7 add-music-button" href="../public_html/templates/addSong.html" style="font-size: 16px;">Edit Album Details</a><br>
-                        <a class="mb-7 add-music-button" href="../public_html/templates/addSong.html" style="font-size: 16px;">Add Song</a>
-                    </div>
-                    <div class="col-sm-6"></div>
+                <!-- Page Heading -->
+                <div class="row ml-1">
+                    <h1 class="content-title">Add Artist</h1>
                 </div>
-                <!-- Album body like song names -->
-                <div class="album-tracklist row">
-                    <div class="col-sm-12">
-                        <ul>
-                            <li>1. Distorted Records</li>
-                            <li>2. A$AP Forever REMIX</li>
-                            <li>3. Tony Tone</li>
-                            <li>4. Fukk Sleep</li>
-                            <li>5. Praise The Lord(Da Shine)</li>
-                            <li>6. CALLDROPS</li>
-                            <li>7. Buck Shots</li>
-                            <li>8. Gunz N Butter</li>
-                            <li>9. Brotha Man</li>
-                            <li>10. OG Beeper</li>
-                            <li>11. Kids Turned Out Fine</li>
-                            <li>12. Hun43rd</li>
-                            <li>13. Changes</li>
-                            <li>14. Black Tux, White Collar</li>
-                            <li id="end-tracklist">15. Purity</li>
-                        </ul>
+                <!-- Add Artist forms and stuff-->
+                <div class="row">
+                    <div class="add-img-div">
+                        <img class="add-img" src="/public_html/img/pfp/blank.png" alt="">
+                        <input type="file" id="myFile" name="filename">
+                    </div>
+                    <div class="add-content-div">
+                        <label class="add-label" for="artist-name">Artist Name:</label>
+                        <br>
+                        <input class="add-input" id="artist-name" type="text"/>
+                        <form class="add-submit" type="submit" value="Submit">Submit</form>
                     </div>
                 </div>
 
-                <div class="content-splitter"></div>
 
-                <!--Start Album comment section-->
-                <h1 class="h3 content-title">Reviews:</h1>
-                <div class="row comments justify-content-around">
-                    <!-- all the comments -->
-                    <div class="comment">
-                        <div class="comment-header">
-                            <h1>User</h1>
-                            <h2>Rating: 5/5</h2>
-                        </div>
-                        <div class="comment-body">
-                            <p>This is where users will leave the details of their reviews,
-                                explaining why they did or didn't like a particular song/album/playlist.
-                            The user will also be able to edit their comments and delete them at any point</p>
-                        </div>
-
-                    </div>
-                    <div class="comment">
-                        <div class="comment-header">
-                            <h1>User</h1>
-                            <h2>Rating: 5/5</h2>
-                        </div>
-                        <div class="comment-body">
-                            <p>This is where users will leave the details of their reviews,
-                                explaining why they did or didn't like a particular song/album/playlist.
-                                The user will also be able to edit their comments and delete them at any point</p>
-                        </div>
-
-                    </div>
-                    <div class="comment">
-                        <div class="comment-header">
-                            <h1>User</h1>
-                            <h2>Rating: 5/5</h2>
-                        </div>
-                        <div class="comment-body">
-                            <p>This is where users will leave the details of their reviews,
-                                explaining why they did or didn't like a particular song/album/playlist.
-                                The user will also be able to edit their comments and delete them at any point</p>
-                        </div>
-
-                    </div>
-                    <div class="comment">
-                        <div class="comment-header">
-                            <h1>User</h1>
-                            <h2>Rating: 5/5</h2>
-                        </div>
-                        <div class="comment-body">
-                            <p>This is where users will leave the details of their reviews,
-                                explaining why they did or didn't like a particular song/album/playlist.
-                                The user will also be able to edit their comments and delete them at any point</p>
-                        </div>
-
-                    </div>
-                    <div class="comment">
-                        <div class="comment-header">
-                            <h1>User</h1>
-                            <h2>Rating: 5/5</h2>
-                        </div>
-                        <div class="comment-body">
-                            <p>This is where users will leave the details of their reviews,
-                                explaining why they did or didn't like a particular song/album/playlist.
-                                The user will also be able to edit their comments and delete them at any point</p>
-                        </div>
-
-                    </div>
-                </div>
-
-                <!--Add comment button-->
-                <div class="row add-comment justify-content-center mb-5">
-                    <a href="../public_html/templates/addComment.html" class="add-comment-button">Add Review</a>
-                </div>
-                <!--Start Album comment section-->
             </div>
             <!-- /.container-fluid -->
 
@@ -326,7 +237,7 @@
         <footer class="sticky-footer bg-darker">
             <div class="container my-auto">
                 <div class="copyright text-center my-auto">
-                    <span>Copyright &copy; Your Website 2020</span>
+                    <span>Copyright &copy; Tau Tech 2022</span>
                 </div>
             </div>
         </footer>

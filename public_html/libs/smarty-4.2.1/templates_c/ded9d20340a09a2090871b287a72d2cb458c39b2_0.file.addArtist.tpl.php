@@ -1,4 +1,27 @@
-<!DOCTYPE html>
+<?php
+/* Smarty version 4.2.1, created on 2022-10-12 16:44:08
+  from '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/addArtist.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '4.2.1',
+  'unifunc' => 'content_63472718773310_59542077',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'ded9d20340a09a2090871b287a72d2cb458c39b2' => 
+    array (
+      0 => '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/addArtist.tpl',
+      1 => 1665607447,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_63472718773310_59542077 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -9,7 +32,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Create Playlist</title>
+    <title>Add Artist</title>
 
     <!-- Custom fonts for this template-->
     <link href="/public_html/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -82,8 +105,8 @@
             <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Browse All:</h6>
-                    <a class="collapse-item" href="browseArtists.html">Artists</a>
-                    <a class="collapse-item" href="browseAlbums.html">Albums</a>
+                    <a class="collapse-item" href="browseArtists.tpl">Artists</a>
+                    <a class="collapse-item" href="browseAlbums.tpl">Albums</a>
                 </div>
             </div>
         </li>
@@ -95,10 +118,10 @@
                 <i class="fas fa-music"></i>
                 <span>Add Music</span>
             </a>
-            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Add Music:</h6>
-                    <a class="collapse-item" href="../public_html/templates/addArtist.html">Artist</a>
+                    <a class="collapse-item active" href="../public_html/templates/addArtist.html">Artist</a>
                     <a class="collapse-item" href="../public_html/templates/addAlbum.html">Album</a>
                     <a class="collapse-item" href="../public_html/templates/addSong.html">Song</a>
                 </div>
@@ -210,23 +233,18 @@
             <div class="container-fluid">
                 <!-- Page Heading -->
                 <div class="row ml-1">
-                    <h1 class="content-title">Create Playlist</h1>
+                    <h1 class="content-title">Add Artist</h1>
                 </div>
-                <!-- Add Playlist form content -->
+                <!-- Add Artist forms and stuff-->
                 <div class="row">
                     <div class="add-img-div">
                         <img class="add-img" src="/public_html/img/pfp/blank.png" alt="">
                         <input type="file" id="myFile" name="filename">
                     </div>
                     <div class="add-content-div">
-                        <label class="add-label" for="playlist-name">Playlist Name:</label>
+                        <label class="add-label" for="artist-name">Artist Name:</label>
                         <br>
-                        <input class="add-input" id="playlist-name" type="text"/>
-                        <br>
-                        <label class="add-label" for="playlist-description">Description:</label>
-                        <br>
-                        <textarea class="add-input" style="height: 100px; resize: none;" id="playlist-description" ></textarea>
-
+                        <input class="add-input" id="artist-name" type="text"/>
                         <form class="add-submit" type="submit" value="Submit">Submit</form>
                     </div>
                 </div>
@@ -280,15 +298,24 @@
 </div>
 
 <!-- Bootstrap core JavaScript-->
-<script src="/public_html/vendor/jquery/jquery.min.js"></script>
-<script src="/public_html/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<?php echo '<script'; ?>
+ src="/public_html/vendor/jquery/jquery.min.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="/public_html/vendor/bootstrap/js/bootstrap.bundle.min.js"><?php echo '</script'; ?>
+>
 
 <!-- Core plugin JavaScript-->
-<script src="/public_html/vendor/jquery-easing/jquery.easing.min.js"></script>
+<?php echo '<script'; ?>
+ src="/public_html/vendor/jquery-easing/jquery.easing.min.js"><?php echo '</script'; ?>
+>
 
 <!-- Custom scripts for all pages-->
-<script src="/public_html/js/sb-admin-2.min.js"></script>
+<?php echo '<script'; ?>
+ src="/public_html/js/sb-admin-2.min.js"><?php echo '</script'; ?>
+>
 
 </body>
 
-</html>
+</html><?php }
+}

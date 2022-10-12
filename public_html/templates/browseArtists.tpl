@@ -2,14 +2,13 @@
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Browse Albums</title>
+    <title>Browse Artists</title>
 
     <!-- Custom fonts for this template-->
     <link href="/public_html/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -20,6 +19,8 @@
     <!-- Custom styles for this template-->
     <link href="/public_html/css/sb-admin-2.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/public_html/css/browseDivStyles.css">
+    <script src="https://kit.fontawesome.com/125fe29883.js" crossorigin="anonymous"></script>
+
 
 </head>
 
@@ -78,8 +79,8 @@
             <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Browse All:</h6>
-                    <a class="collapse-item" href="browseArtists.html">Artists</a>
-                    <a class="collapse-item active" href="../public_html/templates/browseAlbums.html">Albums</a>
+                    <a class="collapse-item active" href="../public_html/templates/browseArtists.html">Artists</a>
+                    <a class="collapse-item" href="browseAlbums.tpl">Albums</a>
                 </div>
             </div>
         </li>
@@ -206,17 +207,57 @@
             <div class="container-fluid">
 
                 <!-- Page Heading -->
-                <h1 class="h3 mb-4 content-title">Browse All Albums:</h1>
-
+                <h1 class="h3 mb-4 content-title">Browse All Artists:</h1>
                 <!--Page Content-->
                 <div class="row pl-3 pr-3 justify-content-around">
-                    <!-- album content divs-->
-                    <a class="content" href="../public_html/templates/viewAlbum.html">
+                    <!-- artist content divs-->
+                    <a class="content" href="../public_html/templates/viewArtist.html">
                         <div class="content-img">
-                            <img class="img-fluid" src="/public_html/img/album-imgs/testing-asap-rocky.jpeg" alt="The Beatles">
+                            <img class="img-fluid" src="/public_html/img/artist-imgs/Asap-Rocky.jpg" alt="A$AP Rocky">
                         </div>
-                        <h1>TESTING</h1>
-                        <h2>A$AP Rocky • 2018</h2>
+                        <h1>A$AP Rocky</h1>
+                    </a>
+                    <a class="content" href="#">
+                        <div class="content-img">
+                            <img class="img-fluid" src="/public_html/img/artist-imgs/Andy-Mineo.jpg" alt="The Beatles">
+                        </div>
+                        <h1>Andy Mineo</h1>
+                    </a>
+                    <a class="content" href="#">
+                        <div class="content-img">
+                            <img class="img-fluid" src="/public_html/img/artist-imgs/Arctic-Monkeys.jpeg" alt="The Beatles">
+                        </div>
+                        <h1>Arctic Monkeys</h1>
+                    </a>
+                    <a class="content" href="#">
+                        <div class="content-img">
+                            <img class="img-fluid" src="/public_html/img/artist-imgs/Baby-Keem.jpeg" alt="The Beatles">
+                        </div>
+                        <h1>Baby Keem</h1>
+                    </a>
+                    <a class="content" href="#">
+                        <div class="content-img">
+                            <img class="img-fluid" src="/public_html/img/artist-imgs/Backseat-Lovers.PNG" alt="The Beatles">
+                        </div>
+                        <h1>The Backseat Lovers</h1>
+                    </a>
+                    <a class="content" href="#">
+                        <div class="content-img">
+                            <img class="img-fluid" src="/public_html/img/artist-imgs/Bad-Bunny.jpeg" alt="The Beatles">
+                        </div>
+                        <h1>Bad Bunny</h1>
+                    </a>
+                    <a class="content" href="#">
+                        <div class="content-img">
+                            <img class="img-fluid" src="/public_html/img/artist-imgs/the-beatles.jpg" alt="The Beatles">
+                        </div>
+                        <h1>The Beatles</h1>
+                    </a>
+                    <a class="content" href="#">
+                        <div class="content-img">
+                            <img class="img-fluid" src="/public_html/img/artist-imgs/Gorillaz.jpeg" alt="">
+                        </div>
+                        <h1>Gorillaz</h1>
                     </a>
                 </div>
 

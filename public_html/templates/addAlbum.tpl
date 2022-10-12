@@ -9,10 +9,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>My Profile</title>
+    <title>Add Album</title>
 
     <!-- Custom fonts for this template-->
-    <link href="/public_html/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
             href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
             rel="stylesheet">
@@ -21,7 +21,9 @@
     <link href="/public_html/css/sb-admin-2.min.css" rel="stylesheet">
 
     <!-- Custom style sheet to change -->
-    <link href="/public_html/css/profile.css" rel="stylesheet">
+    <link href="/public_html/css/browseDivStyles.css" rel="stylesheet">
+    <link rel="stylesheet" href="/public_html/css/addPageStyles.css">
+    <script src="https://kit.fontawesome.com/125fe29883.js" crossorigin="anonymous"></script>
 
 </head>
 
@@ -50,7 +52,7 @@
                 <i class="fas fa-folder-open    "></i>
                 <span>My Library</span></a>
         </li>
-        <li class="nav-item active">
+        <li class="nav-item">
             <a class="nav-link" href="../public_html/templates/profile.html">
                 <i class="fas fa-user fa-tachometer-alt"></i>
                 <span>My Profile</span></a>
@@ -80,8 +82,8 @@
             <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Browse All:</h6>
-                    <a class="collapse-item" href="browseArtists.html">Artists</a>
-                    <a class="collapse-item" href="browseAlbums.html">Albums</a>
+                    <a class="collapse-item" href="browseArtists.tpl">Artists</a>
+                    <a class="collapse-item" href="browseAlbums.tpl">Albums</a>
                 </div>
             </div>
         </li>
@@ -93,15 +95,16 @@
                 <i class="fas fa-music"></i>
                 <span>Add Music</span>
             </a>
-            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Add Music:</h6>
                     <a class="collapse-item" href="../public_html/templates/addArtist.html">Artist</a>
-                    <a class="collapse-item" href="../public_html/templates/addAlbum.html">Album</a>
+                    <a class="collapse-item active" href="../public_html/templates/addAlbum.html">Album</a>
                     <a class="collapse-item" href="../public_html/templates/addSong.html">Song</a>
                 </div>
             </div>
         </li>
+
 
         <!-- Divider -->
         <hr class="sidebar-divider d-none d-md-block">
@@ -206,65 +209,35 @@
 
             <!-- Begin Page Content -->
             <div class="container-fluid">
-
                 <!-- Page Heading -->
-                <img class="artwork float-left pfp" src="/public_html/img/pfp/blank.png">
-                <h1>Account Name</h1>
-
-                <div class="buttons">
-                    <!-- Change Password -->
-                    <button class="open-button pfpbutton" onclick="openForm()">Change Password</button>
-
-                    <!--Upload PFP Image -->
-                    <input type="file" id="imgupload" style="display:none"/>
-                    <label for='imgupload'> <button id="OpenImgUpload">Profile Picture Upload</button></label>
+                <div class="row ml-1">
+                    <h1 class="content-title">Add Album</h1>
                 </div>
+                <!-- Add album content-->
+                <div class="row">
+                    <div class="add-img-div">
+                        <img class="add-img" src="/public_html/img/pfp/blank.png" alt="">
+                        <input type="file" id="myFile" name="filename">
+                    </div>
+                    <div class="add-content-div">
+                        <label class="add-label" for="select-artist">Artist Name:</label>
+                        <br>
+                        <select required name="select-artist" class="add-dropdown" id="select-artist">
+                            <option>A$AP Rocky</option>
+                            <option>Andy Mineo</option>
+                            <option>Arctic Monkeys</option>
+                            <option>Baby Keem</option>
+                            <option>The Backseat Lovers</option>
+                            <option>Bad Bunny</option>
+                        </select>
+                        <br>
+                        <label class="add-label" for="album-name">Album Name:</label>
+                        <br>
+                        <input class="add-input" id="album-name" type="text"/>
 
-                <!-- change password popup -->
-                <div class="form-popup" id="myForm">
-                    <form class="form-container">
-                        <label for="oldpw"><b>Old password</b></label>
-                        <input type="password" placeholder="Enter old password" id="oldpw" name="oldpw" required>
-
-                        <label for="newpw"><b>New password</b></label>
-                        <input type="password" placeholder="Enter new password" id="newpw" name="newpw" required>
-
-                        <button type="submit" class="btn">Change</button>
-                        <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
-                    </form>
+                        <form class="add-submit" type="submit" value="Submit">Submit</form>
+                    </div>
                 </div>
-
-                <script>
-                    function openForm() {
-                        document.getElementById("myForm").style.display = "block";
-                    }
-                    function closeForm() {
-                        document.getElementById("myForm").style.display = "none";
-                    }
-                </script>
-
-                <br><br><br><br>
-                <table class="table table-hover">
-                    <tbody>
-                        <tr>
-                            <th>Songs Uploaded:</th>
-                            <th>15</th>
-                        </tr>
-                        <tr>
-                            <th>Artists Uploaded:</th>
-                            <th>8</th>
-                        </tr>
-                        <tr>
-                            <th>Album Uploaded:</th>
-                            <th>1</th>
-                        </tr>
-                        <tr>
-                            <th>Playlist Created:</th>
-                            <th>0</th>
-                        </tr>
-                    </tbody>
-                </table>
-
             </div>
             <!-- /.container-fluid -->
 
@@ -275,7 +248,7 @@
         <footer class="sticky-footer bg-darker">
             <div class="container my-auto">
                 <div class="copyright text-center my-auto">
-                    <span>Copyright &copy; Your Website 2020</span>
+                    <span>Copyright &copy; Tau Tech 2022</span>
                 </div>
             </div>
         </footer>

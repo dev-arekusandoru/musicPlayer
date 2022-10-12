@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Add Album</title>
+    <title>Explore</title>
 
     <!-- Custom fonts for this template-->
     <link href="/public_html/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -19,10 +19,8 @@
 
     <!-- Custom styles for this template-->
     <link href="/public_html/css/sb-admin-2.min.css" rel="stylesheet">
-
-    <!-- Custom style sheet to change -->
-    <link href="/public_html/css/browseDivStyles.css" rel="stylesheet">
-    <link rel="stylesheet" href="/public_html/css/addPageStyles.css">
+    <link rel="stylesheet" href="/public_html/css/browseDivStyles.css">
+    <script src="https://kit.fontawesome.com/125fe29883.js" crossorigin="anonymous"></script>
 
 
 </head>
@@ -47,7 +45,7 @@
         <hr class="sidebar-divider my-0">
 
         <!-- Nav Item - Dashboard -->
-        <li class="nav-item">
+        <li class="nav-item active">
             <a class="nav-link" href="../public_html/templates/library.html">
                 <i class="fas fa-folder-open    "></i>
                 <span>My Library</span></a>
@@ -82,8 +80,8 @@
             <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Browse All:</h6>
-                    <a class="collapse-item" href="browseArtists.html">Artists</a>
-                    <a class="collapse-item" href="browseAlbums.html">Albums</a>
+                    <a class="collapse-item" href="browseArtists.tpl">Artists</a>
+                    <a class="collapse-item" href="browseAlbums.tpl">Albums</a>
                 </div>
             </div>
         </li>
@@ -95,16 +93,15 @@
                 <i class="fas fa-music"></i>
                 <span>Add Music</span>
             </a>
-            <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Add Music:</h6>
                     <a class="collapse-item" href="../public_html/templates/addArtist.html">Artist</a>
                     <a class="collapse-item" href="../public_html/templates/addAlbum.html">Album</a>
-                    <a class="collapse-item active" href="../public_html/templates/addSong.html">Song</a>
+                    <a class="collapse-item" href="../public_html/templates/addSong.html">Song</a>
                 </div>
             </div>
         </li>
-
 
         <!-- Divider -->
         <hr class="sidebar-divider d-none d-md-block">
@@ -186,11 +183,11 @@
                         <!-- Dropdown - User Information -->
                         <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                              aria-labelledby="userDropdown">
-                            <a class="dropdown-item active" href="#">
-                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400 active"></i>
+                            <a class="dropdown-item" href="#">
+                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                 Profile
                             </a>
-                            <a class="dropdown-item" href="#">
+                            <a class="dropdown-item active" href="#">
                                 <i class="fas fa-folder-open fa-sm fa-fw mr-2 text-gray-400"></i>
                                 My Library
                             </a>
@@ -209,38 +206,172 @@
 
             <!-- Begin Page Content -->
             <div class="container-fluid">
-                <!-- Page Heading -->
-                <div class="row ml-1">
-                    <h1 class="content-title">Add Song</h1>
-                </div>
-                <!-- Add song form content-->
-                <div class="row add-content">
-                    <div class="col-sm-2.5 ">
-                        <img class="add-img" src="/public_html/img/pfp/blank.png" alt="">
-                    </div>
-                    <div class="col">
-                        <label class="add-label" for="select-artist">Artist Name:</label>
-                        <br>
-                        <select required name="select-artist" class="add-dropdown" id="select-artist">
-                            <option>A$AP Rocky</option>
-                            <option>Andy Mineo</option>
-                            <option>Arctic Monkeys</option>
-                            <option>Baby Keem</option>
-                            <option>The Backseat Lovers</option>
-                            <option>Bad Bunny</option>
-                        </select>
-                        <br>
-                        <label class="add-label" for="select-album">Album Name:</label>
-                        <br>
-                        <select required name="select-album" class="add-dropdown" id="select-album">
-                            <option>Testing</option>
-                        </select>
-                        <br>
-                        <label class="add-label" for="song-name">Song Name:</label>
-                        <br>
-                        <input class="add-input" id="song-name" type="text"/>
 
-                        <form class="add-submit" type="submit" value="Submit">Submit</form>
+                <!-- Page Heading -->
+                <!-- Artists Heading -->
+                <h1 class="h3 mb-4 content-title">My Artists:</h1>
+                <!--Artists Content-->
+                <div class="row pl-3 pr-3 justify-content-around">
+                    <!-- artist content divs-->
+                    <div class="content">
+                        <div class="content-img">
+                            <img class="img-fluid" src="/public_html/img/artist-imgs/Asap-Rocky.jpg" alt="A$AP Rocky">
+                        </div>
+                        <h1>A$AP Rocky</h1>
+                    </div>
+                    <div class="content">
+                        <div class="content-img">
+                            <img class="img-fluid" src="/public_html/img/artist-imgs/Andy-Mineo.jpg" alt="The Beatles">
+                        </div>
+                        <h1>Andy Mineo</h1>
+                    </div>
+                    <div class="content">
+                        <div class="content-img">
+                            <img class="img-fluid" src="/public_html/img/artist-imgs/Arctic-Monkeys.jpeg" alt="The Beatles">
+                        </div>
+                        <h1>Arctic Monkeys</h1>
+                    </div>
+                    <div class="content">
+                        <div class="content-img">
+                            <img class="img-fluid" src="/public_html/img/artist-imgs/Baby-Keem.jpeg" alt="The Beatles">
+                        </div>
+                        <h1>Baby Keem</h1>
+                    </div>
+                    <div class="content">
+                        <div class="content-img">
+                            <img class="img-fluid" src="/public_html/img/artist-imgs/Backseat-Lovers.PNG" alt="The Beatles">
+                        </div>
+                        <h1>The Backseat Lovers</h1>
+                    </div>
+                    <div class="content">
+                        <div class="content-img">
+                            <img class="img-fluid" src="/public_html/img/artist-imgs/Bad-Bunny.jpeg" alt="The Beatles">
+                        </div>
+                        <h1>Bad Bunny</h1>
+                    </div>
+                    <div class="content">
+                        <div class="content-img">
+                            <img class="img-fluid" src="/public_html/img/artist-imgs/the-beatles.jpg" alt="The Beatles">
+                        </div>
+                        <h1>The Beatles</h1>
+                    </div>
+                    <div class="content">
+                        <a class="content-img" href="viewAlbum.tpl">
+                            <img class="img-fluid" src="/public_html/img/artist-imgs/Gorillaz.jpeg" alt="">
+                        </a>
+                        <h1>Gorillaz</h1>
+                    </div>
+                    <div class="content">
+                        <a class="content-img" href="viewAlbum.tpl">
+                            <img class="img-fluid" src="/public_html/img/artist-imgs/LivingTombstoneIcon.jpg" alt="">
+                        </a>
+                        <h1>The Living Tombstone</h1>
+                    </div>
+                    <div class="content">
+                        <a class="content-img" href="viewAlbum.tpl">
+                            <img class="img-fluid" src="/public_html/img/artist-imgs/TallyHall.jpg" alt="">
+                        </a>
+                        <h1>Tally Hall</h1>
+                    </div>
+                </div>
+
+                <!--Content Splitter-->
+                <div class="content-splitter ml-1"></div>
+
+                <!-- Albums Heading -->
+                <h1 class="h3 mb-4 content-title">My Albums:</h1>
+                <!--Albums Content-->
+                <div class="row pl-3 pr-3 justify-content-around">
+                    <!-- album content divs-->
+                    <div class="content">
+                        <div class="content-img">
+                            <img class="img-fluid" src="/public_html/img/album-imgs/testing-asap-rocky.jpeg" alt="The Beatles">
+                        </div>
+                        <h1>TESTING</h1>
+                        <h2>A$AP Rocky • 2018</h2>
+                    </div>
+                    <div class="content">
+                        <div class="content-img">
+                            <img class="img-fluid" src="/public_html/img/artist-imgs/Gorillaz.jpeg" alt="">
+                        </div>
+                        <h1>Cracker Island</h1>
+                        <h2>Gorillaz • 2023</h2>
+                    </div>
+                    <div class="content">
+                        <div class="content-img">
+                            <img class="img-fluid" src="/public_html/img/album-imgs/MMMM.jpg" alt="The Beatles">
+                        </div>
+                        <h1>Marvin's Marvelous...</h1>
+                        <h2>Tally Hall • 2005</h2>
+                    </div>
+                    <div class="content">
+                        <div class="content-img">
+                            <img class="img-fluid" src="/public_html/img/album-imgs/ZeroOne.jpg" alt="The Beatles">
+                        </div>
+                        <h1>zero_one</h1>
+                        <h2>The Living Tombstone • 2020</h2>
+                    </div>
+                    <div class="content">
+                        <div class="content-img">
+                            <img class="img-fluid" src="/public_html/img/album-imgs/AbbeyRoad.jpg" alt="The Beatles">
+                        </div>
+                        <h1>Abbey Road</h1>
+                        <h2>The Beatles • 1969</h2>
+                    </div>
+                    <div class="content">
+                        <div class="content-img">
+                            <img class="img-fluid" src="/public_html/img/album-imgs/MMMM.jpg" alt="The Beatles">
+                        </div>
+                        <h1>Marvin's Marvelous...</h1>
+                        <h2>Tally Hall • 2005</h2>
+                    </div>
+                    <div class="content">
+                        <div class="content-img">
+                            <img class="img-fluid" src="/public_html/img/album-imgs/ZeroOne.jpg" alt="The Beatles">
+                        </div>
+                        <h1>zero_one</h1>
+                        <h2>The Living Tombstone • 2020</h2>
+                    </div>
+                    <div class="content">
+                        <div class="content-img">
+                            <img class="img-fluid" src="/public_html/img/album-imgs/AbbeyRoad.jpg" alt="The Beatles">
+                        </div>
+                        <h1>Abbey Road</h1>
+                        <h2>The Beatles • 1969</h2>
+                    </div>
+                </div>
+
+                <!--Content Splitter-->
+                <div class="content-splitter ml-1"></div>
+
+                <!-- Playlists Heading -->
+                <h1 class="h3 content-title">My Playlists:</h1>
+                <a class="mb-4" href="../public_html/templates/addPlaylist.html">Create new</a>
+                <!--Playlist Content-->
+                <div class="row pl-3 pr-3 justify-content-around">
+                    <!-- playlist content divs-->
+                    <a class="content" href="../public_html/templates/viewPlaylist.html">
+                        <div class="content-img">
+                            <img class="img-fluid" src="/public_html/img/empty-playlist.jpg" alt="The Beatles">
+                        </div>
+                        <h1>User's Playlist</h1>
+                        <h2>User • 3 Songs</h2>
+                    </a>
+
+                    <div class="content">
+                        <div class="content-img">
+                            <img class="img-fluid" src="/public_html/img/empty-playlist.jpg" alt="">
+                        </div>
+                        <h1>User's Playlist</h1>
+                        <h2>User • 43 Songs</h2>
+                    </div>
+
+                    <div class="content">
+                        <div class="content-img">
+                            <img class="img-fluid" src="/public_html/img/empty-playlist.jpg" alt="The Beatles">
+                        </div>
+                        <h1>User's Playlist</h1>
+                        <h2>User • 15 Songs</h2>
                     </div>
                 </div>
 

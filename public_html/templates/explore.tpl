@@ -20,6 +20,8 @@
     <!-- Custom styles for this template-->
     <link href="/public_html/css/sb-admin-2.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/public_html/css/browseDivStyles.css">
+    <script src="https://kit.fontawesome.com/125fe29883.js" crossorigin="anonymous"></script>
+
 
 </head>
 
@@ -78,8 +80,8 @@
             <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Browse All:</h6>
-                    <a class="collapse-item" href="browseArtists.html">Artists</a>
-                    <a class="collapse-item" href="browseAlbums.html">Albums</a>
+                    <a class="collapse-item" href="browseArtists.tpl">Artists</a>
+                    <a class="collapse-item" href="browseAlbums.tpl">Albums</a>
                 </div>
             </div>
         </li>
@@ -253,19 +255,19 @@
                         <h1>The Beatles</h1>
                     </div>
                     <div class="content">
-                        <a class="content-img" href="viewAlbum.html">
+                        <a class="content-img" href="viewAlbum.tpl">
                             <img class="img-fluid" src="/public_html/img/artist-imgs/Gorillaz.jpeg" alt="">
                         </a>
                         <h1>Gorillaz</h1>
                     </div>
                     <div class="content">
-                        <a class="content-img" href="viewAlbum.html">
+                        <a class="content-img" href="viewAlbum.tpl">
                             <img class="img-fluid" src="/public_html/img/artist-imgs/LivingTombstoneIcon.jpg" alt="">
                         </a>
                         <h1>The Living Tombstone</h1>
                     </div>
                     <div class="content">
-                        <a class="content-img" href="viewAlbum.html">
+                        <a class="content-img" href="viewAlbum.tpl">
                             <img class="img-fluid" src="/public_html/img/artist-imgs/TallyHall.jpg" alt="">
                         </a>
                         <h1>Tally Hall</h1>
@@ -460,19 +462,19 @@
                         <h1>The Beatles</h1>
                     </div>
                     <div class="content">
-                        <a class="content-img" href="viewAlbum.html">
+                        <a class="content-img" href="viewAlbum.tpl">
                             <img class="img-fluid" src="/public_html/img/artist-imgs/Gorillaz.jpeg" alt="">
                         </a>
                         <h1>Gorillaz</h1>
                     </div>
                     <div class="content">
-                        <a class="content-img" href="viewAlbum.html">
+                        <a class="content-img" href="viewAlbum.tpl">
                             <img class="img-fluid" src="/public_html/img/artist-imgs/LivingTombstoneIcon.jpg" alt="">
                         </a>
                         <h1>The Living Tombstone</h1>
                     </div>
                     <div class="content">
-                        <a class="content-img" href="viewAlbum.html">
+                        <a class="content-img" href="viewAlbum.tpl">
                             <img class="img-fluid" src="/public_html/img/artist-imgs/TallyHall.jpg" alt="">
                         </a>
                         <h1>Tally Hall</h1>
