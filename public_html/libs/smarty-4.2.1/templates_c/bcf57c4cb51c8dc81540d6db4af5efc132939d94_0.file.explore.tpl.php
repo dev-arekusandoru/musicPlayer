@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-13 17:38:04
+/* Smarty version 4.2.1, created on 2022-10-13 18:06:39
   from '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/explore.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_6348853c2f5687_45568237',
+  'unifunc' => 'content_63488bef75d3c4_88599971',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'bcf57c4cb51c8dc81540d6db4af5efc132939d94' => 
     array (
       0 => '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/explore.tpl',
-      1 => 1665697081,
+      1 => 1665698713,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6348853c2f5687_45568237 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63488bef75d3c4_88599971 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -41,8 +41,8 @@ function content_6348853c2f5687_45568237 (Smarty_Internal_Template $_smarty_tpl)
             rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="../public_html/css/sb-admin-2.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../public_html/css/browseDivStyles.css">
+    <link href="/css/sb-admin-2.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/browseDivStyles.css">
     <?php echo '<script'; ?>
  src="https://kit.fontawesome.com/125fe29883.js" crossorigin="anonymous"><?php echo '</script'; ?>
 >
@@ -59,7 +59,7 @@ function content_6348853c2f5687_45568237 (Smarty_Internal_Template $_smarty_tpl)
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
         <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../public_html/templates/explore.php">
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../public_html/explore.php">
             <div class="sidebar-brand-icon rotate-n-15">
                 <i class="fas fa-music"></i>
             </div>

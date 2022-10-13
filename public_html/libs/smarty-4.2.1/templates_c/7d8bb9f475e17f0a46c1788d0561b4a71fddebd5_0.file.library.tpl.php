@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-13 17:45:00
+/* Smarty version 4.2.1, created on 2022-10-13 18:07:10
   from '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/library.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_634886dc431371_21892340',
+  'unifunc' => 'content_63488c0ebb5994_46166321',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7d8bb9f475e17f0a46c1788d0561b4a71fddebd5' => 
     array (
       0 => '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/library.tpl',
-      1 => 1665697482,
+      1 => 1665697855,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_634886dc431371_21892340 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63488c0ebb5994_46166321 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -59,7 +59,7 @@ function content_634886dc431371_21892340 (Smarty_Internal_Template $_smarty_tpl)
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
         <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../public_html/templates/explore.php">
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../public_html/explore.php">
             <div class="sidebar-brand-icon rotate-n-15">
                 <i class="fas fa-music"></i>
             </div>
@@ -371,11 +371,11 @@ function content_634886dc431371_21892340 (Smarty_Internal_Template $_smarty_tpl)
 
                 <!-- Playlists Heading -->
                 <h1 class="h3 content-title">My Playlists:</h1>
-                <a class="mb-4" href="../public_html/templates/addPlaylist.html">Create new</a>
+                <a class="mb-4" href="../public_html/addPlaylist.php">Create new</a>
                 <!--Playlist Content-->
                 <div class="row pl-3 pr-3 justify-content-around">
                     <!-- playlist content divs-->
-                    <a class="content" href="../public_html/templates/viewPlaylist.html">
+                    <a class="content" href="../public_html/viewPlaylist.php">
                         <div class="content-img">
                             <img class="img-fluid" src="../public_html/img/empty-playlist.jpg" alt="The Beatles">
                         </div>
