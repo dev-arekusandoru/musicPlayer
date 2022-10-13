@@ -12,13 +12,13 @@
     <title>Login</title>
 
     <!-- Custom fonts for this template-->
-    <link href="../public_html/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
             href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
             rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="../public_html/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="/css/sb-admin-2.min.css" rel="stylesheet">
 
 </head>
 
@@ -41,7 +41,7 @@
                                 <div class="text-center">
                                     <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
                                 </div>
-                                <form class="user" action="../public_html/login.php" method="post">
+                                <form class="user" action="/login.php" method="post">
                                     <div class="form-group">
                                         <input type="email" class="form-control form-control-user"
                                                name="email" aria-describedby="emailHelp"
@@ -64,10 +64,10 @@
                                 </form method>
                                 <hr>
                                 <div class="text-center">
-                                    <a class="small" href="../public_html/forgotPassword.php">Forgot Password?</a>
+                                    <a class="small" href="/forgotPassword.php">Forgot Password?</a>
                                 </div>
                                 <div class="text-center">
-                                    <a class="small" href="../public_html/register.php">Create an Account!</a>
+                                    <a class="small" href="/register.php">Create an Account!</a>
                                 </div>
                             </div>
                         </div>
@@ -82,14 +82,14 @@
 </div>
 
 <!-- Bootstrap core JavaScript
-<script src="../public_html/vendor/jquery/jquery.min.js"></script>
-<script src="../public_html/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/vendor/jquery/jquery.min.js"></script>
+<script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 <!-- Core plugin JavaScript-->
-<script src="../public_html/vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
 
 <!-- Custom scripts for all pages-->
-<script src="../public_html/js/sb-admin-2.min.js"></script>
+<script src="/js/sb-admin-2.min.js"></script>
 
 </body>
 

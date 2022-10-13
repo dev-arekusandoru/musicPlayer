@@ -63,7 +63,7 @@
                                             id="exampleRepeatPassword" placeholder="Verify Password">
                                     </div>
                                 </div>
-                                <a href="userLogin.html" class="btn btn-primary btn-user btn-block">
+                                <a href=".html" class="btn btn-primary btn-user btn-block">
                                     Register Account
                                 </a>
                             </form>

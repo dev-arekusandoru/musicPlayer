@@ -12,16 +12,16 @@
     <title>Album Title</title>
 
     <!-- Custom fonts for this template-->
-    <link href="../public_html/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
             href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
             rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="../public_html/css/sb-admin-2.min.css" rel="stylesheet">
-    <link href="../public_html/css/starRating.css" rel="stylesheet">
-    <link rel="stylesheet" href="../public_html/css/viewStyles.css">
-    <link rel="stylesheet" href="../public_html/css/browseDivStyles.css">
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="css/starRating.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/viewStyles.css">
+    <link rel="stylesheet" href="css/browseDivStyles.css">
 
     <script src="https://kit.fontawesome.com/125fe29883.js" crossorigin="anonymous"></script>
 
@@ -37,7 +37,7 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
         <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../public_html/explore.php">
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="explore.php">
             <div class="sidebar-brand-icon rotate-n-15">
                 <i class="fas fa-music"></i>
             </div>
@@ -49,12 +49,12 @@
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item">
-            <a class="nav-link" href="../public_html/library.php">
+            <a class="nav-link" href="library.php">
                 <i class="fas fa-folder-open    "></i>
                 <span>My Library</span></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="../public_html/profile.php">
+            <a class="nav-link" href="profile.php">
                 <i class="fas fa-user fa-tachometer-alt"></i>
                 <span>My Profile</span></a>
         </li>
@@ -68,7 +68,7 @@
 
         <!-- Nav Item - Utilities Collapse Menu -->
         <li class="nav-item active">
-            <a class="nav-link" href="../public_html/explore.php">
+            <a class="nav-link" href="explore.php">
                 <i class="fas fa-compass"></i>
                 <span>Explore</span></a>
         </li>
@@ -83,8 +83,8 @@
             <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Browse All:</h6>
-                    <a class="collapse-item" href="../public_html/browseArtists.php">Artists</a>
-                    <a class="collapse-item" href="../public_html/browseAlbums.php">Albums</a>
+                    <a class="collapse-item" href="browseArtists.php">Artists</a>
+                    <a class="collapse-item" href="browseAlbums.php">Albums</a>
                 </div>
             </div>
         </li>
@@ -99,9 +99,9 @@
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Add Music:</h6>
-                    <a class="collapse-item" href="../public_html/addArtist.php">Artist</a>
-                    <a class="collapse-item" href="../public_html/addAlbum.php">Album</a>
-                    <a class="collapse-item" href="../public_html/addSong.php">Song</a>
+                    <a class="collapse-item" href="addArtist.php">Artist</a>
+                    <a class="collapse-item" href="addAlbum.php">Album</a>
+                    <a class="collapse-item" href="addSong.php">Song</a>
                 </div>
             </div>
         </li>
@@ -181,7 +181,7 @@
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="mr-2 d-none d-lg-inline text-gray-600 small">User</span>
                             <img class="img-profile rounded-circle"
-                                 src="../public_html/img/pfp/blank.png" alt="profile">
+                                 src="img/pfp/blank.png" alt="profile">
                         </a>
                         <!-- Dropdown - User Information -->
                         <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -212,21 +212,21 @@
                 <!-- Album header like metadata and stuff -->
                 <div class="album-header row ml-md-2">
                     <div class="album-metadata col-sm-12 p-0">
-                        <img src="../public_html/img/album-imgs/testing-asap-rocky.jpeg" class="img-responsive artwork float-md-left" alt="">
+                        <img src="img/album-imgs/testing-asap-rocky.jpeg" class="img-responsive artwork float-md-left" alt="">
                         <h1>TESTING</h1>
-                        <a href="../public_html/viewArtist.php" class="link-to">A$AP Rocky</a>
+                        <a href="viewArtist.php" class="link-to">A$AP Rocky</a>
                         <h6>HIP-HOP/RAP • 2018</h6>
                         <div class=" ml-0 pl-0">
-                            <img src="../public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                            <img src="../public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                            <img src="../public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                            <img src="../public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                            <img src="../public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                            <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                            <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                            <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                            <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                            <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
                         </div>
                         <div style="height: 15px;"></div>
-                        <a class="mb-7 add-music-button" href="../public_html/addSong.php">Edit Album Details</a>
+                        <a class="mb-7 add-music-button" href="addSong.php">Edit Album Details</a>
                         <br>
-                        <a class="mb-7 add-music-button" href="../public_html/addSong.php">Add Song</a>
+                        <a class="mb-7 add-music-button" href="addSong.php">Add Song</a>
                     </div>
                     <div class="col-sm-6"></div>
                 </div>
@@ -264,11 +264,11 @@
                             <h1 class="row container ml-0 pl-0">User</h1>
                             <div class="row container ml-0 pl-0">
                                 <h2 style="line-height: 27px" class="mr-1">Rating: </h2>
-                                <img src="../public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="../public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="../public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="../public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="../public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
                             </div>
                         </div>
                         <div class="comment-body">
@@ -283,11 +283,11 @@
                             <h1 class="row container ml-0 pl-0">User</h1>
                             <div class="row container ml-0 pl-0">
                                 <h2 style="line-height: 27px" class="mr-1">Rating: </h2>
-                                <img src="../public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="../public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="../public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="../public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="../public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
                             </div>
                         </div>
                         <div class="comment-body">
@@ -302,11 +302,11 @@
                             <h1 class="row container ml-0 pl-0">User</h1>
                             <div class="row container ml-0 pl-0">
                                 <h2 style="line-height: 27px" class="mr-1">Rating: </h2>
-                                <img src="../public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="../public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="../public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="../public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="../public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
                             </div>
                         </div>
                         <div class="comment-body">
@@ -321,11 +321,11 @@
                             <h1 class="row container ml-0 pl-0">User</h1>
                             <div class="row container ml-0 pl-0">
                                 <h2 style="line-height: 27px" class="mr-1">Rating: </h2>
-                                <img src="../public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="../public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="../public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="../public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="../public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
                             </div>
                         </div>
                         <div class="comment-body">
@@ -340,11 +340,11 @@
                             <h1 class="row container ml-0 pl-0">User</h1>
                             <div class="row container ml-0 pl-0">
                                 <h2 style="line-height: 27px" class="mr-1">Rating: </h2>
-                                <img src="../public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="../public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="../public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="../public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="../public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
                             </div>
                         </div>
                         <div class="comment-body">
@@ -466,22 +466,22 @@
             <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
             <div class="modal-footer">
                 <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                <a class="btn btn-primary" href="../public_html/login.php">Logout</a>
+                <a class="btn btn-primary" href="login.php">Logout</a>
             </div>
         </div>
     </div>
 </div>
 
 <!-- Bootstrap core JavaScript-->
-<script src="../public_html/vendor/jquery/jquery.min.js"></script>
-<script src="../public_html/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 <!-- Core plugin JavaScript-->
-<script src="../public_html/vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
 <!-- Custom scripts for all pages-->
-<script src="../public_html/js/sb-admin-2.min.js"></script>
-<script src="../public_html/js/starRating.js"></script>
+<script src="js/sb-admin-2.min.js"></script>
+<script src="js/starRating.js"></script>
 
 </body>
 
