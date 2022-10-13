@@ -1,14 +1,38 @@
-<!DOCTYPE html>
+<?php
+/* Smarty version 4.2.1, created on 2022-10-13 17:45:10
+  from '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/profile.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '4.2.1',
+  'unifunc' => 'content_634886e61278d2_47141973',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'ac196389b9c3e823d9556ff185082dfff0144df0' => 
+    array (
+      0 => '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/profile.tpl',
+      1 => 1665697482,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_634886e61278d2_47141973 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html lang="en">
 
 <head>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Browse Artists</title>
+    <title>My Profile</title>
 
     <!-- Custom fonts for this template-->
     <link href="../public_html/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -18,8 +42,12 @@
 
     <!-- Custom styles for this template-->
     <link href="../public_html/css/sb-admin-2.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../public_html/css/browseDivStyles.css">
-    <script src="https://kit.fontawesome.com/125fe29883.js" crossorigin="anonymous"></script>
+
+    <!-- Custom style sheet to change -->
+    <link href="../public_html/css/profile.css" rel="stylesheet">
+    <?php echo '<script'; ?>
+ src="https://kit.fontawesome.com/125fe29883.js" crossorigin="anonymous"><?php echo '</script'; ?>
+>
 
 
 </head>
@@ -33,7 +61,7 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
         <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../public_html/explore.php">
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../public_html/templates/explore.php">
             <div class="sidebar-brand-icon rotate-n-15">
                 <i class="fas fa-music"></i>
             </div>
@@ -182,8 +210,8 @@
                         <!-- Dropdown - User Information -->
                         <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                              aria-labelledby="userDropdown">
-                            <a class="dropdown-item" href="#">
-                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                            <a class="dropdown-item active" href="#">
+                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400 active"></i>
                                 Profile
                             </a>
                             <a class="dropdown-item" href="#">
@@ -207,59 +235,64 @@
             <div class="container-fluid">
 
                 <!-- Page Heading -->
-                <h1 class="h3 mb-4 content-title">Browse All Artists:</h1>
-                <!--Page Content-->
-                <div class="row pl-3 pr-3 justify-content-around">
-                    <!-- artist content divs-->
-                    <a class="content" href="../public_html/viewArtist.php">
-                        <div class="content-img">
-                            <img class="img-fluid" src="../public_html/img/artist-imgs/Asap-Rocky.jpg" alt="A$AP Rocky">
-                        </div>
-                        <h1>A$AP Rocky</h1>
-                    </a>
-                    <a class="content" href="#">
-                        <div class="content-img">
-                            <img class="img-fluid" src="../public_html/img/artist-imgs/Andy-Mineo.jpg" alt="The Beatles">
-                        </div>
-                        <h1>Andy Mineo</h1>
-                    </a>
-                    <a class="content" href="#">
-                        <div class="content-img">
-                            <img class="img-fluid" src="../public_html/img/artist-imgs/Arctic-Monkeys.jpeg" alt="The Beatles">
-                        </div>
-                        <h1>Arctic Monkeys</h1>
-                    </a>
-                    <a class="content" href="#">
-                        <div class="content-img">
-                            <img class="img-fluid" src="../public_html/img/artist-imgs/Baby-Keem.jpeg" alt="The Beatles">
-                        </div>
-                        <h1>Baby Keem</h1>
-                    </a>
-                    <a class="content" href="#">
-                        <div class="content-img">
-                            <img class="img-fluid" src="../public_html/img/artist-imgs/Backseat-Lovers.PNG" alt="The Beatles">
-                        </div>
-                        <h1>The Backseat Lovers</h1>
-                    </a>
-                    <a class="content" href="#">
-                        <div class="content-img">
-                            <img class="img-fluid" src="../public_html/img/artist-imgs/Bad-Bunny.jpeg" alt="The Beatles">
-                        </div>
-                        <h1>Bad Bunny</h1>
-                    </a>
-                    <a class="content" href="#">
-                        <div class="content-img">
-                            <img class="img-fluid" src="../public_html/img/artist-imgs/the-beatles.jpg" alt="The Beatles">
-                        </div>
-                        <h1>The Beatles</h1>
-                    </a>
-                    <a class="content" href="#">
-                        <div class="content-img">
-                            <img class="img-fluid" src="../public_html/img/artist-imgs/Gorillaz.jpeg" alt="">
-                        </div>
-                        <h1>Gorillaz</h1>
-                    </a>
+                <img class="artwork float-left pfp" src="../public_html/img/pfp/blank.png">
+                <h1>Account Name</h1>
+
+                <div class="buttons">
+                    <!-- Change Password -->
+                    <button class="open-button pfpbutton" onclick="openForm()">Change Password</button>
+
+                    <!--Upload PFP Image -->
+                    <input type="file" id="imgupload" style="display:none"/>
+                    <label for='imgupload'> <button id="OpenImgUpload">Profile Picture Upload</button></label>
                 </div>
+
+                <!-- change password popup -->
+                <div class="form-popup" id="myForm">
+                    <form class="form-container">
+                        <label for="oldpw"><b>Old password</b></label>
+                        <input type="password" placeholder="Enter old password" id="oldpw" name="oldpw" required>
+
+                        <label for="newpw"><b>New password</b></label>
+                        <input type="password" placeholder="Enter new password" id="newpw" name="newpw" required>
+
+                        <button type="submit" class="btn">Change</button>
+                        <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
+                    </form>
+                </div>
+
+                <?php echo '<script'; ?>
+>
+                    function openForm() {
+                        document.getElementById("myForm").style.display = "block";
+                    }
+                    function closeForm() {
+                        document.getElementById("myForm").style.display = "none";
+                    }
+                <?php echo '</script'; ?>
+>
+
+                <br><br><br><br>
+                <table class="table table-hover">
+                    <tbody>
+                        <tr>
+                            <th>Songs Uploaded:</th>
+                            <th>15</th>
+                        </tr>
+                        <tr>
+                            <th>Artists Uploaded:</th>
+                            <th>8</th>
+                        </tr>
+                        <tr>
+                            <th>Album Uploaded:</th>
+                            <th>1</th>
+                        </tr>
+                        <tr>
+                            <th>Playlist Created:</th>
+                            <th>0</th>
+                        </tr>
+                    </tbody>
+                </table>
 
             </div>
             <!-- /.container-fluid -->
@@ -271,7 +304,7 @@
         <footer class="sticky-footer bg-darker">
             <div class="container my-auto">
                 <div class="copyright text-center my-auto">
-                    <span>Copyright &copy; Tau Tech 2022</span>
+                    <span>Copyright &copy; Your Website 2020</span>
                 </div>
             </div>
         </footer>
@@ -309,15 +342,24 @@
 </div>
 
 <!-- Bootstrap core JavaScript-->
-<script src="../public_html/vendor/jquery/jquery.min.js"></script>
-<script src="../public_html/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<?php echo '<script'; ?>
+ src="../public_html/vendor/jquery/jquery.min.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="../public_html/vendor/bootstrap/js/bootstrap.bundle.min.js"><?php echo '</script'; ?>
+>
 
 <!-- Core plugin JavaScript-->
-<script src="../public_html/vendor/jquery-easing/jquery.easing.min.js"></script>
+<?php echo '<script'; ?>
+ src="../public_html/vendor/jquery-easing/jquery.easing.min.js"><?php echo '</script'; ?>
+>
 
 <!-- Custom scripts for all pages-->
-<script src="../public_html/js/sb-admin-2.min.js"></script>
+<?php echo '<script'; ?>
+ src="../public_html/js/sb-admin-2.min.js"><?php echo '</script'; ?>
+>
 
 </body>
 
-</html>
+</html><?php }
+}

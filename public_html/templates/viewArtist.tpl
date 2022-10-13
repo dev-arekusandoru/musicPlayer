@@ -33,7 +33,7 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
         <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../public_html/templates/explore.php">
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../public_html/explore.php">
             <div class="sidebar-brand-icon rotate-n-15">
                 <i class="fas fa-music"></i>
             </div>
@@ -210,11 +210,11 @@
                 <!-- Artist Information -->
                 <h1 class="h3 mb-0 content-title">A$AP Rocky:</h1>
                 <h2 class="mb-1 artist-rating">Average Album Rating: 5/5</h2>
-                <a class="mb-7 add-music-button" href="../public_html/templates/addAlbum.html">Add Album</a>
+                <a class="mb-7 add-music-button" href="../public_html/addAlbum.php">Add Album</a>
                 <!--Page Content-->
                 <!-- Artist Discography  -->
                 <div class="row pl-3 pr-3 justify-content-around">
-                    <a class="content" href="../public_html/templates/viewAlbum.html">
+                    <a class="content" href="../public_html/viewAlbum.php">
                         <div class="content-img">
                             <img class="img-fluid" src="../public_html/img/album-imgs/testing-asap-rocky.jpeg" alt="The Beatles">
                         </div>
@@ -291,7 +291,7 @@
                 </div>
                 <!-- Add Comment Button -->
                 <div class="row add-comment justify-content-center mb-5">
-                    <a href="../public_html/templates/addComment.html" class="add-comment-button">Add Review</a>
+                    <a href="../public_html/addComment.php" class="add-comment-button">Add Review</a>
                 </div>
 
             </div>

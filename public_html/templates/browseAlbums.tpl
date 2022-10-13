@@ -32,7 +32,7 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
         <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../public_html/templates/explore.html">
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../public_html/explore.php">
             <div class="sidebar-brand-icon rotate-n-15">
                 <i class="fas fa-music"></i>
             </div>
@@ -44,12 +44,12 @@
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item">
-            <a class="nav-link" href="../public_html/templates/library.html">
+            <a class="nav-link" href="../public_html/library.php">
                 <i class="fas fa-folder-open    "></i>
                 <span>My Library</span></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="../public_html/templates/profile.html">
+            <a class="nav-link" href="../public_html/profile.php">
                 <i class="fas fa-user fa-tachometer-alt"></i>
                 <span>My Profile</span></a>
         </li>
@@ -62,8 +62,8 @@
         </div>
 
         <!-- Nav Item - Utilities Collapse Menu -->
-        <li class="nav-item">
-            <a class="nav-link" href="../public_html/templates/explore.html">
+        <li class="nav-item active">
+            <a class="nav-link" href="../public_html/explore.php">
                 <i class="fas fa-compass"></i>
                 <span>Explore</span></a>
         </li>
@@ -75,11 +75,11 @@
                 <i class="fas fa-th-large"></i>
                 <span>Browse All</span>
             </a>
-            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionSidebar">
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Browse All:</h6>
-                    <a class="collapse-item" href="browseArtists.tpl">Artists</a>
-                    <a class="collapse-item active" href="../public_html/templates/browseAlbums.html">Albums</a>
+                    <a class="collapse-item" href="../public_html/browseArtists.php">Artists</a>
+                    <a class="collapse-item" href="../public_html/browseAlbums.php">Albums</a>
                 </div>
             </div>
         </li>
@@ -94,9 +94,9 @@
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Add Music:</h6>
-                    <a class="collapse-item" href="../public_html/templates/addArtist.html">Artist</a>
-                    <a class="collapse-item" href="../public_html/templates/addAlbum.html">Album</a>
-                    <a class="collapse-item" href="../public_html/templates/addSong.html">Song</a>
+                    <a class="collapse-item" href="../public_html/addArtist.php">Artist</a>
+                    <a class="collapse-item" href="../public_html/addAlbum.php">Album</a>
+                    <a class="collapse-item" href="../public_html/addSong.php">Song</a>
                 </div>
             </div>
         </li>
@@ -211,7 +211,7 @@
                 <!--Page Content-->
                 <div class="row pl-3 pr-3 justify-content-around">
                     <!-- album content divs-->
-                    <a class="content" href="../public_html/templates/viewAlbum.html">
+                    <a class="content" href="../public_html/viewAlbum.php">
                         <div class="content-img">
                             <img class="img-fluid" src="../public_html/img_html/img/album-imgs/testing-asap-rocky.jpeg" alt="The Beatles">
                         </div>

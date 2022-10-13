@@ -64,10 +64,10 @@
                                 </form method>
                                 <hr>
                                 <div class="text-center">
-                                    <a class="small" href="userForgotPassword.tpl">Forgot Password?</a>
+                                    <a class="small" href="../public_html/forgotPassword.php">Forgot Password?</a>
                                 </div>
                                 <div class="text-center">
-                                    <a class="small" href="userRegister.tpl">Create an Account!</a>
+                                    <a class="small" href="../public_html/register.php">Create an Account!</a>
                                 </div>
                             </div>
                         </div>

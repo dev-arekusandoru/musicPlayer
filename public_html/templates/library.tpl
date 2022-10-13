@@ -34,7 +34,7 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
         <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../public_html/templates/explore.php">
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../public_html/explore.php">
             <div class="sidebar-brand-icon rotate-n-15">
                 <i class="fas fa-music"></i>
             </div>
@@ -346,11 +346,11 @@
 
                 <!-- Playlists Heading -->
                 <h1 class="h3 content-title">My Playlists:</h1>
-                <a class="mb-4" href="../public_html/templates/addPlaylist.html">Create new</a>
+                <a class="mb-4" href="../public_html/addPlaylist.php">Create new</a>
                 <!--Playlist Content-->
                 <div class="row pl-3 pr-3 justify-content-around">
                     <!-- playlist content divs-->
-                    <a class="content" href="../public_html/templates/viewPlaylist.html">
+                    <a class="content" href="../public_html/viewPlaylist.php">
                         <div class="content-img">
                             <img class="img-fluid" src="../public_html/img/empty-playlist.jpg" alt="The Beatles">
                         </div>
