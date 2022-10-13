@@ -1,4 +1,27 @@
-<!DOCTYPE html>
+<?php
+/* Smarty version 4.2.1, created on 2022-10-13 16:23:23
+  from '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/viewArtist.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '4.2.1',
+  'unifunc' => 'content_634873bb57d166_70193202',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'e2b14ea7dd71a160b30b37d168ebd7b222e10214' => 
+    array (
+      0 => '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/viewArtist.tpl',
+      1 => 1665692602,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_634873bb57d166_70193202 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -9,21 +32,20 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Add Artist</title>
+    <title>Artist Name</title>
 
     <!-- Custom fonts for this template-->
-    <link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="/public_html/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
             href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
             rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="/css/sb-admin-2.min.css" rel="stylesheet">
-
-    <!-- Custom style sheet to change -->
-    <link href="/css/browseDivStyles.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/addPageStyles.css">
-    <script src="https://kit.fontawesome.com/125fe29883.js" crossorigin="anonymous"></script>
+    <link href="/public_html/css/sb-admin-2.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/public_html/css/browseDivStyles.css">
+    <?php echo '<script'; ?>
+ src="https://kit.fontawesome.com/125fe29883.js" crossorigin="anonymous"><?php echo '</script'; ?>
+>
 
 </head>
 
@@ -36,7 +58,7 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
         <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/explore.php">
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../public_html/templates/explore.html">
             <div class="sidebar-brand-icon rotate-n-15">
                 <i class="fas fa-music"></i>
             </div>
@@ -48,12 +70,12 @@
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item">
-            <a class="nav-link" href="/library.php">
+            <a class="nav-link" href="../public_html/templates/library.html">
                 <i class="fas fa-folder-open    "></i>
                 <span>My Library</span></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="/profile.php">
+            <a class="nav-link" href="../public_html/templates/profile.html">
                 <i class="fas fa-user fa-tachometer-alt"></i>
                 <span>My Profile</span></a>
         </li>
@@ -66,8 +88,8 @@
         </div>
 
         <!-- Nav Item - Utilities Collapse Menu -->
-        <li class="nav-item active">
-            <a class="nav-link" href="/explore.php">
+        <li class="nav-item">
+            <a class="nav-link" href="../public_html/templates/explore.html">
                 <i class="fas fa-compass"></i>
                 <span>Explore</span></a>
         </li>
@@ -82,8 +104,8 @@
             <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Browse All:</h6>
-                    <a class="collapse-item" href="/browseArtists.php">Artists</a>
-                    <a class="collapse-item" href="/browseAlbums.php">Albums</a>
+                    <a class="collapse-item" href="browseArtists.tpl">Artists</a>
+                    <a class="collapse-item" href="browseAlbums.tpl">Albums</a>
                 </div>
             </div>
         </li>
@@ -98,9 +120,9 @@
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Add Music:</h6>
-                    <a class="collapse-item" href="/addArtist.php">Artist</a>
-                    <a class="collapse-item" href="/addAlbum.php">Album</a>
-                    <a class="collapse-item" href="/addSong.php">Song</a>
+                    <a class="collapse-item" href="../public_html/templates/addArtist.html">Artist</a>
+                    <a class="collapse-item" href="../public_html/templates/addAlbum.html">Album</a>
+                    <a class="collapse-item" href="../public_html/templates/addSong.html">Song</a>
                 </div>
             </div>
         </li>
@@ -180,13 +202,13 @@
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="mr-2 d-none d-lg-inline text-gray-600 small">User</span>
                             <img class="img-profile rounded-circle"
-                                 src="/img/pfp/blank.png">
+                                 src="/public_html/img/pfp/blank.png">
                         </a>
                         <!-- Dropdown - User Information -->
                         <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                              aria-labelledby="userDropdown">
-                            <a class="dropdown-item active" href="#">
-                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400 active"></i>
+                            <a class="dropdown-item" href="#">
+                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                 Profile
                             </a>
                             <a class="dropdown-item" href="#">
@@ -208,27 +230,94 @@
 
             <!-- Begin Page Content -->
             <div class="container-fluid">
+
                 <!-- Page Heading -->
-                <div class="row ml-1">
-                    <h1 class="content-title">Add Artist</h1>
-                </div>
-                <!-- Add Artist forms and stuff-->
-                <div class="row">
-                    <form class="row" method="post" action="/addArtistToDB.php">
-                        <div class="add-img-div">
-                            <img class="add-img" src="/img/pfp/blank.png" alt="">
-                            <input type="file" id="myFile" name="filename">
+                <!-- Artist Information -->
+                <h1 class="h3 mb-0 content-title">A$AP Rocky:</h1>
+                <h2 class="mb-1 artist-rating">Average Album Rating: 5/5</h2>
+                <a class="mb-7 add-music-button" href="../public_html/templates/addAlbum.html">Add Album</a>
+                <!--Page Content-->
+                <!-- Artist Discography  -->
+                <div class="row pl-3 pr-3 justify-content-around">
+                    <a class="content" href="../public_html/templates/viewAlbum.html">
+                        <div class="content-img">
+                            <img class="img-fluid" src="/public_html/img/album-imgs/testing-asap-rocky.jpeg" alt="The Beatles">
                         </div>
-                        <div class="add-content-div">
-                            <label class="add-label" for="artist-name">Artist Name:</label>
-                            <br>
-                            <input class="add-input" name="artist" id="artist-name" type="text"/>
-                            <br>
-                            <input type="submit" value="Submit" class="add-submit">
-                        </div>
-                    </form>
+                        <h1>TESTING</h1>
+                        <h2>A$AP Rocky • 2018</h2>
+                    </a>
                 </div>
 
+                <div class="content-splitter"></div>
+
+                <!--Artist Comments-->
+                <h1 class="h3 content-title">Reviews:</h1>
+                <div class="row comments justify-content-around">
+                    <div class="comment col-md-6">
+                        <div class="comment-header">
+                            <h1>User</h1>
+                            <h2>Rating: 5/5</h2>
+                        </div>
+                        <div class="comment-body">
+                            <p>This is where users will leave the details of their reviews,
+                                explaining why they did or didn't like a particular song/album/playlist.
+                                The user will also be able to edit their comments and delete them at any point</p>
+                        </div>
+
+                    </div>
+                    <div class="comment col-md-6">
+                        <div class="comment-header">
+                            <h1>User</h1>
+                            <h2>Rating: 5/5</h2>
+                        </div>
+                        <div class="comment-body">
+                            <p>This is where users will leave the details of their reviews,
+                                explaining why they did or didn't like a particular song/album/playlist.
+                                The user will also be able to edit their comments and delete them at any point</p>
+                        </div>
+
+                    </div>
+                    <div class="comment col-md-6">
+                        <div class="comment-header">
+                            <h1>User</h1>
+                            <h2>Rating: 5/5</h2>
+                        </div>
+                        <div class="comment-body">
+                            <p>This is where users will leave the details of their reviews,
+                                explaining why they did or didn't like a particular song/album/playlist.
+                                The user will also be able to edit their comments and delete them at any point</p>
+                        </div>
+
+                    </div>
+                    <div class="comment col-md-6">
+                        <div class="comment-header">
+                            <h1>User</h1>
+                            <h2>Rating: 5/5</h2>
+                        </div>
+                        <div class="comment-body">
+                            <p>This is where users will leave the details of their reviews,
+                                explaining why they did or didn't like a particular song/album/playlist.
+                                The user will also be able to edit their comments and delete them at any point</p>
+                        </div>
+
+                    </div>
+                    <div class="comment col-md-6">
+                        <div class="comment-header">
+                            <h1>User</h1>
+                            <h2>Rating: 5/5</h2>
+                        </div>
+                        <div class="comment-body">
+                            <p>This is where users will leave the details of their reviews,
+                                explaining why they did or didn't like a particular song/album/playlist.
+                                The user will also be able to edit their comments and delete them at any point</p>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- Add Comment Button -->
+                <div class="row add-comment justify-content-center mb-5">
+                    <a href="../public_html/templates/addComment.html" class="add-comment-button">Add Review</a>
+                </div>
 
             </div>
             <!-- /.container-fluid -->
@@ -278,15 +367,24 @@
 </div>
 
 <!-- Bootstrap core JavaScript-->
-<script src="/vendor/jquery/jquery.min.js"></script>
-<script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<?php echo '<script'; ?>
+ src="/public_html/vendor/jquery/jquery.min.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="/public_html/vendor/bootstrap/js/bootstrap.bundle.min.js"><?php echo '</script'; ?>
+>
 
 <!-- Core plugin JavaScript-->
-<script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
+<?php echo '<script'; ?>
+ src="/public_html/vendor/jquery-easing/jquery.easing.min.js"><?php echo '</script'; ?>
+>
 
 <!-- Custom scripts for all pages-->
-<script src="/js/sb-admin-2.min.js"></script>
+<?php echo '<script'; ?>
+ src="/public_html/js/sb-admin-2.min.js"><?php echo '</script'; ?>
+>
 
 </body>
 
-</html>
+</html><?php }
+}

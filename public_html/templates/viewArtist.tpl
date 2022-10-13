@@ -12,14 +12,14 @@
     <title>Artist Name</title>
 
     <!-- Custom fonts for this template-->
-    <link href="/public_html/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
             href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
             rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="/public_html/css/sb-admin-2.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/public_html/css/browseDivStyles.css">
+    <link href="/css/sb-admin-2.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/browseDivStyles.css">
     <script src="https://kit.fontawesome.com/125fe29883.js" crossorigin="anonymous"></script>
 
     <script>
@@ -45,7 +45,7 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
         <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../public_html/templates/explore.html">
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/explore.php">
             <div class="sidebar-brand-icon rotate-n-15">
                 <i class="fas fa-music"></i>
             </div>
@@ -57,12 +57,12 @@
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item">
-            <a class="nav-link" href="../public_html/templates/library.html">
+            <a class="nav-link" href="/library.php">
                 <i class="fas fa-folder-open    "></i>
                 <span>My Library</span></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="../public_html/templates/profile.html">
+            <a class="nav-link" href="/profile.php">
                 <i class="fas fa-user fa-tachometer-alt"></i>
                 <span>My Profile</span></a>
         </li>
@@ -75,8 +75,8 @@
         </div>
 
         <!-- Nav Item - Utilities Collapse Menu -->
-        <li class="nav-item">
-            <a class="nav-link" href="../public_html/templates/explore.html">
+        <li class="nav-item active">
+            <a class="nav-link" href="/explore.php">
                 <i class="fas fa-compass"></i>
                 <span>Explore</span></a>
         </li>
@@ -91,8 +91,8 @@
             <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Browse All:</h6>
-                    <a class="collapse-item" href="browseArtists.tpl">Artists</a>
-                    <a class="collapse-item" href="browseAlbums.tpl">Albums</a>
+                    <a class="collapse-item" href="/browseArtists.php">Artists</a>
+                    <a class="collapse-item" href="/browseAlbums.php">Albums</a>
                 </div>
             </div>
         </li>
@@ -107,9 +107,9 @@
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Add Music:</h6>
-                    <a class="collapse-item" href="../public_html/templates/addArtist.html">Artist</a>
-                    <a class="collapse-item" href="../public_html/templates/addAlbum.html">Album</a>
-                    <a class="collapse-item" href="../public_html/templates/addSong.html">Song</a>
+                    <a class="collapse-item" href="/addArtist.php">Artist</a>
+                    <a class="collapse-item" href="/addAlbum.php">Album</a>
+                    <a class="collapse-item" href="/addSong.php">Song</a>
                 </div>
             </div>
         </li>
@@ -189,7 +189,7 @@
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="mr-2 d-none d-lg-inline text-gray-600 small">User</span>
                             <img class="img-profile rounded-circle"
-                                 src="/public_html/img/pfp/blank.png">
+                                 src="/img/pfp/blank.png">
                         </a>
                         <!-- Dropdown - User Information -->
                         <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -229,13 +229,13 @@
                 <!-- Artist Information -->
                 <h1 class="h3 mb-0 content-title">A$AP Rocky:</h1>
                 <h2 class="mb-1 artist-rating">Average Album Rating: 5/5</h2>
-                <a class="mb-7 add-music-button" href="../public_html/templates/addAlbum.html">Add Album</a>
+                <a class="mb-7 add-music-button" href="/addAlbum.php">Add Album</a>
                 <!--Page Content-->
                 <!-- Artist Discography  -->
                 <div class="row pl-3 pr-3 justify-content-around">
-                    <a class="content" href="../public_html/templates/viewAlbum.html">
+                    <a class="content" href="/viewAlbum.php">
                         <div class="content-img">
-                            <img class="img-fluid" src="/public_html/img/album-imgs/testing-asap-rocky.jpeg" alt="The Beatles">
+                            <img class="img-fluid" src="/img/album-imgs/testing-asap-rocky.jpeg" alt="The Beatles">
                         </div>
                         <h1>TESTING</h1>
                         <h2>A$AP Rocky • 2018</h2>
@@ -247,7 +247,7 @@
                 <!--Artist Comments-->
                 <h1 class="h3 content-title">Reviews:</h1>
                 <div class="row comments justify-content-around">
-                    <div class="comment">
+                    <div class="comment col-md-6">
                         <div class="comment-header">
                             <h1>User</h1>
                             <h2>Rating: 5/5</h2>
@@ -259,7 +259,7 @@
                         </div>
 
                     </div>
-                    <div class="comment">
+                    <div class="comment col-md-6">
                         <div class="comment-header">
                             <h1>User</h1>
                             <h2>Rating: 5/5</h2>
@@ -271,7 +271,7 @@
                         </div>
 
                     </div>
-                    <div class="comment">
+                    <div class="comment col-md-6">
                         <div class="comment-header">
                             <h1>User</h1>
                             <h2>Rating: 5/5</h2>
@@ -283,7 +283,7 @@
                         </div>
 
                     </div>
-                    <div class="comment">
+                    <div class="comment col-md-6">
                         <div class="comment-header">
                             <h1>User</h1>
                             <h2>Rating: 5/5</h2>
@@ -295,7 +295,7 @@
                         </div>
 
                     </div>
-                    <div class="comment">
+                    <div class="comment col-md-6">
                         <div class="comment-header">
                             <h1>User</h1>
                             <h2>Rating: 5/5</h2>
@@ -310,7 +310,7 @@
                 </div>
                 <!-- Add Comment Button -->
                 <div class="row add-comment justify-content-center mb-5">
-                    <a href="../public_html/templates/addComment.html" class="add-comment-button">Add Review</a>
+                    <a href="/addComment.php" class="add-comment-button">Add Review</a>
                 </div>
 
             </div>
@@ -361,14 +361,14 @@
 </div>
 
 <!-- Bootstrap core JavaScript-->
-<script src="/public_html/vendor/jquery/jquery.min.js"></script>
-<script src="/public_html/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/vendor/jquery/jquery.min.js"></script>
+<script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 <!-- Core plugin JavaScript-->
-<script src="/public_html/vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
 
 <!-- Custom scripts for all pages-->
-<script src="/public_html/js/sb-admin-2.min.js"></script>
+<script src="/js/sb-admin-2.min.js"></script>
 
 </body>
 
