@@ -18,8 +18,8 @@
             rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="../public_html/css/sb-admin-2.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../public_html/css/browseDivStyles.css">
+    <link href="/css/sb-admin-2.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/browseDivStyles.css">
     <script src="https://kit.fontawesome.com/125fe29883.js" crossorigin="anonymous"></script>
 
 
