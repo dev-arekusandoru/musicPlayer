@@ -295,7 +295,7 @@
                                                 Add to playlist
                                             </a>
                                             <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                            <a class="dropdown-item" href="#">
                                                 <i class="fa fa-minus fa-sm fa-fw mr-2 text-gray-400"></i>
                                                 Remove from playlist
                                             </a>
