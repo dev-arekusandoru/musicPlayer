@@ -1,4 +1,27 @@
-<!DOCTYPE html>
+<?php
+/* Smarty version 4.2.1, created on 2022-10-13 18:55:45
+  from 'C:\Users\kara3\PhpstormProjects\musicPlayer\public_html\templates\viewPlaylist.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '4.2.1',
+  'unifunc' => 'content_63489771674c07_74784569',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '3f58be7e8eae1076967d5472aec8b2bf901d5af7' => 
+    array (
+      0 => 'C:\\Users\\kara3\\PhpstormProjects\\musicPlayer\\public_html\\templates\\viewPlaylist.tpl',
+      1 => 1665701700,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_63489771674c07_74784569 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -20,9 +43,12 @@
     <!-- Custom styles for this template-->
     <link href="/public_html/css/sb-admin-2.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/public_html/css/viewStyles.css">
-    <script src="https://kit.fontawesome.com/125fe29883.js" crossorigin="anonymous"></script>
+    <?php echo '<script'; ?>
+ src="https://kit.fontawesome.com/125fe29883.js" crossorigin="anonymous"><?php echo '</script'; ?>
+>
 
-    <script>
+    <?php echo '<script'; ?>
+>
         // The function below will start the confirmation dialog
         function confirmAction() {
             let confirmAction = confirm("Are you sure to delete this?");
@@ -32,7 +58,8 @@
                 alert("Action canceled");
             }
         }
-    </script>
+    <?php echo '</script'; ?>
+>
 
 </head>
 
@@ -356,15 +383,24 @@
 </div>
 
 <!-- Bootstrap core JavaScript-->
-<script src="/public_html/vendor/jquery/jquery.min.js"></script>
-<script src="/public_html/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<?php echo '<script'; ?>
+ src="/public_html/vendor/jquery/jquery.min.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="/public_html/vendor/bootstrap/js/bootstrap.bundle.min.js"><?php echo '</script'; ?>
+>
 
 <!-- Core plugin JavaScript-->
-<script src="/public_html/vendor/jquery-easing/jquery.easing.min.js"></script>
+<?php echo '<script'; ?>
+ src="/public_html/vendor/jquery-easing/jquery.easing.min.js"><?php echo '</script'; ?>
+>
 
 <!-- Custom scripts for all pages-->
-<script src="/public_html/js/sb-admin-2.min.js"></script>
+<?php echo '<script'; ?>
+ src="/public_html/js/sb-admin-2.min.js"><?php echo '</script'; ?>
+>
 
 </body>
 
-</html>
+</html><?php }
+}

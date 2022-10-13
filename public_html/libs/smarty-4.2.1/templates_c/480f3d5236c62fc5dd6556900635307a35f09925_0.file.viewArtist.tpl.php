@@ -1,4 +1,27 @@
-<!DOCTYPE html>
+<?php
+/* Smarty version 4.2.1, created on 2022-10-13 18:50:28
+  from 'C:\Users\kara3\PhpstormProjects\musicPlayer\public_html\templates\viewArtist.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '4.2.1',
+  'unifunc' => 'content_63489634507679_00880353',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '480f3d5236c62fc5dd6556900635307a35f09925' => 
+    array (
+      0 => 'C:\\Users\\kara3\\PhpstormProjects\\musicPlayer\\public_html\\templates\\viewArtist.tpl',
+      1 => 1665637897,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_63489634507679_00880353 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -9,7 +32,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Playlist Title</title>
+    <title>Artist Name</title>
 
     <!-- Custom fonts for this template-->
     <link href="/public_html/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -19,20 +42,24 @@
 
     <!-- Custom styles for this template-->
     <link href="/public_html/css/sb-admin-2.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/public_html/css/viewStyles.css">
-    <script src="https://kit.fontawesome.com/125fe29883.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/public_html/css/browseDivStyles.css">
+    <?php echo '<script'; ?>
+ src="https://kit.fontawesome.com/125fe29883.js" crossorigin="anonymous"><?php echo '</script'; ?>
+>
 
-    <script>
+    <?php echo '<script'; ?>
+>
         // The function below will start the confirmation dialog
         function confirmAction() {
             let confirmAction = confirm("Are you sure to delete this?");
             if (confirmAction) {
-                alert("Playlist Deleted");
+                alert("Artist Deleted");
             } else {
                 alert("Action canceled");
             }
         }
-    </script>
+    <?php echo '</script'; ?>
+>
 
 </head>
 
@@ -225,87 +252,92 @@
                     </a>
                 </div>
 
-                <!-- Playlist Information -->
-                <div class="album-header row">
-                    <div class="col-sm-3 pl-0 ml-3">
-                        <img class="artwork" src="/public_html/img/empty-playlist.jpg" alt="">
-                    </div>
-                    <div class="album-metadata col-sm-3" style="height: 300px;">
+                <!-- Page Heading -->
+                <!-- Artist Information -->
+                <h1 class="h3 mb-0 content-title">A$AP Rocky:</h1>
+                <h2 class="mb-1 artist-rating">Average Album Rating: 5/5</h2>
+                <a class="mb-7 add-music-button" href="../public_html/templates/addAlbum.html">Add Album</a>
+                <!--Page Content-->
+                <!-- Artist Discography  -->
+                <div class="row pl-3 pr-3 justify-content-around">
+                    <a class="content" href="../public_html/templates/viewAlbum.html">
+                        <div class="content-img">
+                            <img class="img-fluid" src="/public_html/img/album-imgs/testing-asap-rocky.jpeg" alt="The Beatles">
+                        </div>
                         <h1>TESTING</h1>
-                        <h2>User</h2>
-                        <h6>Here the user will add a description of the playlist if so desired.</h6>
-                        <a class="mb-7 add-music-button" href="../public_html/templates/addSong.html">Edit Playlist Details</a><br>
-                        <a class="mb-7 add-music-button" href="../public_html/templates/addSong.html">Add Song</a>
+                        <h2>A$AP Rocky • 2018</h2>
+                    </a>
+                </div>
+
+                <div class="content-splitter"></div>
+
+                <!--Artist Comments-->
+                <h1 class="h3 content-title">Reviews:</h1>
+                <div class="row comments justify-content-around">
+                    <div class="comment">
+                        <div class="comment-header">
+                            <h1>User</h1>
+                            <h2>Rating: 5/5</h2>
+                        </div>
+                        <div class="comment-body">
+                            <p>This is where users will leave the details of their reviews,
+                                explaining why they did or didn't like a particular song/album/playlist.
+                                The user will also be able to edit their comments and delete them at any point</p>
+                        </div>
+
+                    </div>
+                    <div class="comment">
+                        <div class="comment-header">
+                            <h1>User</h1>
+                            <h2>Rating: 5/5</h2>
+                        </div>
+                        <div class="comment-body">
+                            <p>This is where users will leave the details of their reviews,
+                                explaining why they did or didn't like a particular song/album/playlist.
+                                The user will also be able to edit their comments and delete them at any point</p>
+                        </div>
+
+                    </div>
+                    <div class="comment">
+                        <div class="comment-header">
+                            <h1>User</h1>
+                            <h2>Rating: 5/5</h2>
+                        </div>
+                        <div class="comment-body">
+                            <p>This is where users will leave the details of their reviews,
+                                explaining why they did or didn't like a particular song/album/playlist.
+                                The user will also be able to edit their comments and delete them at any point</p>
+                        </div>
+
+                    </div>
+                    <div class="comment">
+                        <div class="comment-header">
+                            <h1>User</h1>
+                            <h2>Rating: 5/5</h2>
+                        </div>
+                        <div class="comment-body">
+                            <p>This is where users will leave the details of their reviews,
+                                explaining why they did or didn't like a particular song/album/playlist.
+                                The user will also be able to edit their comments and delete them at any point</p>
+                        </div>
+
+                    </div>
+                    <div class="comment">
+                        <div class="comment-header">
+                            <h1>User</h1>
+                            <h2>Rating: 5/5</h2>
+                        </div>
+                        <div class="comment-body">
+                            <p>This is where users will leave the details of their reviews,
+                                explaining why they did or didn't like a particular song/album/playlist.
+                                The user will also be able to edit their comments and delete them at any point</p>
+                        </div>
+
                     </div>
                 </div>
-                <!-- Playlist Tracklist -->
-                <div class="album-tracklist row">
-                    <div class="col-sm-12">
-                        <ul>
-                            <li class="row item">
-                                <div class="col-sm-11">
-                                    <h1>Distorted Records</h1>
-                                    <p>A$AP Rocky • TESTING</p>
-                                </div>
-
-                                <!-- Topbar Navbar -->
-                                <ul class="navbar-nav ml-auto">
-
-                                    <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-                                    <li class="nav-item dropdown no-arrow d-sm-none">
-                                        <!-- Dropdown - Messages -->
-                                        <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                                             aria-labelledby="searchDropdown0">
-                                            <form class="form-inline mr-auto w-100 navbar-search">
-                                                <div class="input-group">
-                                                    <input type="text" class="form-control bg-light border-0 small"
-                                                           placeholder="Search music..." aria-label="Search"
-                                                           aria-describedby="basic-addon2">
-                                                    <div class="input-group-append">
-                                                        <button class="btn btn-primary" type="button">
-                                                            <i class="fas fa-search fa-sm"></i>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </li>
-
-                                    <div class="topbar-divider d-none d-sm-block"></div>
-
-                                    <!-- Nav Item - Song Information -->
-                                    <li class="nav-item dropdown no-arrow">
-                                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown0" role="button"
-                                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">. . .</span>
-                                        </a>
-                                        <!-- Dropdown - Song Information -->
-                                        <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                             aria-labelledby="userDropdown0">
-                                            <a class="dropdown-item" href="#">
-                                                <i class="fa fa-comments-o fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                View Comments
-                                            </a>
-                                            <a class="dropdown-item" href="viewArtist.html">
-                                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                View Artist
-                                            </a>
-                                            <a class="dropdown-item" href="addSong.html">
-                                                <i class="fa fa-plus fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                Add to playlist
-                                            </a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                                                <i class="fa fa-minus fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                Remove from playlist
-                                            </a>
-                                        </div>
-                                    </li>
-                                </ul>
-
-                            </li>
-                        </ul>
-                    </div>
+                <!-- Add Comment Button -->
+                <div class="row add-comment justify-content-center mb-5">
+                    <a href="../public_html/templates/addComment.html" class="add-comment-button">Add Review</a>
                 </div>
 
             </div>
@@ -318,7 +350,7 @@
         <footer class="sticky-footer bg-darker">
             <div class="container my-auto">
                 <div class="copyright text-center my-auto">
-                    <span>Copyright &copy; Tau Tech 2020</span>
+                    <span>Copyright &copy; Tau Tech 2022</span>
                 </div>
             </div>
         </footer>
@@ -356,15 +388,24 @@
 </div>
 
 <!-- Bootstrap core JavaScript-->
-<script src="/public_html/vendor/jquery/jquery.min.js"></script>
-<script src="/public_html/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<?php echo '<script'; ?>
+ src="/public_html/vendor/jquery/jquery.min.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="/public_html/vendor/bootstrap/js/bootstrap.bundle.min.js"><?php echo '</script'; ?>
+>
 
 <!-- Core plugin JavaScript-->
-<script src="/public_html/vendor/jquery-easing/jquery.easing.min.js"></script>
+<?php echo '<script'; ?>
+ src="/public_html/vendor/jquery-easing/jquery.easing.min.js"><?php echo '</script'; ?>
+>
 
 <!-- Custom scripts for all pages-->
-<script src="/public_html/js/sb-admin-2.min.js"></script>
+<?php echo '<script'; ?>
+ src="/public_html/js/sb-admin-2.min.js"><?php echo '</script'; ?>
+>
 
 </body>
 
-</html>
+</html><?php }
+}

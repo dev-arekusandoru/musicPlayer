@@ -22,6 +22,18 @@
     <link rel="stylesheet" href="/public_html/css/browseDivStyles.css">
     <script src="https://kit.fontawesome.com/125fe29883.js" crossorigin="anonymous"></script>
 
+    <script>
+        // The function below will start the confirmation dialog
+        function confirmAction() {
+            let confirmAction = confirm("Are you sure to delete this?");
+            if (confirmAction) {
+                alert("Artist Deleted");
+            } else {
+                alert("Action canceled");
+            }
+        }
+    </script>
+
 </head>
 
 <body id="page-top">
@@ -205,6 +217,13 @@
 
             <!-- Begin Page Content -->
             <div class="container-fluid">
+
+                <!--Delete button -->
+                <div class="float-right relative-top">
+                    <a onclick="confirmAction()">
+                        <img src="../public_html/img/trashcan.png" alt="white trash can image" height="30" width="30">
+                    </a>
+                </div>
 
                 <!-- Page Heading -->
                 <!-- Artist Information -->
