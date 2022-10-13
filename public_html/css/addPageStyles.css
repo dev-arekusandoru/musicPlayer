@@ -24,13 +24,14 @@
 .add-submit {
     margin-top: 10px;
     text-align: center;
-    line-height: 41px;
     width: 130px;
     height: 40px;
     background-color: #4e73df;
+    border: none;
     border-radius: 7px;
     color: #EBEBEB;
     transition: 0.3s ease all;
+    padding-left: 0;
 }
 .add-submit:hover {
     background-color: #6f42c1;

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-13 15:29:53
-  from '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/addArtist.tpl' */
+/* Smarty version 4.2.1, created on 2022-10-13 15:37:36
+  from '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/addPlaylist.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_634867313dfc68_62744359',
+  'unifunc' => 'content_63486900d28a93_52848876',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    'ded9d20340a09a2090871b287a72d2cb458c39b2' => 
+    '2de3f14afd01f4e6f715b20d14094f2c9babf8e5' => 
     array (
-      0 => '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/addArtist.tpl',
-      1 => 1665689392,
+      0 => '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/addPlaylist.tpl',
+      1 => 1665689856,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_634867313dfc68_62744359 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63486900d28a93_52848876 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -32,7 +32,7 @@ function content_634867313dfc68_62744359 (Smarty_Internal_Template $_smarty_tpl)
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Add Artist</title>
+    <title>Create Playlist</title>
 
     <!-- Custom fonts for this template-->
     <link href="/public_html/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -46,9 +46,7 @@ function content_634867313dfc68_62744359 (Smarty_Internal_Template $_smarty_tpl)
     <!-- Custom style sheet to change -->
     <link href="/public_html/css/browseDivStyles.css" rel="stylesheet">
     <link rel="stylesheet" href="/public_html/css/addPageStyles.css">
-    <?php echo '<script'; ?>
- src="https://kit.fontawesome.com/125fe29883.js" crossorigin="anonymous"><?php echo '</script'; ?>
->
+
 
 </head>
 
@@ -73,7 +71,7 @@ function content_634867313dfc68_62744359 (Smarty_Internal_Template $_smarty_tpl)
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item">
-            <a class="nav-link" href="/public_html/library.php">
+            <a class="nav-link" href="../public_html/templates/library.html">
                 <i class="fas fa-folder-open    "></i>
                 <span>My Library</span></a>
         </li>
@@ -120,10 +118,10 @@ function content_634867313dfc68_62744359 (Smarty_Internal_Template $_smarty_tpl)
                 <i class="fas fa-music"></i>
                 <span>Add Music</span>
             </a>
-            <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Add Music:</h6>
-                    <a class="collapse-item active" href="../public_html/templates/addArtist.html">Artist</a>
+                    <a class="collapse-item" href="../public_html/templates/addArtist.html">Artist</a>
                     <a class="collapse-item" href="../public_html/templates/addAlbum.html">Album</a>
                     <a class="collapse-item" href="../public_html/templates/addSong.html">Song</a>
                 </div>
@@ -235,19 +233,23 @@ function content_634867313dfc68_62744359 (Smarty_Internal_Template $_smarty_tpl)
             <div class="container-fluid">
                 <!-- Page Heading -->
                 <div class="row ml-1">
-                    <h1 class="content-title">Add Artist</h1>
+                    <h1 class="content-title">Create Playlist</h1>
                 </div>
-                <!-- Add Artist forms and stuff-->
+                <!-- Add Playlist form content -->
                 <div class="row">
-                    <form class="row" method="post" action="addSongToDB.php">
+                    <form class="row" method="post" action="../addSongToDB.php">
                         <div class="add-img-div">
                             <img class="add-img" src="/public_html/img/pfp/blank.png" alt="">
                             <input type="file" id="myFile" name="filename">
                         </div>
                         <div class="add-content-div">
-                            <label class="add-label" for="select-artist">Artist Name:</label>
+                            <label class="add-label" for="playlist-name">Playlist Name:</label>
                             <br>
-                            <input class="add-input" name="artist" id="artist-name" type="text"/>
+                            <input class="add-input" id="playlist-name" type="text"/>
+                            <br>
+                            <label class="add-label" for="playlist-description">Description:</label>
+                            <br>
+                            <textarea class="add-input" style="height: 100px; resize: none;" id="playlist-description" ></textarea>
                             <br>
                             <input type="submit" value="Submit" class="add-submit">
                         </div>

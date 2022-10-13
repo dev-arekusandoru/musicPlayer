@@ -214,21 +214,23 @@
                 </div>
                 <!-- Add Playlist form content -->
                 <div class="row">
-                    <div class="add-img-div">
-                        <img class="add-img" src="/public_html/img/pfp/blank.png" alt="">
-                        <input type="file" id="myFile" name="filename">
-                    </div>
-                    <div class="add-content-div">
-                        <label class="add-label" for="playlist-name">Playlist Name:</label>
-                        <br>
-                        <input class="add-input" id="playlist-name" type="text"/>
-                        <br>
-                        <label class="add-label" for="playlist-description">Description:</label>
-                        <br>
-                        <textarea class="add-input" style="height: 100px; resize: none;" id="playlist-description" ></textarea>
-
-                        <form class="add-submit" type="submit" value="Submit">Submit</form>
-                    </div>
+                    <form class="row" method="post" action="/public_html/addPlaylistToDB.php">
+                        <div class="add-img-div">
+                            <img class="add-img" src="/public_html/img/pfp/blank.png" alt="">
+                            <input type="file" id="myFile" name="filename">
+                        </div>
+                        <div class="add-content-div">
+                            <label class="add-label" for="playlist-name">Playlist Name:</label>
+                            <br>
+                            <input class="add-input" id="playlist-name" type="text"/>
+                            <br>
+                            <label class="add-label" for="playlist-description">Description:</label>
+                            <br>
+                            <textarea class="add-input" style="height: 100px; resize: none;" id="playlist-description" ></textarea>
+                            <br>
+                            <input type="submit" value="Submit" class="add-submit">
+                        </div>
+                    </form>
                 </div>
 
 

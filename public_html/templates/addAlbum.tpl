@@ -36,7 +36,8 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
         <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../public_html/templates/explore.html">
+        <a class="sidebar-brand d-flex align-items-center justify-content-center"
+           href="../public_html/templates/explore.html">
             <div class="sidebar-brand-icon rotate-n-15">
                 <i class="fas fa-music"></i>
             </div>
@@ -215,28 +216,30 @@
                 </div>
                 <!-- Add album content-->
                 <div class="row">
-                    <div class="add-img-div">
-                        <img class="add-img" src="/public_html/img/pfp/blank.png" alt="">
-                        <input type="file" id="myFile" name="filename">
-                    </div>
-                    <div class="add-content-div">
-                        <label class="add-label" for="select-artist">Artist Name:</label>
-                        <br>
-                        <select required name="select-artist" class="add-dropdown" id="select-artist">
-                            <option>A$AP Rocky</option>
-                            <option>Andy Mineo</option>
-                            <option>Arctic Monkeys</option>
-                            <option>Baby Keem</option>
-                            <option>The Backseat Lovers</option>
-                            <option>Bad Bunny</option>
-                        </select>
-                        <br>
-                        <label class="add-label" for="album-name">Album Name:</label>
-                        <br>
-                        <input class="add-input" id="album-name" type="text"/>
-
-                        <form class="add-submit" type="submit" value="Submit">Submit</form>
-                    </div>
+                    <form class="row" method="post" action="/public_html/addAlbumToDB.php">
+                        <div class="add-img-div">
+                            <img class="add-img" src="/public_html/img/pfp/blank.png" alt="">
+                            <input type="file" id="myFile" name="filename">
+                        </div>
+                        <div class="add-content-div">
+                            <label class="add-label" for="select-artist">Artist Name:</label>
+                            <br>
+                            <select required name="select-artist" class="add-dropdown" id="select-artist">
+                                <option>A$AP Rocky</option>
+                                <option>Andy Mineo</option>
+                                <option>Arctic Monkeys</option>
+                                <option>Baby Keem</option>
+                                <option>The Backseat Lovers</option>
+                                <option>Bad Bunny</option>
+                            </select>
+                            <br>
+                            <label class="add-label" for="album-name">Album Name:</label>
+                            <br>
+                            <input class="add-input" name="album" id="album-name" type="text"/>
+                            <br>
+                            <input type="submit" value="Submit" class="add-submit">
+                        </div>
+                    </form>
                 </div>
             </div>
             <!-- /.container-fluid -->

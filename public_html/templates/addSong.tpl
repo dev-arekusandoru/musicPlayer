@@ -214,11 +214,12 @@
                     <h1 class="content-title">Add Song</h1>
                 </div>
                 <!-- Add song form content-->
-                <div class="row add-content">
-                    <div class="col-sm-2.5 ">
+                <form class="row" method="post" action="/public_html/addSongToDB.php">
+                    <div class="add-img-div">
                         <img class="add-img" src="/public_html/img/pfp/blank.png" alt="">
+                        <input type="file" id="myFile" name="filename">
                     </div>
-                    <div class="col">
+                    <div class="add-content-div">
                         <label class="add-label" for="select-artist">Artist Name:</label>
                         <br>
                         <select required name="select-artist" class="add-dropdown" id="select-artist">
@@ -239,11 +240,10 @@
                         <label class="add-label" for="song-name">Song Name:</label>
                         <br>
                         <input class="add-input" id="song-name" type="text"/>
-
-                        <form class="add-submit" type="submit" value="Submit">Submit</form>
+                        <br>
+                        <input type="submit" value="Submit" class="add-submit">
                     </div>
-                </div>
-
+                </form>
 
             </div>
             <!-- /.container-fluid -->

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-13 15:29:53
-  from '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/addArtist.tpl' */
+/* Smarty version 4.2.1, created on 2022-10-13 15:21:49
+  from '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/addAlbum.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_634867313dfc68_62744359',
+  'unifunc' => 'content_6348654d960375_17891781',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    'ded9d20340a09a2090871b287a72d2cb458c39b2' => 
+    'ac058fcb0714b6fd144836c48806c66e7ca6ff14' => 
     array (
-      0 => '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/addArtist.tpl',
-      1 => 1665689392,
+      0 => '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/addAlbum.tpl',
+      1 => 1665688908,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_634867313dfc68_62744359 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6348654d960375_17891781 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -32,10 +32,10 @@ function content_634867313dfc68_62744359 (Smarty_Internal_Template $_smarty_tpl)
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Add Artist</title>
+    <title>Add Album</title>
 
     <!-- Custom fonts for this template-->
-    <link href="/public_html/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
             href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
             rel="stylesheet">
@@ -61,7 +61,8 @@ function content_634867313dfc68_62744359 (Smarty_Internal_Template $_smarty_tpl)
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
         <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../public_html/templates/explore.html">
+        <a class="sidebar-brand d-flex align-items-center justify-content-center"
+           href="../public_html/templates/explore.html">
             <div class="sidebar-brand-icon rotate-n-15">
                 <i class="fas fa-music"></i>
             </div>
@@ -73,7 +74,7 @@ function content_634867313dfc68_62744359 (Smarty_Internal_Template $_smarty_tpl)
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item">
-            <a class="nav-link" href="/public_html/library.php">
+            <a class="nav-link" href="../public_html/templates/library.html">
                 <i class="fas fa-folder-open    "></i>
                 <span>My Library</span></a>
         </li>
@@ -123,12 +124,13 @@ function content_634867313dfc68_62744359 (Smarty_Internal_Template $_smarty_tpl)
             <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Add Music:</h6>
-                    <a class="collapse-item active" href="../public_html/templates/addArtist.html">Artist</a>
-                    <a class="collapse-item" href="../public_html/templates/addAlbum.html">Album</a>
+                    <a class="collapse-item" href="../public_html/templates/addArtist.html">Artist</a>
+                    <a class="collapse-item active" href="../public_html/templates/addAlbum.html">Album</a>
                     <a class="collapse-item" href="../public_html/templates/addSong.html">Song</a>
                 </div>
             </div>
         </li>
+
 
         <!-- Divider -->
         <hr class="sidebar-divider d-none d-md-block">
@@ -235,9 +237,9 @@ function content_634867313dfc68_62744359 (Smarty_Internal_Template $_smarty_tpl)
             <div class="container-fluid">
                 <!-- Page Heading -->
                 <div class="row ml-1">
-                    <h1 class="content-title">Add Artist</h1>
+                    <h1 class="content-title">Add Album</h1>
                 </div>
-                <!-- Add Artist forms and stuff-->
+                <!-- Add album content-->
                 <div class="row">
                     <form class="row" method="post" action="addSongToDB.php">
                         <div class="add-img-div">
@@ -247,14 +249,24 @@ function content_634867313dfc68_62744359 (Smarty_Internal_Template $_smarty_tpl)
                         <div class="add-content-div">
                             <label class="add-label" for="select-artist">Artist Name:</label>
                             <br>
-                            <input class="add-input" name="artist" id="artist-name" type="text"/>
+                            <select required name="select-artist" class="add-dropdown" id="select-artist">
+                                <option>A$AP Rocky</option>
+                                <option>Andy Mineo</option>
+                                <option>Arctic Monkeys</option>
+                                <option>Baby Keem</option>
+                                <option>The Backseat Lovers</option>
+                                <option>Bad Bunny</option>
+                            </select>
+                            <br>
+                            <label class="add-label" for="album-name">Album Name:</label>
+                            <br>
+                            <input class="add-input" name="album" id="album-name" type="text"/>
                             <br>
                             <input type="submit" value="Submit" class="add-submit">
                         </div>
                     </form>
+
                 </div>
-
-
             </div>
             <!-- /.container-fluid -->
 

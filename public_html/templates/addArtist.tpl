@@ -48,7 +48,7 @@
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item">
-            <a class="nav-link" href="../public_html/templates/library.html">
+            <a class="nav-link" href="/public_html/library.php">
                 <i class="fas fa-folder-open    "></i>
                 <span>My Library</span></a>
         </li>
@@ -214,16 +214,19 @@
                 </div>
                 <!-- Add Artist forms and stuff-->
                 <div class="row">
-                    <div class="add-img-div">
-                        <img class="add-img" src="/public_html/img/pfp/blank.png" alt="">
-                        <input type="file" id="myFile" name="filename">
-                    </div>
-                    <div class="add-content-div">
-                        <label class="add-label" for="artist-name">Artist Name:</label>
-                        <br>
-                        <input class="add-input" id="artist-name" type="text"/>
-                        <form class="add-submit" type="submit" value="Submit">Submit</form>
-                    </div>
+                    <form class="row" method="post" action="/public_html/addArtistToDB.php">
+                        <div class="add-img-div">
+                            <img class="add-img" src="/public_html/img/pfp/blank.png" alt="">
+                            <input type="file" id="myFile" name="filename">
+                        </div>
+                        <div class="add-content-div">
+                            <label class="add-label" for="artist-name">Artist Name:</label>
+                            <br>
+                            <input class="add-input" name="artist" id="artist-name" type="text"/>
+                            <br>
+                            <input type="submit" value="Submit" class="add-submit">
+                        </div>
+                    </form>
                 </div>
 
 
