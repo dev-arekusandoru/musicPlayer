@@ -37,7 +37,8 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
         <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../public_html/templates/explore.html">
+        <a class="sidebar-brand d-flex align-items-center justify-content-center"
+           href="../public_html/templates/explore.html">
             <div class="sidebar-brand-icon rotate-n-15">
                 <i class="fas fa-music"></i>
             </div>
@@ -49,12 +50,12 @@
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item">
-            <a class="nav-link" href="../public_html/templates/library.html">
+            <a class="nav-link" href="/public_html/templates/library.php">
                 <i class="fas fa-folder-open    "></i>
                 <span>My Library</span></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="../public_html/templates/profile.html">
+            <a class="nav-link" href="/public_html/templates/profile.tpl">
                 <i class="fas fa-user fa-tachometer-alt"></i>
                 <span>My Profile</span></a>
         </li>
@@ -215,17 +216,25 @@
                         <img class="artwork" src="/public_html/img/album-imgs/testing-asap-rocky.jpeg" alt="">
                     </div>
                     <div class="album-metadata col-sm-3" style="height: 300px;">
-                        <h1>TESTING</h1>
-                        <a href="../public_html/templates/viewArtist.html">A$AP Rocky</a>
-                        <h6>HIP-HOP/RAP • 2018</h6>
-                        <h3>Rating: </h3>
-                        <img src="../img/ratings-imgs/FullDisc.png" class="rating-disc" alt="FullDisc">
-                        <img src="../img/ratings-imgs/FullDisc.png" class="rating-disc" alt="FullDisc">
-                        <img src="../img/ratings-imgs/FullDisc.png" class="rating-disc" alt="FullDisc">
-                        <img src="../img/ratings-imgs/FullDisc.png" class="rating-disc" alt="FullDisc">
-                        <img src="../img/ratings-imgs/FullDisc.png" class="rating-disc" alt="FullDisc">
-                        <a class="mb-7 add-music-button" href="../public_html/templates/addSong.html" style="font-size: 16px;">Edit Album Details</a><br>
-                        <a class="mb-7 add-music-button" href="../public_html/templates/addSong.html" style="font-size: 16px;">Add Song</a>
+                        <div class="row ml-0 pl-0">
+                            <h1>TESTING</h1>
+                            <a href="../public_html/templates/viewArtist.html">A$AP Rocky</a>
+                            <h6>HIP-HOP/RAP • 2018</h6>
+                            <div class="row container ml-0 pl-0">
+                                <h3 style="padding-right: 5px; line-height: 25px;">Rating: </h3>
+                                <img src="/public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="/public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="/public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="/public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="/public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                            </div>
+                            <a class="mb-7 add-music-button" href="/public_html/addSong.php" style="font-size: 16px;">Edit
+                                Album Details</a>
+                            <br>
+
+                            <a class="mb-7 add-music-button" href="/public_html/addSong.php" style="font-size: 16px;">Add
+                                Song</a>
+                        </div>
                     </div>
                     <div class="col-sm-6"></div>
                 </div>
@@ -260,31 +269,15 @@
                     <!-- all the comments -->
                     <div class="comment">
                         <div class="comment-header">
-                            <h1>User</h1>
-                            <h2>Rating: </h2>
-                            <img src="../img/ratings-imgs/FullDisc.png" class="rating-disc" alt="FullDisc">
-                            <img src="../img/ratings-imgs/FullDisc.png" class="rating-disc" alt="FullDisc">
-                            <img src="../img/ratings-imgs/FullDisc.png" class="rating-disc" alt="FullDisc">
-                            <img src="../img/ratings-imgs/FullDisc.png" class="rating-disc" alt="FullDisc">
-                            <img src="../img/ratings-imgs/FullDisc.png" class="rating-disc" alt="FullDisc">
-
-                        </div>
-                        <div class="comment-body">
-                            <p>This is where users will leave the details of their reviews,
-                                explaining why they did or didn't like a particular song/album/playlist.
-                            The user will also be able to edit their comments and delete them at any point</p>
-                        </div>
-
-                    </div>
-                    <div class="comment">
-                        <div class="comment-header">
-                            <h1>User</h1>
-                            <h2>Rating: </h2>
-                            <img src="../img/ratings-imgs/FullDisc.png" class="rating-disc" alt="FullDisc">
-                            <img src="../img/ratings-imgs/FullDisc.png" class="rating-disc" alt="FullDisc">
-                            <img src="../img/ratings-imgs/FullDisc.png" class="rating-disc" alt="FullDisc">
-                            <img src="../img/ratings-imgs/FullDisc.png" class="rating-disc" alt="FullDisc">
-                            <img src="../img/ratings-imgs/FullDisc.png" class="rating-disc" alt="FullDisc">
+                            <h1 class="row container ml-0 pl-0">User</h1>
+                            <div class="row container ml-0 pl-0">
+                                <h2 style="line-height: 27px" class="mr-1">Rating: </h2>
+                                <img src="/public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="/public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="/public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="/public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="/public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                            </div>
                         </div>
                         <div class="comment-body">
                             <p>This is where users will leave the details of their reviews,
@@ -295,13 +288,15 @@
                     </div>
                     <div class="comment">
                         <div class="comment-header">
-                            <h1>User</h1>
-                            <h2>Rating: </h2>
-                            <img src="../img/ratings-imgs/FullDisc.png" class="rating-disc" alt="FullDisc">
-                            <img src="../img/ratings-imgs/FullDisc.png" class="rating-disc" alt="FullDisc">
-                            <img src="../img/ratings-imgs/FullDisc.png" class="rating-disc" alt="FullDisc">
-                            <img src="../img/ratings-imgs/FullDisc.png" class="rating-disc" alt="FullDisc">
-                            <img src="../img/ratings-imgs/FullDisc.png" class="rating-disc" alt="FullDisc">
+                            <h1 class="row container ml-0 pl-0">User</h1>
+                            <div class="row container ml-0 pl-0">
+                                <h2 style="line-height: 27px" class="mr-1">Rating: </h2>
+                                <img src="/public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="/public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="/public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="/public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="/public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                            </div>
                         </div>
                         <div class="comment-body">
                             <p>This is where users will leave the details of their reviews,
@@ -312,13 +307,15 @@
                     </div>
                     <div class="comment">
                         <div class="comment-header">
-                            <h1>User</h1>
-                            <h2>Rating: </h2>
-                            <img src="../img/ratings-imgs/FullDisc.png" class="rating-disc" alt="FullDisc">
-                            <img src="../img/ratings-imgs/FullDisc.png" class="rating-disc" alt="FullDisc">
-                            <img src="../img/ratings-imgs/FullDisc.png" class="rating-disc" alt="FullDisc">
-                            <img src="../img/ratings-imgs/FullDisc.png" class="rating-disc" alt="FullDisc">
-                            <img src="../img/ratings-imgs/FullDisc.png" class="rating-disc" alt="FullDisc">
+                            <h1 class="row container ml-0 pl-0">User</h1>
+                            <div class="row container ml-0 pl-0">
+                                <h2 style="line-height: 27px" class="mr-1">Rating: </h2>
+                                <img src="/public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="/public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="/public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="/public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="/public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                            </div>
                         </div>
                         <div class="comment-body">
                             <p>This is where users will leave the details of their reviews,
@@ -329,13 +326,34 @@
                     </div>
                     <div class="comment">
                         <div class="comment-header">
-                            <h1>User</h1>
-                            <h2>Rating: </h2>
-                            <img src="../img/ratings-imgs/FullDisc.png" class="rating-disc" alt="FullDisc">
-                            <img src="../img/ratings-imgs/FullDisc.png" class="rating-disc" alt="FullDisc">
-                            <img src="../img/ratings-imgs/FullDisc.png" class="rating-disc" alt="FullDisc">
-                            <img src="../img/ratings-imgs/FullDisc.png" class="rating-disc" alt="FullDisc">
-                            <img src="../img/ratings-imgs/FullDisc.png" class="rating-disc" alt="FullDisc">
+                            <h1 class="row container ml-0 pl-0">User</h1>
+                            <div class="row container ml-0 pl-0">
+                                <h2 style="line-height: 27px" class="mr-1">Rating: </h2>
+                                <img src="/public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="/public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="/public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="/public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="/public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                            </div>
+                        </div>
+                        <div class="comment-body">
+                            <p>This is where users will leave the details of their reviews,
+                                explaining why they did or didn't like a particular song/album/playlist.
+                                The user will also be able to edit their comments and delete them at any point</p>
+                        </div>
+
+                    </div>
+                    <div class="comment">
+                        <div class="comment-header">
+                            <h1 class="row container ml-0 pl-0">User</h1>
+                            <div class="row container ml-0 pl-0">
+                                <h2 style="line-height: 27px" class="mr-1">Rating: </h2>
+                                <img src="/public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="/public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="/public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="/public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="/public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                            </div>
                         </div>
                         <div class="comment-body">
                             <p>This is where users will leave the details of their reviews,
@@ -354,7 +372,8 @@
                 </div>
 
                 <!-- Review Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                     aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -366,15 +385,20 @@
                             <div class="modal-body">
                                 <form>
                                     <div class="form-group">
-<!--                                        <label for="recipient-name" class="col-form-label">Rating:</label>-->
-<!--                                        <input type="text" class="form-control" id="recipient-name">-->
-<!--                                        Beginning Star Rating-->
+                                        <!--                                        <label for="recipient-name" class="col-form-label">Rating:</label>-->
+                                        <!--                                        <input type="text" class="form-control" id="recipient-name">-->
+                                        <!--                                        Beginning Star Rating-->
                                         <span class="rating_stars rating_0">
-                                          <span class='s' data-low='0.5' data-high='1'><i class="fa fa-star-o"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star"></i></span>
-                                          <span class='s' data-low='1.5' data-high='2'><i class="fa fa-star-o"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star"></i></span>
-                                          <span class='s' data-low='2.5' data-high='3'><i class="fa fa-star-o"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star"></i></span>
-                                          <span class='s' data-low='3.5' data-high='4'><i class="fa fa-star-o"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star"></i></span>
-                                          <span class='s' data-low='4.5' data-high='5'><i class="fa fa-star-o"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star"></i></span>
+                                          <span class='s' data-low='0.5' data-high='1'><i class="fa fa-star-o"></i><i
+                                                      class="fa fa-star-half-o"></i><i class="fa fa-star"></i></span>
+                                          <span class='s' data-low='1.5' data-high='2'><i class="fa fa-star-o"></i><i
+                                                      class="fa fa-star-half-o"></i><i class="fa fa-star"></i></span>
+                                          <span class='s' data-low='2.5' data-high='3'><i class="fa fa-star-o"></i><i
+                                                      class="fa fa-star-half-o"></i><i class="fa fa-star"></i></span>
+                                          <span class='s' data-low='3.5' data-high='4'><i class="fa fa-star-o"></i><i
+                                                      class="fa fa-star-half-o"></i><i class="fa fa-star"></i></span>
+                                          <span class='s' data-low='4.5' data-high='5'><i class="fa fa-star-o"></i><i
+                                                      class="fa fa-star-half-o"></i><i class="fa fa-star"></i></span>
 
                                           <span class='r r0_5' data-rating='1' data-value='0.5'></span>
                                           <span class='r r1' data-rating='1' data-value='1'></span>
@@ -390,10 +414,10 @@
 
                                         <div class="values">
                                             <div>
-                                                <label>Rating</label><input type="text" id="rating" value="0" />
+                                                <label>Rating</label><input type="text" id="rating" value="0"/>
                                             </div>
                                         </div>
-<!--                                        End Star Rating-->
+                                        <!--                                        End Star Rating-->
                                     </div>
                                     <div class="form-group">
                                         <label for="message-text" class="col-form-label">Review:</label>
