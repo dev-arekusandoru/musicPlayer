@@ -55,11 +55,9 @@ body {
 /*Comment styling*/
 .comments {
     margin-bottom: 10px;
-    padding: 10px;
 }
 .comment {
     border-radius: 15px;
-    width: 48%;
     margin-bottom: 20px;
 }
 

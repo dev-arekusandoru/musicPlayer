@@ -211,36 +211,29 @@
             <!-- Begin Page Content -->
             <div class="container-fluid">
                 <!-- Album header like metadata and stuff -->
-                <div class="album-header row">
-                    <div class="col-sm-3 pl-0 ml-3">
-                        <img class="artwork" src="/public_html/img/album-imgs/testing-asap-rocky.jpeg" alt="">
-                    </div>
-                    <div class="album-metadata col-sm-3" style="height: 300px;">
-                        <div class="row ml-0 pl-0">
-                            <h1>TESTING</h1>
-                            <a href="../public_html/templates/viewArtist.html">A$AP Rocky</a>
-                            <h6>HIP-HOP/RAP • 2018</h6>
-                            <div class="row container ml-0 pl-0">
-                                <h3 style="padding-right: 5px; line-height: 25px;">Rating: </h3>
-                                <img src="/public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="/public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="/public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="/public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="/public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                            </div>
-                            <a class="mb-7 add-music-button" href="/public_html/addSong.php" style="font-size: 16px;">Edit
-                                Album Details</a>
-                            <br>
-
-                            <a class="mb-7 add-music-button" href="/public_html/addSong.php" style="font-size: 16px;">Add
-                                Song</a>
+                <div class="album-header row ml-md-2">
+                    <div class="album-metadata col-sm-12 p-0">
+                        <img src="/public_html/img/album-imgs/testing-asap-rocky.jpeg" class="img-responsive artwork float-md-left" alt="">
+                        <h1>TESTING</h1>
+                        <a href="/public_html/viewArtist.php" class="link-to">A$AP Rocky</a>
+                        <h6>HIP-HOP/RAP • 2018</h6>
+                        <div class=" ml-0 pl-0">
+                            <img src="/public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                            <img src="/public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                            <img src="/public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                            <img src="/public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                            <img src="/public_html/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
                         </div>
+                        <div style="height: 15px;"></div>
+                        <a class="mb-7 add-music-button" href="/public_html/addSong.php">Edit Album Details</a>
+                        <br>
+                        <a class="mb-7 add-music-button" href="/public_html/addSong.php">Add Song</a>
                     </div>
                     <div class="col-sm-6"></div>
                 </div>
                 <!-- Album body like song names -->
                 <div class="album-tracklist row">
-                    <div class="col-sm-12">
+                    <div class="col-12 ml-md-2 mr-md-5">
                         <ul>
                             <li>1. Distorted Records</li>
                             <li>2. A$AP Forever REMIX</li>
@@ -267,7 +260,7 @@
                 <h1 class="h3 content-title">Reviews:</h1>
                 <div class="row comments justify-content-around">
                     <!-- all the comments -->
-                    <div class="comment">
+                    <div class="comment col-md-6">
                         <div class="comment-header">
                             <h1 class="row container ml-0 pl-0">User</h1>
                             <div class="row container ml-0 pl-0">
@@ -286,7 +279,7 @@
                         </div>
 
                     </div>
-                    <div class="comment">
+                    <div class="comment col-md-6">
                         <div class="comment-header">
                             <h1 class="row container ml-0 pl-0">User</h1>
                             <div class="row container ml-0 pl-0">
@@ -305,7 +298,7 @@
                         </div>
 
                     </div>
-                    <div class="comment">
+                    <div class="comment col-md-6">
                         <div class="comment-header">
                             <h1 class="row container ml-0 pl-0">User</h1>
                             <div class="row container ml-0 pl-0">
@@ -324,7 +317,7 @@
                         </div>
 
                     </div>
-                    <div class="comment">
+                    <div class="comment col-md-6">
                         <div class="comment-header">
                             <h1 class="row container ml-0 pl-0">User</h1>
                             <div class="row container ml-0 pl-0">
@@ -343,7 +336,7 @@
                         </div>
 
                     </div>
-                    <div class="comment">
+                    <div class="comment col-md-6">
                         <div class="comment-header">
                             <h1 class="row container ml-0 pl-0">User</h1>
                             <div class="row container ml-0 pl-0">

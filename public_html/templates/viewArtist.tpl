@@ -228,7 +228,7 @@
                 <!--Artist Comments-->
                 <h1 class="h3 content-title">Reviews:</h1>
                 <div class="row comments justify-content-around">
-                    <div class="comment">
+                    <div class="comment col-md-6">
                         <div class="comment-header">
                             <h1>User</h1>
                             <h2>Rating: 5/5</h2>
@@ -240,7 +240,7 @@
                         </div>
 
                     </div>
-                    <div class="comment">
+                    <div class="comment col-md-6">
                         <div class="comment-header">
                             <h1>User</h1>
                             <h2>Rating: 5/5</h2>
@@ -252,7 +252,7 @@
                         </div>
 
                     </div>
-                    <div class="comment">
+                    <div class="comment col-md-6">
                         <div class="comment-header">
                             <h1>User</h1>
                             <h2>Rating: 5/5</h2>
@@ -264,7 +264,7 @@
                         </div>
 
                     </div>
-                    <div class="comment">
+                    <div class="comment col-md-6">
                         <div class="comment-header">
                             <h1>User</h1>
                             <h2>Rating: 5/5</h2>
@@ -276,7 +276,7 @@
                         </div>
 
                     </div>
-                    <div class="comment">
+                    <div class="comment col-md-6">
                         <div class="comment-header">
                             <h1>User</h1>
                             <h2>Rating: 5/5</h2>
