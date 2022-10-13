@@ -1,26 +1,51 @@
-<!DOCTYPE html>
+<?php
+/* Smarty version 4.2.1, created on 2022-10-13 17:22:20
+  from '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/browseArtists.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '4.2.1',
+  'unifunc' => 'content_6348818c2b5af5_19027046',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '44310d3d33387b0a08a2a0b9fad935195db9fc0a' => 
+    array (
+      0 => '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/browseArtists.tpl',
+      1 => 1665607671,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_6348818c2b5af5_19027046 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Playlist Title</title>
+    <title>Browse Artists</title>
 
     <!-- Custom fonts for this template-->
-    <link href="../public_html/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="/public_html/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
             href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
             rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="../public_html/css/sb-admin-2.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../public_html/css/viewStyles.css">
-    <script src="https://kit.fontawesome.com/125fe29883.js" crossorigin="anonymous"></script>
+    <link href="/public_html/css/sb-admin-2.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/public_html/css/browseDivStyles.css">
+    <?php echo '<script'; ?>
+ src="https://kit.fontawesome.com/125fe29883.js" crossorigin="anonymous"><?php echo '</script'; ?>
+>
+
 
 </head>
 
@@ -33,7 +58,7 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
         <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../public_html/templates/explore.php">
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../public_html/templates/explore.html">
             <div class="sidebar-brand-icon rotate-n-15">
                 <i class="fas fa-music"></i>
             </div>
@@ -45,12 +70,12 @@
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item">
-            <a class="nav-link" href="../public_html/library.php">
+            <a class="nav-link" href="../public_html/templates/library.html">
                 <i class="fas fa-folder-open    "></i>
                 <span>My Library</span></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="../public_html/profile.php">
+            <a class="nav-link" href="../public_html/templates/profile.html">
                 <i class="fas fa-user fa-tachometer-alt"></i>
                 <span>My Profile</span></a>
         </li>
@@ -63,8 +88,8 @@
         </div>
 
         <!-- Nav Item - Utilities Collapse Menu -->
-        <li class="nav-item active">
-            <a class="nav-link" href="../public_html/explore.php">
+        <li class="nav-item">
+            <a class="nav-link" href="../public_html/templates/explore.html">
                 <i class="fas fa-compass"></i>
                 <span>Explore</span></a>
         </li>
@@ -76,11 +101,11 @@
                 <i class="fas fa-th-large"></i>
                 <span>Browse All</span>
             </a>
-            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionSidebar">
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Browse All:</h6>
-                    <a class="collapse-item" href="../public_html/browseArtists.php">Artists</a>
-                    <a class="collapse-item" href="../public_html/browseAlbums.php">Albums</a>
+                    <a class="collapse-item active" href="../public_html/templates/browseArtists.html">Artists</a>
+                    <a class="collapse-item" href="browseAlbums.tpl">Albums</a>
                 </div>
             </div>
         </li>
@@ -95,9 +120,9 @@
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Add Music:</h6>
-                    <a class="collapse-item" href="../public_html/addArtist.php">Artist</a>
-                    <a class="collapse-item" href="../public_html/addAlbum.php">Album</a>
-                    <a class="collapse-item" href="../public_html/addSong.php">Song</a>
+                    <a class="collapse-item" href="../public_html/templates/addArtist.html">Artist</a>
+                    <a class="collapse-item" href="../public_html/templates/addAlbum.html">Album</a>
+                    <a class="collapse-item" href="../public_html/templates/addSong.html">Song</a>
                 </div>
             </div>
         </li>
@@ -177,7 +202,7 @@
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="mr-2 d-none d-lg-inline text-gray-600 small">User</span>
                             <img class="img-profile rounded-circle"
-                                 src="../public_html/img/pfp/blank.png">
+                                 src="/public_html/img/pfp/blank.png">
                         </a>
                         <!-- Dropdown - User Information -->
                         <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -206,94 +231,59 @@
             <!-- Begin Page Content -->
             <div class="container-fluid">
 
-                <!--Delete button -->
-                <div class="float-right relative-top">
-                    <a href="">
-                        <img src="../img/trashcan.png" alt="white trash can image" height="30" width="30">
+                <!-- Page Heading -->
+                <h1 class="h3 mb-4 content-title">Browse All Artists:</h1>
+                <!--Page Content-->
+                <div class="row pl-3 pr-3 justify-content-around">
+                    <!-- artist content divs-->
+                    <a class="content" href="../public_html/templates/viewArtist.html">
+                        <div class="content-img">
+                            <img class="img-fluid" src="/public_html/img/artist-imgs/Asap-Rocky.jpg" alt="A$AP Rocky">
+                        </div>
+                        <h1>A$AP Rocky</h1>
                     </a>
-                </div>
-
-                <!-- Playlist Information -->
-                <div class="album-header row">
-                    <div class="col-sm-3 pl-0 ml-3">
-                        <img class="artwork" src="../public_html/img/empty-playlist.jpg" alt="">
-                    </div>
-                    <div class="album-metadata col-sm-3" style="height: 300px;">
-                        <h1>TESTING</h1>
-                        <h2>User</h2>
-                        <h6>Here the user will add a description of the playlist if so desired.</h6>
-                        <a class="mb-7 add-music-button" href="../public_html/templates/addSong.html">Edit Playlist Details</a><br>
-                        <a class="mb-7 add-music-button" href="../public_html/templates/addSong.html">Add Song</a>
-                    </div>
-                </div>
-                <!-- Playlist Tracklist -->
-                <div class="album-tracklist row">
-                    <div class="col-sm-12">
-                        <ul>
-                            <li class="row item">
-                                <div class="col-sm-11">
-                                    <h1>Distorted Records</h1>
-                                    <p>A$AP Rocky • TESTING</p>
-                                </div>
-
-                                <!-- Topbar Navbar -->
-                                <ul class="navbar-nav ml-auto">
-
-                                    <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-                                    <li class="nav-item dropdown no-arrow d-sm-none">
-                                        <!-- Dropdown - Messages -->
-                                        <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                                             aria-labelledby="searchDropdown0">
-                                            <form class="form-inline mr-auto w-100 navbar-search">
-                                                <div class="input-group">
-                                                    <input type="text" class="form-control bg-light border-0 small"
-                                                           placeholder="Search music..." aria-label="Search"
-                                                           aria-describedby="basic-addon2">
-                                                    <div class="input-group-append">
-                                                        <button class="btn btn-primary" type="button">
-                                                            <i class="fas fa-search fa-sm"></i>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </li>
-
-                                    <div class="topbar-divider d-none d-sm-block"></div>
-
-                                    <!-- Nav Item - Song Information -->
-                                    <li class="nav-item dropdown no-arrow">
-                                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown0" role="button"
-                                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">. . .</span>
-                                        </a>
-                                        <!-- Dropdown - Song Information -->
-                                        <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                             aria-labelledby="userDropdown0">
-                                            <a class="dropdown-item" href="#">
-                                                <i class="fas fa-folder-open fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                View Comments
-                                            </a>
-                                            <a class="dropdown-item" href="viewArtist.html">
-                                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                View Artist
-                                            </a>
-                                            <a class="dropdown-item" href="addSong.html">
-                                                <i class="fas fa-folder-open fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                Add to playlist
-                                            </a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                                                <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                Delete
-                                            </a>
-                                        </div>
-                                    </li>
-                                </ul>
-                                
-                            </li>
-                        </ul>
-                    </div>
+                    <a class="content" href="#">
+                        <div class="content-img">
+                            <img class="img-fluid" src="/public_html/img/artist-imgs/Andy-Mineo.jpg" alt="The Beatles">
+                        </div>
+                        <h1>Andy Mineo</h1>
+                    </a>
+                    <a class="content" href="#">
+                        <div class="content-img">
+                            <img class="img-fluid" src="/public_html/img/artist-imgs/Arctic-Monkeys.jpeg" alt="The Beatles">
+                        </div>
+                        <h1>Arctic Monkeys</h1>
+                    </a>
+                    <a class="content" href="#">
+                        <div class="content-img">
+                            <img class="img-fluid" src="/public_html/img/artist-imgs/Baby-Keem.jpeg" alt="The Beatles">
+                        </div>
+                        <h1>Baby Keem</h1>
+                    </a>
+                    <a class="content" href="#">
+                        <div class="content-img">
+                            <img class="img-fluid" src="/public_html/img/artist-imgs/Backseat-Lovers.PNG" alt="The Beatles">
+                        </div>
+                        <h1>The Backseat Lovers</h1>
+                    </a>
+                    <a class="content" href="#">
+                        <div class="content-img">
+                            <img class="img-fluid" src="/public_html/img/artist-imgs/Bad-Bunny.jpeg" alt="The Beatles">
+                        </div>
+                        <h1>Bad Bunny</h1>
+                    </a>
+                    <a class="content" href="#">
+                        <div class="content-img">
+                            <img class="img-fluid" src="/public_html/img/artist-imgs/the-beatles.jpg" alt="The Beatles">
+                        </div>
+                        <h1>The Beatles</h1>
+                    </a>
+                    <a class="content" href="#">
+                        <div class="content-img">
+                            <img class="img-fluid" src="/public_html/img/artist-imgs/Gorillaz.jpeg" alt="">
+                        </div>
+                        <h1>Gorillaz</h1>
+                    </a>
                 </div>
 
             </div>
@@ -306,7 +296,7 @@
         <footer class="sticky-footer bg-darker">
             <div class="container my-auto">
                 <div class="copyright text-center my-auto">
-                    <span>Copyright &copy; Tau Tech 2020</span>
+                    <span>Copyright &copy; Tau Tech 2022</span>
                 </div>
             </div>
         </footer>
@@ -344,15 +334,24 @@
 </div>
 
 <!-- Bootstrap core JavaScript-->
-<script src="../public_html/vendor/jquery/jquery.min.js"></script>
-<script src="../public_html/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<?php echo '<script'; ?>
+ src="/public_html/vendor/jquery/jquery.min.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="/public_html/vendor/bootstrap/js/bootstrap.bundle.min.js"><?php echo '</script'; ?>
+>
 
 <!-- Core plugin JavaScript-->
-<script src="../public_html/vendor/jquery-easing/jquery.easing.min.js"></script>
+<?php echo '<script'; ?>
+ src="/public_html/vendor/jquery-easing/jquery.easing.min.js"><?php echo '</script'; ?>
+>
 
 <!-- Custom scripts for all pages-->
-<script src="../public_html/js/sb-admin-2.min.js"></script>
+<?php echo '<script'; ?>
+ src="/public_html/js/sb-admin-2.min.js"><?php echo '</script'; ?>
+>
 
 </body>
 
-</html>
+</html><?php }
+}

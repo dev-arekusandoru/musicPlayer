@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-13 17:03:46
+/* Smarty version 4.2.1, created on 2022-10-13 17:20:34
   from '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/viewAlbum.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_63487d32187f63_86147838',
+  'unifunc' => 'content_63488122e66ea4_32065495',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ec88983db589af83ded1515fe17bce1d59ee7b24' => 
     array (
       0 => '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/viewAlbum.tpl',
-      1 => 1665695025,
+      1 => 1665695820,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63487d32187f63_86147838 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63488122e66ea4_32065495 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -35,7 +35,7 @@ function content_63487d32187f63_86147838 (Smarty_Internal_Template $_smarty_tpl)
     <title>Album Title</title>
 
     <!-- Custom fonts for this template-->
-    <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="/public_html/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
             href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
             rel="stylesheet">
@@ -63,7 +63,7 @@ function content_63487d32187f63_86147838 (Smarty_Internal_Template $_smarty_tpl)
 
         <!-- Sidebar - Brand -->
         <a class="sidebar-brand d-flex align-items-center justify-content-center"
-           href="../public_html/templates/explore.html">
+           href="/public_html/explore.php">
             <div class="sidebar-brand-icon rotate-n-15">
                 <i class="fas fa-music"></i>
             </div>
@@ -75,12 +75,12 @@ function content_63487d32187f63_86147838 (Smarty_Internal_Template $_smarty_tpl)
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item">
-            <a class="nav-link" href="/public_html/templates/library.php">
+            <a class="nav-link" href="/public_html/library.php">
                 <i class="fas fa-folder-open    "></i>
                 <span>My Library</span></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="/public_html/templates/profile.tpl">
+            <a class="nav-link" href="/public_html/profile.php">
                 <i class="fas fa-user fa-tachometer-alt"></i>
                 <span>My Profile</span></a>
         </li>
@@ -94,7 +94,7 @@ function content_63487d32187f63_86147838 (Smarty_Internal_Template $_smarty_tpl)
 
         <!-- Nav Item - Utilities Collapse Menu -->
         <li class="nav-item">
-            <a class="nav-link" href="../public_html/templates/explore.html">
+            <a class="nav-link" href="/public_html/explore.php">
                 <i class="fas fa-compass"></i>
                 <span>Explore</span></a>
         </li>
@@ -109,8 +109,8 @@ function content_63487d32187f63_86147838 (Smarty_Internal_Template $_smarty_tpl)
             <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Browse All:</h6>
-                    <a class="collapse-item" href="browseArtists.tpl">Artists</a>
-                    <a class="collapse-item" href="browseAlbums.tpl">Albums</a>
+                    <a class="collapse-item" href="/public_html/browseArtists.php">Artists</a>
+                    <a class="collapse-item" href="/public_html/browseAlbums.php">Albums</a>
                 </div>
             </div>
         </li>
@@ -125,9 +125,9 @@ function content_63487d32187f63_86147838 (Smarty_Internal_Template $_smarty_tpl)
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Add Music:</h6>
-                    <a class="collapse-item" href="../public_html/templates/addArtist.html">Artist</a>
-                    <a class="collapse-item" href="../public_html/templates/addAlbum.html">Album</a>
-                    <a class="collapse-item" href="../public_html/templates/addSong.html">Song</a>
+                    <a class="collapse-item" href="/public_html/addArtist.php">Artist</a>
+                    <a class="collapse-item" href="/public_html/addAlbum.php">Album</a>
+                    <a class="collapse-item" href="/public_html/addSong.php">Song</a>
                 </div>
             </div>
         </li>
@@ -207,7 +207,7 @@ function content_63487d32187f63_86147838 (Smarty_Internal_Template $_smarty_tpl)
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="mr-2 d-none d-lg-inline text-gray-600 small">User</span>
                             <img class="img-profile rounded-circle"
-                                 src="/public_html/img/pfp/blank.png">
+                                 src="/public_html/img/pfp/blank.png" alt="profile">
                         </a>
                         <!-- Dropdown - User Information -->
                         <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -432,7 +432,7 @@ function content_63487d32187f63_86147838 (Smarty_Internal_Template $_smarty_tpl)
 
                                         <div class="values">
                                             <div>
-                                                <label>Rating</label><input type="text" id="rating" value="0"/>
+                                                <label for="rating">Rating</label><input type="text" id="rating" value="0">
                                             </div>
                                         </div>
                                         <!--                                        End Star Rating-->
@@ -492,7 +492,7 @@ function content_63487d32187f63_86147838 (Smarty_Internal_Template $_smarty_tpl)
             <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
             <div class="modal-footer">
                 <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                <a class="btn btn-primary" href="userLogin.html">Logout</a>
+                <a class="btn btn-primary" href="/public_html/login.php">Logout</a>
             </div>
         </div>
     </div>
@@ -516,7 +516,7 @@ function content_63487d32187f63_86147838 (Smarty_Internal_Template $_smarty_tpl)
  src="/public_html/js/sb-admin-2.min.js"><?php echo '</script'; ?>
 >
 <?php echo '<script'; ?>
- src="starRating.js"><?php echo '</script'; ?>
+ src="/public_html/js/starRating.js"><?php echo '</script'; ?>
 >
 
 </body>

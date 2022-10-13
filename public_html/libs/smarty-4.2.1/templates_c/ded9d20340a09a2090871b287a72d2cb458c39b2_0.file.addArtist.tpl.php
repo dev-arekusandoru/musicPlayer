@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-13 15:29:53
+/* Smarty version 4.2.1, created on 2022-10-13 17:37:48
   from '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/addArtist.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_634867313dfc68_62744359',
+  'unifunc' => 'content_6348852c926c64_92816372',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ded9d20340a09a2090871b287a72d2cb458c39b2' => 
     array (
       0 => '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/addArtist.tpl',
-      1 => 1665689392,
+      1 => 1665690223,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_634867313dfc68_62744359 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6348852c926c64_92816372 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -239,13 +239,13 @@ function content_634867313dfc68_62744359 (Smarty_Internal_Template $_smarty_tpl)
                 </div>
                 <!-- Add Artist forms and stuff-->
                 <div class="row">
-                    <form class="row" method="post" action="addSongToDB.php">
+                    <form class="row" method="post" action="/public_html/addArtistToDB.php">
                         <div class="add-img-div">
                             <img class="add-img" src="/public_html/img/pfp/blank.png" alt="">
                             <input type="file" id="myFile" name="filename">
                         </div>
                         <div class="add-content-div">
-                            <label class="add-label" for="select-artist">Artist Name:</label>
+                            <label class="add-label" for="artist-name">Artist Name:</label>
                             <br>
                             <input class="add-input" name="artist" id="artist-name" type="text"/>
                             <br>

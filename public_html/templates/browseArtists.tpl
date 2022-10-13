@@ -11,14 +11,14 @@
     <title>Browse Artists</title>
 
     <!-- Custom fonts for this template-->
-    <link href="/public_html/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="../public_html/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
             href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
             rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="/public_html/css/sb-admin-2.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/public_html/css/browseDivStyles.css">
+    <link href="../public_html/css/sb-admin-2.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../public_html/css/browseDivStyles.css">
     <script src="https://kit.fontawesome.com/125fe29883.js" crossorigin="anonymous"></script>
 
 
@@ -33,7 +33,7 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
         <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../public_html/templates/explore.html">
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../public_html/templates/explore.php">
             <div class="sidebar-brand-icon rotate-n-15">
                 <i class="fas fa-music"></i>
             </div>
@@ -45,12 +45,12 @@
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item">
-            <a class="nav-link" href="../public_html/templates/library.html">
+            <a class="nav-link" href="../public_html/library.php">
                 <i class="fas fa-folder-open    "></i>
                 <span>My Library</span></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="../public_html/templates/profile.html">
+            <a class="nav-link" href="../public_html/profile.php">
                 <i class="fas fa-user fa-tachometer-alt"></i>
                 <span>My Profile</span></a>
         </li>
@@ -63,8 +63,8 @@
         </div>
 
         <!-- Nav Item - Utilities Collapse Menu -->
-        <li class="nav-item">
-            <a class="nav-link" href="../public_html/templates/explore.html">
+        <li class="nav-item active">
+            <a class="nav-link" href="../public_html/explore.php">
                 <i class="fas fa-compass"></i>
                 <span>Explore</span></a>
         </li>
@@ -76,11 +76,11 @@
                 <i class="fas fa-th-large"></i>
                 <span>Browse All</span>
             </a>
-            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionSidebar">
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Browse All:</h6>
-                    <a class="collapse-item active" href="../public_html/templates/browseArtists.html">Artists</a>
-                    <a class="collapse-item" href="browseAlbums.tpl">Albums</a>
+                    <a class="collapse-item" href="../public_html/browseArtists.php">Artists</a>
+                    <a class="collapse-item" href="../public_html/browseAlbums.php">Albums</a>
                 </div>
             </div>
         </li>
@@ -95,9 +95,9 @@
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Add Music:</h6>
-                    <a class="collapse-item" href="../public_html/templates/addArtist.html">Artist</a>
-                    <a class="collapse-item" href="../public_html/templates/addAlbum.html">Album</a>
-                    <a class="collapse-item" href="../public_html/templates/addSong.html">Song</a>
+                    <a class="collapse-item" href="../public_html/addArtist.php">Artist</a>
+                    <a class="collapse-item" href="../public_html/addAlbum.php">Album</a>
+                    <a class="collapse-item" href="../public_html/addSong.php">Song</a>
                 </div>
             </div>
         </li>
@@ -177,7 +177,7 @@
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="mr-2 d-none d-lg-inline text-gray-600 small">User</span>
                             <img class="img-profile rounded-circle"
-                                 src="/public_html/img/pfp/blank.png">
+                                 src="../public_html/img/pfp/blank.png">
                         </a>
                         <!-- Dropdown - User Information -->
                         <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -213,49 +213,49 @@
                     <!-- artist content divs-->
                     <a class="content" href="../public_html/templates/viewArtist.html">
                         <div class="content-img">
-                            <img class="img-fluid" src="/public_html/img/artist-imgs/Asap-Rocky.jpg" alt="A$AP Rocky">
+                            <img class="img-fluid" src="../public_html/img/artist-imgs/Asap-Rocky.jpg" alt="A$AP Rocky">
                         </div>
                         <h1>A$AP Rocky</h1>
                     </a>
                     <a class="content" href="#">
                         <div class="content-img">
-                            <img class="img-fluid" src="/public_html/img/artist-imgs/Andy-Mineo.jpg" alt="The Beatles">
+                            <img class="img-fluid" src="../public_html/img/artist-imgs/Andy-Mineo.jpg" alt="The Beatles">
                         </div>
                         <h1>Andy Mineo</h1>
                     </a>
                     <a class="content" href="#">
                         <div class="content-img">
-                            <img class="img-fluid" src="/public_html/img/artist-imgs/Arctic-Monkeys.jpeg" alt="The Beatles">
+                            <img class="img-fluid" src="../public_html/img/artist-imgs/Arctic-Monkeys.jpeg" alt="The Beatles">
                         </div>
                         <h1>Arctic Monkeys</h1>
                     </a>
                     <a class="content" href="#">
                         <div class="content-img">
-                            <img class="img-fluid" src="/public_html/img/artist-imgs/Baby-Keem.jpeg" alt="The Beatles">
+                            <img class="img-fluid" src="../public_html/img/artist-imgs/Baby-Keem.jpeg" alt="The Beatles">
                         </div>
                         <h1>Baby Keem</h1>
                     </a>
                     <a class="content" href="#">
                         <div class="content-img">
-                            <img class="img-fluid" src="/public_html/img/artist-imgs/Backseat-Lovers.PNG" alt="The Beatles">
+                            <img class="img-fluid" src="../public_html/img/artist-imgs/Backseat-Lovers.PNG" alt="The Beatles">
                         </div>
                         <h1>The Backseat Lovers</h1>
                     </a>
                     <a class="content" href="#">
                         <div class="content-img">
-                            <img class="img-fluid" src="/public_html/img/artist-imgs/Bad-Bunny.jpeg" alt="The Beatles">
+                            <img class="img-fluid" src="../public_html/img/artist-imgs/Bad-Bunny.jpeg" alt="The Beatles">
                         </div>
                         <h1>Bad Bunny</h1>
                     </a>
                     <a class="content" href="#">
                         <div class="content-img">
-                            <img class="img-fluid" src="/public_html/img/artist-imgs/the-beatles.jpg" alt="The Beatles">
+                            <img class="img-fluid" src="../public_html/img/artist-imgs/the-beatles.jpg" alt="The Beatles">
                         </div>
                         <h1>The Beatles</h1>
                     </a>
                     <a class="content" href="#">
                         <div class="content-img">
-                            <img class="img-fluid" src="/public_html/img/artist-imgs/Gorillaz.jpeg" alt="">
+                            <img class="img-fluid" src="../public_html/img/artist-imgs/Gorillaz.jpeg" alt="">
                         </div>
                         <h1>Gorillaz</h1>
                     </a>
@@ -309,14 +309,14 @@
 </div>
 
 <!-- Bootstrap core JavaScript-->
-<script src="/public_html/vendor/jquery/jquery.min.js"></script>
-<script src="/public_html/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../public_html/vendor/jquery/jquery.min.js"></script>
+<script src="../public_html/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 <!-- Core plugin JavaScript-->
-<script src="/public_html/vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="../public_html/vendor/jquery-easing/jquery.easing.min.js"></script>
 
 <!-- Custom scripts for all pages-->
-<script src="/public_html/js/sb-admin-2.min.js"></script>
+<script src="../public_html/js/sb-admin-2.min.js"></script>
 
 </body>
 
