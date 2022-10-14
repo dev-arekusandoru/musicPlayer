@@ -298,6 +298,12 @@
                                                 <i class="fa fa-comments-o fa-sm fa-fw mr-2 text-gray-400"></i>
                                                 View Comments
                                             </a>
+
+                                            <a class="dropdown-item" href="/viewAlbum.php">
+                                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                                View Album
+                                            </a>
+
                                             <a class="dropdown-item" href="/viewArtist.php">
                                                 <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                                 View Artist
