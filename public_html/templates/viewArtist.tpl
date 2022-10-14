@@ -19,7 +19,10 @@
 
     <!-- Custom styles for this template-->
     <link href="/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="/css/starRating.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/viewStyles.css">
     <link rel="stylesheet" href="/css/browseDivStyles.css">
+
     <!--<script src="https://kit.fontawesome.com/125fe29883.js" crossorigin="anonymous"></script>-->
 
     <script>
@@ -244,19 +247,22 @@
 
                 <div class="content-splitter"></div>
 
-                <!--Artist Comments-->
+
+                <!--Start Artist comment section-->
                 <h1 class="h3 content-title">Reviews:</h1>
                 <div class="row comments justify-content-around">
+                    <!-- all the comments -->
                     <div class="comment col-md-6">
                         <div class="comment-header">
                             <h1 class="row container ml-0 pl-0">User</h1>
                             <div class="row container ml-0 pl-0">
                                 <h2 style="line-height: 27px" class="mr-1">Rating: </h2>
-                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                            </div>
                         </div>
                         <div class="comment-body">
                             <p>This is where users will leave the details of their reviews,
@@ -270,11 +276,12 @@
                             <h1 class="row container ml-0 pl-0">User</h1>
                             <div class="row container ml-0 pl-0">
                                 <h2 style="line-height: 27px" class="mr-1">Rating: </h2>
-                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                            </div>
                         </div>
                         <div class="comment-body">
                             <p>This is where users will leave the details of their reviews,
@@ -288,11 +295,12 @@
                             <h1 class="row container ml-0 pl-0">User</h1>
                             <div class="row container ml-0 pl-0">
                                 <h2 style="line-height: 27px" class="mr-1">Rating: </h2>
-                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                            </div>
                         </div>
                         <div class="comment-body">
                             <p>This is where users will leave the details of their reviews,
@@ -306,11 +314,12 @@
                             <h1 class="row container ml-0 pl-0">User</h1>
                             <div class="row container ml-0 pl-0">
                                 <h2 style="line-height: 27px" class="mr-1">Rating: </h2>
-                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                            </div>
                         </div>
                         <div class="comment-body">
                             <p>This is where users will leave the details of their reviews,
@@ -324,11 +333,12 @@
                             <h1 class="row container ml-0 pl-0">User</h1>
                             <div class="row container ml-0 pl-0">
                                 <h2 style="line-height: 27px" class="mr-1">Rating: </h2>
-                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                            </div>
                         </div>
                         <div class="comment-body">
                             <p>This is where users will leave the details of their reviews,
@@ -338,31 +348,32 @@
 
                     </div>
                 </div>
-                <!-- Add Comment Button -->
-                        div class="row add-comment justify-content-center mb-5">
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                            Add Review
-                        </button>
-                    </div>
 
-                        <!-- Review Modal -->
-                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
-                             aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="reviewModalLabel">Write Review</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <form>
-                                            <div class="form-group">
-                                                <!--                                        <label for="recipient-name" class="col-form-label">Rating:</label>-->
-                                                <!--                                        <input type="text" class="form-control" id="recipient-name">-->
-                                                <!--                                        Beginning Star Rating-->
-                                                <span class="rating_stars rating_0">
+                <!--Add review  button-->
+                <div class="row add-comment justify-content-center mb-5">
+                    <button type="button" class="btn btn-primary add-comment-button" data-toggle="modal" data-target="#exampleModal">
+                        Add Review
+                    </button>
+                </div>
+
+                <!-- Review Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                     aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="reviewModalLabel">Write Review</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                        <!--                                        <label for="recipient-name" class="col-form-label">Rating:</label>-->
+                                        <!--                                        <input type="text" class="form-control" id="recipient-name">-->
+                                        <!--                                        Beginning Star Rating-->
+                                        <span class="rating_stars rating_0">
                                           <span class='s' data-low='0.5' data-high='1'><i class="fa fa-star-o"></i><i
                                                       class="fa fa-star-half-o"></i><i class="fa fa-star"></i></span>
                                           <span class='s' data-low='1.5' data-high='2'><i class="fa fa-star-o"></i><i
@@ -386,26 +397,28 @@
                                           <span class='r r5' data-rating='5' data-value='5'></span>
                                         </span>
 
-                                                <div class="values">
-                                                    <div>
-                                                        <label for="rating">Rating</label><input type="text" id="rating" value="0">
-                                                    </div>
-                                                </div>
-                                                <!--                                        End Star Rating-->
+                                        <div class="values">
+                                            <div>
+                                                <label for="rating">Rating</label><input type="text" id="rating"
+                                                                                         value="0">
                                             </div>
-                                            <div class="form-group">
-                                                <label for="message-text" class="col-form-label">Review:</label>
-                                                <textarea class="form-control" id="message-text"></textarea>
-                                            </div>
-                                        </form>
+                                        </div>
+                                        <!--                                        End Star Rating-->
                                     </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                        <button type="button" class="btn btn-primary">Submit Review</button>
+                                    <div class="form-group">
+                                        <label for="message-text" class="col-form-label">Review:</label>
+                                        <textarea class="form-control" id="message-text"></textarea>
                                     </div>
-                                </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-primary">Submit Review</button>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <!--End Artist comment section-->
 
             </div>
             <!-- /.container-fluid -->
@@ -435,7 +448,8 @@
 </a>
 
 <!-- Logout Modal-->
-<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog"
+     aria-labelledby="exampleModalLabel"
      aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -445,7 +459,9 @@
                     <span aria-hidden="true">×</span>
                 </button>
             </div>
-            <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+            <div class="modal-body">Select "Logout" below if you are ready to end your current
+                session.
+            </div>
             <div class="modal-footer">
                 <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
                 <a class="btn btn-primary" href="userLogin.html">Logout</a>
