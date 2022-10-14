@@ -240,41 +240,6 @@
                 </div>
                 <!-- Playlist Tracklist -->
                 <div class="album-tracklist row">
-<<<<<<< Updated upstream
-                    <div class="col-sm-12">
-                        <ul>
-                            <li class="row item">
-                                <div class="col-sm-10">
-                                    <h1>Distorted Records</h1>
-                                    <p>A$AP Rocky • TESTING</p>
-                                </div>
-
-                                <!-- Topbar Navbar -->
-                                <ul class="navbar-nav ml-auto">
-
-                                    <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-                                    <li class="nav-item dropdown no-arrow d-sm-none">
-                                        <!-- Dropdown - Messages -->
-                                        <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                                             aria-labelledby="searchDropdown0">
-                                            <form class="form-inline mr-auto w-100 navbar-search">
-                                                <div class="input-group">
-                                                    <input type="text" class="form-control bg-light border-0 small"
-                                                           placeholder="Search music..." aria-label="Search"
-                                                           aria-describedby="basic-addon2">
-                                                    <div class="input-group-append">
-                                                        <button class="btn btn-primary" type="button">
-                                                            <i class="fas fa-search fa-sm"></i>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </li>
-
-                                    <div class="topbar-divider d-none d-sm-block"></div>
-
-=======
                     <div class="col">
                         <div class="row container playlist-song justify-content-between">
                             <div class="song-info">
@@ -282,37 +247,29 @@
                                 <p>A$AP Rocky • TESTING</p>
                             </div>
                             <div class="dropdown">
-                                <ul class="navbar-nav">
->>>>>>> Stashed changes
+                                <ul class="navbar-nav ml-auto">
                                     <!-- Nav Item - Song Information -->
                                     <li class="nav-item dropdown no-arrow" style="border: none;">
                                         <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <span class="mr-2 d-none d-lg-inline text-secondary " >. . .</span>
-
+                                            <span class="mr-2 d-none d-lg-inline text-secondary " style="border: none;">. . .</span>
                                         </a>
-                                        <!-- Dropdown - User Information -->
+                                        <!-- Dropdown - Song Information -->
                                         <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                              aria-labelledby="userDropdown0">
                                             <a class="dropdown-item" href="#">
                                                 <i class="fa fa-comments-o fa-sm fa-fw mr-2 text-gray-400"></i>
                                                 View Comments
                                             </a>
-
                                             <a class="dropdown-item" href="/viewAlbum.php">
-                                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                                <i class="fas fa-folder-open fa-sm fa-fw mr-2 text-gray-400"></i>
                                                 View Album
                                             </a>
-
                                             <a class="dropdown-item" href="/viewArtist.php">
                                                 <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                                 View Artist
                                             </a>
-<<<<<<< Updated upstream
                                             <a class="dropdown-item" href="/addSong.php">
-=======
-                                            <a class="dropdown-item" href="/addSong.ph">
->>>>>>> Stashed changes
                                                 <i class="fa fa-plus fa-sm fa-fw mr-2 text-gray-400"></i>
                                                 Add to playlist
                                             </a>
@@ -324,69 +281,68 @@
                                         </div>
                                     </li>
                                 </ul>
-
-
                             </div>
                         </div>
                     </div>
+                    <!-- Topbar Navbar -->
+
+
                 </div>
+                <!-- /.container-fluid -->
 
             </div>
-            <!-- /.container-fluid -->
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-darker">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Tau Tech 2020</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
 
         </div>
-        <!-- End of Main Content -->
-
-        <!-- Footer -->
-        <footer class="sticky-footer bg-darker">
-            <div class="container my-auto">
-                <div class="copyright text-center my-auto">
-                    <span>Copyright &copy; Tau Tech 2020</span>
-                </div>
-            </div>
-        </footer>
-        <!-- End of Footer -->
+        <!-- End of Content Wrapper -->
 
     </div>
-    <!-- End of Content Wrapper -->
+    <!-- End of Page Wrapper -->
 
-</div>
-<!-- End of Page Wrapper -->
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
 
-<!-- Scroll to Top Button-->
-<a class="scroll-to-top rounded" href="#page-top">
-    <i class="fas fa-angle-up"></i>
-</a>
-
-<!-- Logout Modal-->
-<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-     aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                </button>
-            </div>
-            <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-            <div class="modal-footer">
-                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                <a class="btn btn-primary" href="userLogin.html">Logout</a>
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="userLogin.html">Logout</a>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<!-- Bootstrap core JavaScript-->
-<script src="/vendor/jquery/jquery.min.js"></script>
-<script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap core JavaScript-->
+    <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-<!-- Core plugin JavaScript-->
-<script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
 
-<!-- Custom scripts for all pages-->
-<script src="/js/sb-admin-2.min.js"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="/js/sb-admin-2.min.js"></script>
 
 </body>
 

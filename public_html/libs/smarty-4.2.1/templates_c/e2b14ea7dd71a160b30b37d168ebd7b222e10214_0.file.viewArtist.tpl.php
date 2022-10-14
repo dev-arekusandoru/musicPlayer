@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-13 22:17:03
+/* Smarty version 4.2.1, created on 2022-10-13 22:31:41
   from '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/viewArtist.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_6348c69f96ee65_91140352',
+  'unifunc' => 'content_6348ca0d753221_95419776',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e2b14ea7dd71a160b30b37d168ebd7b222e10214' => 
     array (
       0 => '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/viewArtist.tpl',
-      1 => 1665713821,
+      1 => 1665714700,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6348c69f96ee65_91140352 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6348ca0d753221_95419776 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -258,7 +258,15 @@ function content_6348c69f96ee65_91140352 (Smarty_Internal_Template $_smarty_tpl)
                 <!-- Page Heading -->
                 <!-- Artist Information -->
                 <h1 class="h3 mb-0 content-title">A$AP Rocky:</h1>
-                <h2 class="mb-1 artist-rating">Average Album Rating: 5/5</h2>
+                <h2 class="mb-1 artist-rating">Average Album Rating: </h2>
+                <div class=" ml-0 pl-0">
+                    <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                    <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                    <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                    <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                    <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                </div>
+                <div style="height: 10px;"></div>
                 <a class="mb-7 add-music-button" href="/addAlbum.php">Add Album</a>
                 <!--Page Content-->
                 <!-- Artist Discography  -->

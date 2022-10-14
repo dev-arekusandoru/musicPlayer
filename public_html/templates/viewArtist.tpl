@@ -231,7 +231,15 @@
                 <!-- Page Heading -->
                 <!-- Artist Information -->
                 <h1 class="h3 mb-0 content-title">A$AP Rocky:</h1>
-                <h2 class="mb-1 artist-rating">Average Album Rating: 5/5</h2>
+                <h2 class="mb-1 artist-rating">Average Album Rating: </h2>
+                <div class=" ml-0 pl-0">
+                    <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                    <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                    <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                    <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                    <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                </div>
+                <div style="height: 10px;"></div>
                 <a class="mb-7 add-music-button" href="/addAlbum.php">Add Album</a>
                 <!--Page Content-->
                 <!-- Artist Discography  -->

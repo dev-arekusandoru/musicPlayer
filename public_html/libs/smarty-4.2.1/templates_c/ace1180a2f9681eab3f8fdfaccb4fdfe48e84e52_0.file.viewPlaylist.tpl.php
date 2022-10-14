@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-13 21:59:28
+/* Smarty version 4.2.1, created on 2022-10-13 22:46:54
   from '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/viewPlaylist.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_6348c280b3da83_75155766',
+  'unifunc' => 'content_6348cd9eb717d5_92840496',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ace1180a2f9681eab3f8fdfaccb4fdfe48e84e52' => 
     array (
       0 => '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/viewPlaylist.tpl',
-      1 => 1665712754,
+      1 => 1665715614,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6348c280b3da83_75155766 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6348cd9eb717d5_92840496 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -51,7 +51,7 @@ function content_6348c280b3da83_75155766 (Smarty_Internal_Template $_smarty_tpl)
 >
         // The function below will start the confirmation dialog
         function confirmAction() {
-            let confirmAction = confirm("Are you sure to delete this?");
+            let confirmAction = confirm("Are you sure you want to delete this?");
             if (confirmAction) {
                 alert("Playlist Deleted");
             } else {
@@ -274,26 +274,29 @@ function content_6348c280b3da83_75155766 (Smarty_Internal_Template $_smarty_tpl)
                                 <p>A$AP Rocky • TESTING</p>
                             </div>
                             <div class="dropdown">
-                                <ul class="navbar-nav">
+                                <ul class="navbar-nav ml-auto">
                                     <!-- Nav Item - Song Information -->
                                     <li class="nav-item dropdown no-arrow" style="border: none;">
                                         <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <span class="mr-2 d-none d-lg-inline text-secondary " >. . .</span>
-
+                                            <span class="mr-2 d-none d-lg-inline text-secondary " style="border: none;">. . .</span>
                                         </a>
-                                        <!-- Dropdown - User Information -->
+                                        <!-- Dropdown - Song Information -->
                                         <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                              aria-labelledby="userDropdown0">
                                             <a class="dropdown-item" href="#">
                                                 <i class="fa fa-comments-o fa-sm fa-fw mr-2 text-gray-400"></i>
                                                 View Comments
                                             </a>
+                                            <a class="dropdown-item" href="/viewAlbum.php">
+                                                <i class="fas fa-folder-open fa-sm fa-fw mr-2 text-gray-400"></i>
+                                                View Album
+                                            </a>
                                             <a class="dropdown-item" href="/viewArtist.php">
                                                 <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                                 View Artist
                                             </a>
-                                            <a class="dropdown-item" href="/addSong.ph">
+                                            <a class="dropdown-item" href="/addSong.php">
                                                 <i class="fa fa-plus fa-sm fa-fw mr-2 text-gray-400"></i>
                                                 Add to playlist
                                             </a>
@@ -305,75 +308,74 @@ function content_6348c280b3da83_75155766 (Smarty_Internal_Template $_smarty_tpl)
                                         </div>
                                     </li>
                                 </ul>
-
-
                             </div>
                         </div>
                     </div>
+                    <!-- Topbar Navbar -->
+
+
                 </div>
+                <!-- /.container-fluid -->
 
             </div>
-            <!-- /.container-fluid -->
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-darker">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Tau Tech 2020</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
 
         </div>
-        <!-- End of Main Content -->
-
-        <!-- Footer -->
-        <footer class="sticky-footer bg-darker">
-            <div class="container my-auto">
-                <div class="copyright text-center my-auto">
-                    <span>Copyright &copy; Tau Tech 2020</span>
-                </div>
-            </div>
-        </footer>
-        <!-- End of Footer -->
+        <!-- End of Content Wrapper -->
 
     </div>
-    <!-- End of Content Wrapper -->
+    <!-- End of Page Wrapper -->
 
-</div>
-<!-- End of Page Wrapper -->
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
 
-<!-- Scroll to Top Button-->
-<a class="scroll-to-top rounded" href="#page-top">
-    <i class="fas fa-angle-up"></i>
-</a>
-
-<!-- Logout Modal-->
-<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-     aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                </button>
-            </div>
-            <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-            <div class="modal-footer">
-                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                <a class="btn btn-primary" href="userLogin.html">Logout</a>
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="userLogin.html">Logout</a>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<!-- Bootstrap core JavaScript-->
-<?php echo '<script'; ?>
+    <!-- Bootstrap core JavaScript-->
+    <?php echo '<script'; ?>
  src="/vendor/jquery/jquery.min.js"><?php echo '</script'; ?>
 >
-<?php echo '<script'; ?>
+    <?php echo '<script'; ?>
  src="/vendor/bootstrap/js/bootstrap.bundle.min.js"><?php echo '</script'; ?>
 >
 
-<!-- Core plugin JavaScript-->
-<?php echo '<script'; ?>
+    <!-- Core plugin JavaScript-->
+    <?php echo '<script'; ?>
  src="/vendor/jquery-easing/jquery.easing.min.js"><?php echo '</script'; ?>
 >
 
-<!-- Custom scripts for all pages-->
-<?php echo '<script'; ?>
+    <!-- Custom scripts for all pages-->
+    <?php echo '<script'; ?>
  src="/js/sb-admin-2.min.js"><?php echo '</script'; ?>
 >
 
