@@ -28,7 +28,7 @@
     <script>
         // The function below will start the confirmation dialog
         function confirmAction() {
-            let confirmAction = confirm("Are you sure to delete this?");
+            let confirmAction = confirm("Are you sure you want to delete this?");
             if (confirmAction) {
                 alert("Album Deleted");
             } else {
@@ -224,7 +224,7 @@
                 <!--Delete button -->
                 <div class="float-right relative-top">
                     <a onclick="confirmAction()">
-                        <img src="/img/trashcan.png" alt="white trash can image" height="30" width="30">
+                        <img src="img/trashcan.png" alt="white trash can image" height="30" width="30">
                     </a>
                 </div>
 
