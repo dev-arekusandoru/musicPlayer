@@ -25,7 +25,7 @@
     <script>
         // The function below will start the confirmation dialog
         function confirmAction() {
-            let confirmAction = confirm("Are you sure to delete this?");
+            let confirmAction = confirm("Are you sure you want to delete this?");
             if (confirmAction) {
                 alert("Playlist Deleted");
             } else {
@@ -243,7 +243,7 @@
                     <div class="col-sm-12">
                         <ul>
                             <li class="row item">
-                                <div class="col-sm-11">
+                                <div class="col-sm-10">
                                     <h1>Distorted Records</h1>
                                     <p>A$AP Rocky • TESTING</p>
                                 </div>
@@ -286,11 +286,11 @@
                                                 <i class="fa fa-comments-o fa-sm fa-fw mr-2 text-gray-400"></i>
                                                 View Comments
                                             </a>
-                                            <a class="dropdown-item" href="viewArtist.html">
+                                            <a class="dropdown-item" href="/viewArtist.php">
                                                 <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                                 View Artist
                                             </a>
-                                            <a class="dropdown-item" href="addSong.html">
+                                            <a class="dropdown-item" href="/addSong.php">
                                                 <i class="fa fa-plus fa-sm fa-fw mr-2 text-gray-400"></i>
                                                 Add to playlist
                                             </a>
