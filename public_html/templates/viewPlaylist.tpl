@@ -263,6 +263,7 @@
                                             </a>
                                             <a class="dropdown-item" href="/viewAlbum.php">
                                                 <i class="fas fa-folder-open fa-sm fa-fw mr-2 text-gray-400"></i>
+                                                <i class="fa fa-folder-o fa-sm fa-fw mr-2 text-gray-400"></i>
                                                 View Album
                                             </a>
                                             <a class="dropdown-item" href="/viewArtist.php">
