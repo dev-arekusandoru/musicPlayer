@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-13 20:49:01
+/* Smarty version 4.2.1, created on 2022-10-13 21:26:15
   from '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/viewAlbum.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_6348b1fd6d4ad7_21534659',
+  'unifunc' => 'content_6348bab79dc9c5_13191504',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ec88983db589af83ded1515fe17bce1d59ee7b24' => 
     array (
       0 => '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/viewAlbum.tpl',
-      1 => 1665707986,
+      1 => 1665709252,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6348b1fd6d4ad7_21534659 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6348bab79dc9c5_13191504 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -46,9 +46,9 @@ function content_6348b1fd6d4ad7_21534659 (Smarty_Internal_Template $_smarty_tpl)
     <link rel="stylesheet" href="css/viewStyles.css">
     <link rel="stylesheet" href="css/browseDivStyles.css">
 
-    <?php echo '<script'; ?>
+    <!--<?php echo '<script'; ?>
  src="https://kit.fontawesome.com/125fe29883.js" crossorigin="anonymous"><?php echo '</script'; ?>
->
+>-->
 
     <?php echo '<script'; ?>
 >
@@ -105,7 +105,7 @@ function content_6348b1fd6d4ad7_21534659 (Smarty_Internal_Template $_smarty_tpl)
         </div>
 
         <!-- Nav Item - Utilities Collapse Menu -->
-        <li class="nav-item active">
+        <li class="nav-item">
             <a class="nav-link" href="explore.php">
                 <i class="fas fa-compass"></i>
                 <span>Explore</span></a>
@@ -251,7 +251,7 @@ function content_6348b1fd6d4ad7_21534659 (Smarty_Internal_Template $_smarty_tpl)
                 <!--Delete button -->
                 <div class="float-right relative-top">
                     <a onclick="confirmAction()">
-                        <img src="../public_html/img/trashcan.png" alt="white trash can image" height="30" width="30">
+                        <img src="/img/trashcan.png" alt="white trash can image" height="30" width="30">
                     </a>
                 </div>
 

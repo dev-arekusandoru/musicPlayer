@@ -1,4 +1,27 @@
-<!DOCTYPE html>
+<?php
+/* Smarty version 4.2.1, created on 2022-10-13 21:59:28
+  from '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/viewPlaylist.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '4.2.1',
+  'unifunc' => 'content_6348c280b3da83_75155766',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'ace1180a2f9681eab3f8fdfaccb4fdfe48e84e52' => 
+    array (
+      0 => '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/viewPlaylist.tpl',
+      1 => 1665712754,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_6348c280b3da83_75155766 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -20,19 +43,23 @@
     <!-- Custom styles for this template-->
     <link href="/css/sb-admin-2.min.css" rel="stylesheet">
     <link href="/css/viewStyles.css" rel="stylesheet">
-    <!--<script src="https://kit.fontawesome.com/125fe29883.js" crossorigin="anonymous"></script>-->
+    <!--<?php echo '<script'; ?>
+ src="https://kit.fontawesome.com/125fe29883.js" crossorigin="anonymous"><?php echo '</script'; ?>
+>-->
 
-    <script>
+    <?php echo '<script'; ?>
+>
         // The function below will start the confirmation dialog
         function confirmAction() {
-            let confirmAction = confirm("Are you sure you want to delete this?");
+            let confirmAction = confirm("Are you sure to delete this?");
             if (confirmAction) {
                 alert("Playlist Deleted");
             } else {
                 alert("Action canceled");
             }
         }
-    </script>
+    <?php echo '</script'; ?>
+>
 
 </head>
 
@@ -240,41 +267,6 @@
                 </div>
                 <!-- Playlist Tracklist -->
                 <div class="album-tracklist row">
-<<<<<<< Updated upstream
-                    <div class="col-sm-12">
-                        <ul>
-                            <li class="row item">
-                                <div class="col-sm-10">
-                                    <h1>Distorted Records</h1>
-                                    <p>A$AP Rocky • TESTING</p>
-                                </div>
-
-                                <!-- Topbar Navbar -->
-                                <ul class="navbar-nav ml-auto">
-
-                                    <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-                                    <li class="nav-item dropdown no-arrow d-sm-none">
-                                        <!-- Dropdown - Messages -->
-                                        <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                                             aria-labelledby="searchDropdown0">
-                                            <form class="form-inline mr-auto w-100 navbar-search">
-                                                <div class="input-group">
-                                                    <input type="text" class="form-control bg-light border-0 small"
-                                                           placeholder="Search music..." aria-label="Search"
-                                                           aria-describedby="basic-addon2">
-                                                    <div class="input-group-append">
-                                                        <button class="btn btn-primary" type="button">
-                                                            <i class="fas fa-search fa-sm"></i>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </li>
-
-                                    <div class="topbar-divider d-none d-sm-block"></div>
-
-=======
                     <div class="col">
                         <div class="row container playlist-song justify-content-between">
                             <div class="song-info">
@@ -283,7 +275,6 @@
                             </div>
                             <div class="dropdown">
                                 <ul class="navbar-nav">
->>>>>>> Stashed changes
                                     <!-- Nav Item - Song Information -->
                                     <li class="nav-item dropdown no-arrow" style="border: none;">
                                         <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
@@ -302,11 +293,7 @@
                                                 <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                                 View Artist
                                             </a>
-<<<<<<< Updated upstream
-                                            <a class="dropdown-item" href="/addSong.php">
-=======
                                             <a class="dropdown-item" href="/addSong.ph">
->>>>>>> Stashed changes
                                                 <i class="fa fa-plus fa-sm fa-fw mr-2 text-gray-400"></i>
                                                 Add to playlist
                                             </a>
@@ -373,15 +360,24 @@
 </div>
 
 <!-- Bootstrap core JavaScript-->
-<script src="/vendor/jquery/jquery.min.js"></script>
-<script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<?php echo '<script'; ?>
+ src="/vendor/jquery/jquery.min.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="/vendor/bootstrap/js/bootstrap.bundle.min.js"><?php echo '</script'; ?>
+>
 
 <!-- Core plugin JavaScript-->
-<script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
+<?php echo '<script'; ?>
+ src="/vendor/jquery-easing/jquery.easing.min.js"><?php echo '</script'; ?>
+>
 
 <!-- Custom scripts for all pages-->
-<script src="/js/sb-admin-2.min.js"></script>
+<?php echo '<script'; ?>
+ src="/js/sb-admin-2.min.js"><?php echo '</script'; ?>
+>
 
 </body>
 
-</html>
+</html><?php }
+}

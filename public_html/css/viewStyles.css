@@ -65,16 +65,32 @@ body {
 }
 
 /*playlist list item text styles*/
-.item h1 {
+.playlist-song {
+    height: 60px;
+    width: 96%;
+    border-bottom: 1px solid #acacac;
+    margin-left: 20px;
+    padding-left: 5px;
+    padding-right: 10px;
+}
+.dropdown ul {
+    height: 50px;
+}
+
+.song-info {
+    padding-top: 10px;
+    margin: 0;
+    color: #EBEBEB;
+}
+.song-info h1 {
     line-height: 16px;
     font-size: 18px;
-
 }
-.item p {
+.song-info p {
     line-height: 10px;
     font-size: 12px;
 }
-.item a {
+.song-info a {
     padding-left: 12px;
     float: right;
 }
