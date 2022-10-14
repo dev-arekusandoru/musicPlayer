@@ -300,7 +300,7 @@
                                             </a>
 
                                             <a class="dropdown-item" href="/viewAlbum.php">
-                                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                                <i class="fa fa-folder-o fa-sm fa-fw mr-2 text-gray-400"></i>
                                                 View Album
                                             </a>
 
