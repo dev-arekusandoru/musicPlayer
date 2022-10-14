@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="css/viewStyles.css">
     <link rel="stylesheet" href="css/browseDivStyles.css">
 
-    <script src="https://kit.fontawesome.com/125fe29883.js" crossorigin="anonymous"></script>
+    <!--<script src="https://kit.fontawesome.com/125fe29883.js" crossorigin="anonymous"></script>-->
 
     <script>
         // The function below will start the confirmation dialog
@@ -78,7 +78,7 @@
         </div>
 
         <!-- Nav Item - Utilities Collapse Menu -->
-        <li class="nav-item active">
+        <li class="nav-item">
             <a class="nav-link" href="explore.php">
                 <i class="fas fa-compass"></i>
                 <span>Explore</span></a>
@@ -224,7 +224,7 @@
                 <!--Delete button -->
                 <div class="float-right relative-top">
                     <a onclick="confirmAction()">
-                        <img src="../public_html/img/trashcan.png" alt="white trash can image" height="30" width="30">
+                        <img src="/img/trashcan.png" alt="white trash can image" height="30" width="30">
                     </a>
                 </div>
 

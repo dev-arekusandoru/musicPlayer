@@ -20,7 +20,7 @@
     <!-- Custom styles for this template-->
     <link href="/css/sb-admin-2.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/browseDivStyles.css">
-    <script src="https://kit.fontawesome.com/125fe29883.js" crossorigin="anonymous"></script>
+    <!--<script src="https://kit.fontawesome.com/125fe29883.js" crossorigin="anonymous"></script>-->
 
 
 </head>

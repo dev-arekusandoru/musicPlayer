@@ -66,7 +66,7 @@
         </div>
 
         <!-- Nav Item - Utilities Collapse Menu -->
-        <li class="nav-item active">
+        <li class="nav-item">
             <a class="nav-link" href="/explore.php">
                 <i class="fas fa-compass"></i>
                 <span>Explore</span></a>

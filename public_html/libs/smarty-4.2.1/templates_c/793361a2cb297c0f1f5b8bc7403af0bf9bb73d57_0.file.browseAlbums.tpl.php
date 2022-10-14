@@ -1,4 +1,27 @@
-<!DOCTYPE html>
+<?php
+/* Smarty version 4.2.1, created on 2022-10-13 20:57:00
+  from '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/browseAlbums.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '4.2.1',
+  'unifunc' => 'content_6348b3dcc125f9_17288946',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '793361a2cb297c0f1f5b8bc7403af0bf9bb73d57' => 
+    array (
+      0 => '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/browseAlbums.tpl',
+      1 => 1665708992,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_6348b3dcc125f9_17288946 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -9,7 +32,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Add Artist</title>
+    <title>Browse Albums</title>
 
     <!-- Custom fonts for this template-->
     <link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -19,11 +42,7 @@
 
     <!-- Custom styles for this template-->
     <link href="/css/sb-admin-2.min.css" rel="stylesheet">
-
-    <!-- Custom style sheet to change -->
-    <link href="/css/browseDivStyles.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/addPageStyles.css">
-    <!--<script src="https://kit.fontawesome.com/125fe29883.js" crossorigin="anonymous"></script>-->
+    <link rel="stylesheet" href="/css/browseDivStyles.css">
 
 </head>
 
@@ -73,32 +92,32 @@
         </li>
 
         <!-- Nav Item - Browse Music Menu -->
-        <li class="nav-item">
+        <li class="nav-item active">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseOne"
                aria-expanded="true" aria-controls="collapseOne">
                 <i class="fas fa-th-large"></i>
                 <span>Browse All</span>
             </a>
-            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionSidebar">
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Browse All:</h6>
                     <a class="collapse-item" href="/browseArtists.php">Artists</a>
-                    <a class="collapse-item" href="/browseAlbums.php">Albums</a>
+                    <a class="collapse-item active" href="/browseAlbums.php">Albums</a>
                 </div>
             </div>
         </li>
 
         <!-- Nav Item - Add Music Menu -->
-        <li class="nav-item active">
+        <li class="nav-item">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                aria-expanded="true" aria-controls="collapseTwo">
                 <i class="fas fa-music"></i>
                 <span>Add Music</span>
             </a>
-            <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Add Music:</h6>
-                    <a class="collapse-item active" href="/addArtist.php">Artist</a>
+                    <a class="collapse-item" href="/addArtist.php">Artist</a>
                     <a class="collapse-item" href="/addAlbum.php">Album</a>
                     <a class="collapse-item" href="/addSong.php">Song</a>
                 </div>
@@ -185,8 +204,8 @@
                         <!-- Dropdown - User Information -->
                         <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                              aria-labelledby="userDropdown">
-                            <a class="dropdown-item active" href="#">
-                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400 active"></i>
+                            <a class="dropdown-item" href="#">
+                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                 Profile
                             </a>
                             <a class="dropdown-item" href="#">
@@ -208,27 +227,21 @@
 
             <!-- Begin Page Content -->
             <div class="container-fluid">
-                <!-- Page Heading -->
-                <div class="row ml-1">
-                    <h1 class="content-title">Add Artist</h1>
-                </div>
-                <!-- Add Artist forms and stuff-->
-                <div class="row">
-                    <form class="row" method="post" action="/addArtistToDB.php">
-                        <div class="add-img-div">
-                            <img class="add-img" src="/img/pfp/blank.png" alt="">
-                            <input type="file" id="myFile" name="filename">
-                        </div>
-                        <div class="add-content-div">
-                            <label class="add-label" for="artist-name">Artist Name:</label>
-                            <br>
-                            <input class="add-input" name="artist" id="artist-name" type="text"/>
-                            <br>
-                            <input type="submit" value="Submit" class="add-submit">
-                        </div>
-                    </form>
-                </div>
 
+                <!-- Page Heading -->
+                <h1 class="h3 mb-4 content-title">Browse All Albums:</h1>
+
+                <!--Page Content-->
+                <div class="row pl-3 pr-3 justify-content-around">
+                    <!-- album content divs-->
+                    <a class="content" href="/viewAlbum.php">
+                        <div class="content-img">
+                            <img class="img-fluid" src="/img/album-imgs/testing-asap-rocky.jpeg" alt="The Beatles">
+                        </div>
+                        <h1>TESTING</h1>
+                        <h2>A$AP Rocky • 2018</h2>
+                    </a>
+                </div>
 
             </div>
             <!-- /.container-fluid -->
@@ -278,15 +291,24 @@
 </div>
 
 <!-- Bootstrap core JavaScript-->
-<script src="/vendor/jquery/jquery.min.js"></script>
-<script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<?php echo '<script'; ?>
+ src="/vendor/jquery/jquery.min.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="/vendor/bootstrap/js/bootstrap.bundle.min.js"><?php echo '</script'; ?>
+>
 
 <!-- Core plugin JavaScript-->
-<script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
+<?php echo '<script'; ?>
+ src="/vendor/jquery-easing/jquery.easing.min.js"><?php echo '</script'; ?>
+>
 
 <!-- Custom scripts for all pages-->
-<script src="/js/sb-admin-2.min.js"></script>
+<?php echo '<script'; ?>
+ src="/js/sb-admin-2.min.js"><?php echo '</script'; ?>
+>
 
 </body>
 
-</html>
+</html><?php }
+}

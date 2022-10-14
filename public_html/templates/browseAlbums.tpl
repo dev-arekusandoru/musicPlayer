@@ -18,8 +18,8 @@
             rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="/img_html/css/sb-admin-2.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/img_html/css/browseDivStyles.css">
+    <link href="/css/sb-admin-2.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/browseDivStyles.css">
 
 </head>
 
@@ -62,24 +62,24 @@
         </div>
 
         <!-- Nav Item - Utilities Collapse Menu -->
-        <li class="nav-item active">
+        <li class="nav-item">
             <a class="nav-link" href="/explore.php">
                 <i class="fas fa-compass"></i>
                 <span>Explore</span></a>
         </li>
 
         <!-- Nav Item - Browse Music Menu -->
-        <li class="nav-item">
+        <li class="nav-item active">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseOne"
                aria-expanded="true" aria-controls="collapseOne">
                 <i class="fas fa-th-large"></i>
                 <span>Browse All</span>
             </a>
-            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionSidebar">
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Browse All:</h6>
                     <a class="collapse-item" href="/browseArtists.php">Artists</a>
-                    <a class="collapse-item" href="/browseAlbums.php">Albums</a>
+                    <a class="collapse-item active" href="/browseAlbums.php">Albums</a>
                 </div>
             </div>
         </li>
@@ -176,7 +176,7 @@
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="mr-2 d-none d-lg-inline text-gray-600 small">User</span>
                             <img class="img-profile rounded-circle"
-                                 src="/img_html/img/pfp/blank.png">
+                                 src="/img/pfp/blank.png">
                         </a>
                         <!-- Dropdown - User Information -->
                         <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -213,7 +213,7 @@
                     <!-- album content divs-->
                     <a class="content" href="/viewAlbum.php">
                         <div class="content-img">
-                            <img class="img-fluid" src="/img_html/img/album-imgs/testing-asap-rocky.jpeg" alt="The Beatles">
+                            <img class="img-fluid" src="/img/album-imgs/testing-asap-rocky.jpeg" alt="The Beatles">
                         </div>
                         <h1>TESTING</h1>
                         <h2>A$AP Rocky • 2018</h2>
@@ -268,14 +268,14 @@
 </div>
 
 <!-- Bootstrap core JavaScript-->
-<script src="/img_html/vendor/jquery/jquery.min.js"></script>
-<script src="/img_html/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/vendor/jquery/jquery.min.js"></script>
+<script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 <!-- Core plugin JavaScript-->
-<script src="/img_html/vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
 
 <!-- Custom scripts for all pages-->
-<script src="/img_html/js/sb-admin-2.min.js"></script>
+<script src="/js/sb-admin-2.min.js"></script>
 
 </body>
 

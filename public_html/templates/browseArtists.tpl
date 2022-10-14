@@ -19,7 +19,7 @@
     <!-- Custom styles for this template-->
     <link href="/css/sb-admin-2.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/browseDivStyles.css">
-    <script src="https://kit.fontawesome.com/125fe29883.js" crossorigin="anonymous"></script>
+    <!--<script src="https://kit.fontawesome.com/125fe29883.js" crossorigin="anonymous"></script>-->
 
 
 </head>
@@ -63,23 +63,23 @@
         </div>
 
         <!-- Nav Item - Utilities Collapse Menu -->
-        <li class="nav-item active">
+        <li class="nav-item">
             <a class="nav-link" href="/explore.php">
                 <i class="fas fa-compass"></i>
                 <span>Explore</span></a>
         </li>
 
         <!-- Nav Item - Browse Music Menu -->
-        <li class="nav-item">
+        <li class="nav-item active">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseOne"
                aria-expanded="true" aria-controls="collapseOne">
                 <i class="fas fa-th-large"></i>
                 <span>Browse All</span>
             </a>
-            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionSidebar">
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Browse All:</h6>
-                    <a class="collapse-item" href="/browseArtists.php">Artists</a>
+                    <a class="collapse-item active" href="/browseArtists.php">Artists</a>
                     <a class="collapse-item" href="/browseAlbums.php">Albums</a>
                 </div>
             </div>

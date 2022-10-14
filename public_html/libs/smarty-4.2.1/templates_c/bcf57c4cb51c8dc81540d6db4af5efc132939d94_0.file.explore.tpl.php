@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-13 18:10:22
+/* Smarty version 4.2.1, created on 2022-10-13 20:59:56
   from '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/explore.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_63488cce720287_71939206',
+  'unifunc' => 'content_6348b48cc0e836_78282997',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'bcf57c4cb51c8dc81540d6db4af5efc132939d94' => 
     array (
       0 => '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/explore.tpl',
-      1 => 1665698929,
+      1 => 1665709191,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63488cce720287_71939206 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6348b48cc0e836_78282997 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -43,9 +43,9 @@ function content_63488cce720287_71939206 (Smarty_Internal_Template $_smarty_tpl)
     <!-- Custom styles for this template-->
     <link href="/css/sb-admin-2.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/browseDivStyles.css">
-    <?php echo '<script'; ?>
+    <!--<?php echo '<script'; ?>
  src="https://kit.fontawesome.com/125fe29883.js" crossorigin="anonymous"><?php echo '</script'; ?>
->
+>-->
 
 
 </head>
