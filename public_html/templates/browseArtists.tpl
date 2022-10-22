@@ -211,54 +211,16 @@
                 <!--Page Content-->
                 <div class="row pl-3 pr-3 justify-content-around">
                     <!-- artist content divs-->
-                    <a class="content" href="/viewArtist.php">
-                        <div class="content-img">
-                            <img class="img-fluid" src="/img/artist-imgs/Asap-Rocky.jpg" alt="A$AP Rocky">
-                        </div>
-                        <h1>A$AP Rocky</h1>
-                    </a>
-                    <a class="content" href="#">
-                        <div class="content-img">
-                            <img class="img-fluid" src="/img/artist-imgs/Andy-Mineo.jpg" alt="The Beatles">
-                        </div>
-                        <h1>Andy Mineo</h1>
-                    </a>
-                    <a class="content" href="#">
-                        <div class="content-img">
-                            <img class="img-fluid" src="/img/artist-imgs/Arctic-Monkeys.jpeg" alt="The Beatles">
-                        </div>
-                        <h1>Arctic Monkeys</h1>
-                    </a>
-                    <a class="content" href="#">
-                        <div class="content-img">
-                            <img class="img-fluid" src="/img/artist-imgs/Baby-Keem.jpeg" alt="The Beatles">
-                        </div>
-                        <h1>Baby Keem</h1>
-                    </a>
-                    <a class="content" href="#">
-                        <div class="content-img">
-                            <img class="img-fluid" src="/img/artist-imgs/Backseat-Lovers.PNG" alt="The Beatles">
-                        </div>
-                        <h1>The Backseat Lovers</h1>
-                    </a>
-                    <a class="content" href="#">
-                        <div class="content-img">
-                            <img class="img-fluid" src="/img/artist-imgs/Bad-Bunny.jpeg" alt="The Beatles">
-                        </div>
-                        <h1>Bad Bunny</h1>
-                    </a>
-                    <a class="content" href="#">
-                        <div class="content-img">
-                            <img class="img-fluid" src="/img/artist-imgs/the-beatles.jpg" alt="The Beatles">
-                        </div>
-                        <h1>The Beatles</h1>
-                    </a>
-                    <a class="content" href="#">
-                        <div class="content-img">
-                            <img class="img-fluid" src="/img/artist-imgs/Gorillaz.jpeg" alt="">
-                        </div>
-                        <h1>Gorillaz</h1>
-                    </a>
+
+                    {foreach $artists as $artist}
+                        <a class="content" href="#">
+                            <div class="content-img">
+                                <img class="img-fluid" src="/img/artist-imgs/{$artist['Image_URL']}" alt="{$artist['Artist_Name']}">
+                            </div>
+                            <h1>{$artist['Artist_Name']}</h1>
+                        </a>
+                    {/foreach}
+
                 </div>
 
             </div>

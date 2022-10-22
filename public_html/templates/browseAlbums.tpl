@@ -211,13 +211,15 @@
                 <!--Page Content-->
                 <div class="row pl-3 pr-3 justify-content-around">
                     <!-- album content divs-->
+                    {foreach $albums as $album}
                     <a class="content" href="/viewAlbum.php">
                         <div class="content-img">
-                            <img class="img-fluid" src="/img/album-imgs/testing-asap-rocky.jpeg" alt="The Beatles">
+                            <img class="img-fluid" src="/img/album-imgs/{$album['Image_URL']}" alt="{$album['Album_Name']}">
                         </div>
-                        <h1>TESTING</h1>
-                        <h2>A$AP Rocky • 2018</h2>
+                        <h1>{$album['Album_Name']}</h1>
+                        <h2>{$album['Artist_Name']} • {$album['release_year']}</h2>
                     </a>
+                    {/foreach}
                 </div>
 
             </div>
