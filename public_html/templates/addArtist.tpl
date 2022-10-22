@@ -214,15 +214,15 @@
                 </div>
                 <!-- Add Artist forms and stuff-->
                 <div class="row">
-                    <form class="row" method="post" action="/addArtistToDB.php">
+                    <form class="row" action="/addArtistToDB.php" method="post" enctype="multipart/form-data">
                         <div class="add-img-div">
-                            <img class="add-img" src="/img/pfp/blank.png" alt="">
-                            <input type="file" id="myFile" name="filename">
+                            <img class="add-img" id="artist-img" src="/img/pfp/blank.png" alt="">
+                            <input type="file" name="img" accept=".jpg,.jpeg,.png" required>
                         </div>
                         <div class="add-content-div">
                             <label class="add-label" for="artist-name">Artist Name:</label>
                             <br>
-                            <input class="add-input" name="artist" id="artist-name" type="text"/>
+                            <input class="add-input" name="artist" id="artist-name" type="text" required>
                             <br>
                             <input type="submit" value="Submit" class="add-submit">
                         </div>
