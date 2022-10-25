@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-13 20:54:10
+/* Smarty version 4.2.1, created on 2022-10-21 22:21:35
   from '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/addAlbum.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_6348b3326c2b02_41362969',
+  'unifunc' => 'content_635353af5198a5_40632166',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ac058fcb0714b6fd144836c48806c66e7ca6ff14' => 
     array (
       0 => '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/addAlbum.tpl',
-      1 => 1665708849,
+      1 => 1666405290,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6348b3326c2b02_41362969 (Smarty_Internal_Template $_smarty_tpl) {
+function content_635353af5198a5_40632166 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -46,9 +46,9 @@ function content_6348b3326c2b02_41362969 (Smarty_Internal_Template $_smarty_tpl)
     <!-- Custom style sheet to change -->
     <link href="/css/browseDivStyles.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/addPageStyles.css">
-    <?php echo '<script'; ?>
+    <!--<?php echo '<script'; ?>
  src="https://kit.fontawesome.com/125fe29883.js" crossorigin="anonymous"><?php echo '</script'; ?>
->
+>-->
 
 </head>
 
@@ -114,7 +114,7 @@ function content_6348b3326c2b02_41362969 (Smarty_Internal_Template $_smarty_tpl)
         </li>
 
         <!-- Nav Item - Add Music Menu -->
-        <li class="nav-item">
+        <li class="nav-item active">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                aria-expanded="true" aria-controls="collapseTwo">
                 <i class="fas fa-music"></i>
@@ -243,23 +243,28 @@ function content_6348b3326c2b02_41362969 (Smarty_Internal_Template $_smarty_tpl)
                     <form class="row" method="post" action="/addAlbumToDB.php">
                         <div class="add-img-div">
                             <img class="add-img" src="/img/pfp/blank.png" alt="">
-                            <input type="file" id="myFile" name="filename">
+                            <input type="file" name="img" required>
                         </div>
                         <div class="add-content-div">
                             <label class="add-label" for="select-artist">Artist Name:</label>
                             <br>
                             <select required name="select-artist" class="add-dropdown" id="select-artist">
-                                <option>A$AP Rocky</option>
-                                <option>Andy Mineo</option>
-                                <option>Arctic Monkeys</option>
-                                <option>Baby Keem</option>
-                                <option>The Backseat Lovers</option>
-                                <option>Bad Bunny</option>
+                                <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['artists']->value, 'artist');
+$_smarty_tpl->tpl_vars['artist']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['artist']->value) {
+$_smarty_tpl->tpl_vars['artist']->do_else = false;
+?>
+                                    <option><?php echo $_smarty_tpl->tpl_vars['artist']->value['Artist_Name'];?>
+</option>
+                                <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                             </select>
                             <br>
                             <label class="add-label" for="album-name">Album Name:</label>
                             <br>
-                            <input class="add-input" name="album" id="album-name" type="text"/>
+                            <input class="add-input" name="album" id="album-name" type="text" required>
                             <br>
                             <input type="submit" value="Submit" class="add-submit">
                         </div>

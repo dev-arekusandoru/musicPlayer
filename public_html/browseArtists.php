@@ -6,27 +6,19 @@
  */
 include "../private_html/config.php";
 include_once PRIVATE_PATH . "dbConfig.php";
+include PRIVATE_PATH . "functions.php";
 
 $artists = array();
 
 $stmt = $pdo->query("SELECT Artist_Name, Image_URL FROM Artist");
 while ($row = $stmt->fetch()) {
-    unset($row['0']);
-    unset($row['1']);
+    for($i = 0; $i < count($row); $i++) {
+        unset($row[$i]);
+    }
     $artists[] = $row;
 }
 
-//organize artists alphabetically
-for($i = 0; $i < count($artists); $i++) {
-    for($j = 0; $j < $i; $j++) {
-        if (strtolower($artists[$i]['Artist_Name'][0]) < strtolower($artists[$j]['Artist_Name'][0])) {
-            $temp = $artists[$i];
-            $artists[$i] = $artists[$j];
-            $artists[$j] = $temp;
-            break;
-        }
-    }
-}
+$artists = alphabetizeArtists($artists);
 
 
 //print("<pre>".print_r($artists,true)."</pre>");

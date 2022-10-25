@@ -215,26 +215,23 @@
                 </div>
                 <!-- Add album content-->
                 <div class="row">
-                    <form class="row" method="post" action="/addAlbumToDB.php">
+                    <form class="row" method="post" action="/addAlbumToDB.php" enctype="multipart/form-data">
                         <div class="add-img-div">
-                            <img class="add-img" src="/img/pfp/blank.png" alt="">
-                            <input type="file" id="myFile" name="filename">
+                            <img class="add-img" src="/img/pfp/blank.png" alt="album-cover">
+                            <input type="file" name="img" accept=".png,.jpg,.jpeg" required>
                         </div>
                         <div class="add-content-div">
                             <label class="add-label" for="select-artist">Artist Name:</label>
                             <br>
                             <select required name="select-artist" class="add-dropdown" id="select-artist">
-                                <option>A$AP Rocky</option>
-                                <option>Andy Mineo</option>
-                                <option>Arctic Monkeys</option>
-                                <option>Baby Keem</option>
-                                <option>The Backseat Lovers</option>
-                                <option>Bad Bunny</option>
+                                {foreach $artists as $artist}
+                                    <option>{$artist['Artist_Name']}</option>
+                                {/foreach}
                             </select>
                             <br>
                             <label class="add-label" for="album-name">Album Name:</label>
                             <br>
-                            <input class="add-input" name="album" id="album-name" type="text"/>
+                            <input class="add-input" name="album" id="album-name" type="text" required>
                             <br>
                             <input type="submit" value="Submit" class="add-submit">
                         </div>
