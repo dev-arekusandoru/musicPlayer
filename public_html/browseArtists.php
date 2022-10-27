@@ -10,19 +10,16 @@ include PRIVATE_PATH . "functions.php";
 
 $artists = array();
 
-$stmt = $pdo->query("SELECT Artist_Name, Image_URL FROM Artist");
-while ($row = $stmt->fetch()) {
-    for($i = 0; $i < count($row); $i++) {
-        unset($row[$i]);
-    }
+$stmt = $pdo->query("SELECT Artist_ID, Artist_Name, Image_URL FROM Artist");
+while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     $artists[] = $row;
 }
 
 $artists = alphabetizeArtists($artists);
 
 
+
 //print("<pre>".print_r($artists,true)."</pre>");
 $smarty->assign('artists', $artists);
-
 
 $smarty->display("browseArtists.tpl");

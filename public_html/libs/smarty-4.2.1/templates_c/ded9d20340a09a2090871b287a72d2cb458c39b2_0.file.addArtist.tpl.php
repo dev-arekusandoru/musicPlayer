@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-21 21:55:47
+/* Smarty version 4.2.1, created on 2022-10-26 10:13:57
   from '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/addArtist.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_63534da3f09862_98167150',
+  'unifunc' => 'content_635940a55f1816_60666893',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ded9d20340a09a2090871b287a72d2cb458c39b2' => 
     array (
       0 => '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/addArtist.tpl',
-      1 => 1666403744,
+      1 => 1666793634,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63534da3f09862_98167150 (Smarty_Internal_Template $_smarty_tpl) {
+function content_635940a55f1816_60666893 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -239,7 +239,7 @@ function content_63534da3f09862_98167150 (Smarty_Internal_Template $_smarty_tpl)
                 </div>
                 <!-- Add Artist forms and stuff-->
                 <div class="row">
-                    <form class="row" action="/addArtistToDB.php" method="post" enctype="multipart/form-data">
+                    <form class="row" action="/addArtist.php" method="post" enctype="multipart/form-data">
                         <div class="add-img-div">
                             <img class="add-img" id="artist-img" src="/img/pfp/blank.png" alt="">
                             <input type="file" name="img" accept=".jpg,.jpeg,.png" required>

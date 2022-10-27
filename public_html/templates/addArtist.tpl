@@ -214,7 +214,7 @@
                 </div>
                 <!-- Add Artist forms and stuff-->
                 <div class="row">
-                    <form class="row" action="/addArtistToDB.php" method="post" enctype="multipart/form-data">
+                    <form class="row" action="/addArtist.php" method="post" enctype="multipart/form-data">
                         <div class="add-img-div">
                             <img class="add-img" id="artist-img" src="/img/pfp/blank.png" alt="">
                             <input type="file" name="img" accept=".jpg,.jpeg,.png" required>

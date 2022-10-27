@@ -215,7 +215,7 @@
                 </div>
                 <!-- Add album content-->
                 <div class="row">
-                    <form class="row" method="post" action="/addAlbumToDB.php" enctype="multipart/form-data">
+                    <form class="row" method="post" action="/addAlbum.php" enctype="multipart/form-data">
                         <div class="add-img-div">
                             <img class="add-img" src="/img/pfp/blank.png" alt="album-cover">
                             <input type="file" name="img" accept=".png,.jpg,.jpeg" required>
@@ -232,6 +232,10 @@
                             <label class="add-label" for="album-name">Album Name:</label>
                             <br>
                             <input class="add-input" name="album" id="album-name" type="text" required>
+                            <br>
+                            <label class="add-label" for="release-year">Release Year:</label>
+                            <br>
+                            <input class="add-input" name="release-year" id="release-year" type="number" max="9999" min="0000" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
                             <br>
                             <input type="submit" value="Submit" class="add-submit">
                         </div>
