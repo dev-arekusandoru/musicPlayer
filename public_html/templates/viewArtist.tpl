@@ -230,7 +230,7 @@
 
                 <!-- Page Heading -->
                 <!-- Artist Information -->
-                <h1 class="h3 mb-0 content-title">A$AP Rocky:</h1>
+                <h1 class="h3 mb-0 content-title">{$artist_name}:</h1>
                 <h2 class="mb-1 artist-rating">Average Album Rating: </h2>
                 <div class=" ml-0 pl-0">
                     <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
@@ -243,18 +243,19 @@
                 <a class="mb-7 add-music-button" href="/addAlbum.php">Add Album</a>
                 <!--Page Content-->
                 <!-- Artist Discography  -->
-                <div class="row pl-3 pr-3 justify-content-around">
-                    <a class="content" href="/viewAlbum.php">
+                <div class="row mt-4 pl-3 pr-3 justify-content-around">
+                    {foreach $albums as $album}
+                    <a class="content" href="/viewAlbum.php?id={$album['Album_ID']}">
                         <div class="content-img">
-                            <img class="img-fluid" src="/img/album-imgs/testing-asap-rocky.jpeg" alt="The Beatles">
+                            <img class="img-fluid" src="/img/album-imgs/{$album['Image_URL']}" alt="{$album['Album_Name']}">
                         </div>
-                        <h1>TESTING</h1>
-                        <h2>A$AP Rocky • 2018</h2>
+                        <h1>{$album['Album_Name']}</h1>
+                        <h2>{$album['Release_Year']}</h2>
                     </a>
+                    {/foreach}
                 </div>
 
                 <div class="content-splitter"></div>
-
 
                 <!--Start Artist comment section-->
                 <h1 class="h3 content-title">Reviews:</h1>

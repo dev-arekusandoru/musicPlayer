@@ -8,13 +8,8 @@ include_once PRIVATE_PATH . "dbConfig.php";
 
 $albums = array();
 
-$stmt = $pdo->query("SELECT Album_Name, Image_URL FROM Album");
-while ($row = $stmt->fetch()) {
-    for($i = 0; $i < count($row); $i++) {
-        unset($row[$i]);
-    }
-    $row['Artist_Name'] = "Artist Name";
-    $row['release_year'] = "YEAR";
+$stmt = $pdo->query("SELECT Album_ID, Album_Name, Album.Image_URL, Release_Year, Artist_Name FROM Album JOIN Artist ON Artist_FK=Artist.Artist_ID");
+while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 
     $albums[] = $row;
 }

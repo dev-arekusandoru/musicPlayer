@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-21 22:21:35
+/* Smarty version 4.2.1, created on 2022-10-26 14:00:54
   from '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/addAlbum.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_635353af5198a5_40632166',
+  'unifunc' => 'content_635975d6acd073_15410293',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ac058fcb0714b6fd144836c48806c66e7ca6ff14' => 
     array (
       0 => '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/addAlbum.tpl',
-      1 => 1666405290,
+      1 => 1666807242,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_635353af5198a5_40632166 (Smarty_Internal_Template $_smarty_tpl) {
+function content_635975d6acd073_15410293 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -240,10 +240,10 @@ function content_635353af5198a5_40632166 (Smarty_Internal_Template $_smarty_tpl)
                 </div>
                 <!-- Add album content-->
                 <div class="row">
-                    <form class="row" method="post" action="/addAlbumToDB.php">
+                    <form class="row" method="post" action="/addAlbum.php" enctype="multipart/form-data">
                         <div class="add-img-div">
-                            <img class="add-img" src="/img/pfp/blank.png" alt="">
-                            <input type="file" name="img" required>
+                            <img class="add-img" src="/img/pfp/blank.png" alt="album-cover">
+                            <input type="file" name="img" accept=".png,.jpg,.jpeg" required>
                         </div>
                         <div class="add-content-div">
                             <label class="add-label" for="select-artist">Artist Name:</label>
@@ -265,6 +265,10 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                             <label class="add-label" for="album-name">Album Name:</label>
                             <br>
                             <input class="add-input" name="album" id="album-name" type="text" required>
+                            <br>
+                            <label class="add-label" for="release-year">Release Year:</label>
+                            <br>
+                            <input class="add-input" name="release-year" id="release-year" type="number" max="9999" min="0000" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
                             <br>
                             <input type="submit" value="Submit" class="add-submit">
                         </div>

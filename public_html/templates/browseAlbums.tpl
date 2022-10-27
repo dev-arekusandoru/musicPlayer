@@ -212,12 +212,12 @@
                 <div class="row pl-3 pr-3 justify-content-around">
                     <!-- album content divs-->
                     {foreach $albums as $album}
-                    <a class="content" href="/viewAlbum.php">
+                    <a class="content" href="/viewAlbum.php?id{$album['Album_ID']}">
                         <div class="content-img">
                             <img class="img-fluid" src="/img/album-imgs/{$album['Image_URL']}" alt="{$album['Album_Name']}">
                         </div>
                         <h1>{$album['Album_Name']}</h1>
-                        <h2>{$album['Artist_Name']} • {$album['release_year']}</h2>
+                        <h2>{$album['Artist_Name']} • {$album['Release_Year']}</h2>
                     </a>
                     {/foreach}
                 </div>

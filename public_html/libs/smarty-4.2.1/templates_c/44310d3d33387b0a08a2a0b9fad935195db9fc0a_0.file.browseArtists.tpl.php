@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-19 12:48:45
+/* Smarty version 4.2.1, created on 2022-10-26 20:45:51
   from '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/browseArtists.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_63502a6d5d11f0_55453011',
+  'unifunc' => 'content_6359d4bf7aeed2_43375215',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '44310d3d33387b0a08a2a0b9fad935195db9fc0a' => 
     array (
       0 => '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/browseArtists.tpl',
-      1 => 1666198103,
+      1 => 1666831452,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63502a6d5d11f0_55453011 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6359d4bf7aeed2_43375215 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -243,7 +243,8 @@ $_smarty_tpl->tpl_vars['artist']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['artist']->value) {
 $_smarty_tpl->tpl_vars['artist']->do_else = false;
 ?>
-                        <a class="content" href="#">
+                        <a class="content" href="/viewArtist.php?id=<?php echo $_smarty_tpl->tpl_vars['artist']->value['Artist_ID'];?>
+">
                             <div class="content-img">
                                 <img class="img-fluid" src="/img/artist-imgs/<?php echo $_smarty_tpl->tpl_vars['artist']->value['Image_URL'];?>
 " alt="<?php echo $_smarty_tpl->tpl_vars['artist']->value['Artist_Name'];?>

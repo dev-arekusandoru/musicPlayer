@@ -213,7 +213,7 @@
                     <!-- artist content divs-->
 
                     {foreach $artists as $artist}
-                        <a class="content" href="#">
+                        <a class="content" href="/viewArtist.php?id={$artist['Artist_ID']}">
                             <div class="content-img">
                                 <img class="img-fluid" src="/img/artist-imgs/{$artist['Image_URL']}" alt="{$artist['Artist_Name']}">
                             </div>
