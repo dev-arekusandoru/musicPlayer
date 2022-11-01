@@ -1,11 +1,10 @@
 <?php
 /**
  * @var $smarty
- *
+ * @var $pdo
  */
 include "../private_html/config.php";
-<<<<<<< Updated upstream
-=======
+
 include_once PRIVATE_PATH . "dbConfig.php";
 
 $albums = array();
@@ -30,6 +29,5 @@ for($i = 0; $i < count($albums); $i++) {
 
 //print("<pre>".print_r($albums,true)."</pre>");
 $smarty->assign('albums', $albums);
->>>>>>> Stashed changes
 
 $smarty->display("browseAlbums.tpl");

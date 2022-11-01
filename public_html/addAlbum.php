@@ -1,12 +1,12 @@
 <?php
 /**
  * @var $smarty
+ * @var $pdo
  *
  */
 include "../private_html/config.php";
+include_once PRIVATE_PATH . "dbConfig.php";
 
-<<<<<<< Updated upstream
-=======
 if(isset($_POST['album'])) {
     $album_name = "";
     $album_img = "";
@@ -39,5 +39,5 @@ while ($row = $stmt->fetch()) {
 
 //print("<pre>".print_r($artists,true)."</pre>");
 $smarty->assign("artists", $artists);
->>>>>>> Stashed changes
+
 $smarty->display("addAlbum.tpl");

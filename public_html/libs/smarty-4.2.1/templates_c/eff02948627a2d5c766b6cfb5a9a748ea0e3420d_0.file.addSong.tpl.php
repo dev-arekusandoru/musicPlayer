@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-13 20:55:06
+/* Smarty version 4.2.1, created on 2022-10-19 11:21:32
   from '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/addSong.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_6348b36ab0dcc3_27173111',
+  'unifunc' => 'content_635015fc57a7c3_39481684',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'eff02948627a2d5c766b6cfb5a9a748ea0e3420d' => 
     array (
       0 => '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/addSong.tpl',
-      1 => 1665708905,
+      1 => 1665709018,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6348b36ab0dcc3_27173111 (Smarty_Internal_Template $_smarty_tpl) {
+function content_635015fc57a7c3_39481684 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -112,7 +112,7 @@ function content_6348b36ab0dcc3_27173111 (Smarty_Internal_Template $_smarty_tpl)
         </li>
 
         <!-- Nav Item - Add Music Menu -->
-        <li class="nav-item">
+        <li class="nav-item active">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                aria-expanded="true" aria-controls="collapseTwo">
                 <i class="fas fa-music"></i>

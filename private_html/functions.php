@@ -1,9 +1,5 @@
 <?php
-function arrayToString($array, $padding) {
 
-<<<<<<< Updated upstream
-}
-=======
 function alphabetizeArtists($artists) {
     //organize artists alphabetically
     for($i = 0; $i < count($artists); $i++) {
@@ -33,4 +29,3 @@ function sortAlbumsByYear($albums) {
     }
     return $albums;
 }
->>>>>>> Stashed changes

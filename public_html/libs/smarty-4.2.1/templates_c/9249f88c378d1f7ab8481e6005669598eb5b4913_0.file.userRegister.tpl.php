@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-12 17:25:24
+/* Smarty version 4.2.1, created on 2022-10-15 13:46:03
   from '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/userRegister.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_634730c44b0551_14817987',
+  'unifunc' => 'content_634af1db1feb77_42640621',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9249f88c378d1f7ab8481e6005669598eb5b4913' => 
     array (
       0 => '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/userRegister.tpl',
-      1 => 1665607522,
+      1 => 1665699148,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_634730c44b0551_14817987 (Smarty_Internal_Template $_smarty_tpl) {
+function content_634af1db1feb77_42640621 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -35,13 +35,13 @@ function content_634730c44b0551_14817987 (Smarty_Internal_Template $_smarty_tpl)
     <title>Register</title>
 
     <!-- Custom fonts for this template-->
-    <link href="/public_html/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="../public_html/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="/public_html/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="../public_html/css/sb-admin-2.min.css" rel="stylesheet">
     <?php echo '<script'; ?>
  src="https://kit.fontawesome.com/125fe29883.js" crossorigin="anonymous"><?php echo '</script'; ?>
 >
@@ -88,16 +88,16 @@ function content_634730c44b0551_14817987 (Smarty_Internal_Template $_smarty_tpl)
                                             id="exampleRepeatPassword" placeholder="Verify Password">
                                     </div>
                                 </div>
-                                <a href="userLogin.html" class="btn btn-primary btn-user btn-block">
+                                <a href=".html" class="btn btn-primary btn-user btn-block">
                                     Register Account
                                 </a>
                             </form>
                             <hr>
                             <div class="text-center">
-                                <a class="small" href="../public_html/templates/userForgotPassword.html">Forgot Password?</a>
+                                <a class="small" href="../public_html/forgotPassword.php">Forgot Password?</a>
                             </div>
                             <div class="text-center">
-                                <a class="small" href="../public_html/templates/userLogin.html">Already have an account? Login!</a>
+                                <a class="small" href="../public_html/login.php">Already have an account? Login!</a>
                             </div>
                         </div>
                     </div>
