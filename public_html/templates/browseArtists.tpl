@@ -17,7 +17,7 @@
             rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/browseDivStyles.css">
     <!--<script src="https://kit.fontawesome.com/125fe29883.js" crossorigin="anonymous"></script>-->
 
@@ -33,7 +33,7 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
         <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/explore.php">
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="explore.php">
             <div class="sidebar-brand-icon rotate-n-15">
                 <i class="fas fa-music"></i>
             </div>
@@ -45,12 +45,12 @@
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item">
-            <a class="nav-link" href="/library.php">
+            <a class="nav-link" href="library.php">
                 <i class="fas fa-folder-open    "></i>
                 <span>My Library</span></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="/profile.php">
+            <a class="nav-link" href="profile.php">
                 <i class="fas fa-user fa-tachometer-alt"></i>
                 <span>My Profile</span></a>
         </li>
@@ -64,7 +64,7 @@
 
         <!-- Nav Item - Utilities Collapse Menu -->
         <li class="nav-item">
-            <a class="nav-link" href="/explore.php">
+            <a class="nav-link" href="explore.php">
                 <i class="fas fa-compass"></i>
                 <span>Explore</span></a>
         </li>
@@ -79,8 +79,8 @@
             <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Browse All:</h6>
-                    <a class="collapse-item active" href="/browseArtists.php">Artists</a>
-                    <a class="collapse-item" href="/browseAlbums.php">Albums</a>
+                    <a class="collapse-item active" href="browseArtists.php">Artists</a>
+                    <a class="collapse-item" href="browseAlbums.php">Albums</a>
                 </div>
             </div>
         </li>
@@ -95,9 +95,9 @@
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Add Music:</h6>
-                    <a class="collapse-item" href="/addArtist.php">Artist</a>
-                    <a class="collapse-item" href="/addAlbum.php">Album</a>
-                    <a class="collapse-item" href="/addSong.php">Song</a>
+                    <a class="collapse-item" href="addArtist.php">Artist</a>
+                    <a class="collapse-item" href="addAlbum.php">Album</a>
+                    <a class="collapse-item" href="addSong.php">Song</a>
                 </div>
             </div>
         </li>
@@ -177,7 +177,7 @@
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="mr-2 d-none d-lg-inline text-gray-600 small">User</span>
                             <img class="img-profile rounded-circle"
-                                 src="/img/pfp/blank.png">
+                                 src="img/pfp/blank.png">
                         </a>
                         <!-- Dropdown - User Information -->
                         <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -211,6 +211,7 @@
                 <!--Page Content-->
                 <div class="row pl-3 pr-3 justify-content-around">
                     <!-- artist content divs-->
+<<<<<<< Updated upstream
                     <a class="content" href="/viewArtist.php">
                         <div class="content-img">
                             <img class="img-fluid" src="/img/artist-imgs/Asap-Rocky.jpg" alt="A$AP Rocky">
@@ -259,6 +260,18 @@
                         </div>
                         <h1>Gorillaz</h1>
                     </a>
+=======
+
+                    {foreach $artists as $artist}
+                        <a class="content" href="/viewArtist.php?id={$artist['Artist_ID']}">
+                            <div class="content-img">
+                                <img class="img-fluid" src="img/artist-imgs/{$artist['Image_URL']}" alt="{$artist['Artist_Name']}">
+                            </div>
+                            <h1>{$artist['Artist_Name']}</h1>
+                        </a>
+                    {/foreach}
+
+>>>>>>> Stashed changes
                 </div>
 
             </div>
@@ -309,14 +322,14 @@
 </div>
 
 <!-- Bootstrap core JavaScript-->
-<script src="/vendor/jquery/jquery.min.js"></script>
-<script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 <!-- Core plugin JavaScript-->
-<script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
 <!-- Custom scripts for all pages-->
-<script src="/js/sb-admin-2.min.js"></script>
+<script src="js/sb-admin-2.min.js"></script>
 
 </body>
 

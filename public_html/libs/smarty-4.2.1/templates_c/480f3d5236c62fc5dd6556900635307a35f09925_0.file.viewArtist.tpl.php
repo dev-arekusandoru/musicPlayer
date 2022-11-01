@@ -262,7 +262,7 @@ function content_63489634507679_00880353 (Smarty_Internal_Template $_smarty_tpl)
                 <div class="row pl-3 pr-3 justify-content-around">
                     <a class="content" href="../public_html/templates/viewAlbum.html">
                         <div class="content-img">
-                            <img class="img-fluid" src="/public_html/img/album-imgs/testing-asap-rocky.jpeg" alt="The Beatles">
+                            <img class="img-fluid" src="/public_html/img/album-imgs/A$AP-Rocky-Testing.jpeg" alt="The Beatles">
                         </div>
                         <h1>TESTING</h1>
                         <h2>A$AP Rocky • 2018</h2>

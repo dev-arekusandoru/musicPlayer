@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-13 22:31:41
+/* Smarty version 4.2.1, created on 2022-10-26 21:21:52
   from '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/viewArtist.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_6348ca0d753221_95419776',
+  'unifunc' => 'content_6359dd30521658_74089868',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e2b14ea7dd71a160b30b37d168ebd7b222e10214' => 
     array (
       0 => '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/viewArtist.tpl',
-      1 => 1665714700,
+      1 => 1666833711,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6348ca0d753221_95419776 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6359dd30521658_74089868 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -257,7 +257,8 @@ function content_6348ca0d753221_95419776 (Smarty_Internal_Template $_smarty_tpl)
 
                 <!-- Page Heading -->
                 <!-- Artist Information -->
-                <h1 class="h3 mb-0 content-title">A$AP Rocky:</h1>
+                <h1 class="h3 mb-0 content-title"><?php echo $_smarty_tpl->tpl_vars['artist_name']->value;?>
+:</h1>
                 <h2 class="mb-1 artist-rating">Average Album Rating: </h2>
                 <div class=" ml-0 pl-0">
                     <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
@@ -270,18 +271,31 @@ function content_6348ca0d753221_95419776 (Smarty_Internal_Template $_smarty_tpl)
                 <a class="mb-7 add-music-button" href="/addAlbum.php">Add Album</a>
                 <!--Page Content-->
                 <!-- Artist Discography  -->
-                <div class="row pl-3 pr-3 justify-content-around">
-                    <a class="content" href="/viewAlbum.php">
+                <div class="row mt-4 pl-3 pr-3 justify-content-around">
+                    <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['albums']->value, 'album');
+$_smarty_tpl->tpl_vars['album']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['album']->value) {
+$_smarty_tpl->tpl_vars['album']->do_else = false;
+?>
+                    <a class="content" href="/viewAlbum.php?id=<?php echo $_smarty_tpl->tpl_vars['album']->value['Album_ID'];?>
+">
                         <div class="content-img">
-                            <img class="img-fluid" src="/img/album-imgs/testing-asap-rocky.jpeg" alt="The Beatles">
+                            <img class="img-fluid" src="/img/album-imgs/<?php echo $_smarty_tpl->tpl_vars['album']->value['Image_URL'];?>
+" alt="<?php echo $_smarty_tpl->tpl_vars['album']->value['Album_Name'];?>
+">
                         </div>
-                        <h1>TESTING</h1>
-                        <h2>A$AP Rocky • 2018</h2>
+                        <h1><?php echo $_smarty_tpl->tpl_vars['album']->value['Album_Name'];?>
+</h1>
+                        <h2><?php echo $_smarty_tpl->tpl_vars['album']->value['Release_Year'];?>
+</h2>
                     </a>
+                    <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                 </div>
 
                 <div class="content-splitter"></div>
-
 
                 <!--Start Artist comment section-->
                 <h1 class="h3 content-title">Reviews:</h1>

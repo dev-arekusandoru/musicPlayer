@@ -258,7 +258,7 @@ function content_634896012f6496_84499978 (Smarty_Internal_Template $_smarty_tpl)
                 <!-- Album header like metadata and stuff -->
                 <div class="album-header row">
                     <div class="col-sm-3 pl-0 ml-3">
-                        <img class="artwork" src="/public_html/img/album-imgs/testing-asap-rocky.jpeg" alt="">
+                        <img class="artwork" src="/public_html/img/album-imgs/A$AP-Rocky-Testing.jpeg" alt="">
                     </div>
                     <div class="album-metadata col-sm-3" style="height: 300px;">
                         <h1>TESTING</h1>

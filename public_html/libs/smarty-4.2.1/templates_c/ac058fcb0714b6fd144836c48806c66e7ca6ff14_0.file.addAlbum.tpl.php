@@ -1,18 +1,42 @@
 <?php
+<<<<<<< Updated upstream
 /* Smarty version 4.2.1, created on 2022-10-13 20:54:10
+=======
+<<<<<<< HEAD
+/* Smarty version 4.2.1, created on 2022-11-01 10:43:55
+=======
+/* Smarty version 4.2.1, created on 2022-10-26 14:00:54
+>>>>>>> baf1ceba589e7186426a1aa3eb43d2560dc27115
+>>>>>>> Stashed changes
   from '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/addAlbum.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
+<<<<<<< Updated upstream
   'unifunc' => 'content_6348b3326c2b02_41362969',
+=======
+<<<<<<< HEAD
+  'unifunc' => 'content_636130ab155a68_41863942',
+=======
+  'unifunc' => 'content_635975d6acd073_15410293',
+>>>>>>> baf1ceba589e7186426a1aa3eb43d2560dc27115
+>>>>>>> Stashed changes
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ac058fcb0714b6fd144836c48806c66e7ca6ff14' => 
     array (
       0 => '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/addAlbum.tpl',
+<<<<<<< Updated upstream
       1 => 1665708849,
+=======
+<<<<<<< HEAD
+      1 => 1667313799,
+=======
+      1 => 1666807242,
+>>>>>>> baf1ceba589e7186426a1aa3eb43d2560dc27115
+>>>>>>> Stashed changes
       2 => 'file',
     ),
   ),
@@ -20,7 +44,15 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
+<<<<<<< Updated upstream
 function content_6348b3326c2b02_41362969 (Smarty_Internal_Template $_smarty_tpl) {
+=======
+<<<<<<< HEAD
+function content_636130ab155a68_41863942 (Smarty_Internal_Template $_smarty_tpl) {
+=======
+function content_635975d6acd073_15410293 (Smarty_Internal_Template $_smarty_tpl) {
+>>>>>>> baf1ceba589e7186426a1aa3eb43d2560dc27115
+>>>>>>> Stashed changes
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -35,18 +67,24 @@ function content_6348b3326c2b02_41362969 (Smarty_Internal_Template $_smarty_tpl)
     <title>Add Album</title>
 
     <!-- Custom fonts for this template-->
-    <link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
             href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
             rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
     <!-- Custom style sheet to change -->
+<<<<<<< Updated upstream
     <link href="/css/browseDivStyles.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/addPageStyles.css">
     <?php echo '<script'; ?>
+=======
+    <link href="css/browseDivStyles.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/addPageStyles.css">
+    <!--<?php echo '<script'; ?>
+>>>>>>> Stashed changes
  src="https://kit.fontawesome.com/125fe29883.js" crossorigin="anonymous"><?php echo '</script'; ?>
 >
 
@@ -61,7 +99,7 @@ function content_6348b3326c2b02_41362969 (Smarty_Internal_Template $_smarty_tpl)
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
         <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/explore.php">
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="explore.php">
             <div class="sidebar-brand-icon rotate-n-15">
                 <i class="fas fa-music"></i>
             </div>
@@ -73,12 +111,12 @@ function content_6348b3326c2b02_41362969 (Smarty_Internal_Template $_smarty_tpl)
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item">
-            <a class="nav-link" href="/library.php">
+            <a class="nav-link" href="library.php">
                 <i class="fas fa-folder-open    "></i>
                 <span>My Library</span></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="/profile.php">
+            <a class="nav-link" href="profile.php">
                 <i class="fas fa-user fa-tachometer-alt"></i>
                 <span>My Profile</span></a>
         </li>
@@ -92,7 +130,7 @@ function content_6348b3326c2b02_41362969 (Smarty_Internal_Template $_smarty_tpl)
 
         <!-- Nav Item - Utilities Collapse Menu -->
         <li class="nav-item">
-            <a class="nav-link" href="/explore.php">
+            <a class="nav-link" href="explore.php">
                 <i class="fas fa-compass"></i>
                 <span>Explore</span></a>
         </li>
@@ -107,8 +145,8 @@ function content_6348b3326c2b02_41362969 (Smarty_Internal_Template $_smarty_tpl)
             <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Browse All:</h6>
-                    <a class="collapse-item" href="/browseArtists.php">Artists</a>
-                    <a class="collapse-item" href="/browseAlbums.php">Albums</a>
+                    <a class="collapse-item" href="browseArtists.php">Artists</a>
+                    <a class="collapse-item" href="browseAlbums.php">Albums</a>
                 </div>
             </div>
         </li>
@@ -123,9 +161,9 @@ function content_6348b3326c2b02_41362969 (Smarty_Internal_Template $_smarty_tpl)
             <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Add Music:</h6>
-                    <a class="collapse-item" href="/addArtist.php">Artist</a>
-                    <a class="collapse-item active" href="/addAlbum.php">Album</a>
-                    <a class="collapse-item" href="/addSong.php">Song</a>
+                    <a class="collapse-item" href="addArtist.php">Artist</a>
+                    <a class="collapse-item active" href="addAlbum.php">Album</a>
+                    <a class="collapse-item" href="addSong.php">Song</a>
                 </div>
             </div>
         </li>
@@ -206,7 +244,7 @@ function content_6348b3326c2b02_41362969 (Smarty_Internal_Template $_smarty_tpl)
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="mr-2 d-none d-lg-inline text-gray-600 small">User</span>
                             <img class="img-profile rounded-circle"
-                                 src="/img/pfp/blank.png">
+                                 src="img/pfp/blank.png">
                         </a>
                         <!-- Dropdown - User Information -->
                         <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -240,10 +278,21 @@ function content_6348b3326c2b02_41362969 (Smarty_Internal_Template $_smarty_tpl)
                 </div>
                 <!-- Add album content-->
                 <div class="row">
-                    <form class="row" method="post" action="/addAlbumToDB.php">
+<<<<<<< HEAD
+                    <form class="row" method="post" action="addAlbumToDB.php" enctype="multipart/form-data">
                         <div class="add-img-div">
+<<<<<<< Updated upstream
                             <img class="add-img" src="/img/pfp/blank.png" alt="">
                             <input type="file" id="myFile" name="filename">
+=======
+                            <img class="add-img" src="img/pfp/blank.png" alt="album-cover">
+=======
+                    <form class="row" method="post" action="/addAlbum.php" enctype="multipart/form-data">
+                        <div class="add-img-div">
+                            <img class="add-img" src="/img/pfp/blank.png" alt="album-cover">
+>>>>>>> baf1ceba589e7186426a1aa3eb43d2560dc27115
+                            <input type="file" name="img" accept=".png,.jpg,.jpeg" required>
+>>>>>>> Stashed changes
                         </div>
                         <div class="add-content-div">
                             <label class="add-label" for="select-artist">Artist Name:</label>
@@ -260,6 +309,10 @@ function content_6348b3326c2b02_41362969 (Smarty_Internal_Template $_smarty_tpl)
                             <label class="add-label" for="album-name">Album Name:</label>
                             <br>
                             <input class="add-input" name="album" id="album-name" type="text"/>
+                            <br>
+                            <label class="add-label" for="release-year">Release Year:</label>
+                            <br>
+                            <input class="add-input" name="release-year" id="release-year" type="number" max="9999" min="0000" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
                             <br>
                             <input type="submit" value="Submit" class="add-submit">
                         </div>
@@ -314,20 +367,20 @@ function content_6348b3326c2b02_41362969 (Smarty_Internal_Template $_smarty_tpl)
 
 <!-- Bootstrap core JavaScript-->
 <?php echo '<script'; ?>
- src="/vendor/jquery/jquery.min.js"><?php echo '</script'; ?>
+ src="vendor/jquery/jquery.min.js"><?php echo '</script'; ?>
 >
 <?php echo '<script'; ?>
- src="/vendor/bootstrap/js/bootstrap.bundle.min.js"><?php echo '</script'; ?>
+ src="vendor/bootstrap/js/bootstrap.bundle.min.js"><?php echo '</script'; ?>
 >
 
 <!-- Core plugin JavaScript-->
 <?php echo '<script'; ?>
- src="/vendor/jquery-easing/jquery.easing.min.js"><?php echo '</script'; ?>
+ src="vendor/jquery-easing/jquery.easing.min.js"><?php echo '</script'; ?>
 >
 
 <!-- Custom scripts for all pages-->
 <?php echo '<script'; ?>
- src="/js/sb-admin-2.min.js"><?php echo '</script'; ?>
+ src="js/sb-admin-2.min.js"><?php echo '</script'; ?>
 >
 
 </body>

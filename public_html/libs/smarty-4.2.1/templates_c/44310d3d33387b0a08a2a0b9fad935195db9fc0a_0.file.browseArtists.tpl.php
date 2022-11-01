@@ -1,18 +1,30 @@
 <?php
+<<<<<<< Updated upstream
 /* Smarty version 4.2.1, created on 2022-10-13 20:57:35
+=======
+/* Smarty version 4.2.1, created on 2022-10-26 20:45:51
+>>>>>>> Stashed changes
   from '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/browseArtists.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
+<<<<<<< Updated upstream
   'unifunc' => 'content_6348b3ff41f8d2_40573467',
+=======
+  'unifunc' => 'content_6359d4bf7aeed2_43375215',
+>>>>>>> Stashed changes
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '44310d3d33387b0a08a2a0b9fad935195db9fc0a' => 
     array (
       0 => '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/browseArtists.tpl',
+<<<<<<< Updated upstream
       1 => 1665709053,
+=======
+      1 => 1666831452,
+>>>>>>> Stashed changes
       2 => 'file',
     ),
   ),
@@ -20,7 +32,11 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
+<<<<<<< Updated upstream
 function content_6348b3ff41f8d2_40573467 (Smarty_Internal_Template $_smarty_tpl) {
+=======
+function content_6359d4bf7aeed2_43375215 (Smarty_Internal_Template $_smarty_tpl) {
+>>>>>>> Stashed changes
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -236,6 +252,7 @@ function content_6348b3ff41f8d2_40573467 (Smarty_Internal_Template $_smarty_tpl)
                 <!--Page Content-->
                 <div class="row pl-3 pr-3 justify-content-around">
                     <!-- artist content divs-->
+<<<<<<< Updated upstream
                     <a class="content" href="/viewArtist.php">
                         <div class="content-img">
                             <img class="img-fluid" src="/img/artist-imgs/Asap-Rocky.jpg" alt="A$AP Rocky">
@@ -284,6 +301,29 @@ function content_6348b3ff41f8d2_40573467 (Smarty_Internal_Template $_smarty_tpl)
                         </div>
                         <h1>Gorillaz</h1>
                     </a>
+=======
+
+                    <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['artists']->value, 'artist');
+$_smarty_tpl->tpl_vars['artist']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['artist']->value) {
+$_smarty_tpl->tpl_vars['artist']->do_else = false;
+?>
+                        <a class="content" href="/viewArtist.php?id=<?php echo $_smarty_tpl->tpl_vars['artist']->value['Artist_ID'];?>
+">
+                            <div class="content-img">
+                                <img class="img-fluid" src="/img/artist-imgs/<?php echo $_smarty_tpl->tpl_vars['artist']->value['Image_URL'];?>
+" alt="<?php echo $_smarty_tpl->tpl_vars['artist']->value['Artist_Name'];?>
+">
+                            </div>
+                            <h1><?php echo $_smarty_tpl->tpl_vars['artist']->value['Artist_Name'];?>
+</h1>
+                        </a>
+                    <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+
+>>>>>>> Stashed changes
                 </div>
 
             </div>
