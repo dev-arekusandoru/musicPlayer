@@ -1,13 +1,13 @@
 <?php
 /**
- * @var $smarty
- * @var $pdo
- *
- */
+* @var $smarty
+* @var $pdo
+*
+*/
 include "../private_html/config.php";
 include_once PRIVATE_PATH . "dbConfig.php";
 include PRIVATE_PATH . "functions.php";
-
+    
 $artists = array();
 
 $stmt = $pdo->query("SELECT Artist_ID, Artist_Name, Image_URL FROM Artist");
