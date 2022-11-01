@@ -39,4 +39,5 @@ while ($row = $stmt->fetch()) {
 
 //print("<pre>".print_r($artists,true)."</pre>");
 $smarty->assign("artists", $artists);
+
 $smarty->display("addAlbum.tpl");
