@@ -10,8 +10,12 @@ include PRIVATE_PATH . "functions.php";
     
 $artists = array();
 
-$stmt = $pdo->query("SELECT Artist_ID, Artist_Name, Image_URL FROM Artist");
-while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+$sql ="SELECT Artist_ID, Artist_Name, Image_URL FROM Artist";
+$stmt = $pdo->prepare($sql);
+$stmt->execute();
+
+
+foreach($stmt as $row) {
     $artists[] = $row;
 }
 
