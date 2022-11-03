@@ -73,7 +73,7 @@ if (isset($_POST['album'])) {
             $stmt->bindParam(":afk", $artist_fk);
             try {
                 $stmt->execute();
-            } catch (Exception) {
+            } catch (Exception $exception) {
                 echo '<script>alert("Sorry, your submission was not uploaded. Make sure the artist does not already exist. ")</script>';
                 exit;
             }
@@ -85,7 +85,6 @@ if (isset($_POST['album'])) {
 
 //print("<pre>".print_r($artists,true)."</pre>");
 
-//print("<pre>".print_r($artists,true)."</pre>");
 $smarty->assign("artists", $artists);
 
 $smarty->display("addAlbum.tpl");
