@@ -12,9 +12,24 @@ $artist_img = "";
 
 if (isset($_POST['artist'])) {
     $artist_name = $_POST['artist'];
-//$test = $_FILES['img']["type"];
-
     $artist_img = implode("-", explode(" ", $artist_name)) . "." . substr($_FILES["img"]["type"], 6);
+
+    $targetDirImg = "img/artist-imgs";
+    $targetFile = $targetDirImg . "/" . $artist_img;
+    $imageFileType = strtolower(pathinfo($targetFile,PATHINFO_EXTENSION));
+    $uploadOK = 1;
+
+    if ($uploadOK == 0) {
+        echo "Sorry, your file was not uploaded.";
+// if everything is ok, try to upload file
+    } else {
+        if (move_uploaded_file($_FILES["img"]["tmp_name"], $targetFile)) {
+            echo "The file ". htmlspecialchars( basename( $_FILES["img"]["name"])). " has been uploaded.";
+        } else {
+            echo "Sorry, there was an error uploading your file.";
+        }
+    }
+
 
 
     $sql = "INSERT INTO Artist (Artist_Name, Image_URL)
@@ -25,4 +40,5 @@ if (isset($_POST['artist'])) {
     $stmt->bindParam(":img", $artist_img);
     $stmt->execute();
 }
+
 $smarty->display("addArtist.tpl");
