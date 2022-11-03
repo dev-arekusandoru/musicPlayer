@@ -6,24 +6,18 @@
  */
 include "../private_html/config.php";
 include_once PRIVATE_PATH . "dbConfig.php";
+include PRIVATE_PATH . "functions.php";
 
 if(isset($_POST['album'])) {
     $album_name = "";
     $album_img = "";
     $release_year = 0;
+    $artist_fk = 0;
 
     $album_name = $_POST['album'];
     $album_img = implode("-", explode(" ", $album_name)) . "." . substr($_FILES['img']["type"], 6);
     $release_year = $_POST['release-year'];
-
-    /*$sql = "INSERT INTO Album (Album_Name, Image_URL, Release_Year)
-            VALUES (:name, :img, :year)";
-
-    $stmt = $pdo->prepare($sql);
-    $stmt->bindParam(":name", $album_name);
-    $stmt->bindParam(":img", $album_img);
-    $stmt->bindParam(":year", $release_year);
-    $stmt->execute();*/
+    $artist_fk = intval($_POST['select-artist']);
 
 
     $targetDirImg = "img/album-imgs";
@@ -56,13 +50,14 @@ if(isset($_POST['album'])) {
 // if everything is ok, try to upload file
     } else {
         if (move_uploaded_file($_FILES["img"]["tmp_name"], $targetFile)) {
-            //db integration
-            $sql = "INSERT INTO Artist (Artist_Name, Image_URL)
-        VALUES (:name, :img)";
+            $sql = "INSERT INTO Album (Album_Name, Image_URL, Release_Year, Artist_FK)
+            VALUES (:name, :img, :year, :afk)";
 
             $stmt = $pdo->prepare($sql);
-            $stmt->bindParam(":name", $artist_name);
-            $stmt->bindParam(":img", $artist_img);
+            $stmt->bindParam(":name", $album_name);
+            $stmt->bindParam(":img", $album_img);
+            $stmt->bindParam(":year", $release_year);
+            $stmt->bindParam(":afk", $artist_fk);
             try{
                 $stmt->execute();}
             catch(Exception) {
@@ -75,16 +70,19 @@ if(isset($_POST['album'])) {
 }
 
 $artists = array();
+$sql ="SELECT Artist_ID, Artist_Name, Image_URL FROM Artist";
+$stmt = $pdo->prepare($sql);
+$stmt->execute();
 
-$stmt = $pdo->query("SELECT Artist_Name, Artist_ID FROM Artist");
-while ($row = $stmt->fetch()) {
-    for($i = 0; $i < count($row); $i++) {
-        unset($row[$i]);
-    }
+foreach($stmt as $row) {
     $artists[] = $row;
 }
 
-//print("<pre>".print_r($artists,true)."</pre>");
+$artists = alphabetizeArtists($artists);
+
+print("<pre>".print_r($artists,true)."</pre>");
+
+print("<pre>".print_r($artists,true)."</pre>");
 $smarty->assign("artists", $artists);
 
 $smarty->display("addAlbum.tpl");

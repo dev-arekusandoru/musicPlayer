@@ -9,12 +9,16 @@ include_once PRIVATE_PATH . "dbConfig.php";
 
 $albums = array();
 
-$stmt = $pdo->query("SELECT Album_ID, Album_Name, Album.Image_URL, Release_Year, Artist_Name FROM Album JOIN Artist ON Artist_FK=Artist.Artist_ID");
-while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+$sql = "SELECT Album_ID, Album_Name, Album.Image_URL, Release_Year, Artist_Name FROM Album JOIN Artist ON Artist_FK=Artist.Artist_ID";
+$stmt = $pdo->prepare($sql);
+$stmt->execute();
+
+foreach ($stmt as $row) {
 
     $albums[] = $row;
 }
 
+print("<pre>".print_r($albums,true)."</pre>");
 //organize albums alphabetically
 for($i = 0; $i < count($albums); $i++) {
     for($j = 0; $j < $i; $j++) {
@@ -27,7 +31,7 @@ for($i = 0; $i < count($albums); $i++) {
     }
 }
 
-//print("<pre>".print_r($albums,true)."</pre>");
+print("<pre>".print_r($albums,true)."</pre>");
 $smarty->assign('albums', $albums);
 
 $smarty->display("browseAlbums.tpl");
