@@ -20,6 +20,7 @@ foreach ($stmt as $row) {
 $artists = alphabetizeArtists($artists);
 
 if (isset($_POST['album'])) {
+    echo '<script>alert("Starting upload")</script>';
     $album_name = "";
     $album_img = "";
     $release_year = 0;
