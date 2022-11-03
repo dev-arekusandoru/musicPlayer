@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-26 21:21:52
+/* Smarty version 4.2.1, created on 2022-11-02 23:15:51
   from '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/viewArtist.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_6359dd30521658_74089868',
+  'unifunc' => 'content_63633267f2a035_05412924',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e2b14ea7dd71a160b30b37d168ebd7b222e10214' => 
     array (
       0 => '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/viewArtist.tpl',
-      1 => 1666833711,
+      1 => 1667315208,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6359dd30521658_74089868 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63633267f2a035_05412924 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -35,16 +35,16 @@ function content_6359dd30521658_74089868 (Smarty_Internal_Template $_smarty_tpl)
     <title>Artist Name</title>
 
     <!-- Custom fonts for this template-->
-    <link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
             href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
             rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="/css/sb-admin-2.min.css" rel="stylesheet">
-    <link href="/css/starRating.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/viewStyles.css">
-    <link rel="stylesheet" href="/css/browseDivStyles.css">
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="css/starRating.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/viewStyles.css">
+    <link rel="stylesheet" href="css/browseDivStyles.css">
 
     <!--<?php echo '<script'; ?>
  src="https://kit.fontawesome.com/125fe29883.js" crossorigin="anonymous"><?php echo '</script'; ?>
@@ -75,7 +75,7 @@ function content_6359dd30521658_74089868 (Smarty_Internal_Template $_smarty_tpl)
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
         <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/explore.php">
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="explore.php">
             <div class="sidebar-brand-icon rotate-n-15">
                 <i class="fas fa-music"></i>
             </div>
@@ -87,12 +87,12 @@ function content_6359dd30521658_74089868 (Smarty_Internal_Template $_smarty_tpl)
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item">
-            <a class="nav-link" href="/library.php">
+            <a class="nav-link" href="library.php">
                 <i class="fas fa-folder-open    "></i>
                 <span>My Library</span></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="/profile.php">
+            <a class="nav-link" href="profile.php">
                 <i class="fas fa-user fa-tachometer-alt"></i>
                 <span>My Profile</span></a>
         </li>
@@ -106,7 +106,7 @@ function content_6359dd30521658_74089868 (Smarty_Internal_Template $_smarty_tpl)
 
         <!-- Nav Item - Utilities Collapse Menu -->
         <li class="nav-item">
-            <a class="nav-link" href="/explore.php">
+            <a class="nav-link" href="explore.php">
                 <i class="fas fa-compass"></i>
                 <span>Explore</span></a>
         </li>
@@ -121,8 +121,8 @@ function content_6359dd30521658_74089868 (Smarty_Internal_Template $_smarty_tpl)
             <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Browse All:</h6>
-                    <a class="collapse-item" href="/browseArtists.php">Artists</a>
-                    <a class="collapse-item" href="/browseAlbums.php">Albums</a>
+                    <a class="collapse-item" href="browseArtists.php">Artists</a>
+                    <a class="collapse-item" href="browseAlbums.php">Albums</a>
                 </div>
             </div>
         </li>
@@ -137,9 +137,9 @@ function content_6359dd30521658_74089868 (Smarty_Internal_Template $_smarty_tpl)
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Add Music:</h6>
-                    <a class="collapse-item" href="/addArtist.php">Artist</a>
-                    <a class="collapse-item" href="/addAlbum.php">Album</a>
-                    <a class="collapse-item" href="/addSong.php">Song</a>
+                    <a class="collapse-item" href="addArtist.php">Artist</a>
+                    <a class="collapse-item" href="addAlbum.php">Album</a>
+                    <a class="collapse-item" href="addSong.php">Song</a>
                 </div>
             </div>
         </li>
@@ -219,7 +219,7 @@ function content_6359dd30521658_74089868 (Smarty_Internal_Template $_smarty_tpl)
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="mr-2 d-none d-lg-inline text-gray-600 small">User</span>
                             <img class="img-profile rounded-circle"
-                                 src="/img/pfp/blank.png">
+                                 src="img/pfp/blank.png">
                         </a>
                         <!-- Dropdown - User Information -->
                         <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -251,7 +251,7 @@ function content_6359dd30521658_74089868 (Smarty_Internal_Template $_smarty_tpl)
                 <!--Delete button -->
                 <div class="float-right relative-top">
                     <a onclick="confirmAction()">
-                        <img src="/img/trashcan.png" alt="trash can" height="30" width="30">
+                        <img src="img/trashcan.png" alt="trash can" height="30" width="30">
                     </a>
                 </div>
 
@@ -261,14 +261,14 @@ function content_6359dd30521658_74089868 (Smarty_Internal_Template $_smarty_tpl)
 :</h1>
                 <h2 class="mb-1 artist-rating">Average Album Rating: </h2>
                 <div class=" ml-0 pl-0">
-                    <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                    <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                    <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                    <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                    <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                    <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                    <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                    <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                    <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                    <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
                 </div>
                 <div style="height: 10px;"></div>
-                <a class="mb-7 add-music-button" href="/addAlbum.php">Add Album</a>
+                <a class="mb-7 add-music-button" href="addAlbum.php">Add Album</a>
                 <!--Page Content-->
                 <!-- Artist Discography  -->
                 <div class="row mt-4 pl-3 pr-3 justify-content-around">
@@ -278,10 +278,10 @@ $_smarty_tpl->tpl_vars['album']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['album']->value) {
 $_smarty_tpl->tpl_vars['album']->do_else = false;
 ?>
-                    <a class="content" href="/viewAlbum.php?id=<?php echo $_smarty_tpl->tpl_vars['album']->value['Album_ID'];?>
+                    <a class="content" href="viewAlbum.php?id=<?php echo $_smarty_tpl->tpl_vars['album']->value['Album_ID'];?>
 ">
                         <div class="content-img">
-                            <img class="img-fluid" src="/img/album-imgs/<?php echo $_smarty_tpl->tpl_vars['album']->value['Image_URL'];?>
+                            <img class="img-fluid" src="img/album-imgs/<?php echo $_smarty_tpl->tpl_vars['album']->value['Image_URL'];?>
 " alt="<?php echo $_smarty_tpl->tpl_vars['album']->value['Album_Name'];?>
 ">
                         </div>
@@ -306,11 +306,11 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                             <h1 class="row container ml-0 pl-0">User</h1>
                             <div class="row container ml-0 pl-0">
                                 <h2 style="line-height: 27px" class="mr-1">Rating: </h2>
-                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
                             </div>
                         </div>
                         <div class="comment-body">
@@ -325,11 +325,11 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                             <h1 class="row container ml-0 pl-0">User</h1>
                             <div class="row container ml-0 pl-0">
                                 <h2 style="line-height: 27px" class="mr-1">Rating: </h2>
-                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
                             </div>
                         </div>
                         <div class="comment-body">
@@ -344,11 +344,11 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                             <h1 class="row container ml-0 pl-0">User</h1>
                             <div class="row container ml-0 pl-0">
                                 <h2 style="line-height: 27px" class="mr-1">Rating: </h2>
-                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
                             </div>
                         </div>
                         <div class="comment-body">
@@ -363,11 +363,11 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                             <h1 class="row container ml-0 pl-0">User</h1>
                             <div class="row container ml-0 pl-0">
                                 <h2 style="line-height: 27px" class="mr-1">Rating: </h2>
-                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
                             </div>
                         </div>
                         <div class="comment-body">
@@ -382,11 +382,11 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                             <h1 class="row container ml-0 pl-0">User</h1>
                             <div class="row container ml-0 pl-0">
                                 <h2 style="line-height: 27px" class="mr-1">Rating: </h2>
-                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
                             </div>
                         </div>
                         <div class="comment-body">
@@ -521,20 +521,20 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
 <!-- Bootstrap core JavaScript-->
 <?php echo '<script'; ?>
- src="/vendor/jquery/jquery.min.js"><?php echo '</script'; ?>
+ src="vendor/jquery/jquery.min.js"><?php echo '</script'; ?>
 >
 <?php echo '<script'; ?>
- src="/vendor/bootstrap/js/bootstrap.bundle.min.js"><?php echo '</script'; ?>
+ src="vendor/bootstrap/js/bootstrap.bundle.min.js"><?php echo '</script'; ?>
 >
 
 <!-- Core plugin JavaScript-->
 <?php echo '<script'; ?>
- src="/vendor/jquery-easing/jquery.easing.min.js"><?php echo '</script'; ?>
+ src="vendor/jquery-easing/jquery.easing.min.js"><?php echo '</script'; ?>
 >
 
 <!-- Custom scripts for all pages-->
 <?php echo '<script'; ?>
- src="/js/sb-admin-2.min.js"><?php echo '</script'; ?>
+ src="js/sb-admin-2.min.js"><?php echo '</script'; ?>
 >
 
 </body>
