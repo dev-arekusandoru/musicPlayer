@@ -225,7 +225,7 @@
                             <br>
                             <select required name="select-artist" class="add-dropdown" id="select-artist">
                                 {foreach $artists as $artist}
-                                    <option value="{$artist['Artist_ID']}" type="number">{$artist['Artist_Name']}</option>
+                                    <option value="{$artist['Artist_ID']}">{$artist['Artist_Name']}</option>
                                 {/foreach}
                             </select>
                             <br>

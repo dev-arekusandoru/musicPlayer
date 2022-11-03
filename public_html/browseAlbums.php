@@ -14,11 +14,10 @@ $stmt = $pdo->prepare($sql);
 $stmt->execute();
 
 foreach ($stmt as $row) {
-
     $albums[] = $row;
 }
 
-print("<pre>".print_r($albums,true)."</pre>");
+//print("<pre>".print_r($albums,true)."</pre>");
 //organize albums alphabetically
 for($i = 0; $i < count($albums); $i++) {
     for($j = 0; $j < $i; $j++) {
@@ -31,7 +30,7 @@ for($i = 0; $i < count($albums); $i++) {
     }
 }
 
-print("<pre>".print_r($albums,true)."</pre>");
+//print("<pre>".print_r($albums,true)."</pre>");
 $smarty->assign('albums', $albums);
 
 $smarty->display("browseAlbums.tpl");
