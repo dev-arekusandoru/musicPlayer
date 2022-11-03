@@ -36,8 +36,7 @@ if (isset($_POST['artist'])) {
         $uploadOK = 0;
     }
     // Allow certain file formats
-    if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
-        && $imageFileType != "gif" ) {
+    if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif" ) {
         $uploadOK = 0;
     }
     if ($uploadOK == 0) {
