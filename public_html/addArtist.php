@@ -45,6 +45,7 @@ if (isset($_POST['artist'])) {
 // if everything is ok, try to upload file
     } else {
         if (move_uploaded_file($_FILES["img"]["tmp_name"], $targetFile)) {
+            //db integration
             $sql = "INSERT INTO Artist (Artist_Name, Image_URL)
         VALUES (:name, :img)";
 
@@ -59,7 +60,6 @@ if (isset($_POST['artist'])) {
             echo '<script>alert("Upload Successful!")</script>';
         }
     }
-
 }
 
 $smarty->display("addArtist.tpl");
