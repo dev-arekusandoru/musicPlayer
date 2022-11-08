@@ -6,5 +6,9 @@
 include "../private_html/config.php";
 
 
-
-$smarty->display("addSong.tpl");
+if (!isset($_SESSION['logged']) || $_SESSION['logged'] == 0) {
+    $_SESSION['page_to_load'] = "addSong.php";
+    $smarty->display("userLogin.tpl");
+} else {
+    $smarty->display("addSong.tpl");
+}
