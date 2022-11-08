@@ -1,2 +1,0 @@
-## Let our index.php file handle 404 errors.
-ErrorDocument 404 /public_html/404.php
