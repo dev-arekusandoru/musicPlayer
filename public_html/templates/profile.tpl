@@ -219,7 +219,7 @@
 
                     <!--Upload PFP Image -->
                     <input type="file" id="imgupload" style="display:none">
-                    <label for='imgupload'> <button id="OpenImgUpload">Profile Picture Upload</button></label>
+                    <label for='imgupload'> <input type="file" id="myFile" name="filename"></label>
                 </div>
 
                 <!-- change password popup -->

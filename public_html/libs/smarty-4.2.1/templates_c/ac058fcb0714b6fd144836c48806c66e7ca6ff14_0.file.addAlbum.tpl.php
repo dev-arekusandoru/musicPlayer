@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-11-03 00:00:27
+/* Smarty version 4.2.1, created on 2022-11-03 13:55:34
   from '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/addAlbum.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_63633cdb081cc8_04498108',
+  'unifunc' => 'content_63640096a4a259_54751270',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ac058fcb0714b6fd144836c48806c66e7ca6ff14' => 
     array (
       0 => '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/addAlbum.tpl',
-      1 => 1667447063,
+      1 => 1667498054,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63633cdb081cc8_04498108 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63640096a4a259_54751270 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -255,7 +255,8 @@ $_smarty_tpl->tpl_vars['artist']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['artist']->value) {
 $_smarty_tpl->tpl_vars['artist']->do_else = false;
 ?>
-                                    <option><?php echo $_smarty_tpl->tpl_vars['artist']->value['Artist_Name'];?>
+                                    <option value="<?php echo $_smarty_tpl->tpl_vars['artist']->value['Artist_ID'];?>
+"><?php echo $_smarty_tpl->tpl_vars['artist']->value['Artist_Name'];?>
 </option>
                                 <?php
 }

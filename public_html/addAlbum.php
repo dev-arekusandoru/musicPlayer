@@ -85,4 +85,6 @@ if (!isset($_SESSION['logged']) || $_SESSION['logged'] == 0) {
         }
 
     }
+
+    $smarty->display("addAlbum.tpl");
 }

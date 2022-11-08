@@ -12,17 +12,17 @@
     <title>Create Playlist</title>
 
     <!-- Custom fonts for this template-->
-    <link href="img_html/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
             href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
             rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="img_html/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
     <!-- Custom style sheet to change -->
-    <link href="img_html/css/browseDivStyles.css" rel="stylesheet">
-    <link rel="stylesheet" href="img_html/css/addPageStyles.css">
+    <link href="css/browseDivStyles.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/addPageStyles.css">
 
 
 </head>
@@ -180,7 +180,7 @@
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="mr-2 d-none d-lg-inline text-gray-600 small">User</span>
                             <img class="img-profile rounded-circle"
-                                 src="img_html/img/pfp/blank.png">
+                                 src="img/pfp/blank.png">
                         </a>
                         <!-- Dropdown - User Information -->
                         <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -214,9 +214,9 @@
                 </div>
                 <!-- Add Playlist form content -->
                 <div class="row">
-                    <form class="row" method="post" action="img_html/addPlaylistToDB.php">
+                    <form class="row" method="post" action="addPlaylistToDB.php">
                         <div class="add-img-div">
-                            <img class="add-img" src="img_html/img/pfp/blank.png" alt="">
+                            <img class="add-img" src="img/pfp/blank.png" alt="">
                             <input type="file" id="myFile" name="filename">
                         </div>
                         <div class="add-content-div">
@@ -282,14 +282,14 @@
 </div>
 
 <!-- Bootstrap core JavaScript-->
-<script src="img_html/vendor/jquery/jquery.min.js"></script>
-<script src="img_html/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 <!-- Core plugin JavaScript-->
-<script src="img_html/vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
 <!-- Custom scripts for all pages-->
-<script src="img_html/js/sb-admin-2.min.js"></script>
+<script src="js/sb-admin-2.min.js"></script>
 
 </body>
 
