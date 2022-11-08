@@ -235,7 +235,7 @@
                             <br>
                             <label class="add-label" for="release-year">Release Year:</label>
                             <br>
-                            <input class="add-input" name="release-year" id="release-year" type="number" max="9999" min="0000" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
+                            <input class="add-input" name="release-year" id="release-year" type="number" maxlength="4" minlength="1" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
                             <br>
                             <input type="submit" value="Submit" class="add-submit">
                         </div>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-15 13:46:03
+/* Smarty version 4.2.1, created on 2022-11-07 12:53:28
   from '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/userRegister.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_634af1db1feb77_42640621',
+  'unifunc' => 'content_636946181d8264_66138258',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9249f88c378d1f7ab8481e6005669598eb5b4913' => 
     array (
       0 => '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/userRegister.tpl',
-      1 => 1665699148,
+      1 => 1667843601,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_634af1db1feb77_42640621 (Smarty_Internal_Template $_smarty_tpl) {
+function content_636946181d8264_66138258 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -35,13 +35,13 @@ function content_634af1db1feb77_42640621 (Smarty_Internal_Template $_smarty_tpl)
     <title>Register</title>
 
     <!-- Custom fonts for this template-->
-    <link href="../public_html/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="../public_html/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
     <?php echo '<script'; ?>
  src="https://kit.fontawesome.com/125fe29883.js" crossorigin="anonymous"><?php echo '</script'; ?>
 >
@@ -63,41 +63,40 @@ function content_634af1db1feb77_42640621 (Smarty_Internal_Template $_smarty_tpl)
                             <div class="text-center">
                                 <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
                             </div>
-                            <form class="user">
+                            <form class="user" action="register.php" method="post">
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="text" class="form-control form-control-user" id="exampleFirstName"
-                                            placeholder="First Name">
+                                        <input type="text" name="fname" class="form-control form-control-user"
+                                            placeholder="First Name" required>
                                     </div>
                                     <div class="col-sm-6">
-                                        <input type="text" class="form-control form-control-user" id="exampleLastName"
-                                            placeholder="Last Name">
+                                        <input type="text" name="lname" class="form-control form-control-user"
+                                            placeholder="Last Name" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control form-control-user" id="exampleInputEmail"
-                                        placeholder="Email Address">
+                                    <input type="email" name="email" class="form-control form-control-user"
+                                        placeholder="Email Address" required>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="password" class="form-control form-control-user"
-                                            id="exampleInputPassword" placeholder="Password">
+                                        <input type="password" name="password" class="form-control form-control-user"
+                                            placeholder="Password" required>
                                     </div>
                                     <div class="col-sm-6">
-                                        <input type="password" class="form-control form-control-user"
-                                            id="exampleRepeatPassword" placeholder="Verify Password">
+                                        <input type="password" name="vpassword" class="form-control form-control-user"
+                                            placeholder="Verify Password" required>
                                     </div>
                                 </div>
-                                <a href=".html" class="btn btn-primary btn-user btn-block">
-                                    Register Account
-                                </a>
+                                <input type="submit" value="Register Account" class="btn btn-primary btn-user btn-block">
+
                             </form>
                             <hr>
                             <div class="text-center">
-                                <a class="small" href="../public_html/forgotPassword.php">Forgot Password?</a>
+                                <a class="small" href="forgotPassword.php">Forgot Password?</a>
                             </div>
                             <div class="text-center">
-                                <a class="small" href="../public_html/login.php">Already have an account? Login!</a>
+                                <a class="small" href="login.php">Already have an account? Login!</a>
                             </div>
                         </div>
                     </div>
@@ -109,20 +108,20 @@ function content_634af1db1feb77_42640621 (Smarty_Internal_Template $_smarty_tpl)
 
     <!-- Bootstrap core JavaScript-->
     <?php echo '<script'; ?>
- src="../public_html/vendor/jquery/jquery.min.js"><?php echo '</script'; ?>
+ src="vendor/jquery/jquery.min.js"><?php echo '</script'; ?>
 >
     <?php echo '<script'; ?>
- src="../public_html/vendor/bootstrap/js/bootstrap.bundle.min.js"><?php echo '</script'; ?>
+ src="vendor/bootstrap/js/bootstrap.bundle.min.js"><?php echo '</script'; ?>
 >
 
     <!-- Core plugin JavaScript-->
     <?php echo '<script'; ?>
- src="../public_html/vendor/jquery-easing/jquery.easing.min.js"><?php echo '</script'; ?>
+ src="vendor/jquery-easing/jquery.easing.min.js"><?php echo '</script'; ?>
 >
 
     <!-- Custom scripts for all pages-->
     <?php echo '<script'; ?>
- src="../public_html/js/sb-admin-2.min.js"><?php echo '</script'; ?>
+ src="js/sb-admin-2.min.js"><?php echo '</script'; ?>
 >
 
 </body>
