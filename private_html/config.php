@@ -47,3 +47,4 @@ echo "Base Path: " . BASE_PATH . "<br><br>";
 echo "Smarty: " . SMARTY . "<br><br>";
 exit();
 // */
+session_start();
