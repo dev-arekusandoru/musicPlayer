@@ -6,6 +6,7 @@
  */
 include "../private_html/config.php";
 include_once PRIVATE_PATH . "dbConfig.php";
+include_once PRIVATE_PATH . "functions.php";
 
 if (!isset($_SESSION['logged']) || $_SESSION['logged'] == 0) {
     $_SESSION['page_to_load'] = "addAlbum.php";

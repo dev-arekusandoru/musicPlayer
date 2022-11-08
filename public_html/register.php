@@ -49,7 +49,7 @@ if(isset($_POST['email'])) {
 
             $stmt->execute();
 
-            $smarty->display("login.tpl");
+            header("Location: login.php");
             echo '<script>alert("Registration successful. You may now login.")</script>';
         } else {
             $smarty->display("userRegister.tpl");
