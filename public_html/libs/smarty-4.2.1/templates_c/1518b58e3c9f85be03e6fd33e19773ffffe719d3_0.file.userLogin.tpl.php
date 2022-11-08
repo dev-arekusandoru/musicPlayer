@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-04 11:35:23
+/* Smarty version 4.2.1, created on 2022-11-07 12:48:25
   from '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/userLogin.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_633c52bb525632_58987741',
+  'unifunc' => 'content_636944e99ea9f0_32397165',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1518b58e3c9f85be03e6fd33e19773ffffe719d3' => 
     array (
       0 => '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/userLogin.tpl',
-      1 => 1664897722,
+      1 => 1667496725,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_633c52bb525632_58987741 (Smarty_Internal_Template $_smarty_tpl) {
+function content_636944e99ea9f0_32397165 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -35,13 +35,13 @@ function content_633c52bb525632_58987741 (Smarty_Internal_Template $_smarty_tpl)
     <title>Login</title>
 
     <!-- Custom fonts for this template-->
-    <link href="/public_html/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
             href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
             rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="/public_html/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
 </head>
 
@@ -68,29 +68,22 @@ function content_633c52bb525632_58987741 (Smarty_Internal_Template $_smarty_tpl)
                                     <div class="form-group">
                                         <input type="email" class="form-control form-control-user"
                                                name="email" aria-describedby="emailHelp"
-                                               placeholder="Enter Email Address...">
+                                               placeholder="Enter Email Address..." required>
                                     </div>
                                     <div class="form-group">
                                         <input type="password" class="form-control form-control-user"
-                                               name="password" placeholder="Password">
+                                               name="password" placeholder="Password" required>
                                     </div>
-                                    <div class="form-group">
-                                        <div class="custom-control custom-checkbox small">
-                                            <input type="checkbox" class="custom-control-input" id="customCheck">
-                                            <label class="custom-control-label" for="customCheck">Remember
-                                                Me</label>
-                                        </div>
-                                    </div>
-                                    <button type="submit" class="btn btn-primary btn-user btn-block">
+                                                                        <button type="submit" class="btn btn-primary btn-user btn-block">
                                         Login
                                     </button>
                                 </form method>
                                 <hr>
                                 <div class="text-center">
-                                    <a class="small" href="userForgotPassword.html">Forgot Password?</a>
+                                    <a class="small" href="forgotPassword.php">Forgot Password?</a>
                                 </div>
                                 <div class="text-center">
-                                    <a class="small" href="userRegister.html">Create an Account!</a>
+                                    <a class="small" href="register.php">Create an Account!</a>
                                 </div>
                             </div>
                         </div>
@@ -106,20 +99,20 @@ function content_633c52bb525632_58987741 (Smarty_Internal_Template $_smarty_tpl)
 
 <!-- Bootstrap core JavaScript
 <?php echo '<script'; ?>
- src="../public_html/vendor/jquery/jquery.min.js"><?php echo '</script'; ?>
+ src="vendor/jquery/jquery.min.js"><?php echo '</script'; ?>
 >
 <?php echo '<script'; ?>
- src="../public_html/vendor/bootstrap/js/bootstrap.bundle.min.js"><?php echo '</script'; ?>
+ src="vendor/bootstrap/js/bootstrap.bundle.min.js"><?php echo '</script'; ?>
 >
 
 <!-- Core plugin JavaScript-->
 <?php echo '<script'; ?>
- src="../public_html/vendor/jquery-easing/jquery.easing.min.js"><?php echo '</script'; ?>
+ src="vendor/jquery-easing/jquery.easing.min.js"><?php echo '</script'; ?>
 >
 
 <!-- Custom scripts for all pages-->
 <?php echo '<script'; ?>
- src="../public_html/js/sb-admin-2.min.js"><?php echo '</script'; ?>
+ src="js/sb-admin-2.min.js"><?php echo '</script'; ?>
 >
 
 </body>

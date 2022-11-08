@@ -1,15 +1,17 @@
 <?php
 /**
  * @var $smarty
+ * @var $pdo
  *
  */
 include "../private_html/config.php";
+include_once PRIVATE_PATH . "dbConfig.php";
+include_once PRIVATE_PATH . "functions.php";
 
 if (!isset($_SESSION['logged']) || $_SESSION['logged'] == 0) {
     $_SESSION['page_to_load'] = "addAlbum.php";
     $smarty->display("userLogin.tpl");
-} else
-{
+} else {
     $artists = array();
     $sql = "SELECT Artist_ID, Artist_Name, Image_URL FROM Artist";
     $stmt = $pdo->prepare($sql);

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-13 20:54:21
+/* Smarty version 4.2.1, created on 2022-11-08 14:15:46
   from '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/addArtist.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_6348b33df3e3b7_89359860',
+  'unifunc' => 'content_636aaae23282b8_58410685',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ded9d20340a09a2090871b287a72d2cb458c39b2' => 
     array (
       0 => '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/addArtist.tpl',
-      1 => 1665708861,
+      1 => 1667925590,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6348b33df3e3b7_89359860 (Smarty_Internal_Template $_smarty_tpl) {
+function content_636aaae23282b8_58410685 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -46,9 +46,9 @@ function content_6348b33df3e3b7_89359860 (Smarty_Internal_Template $_smarty_tpl)
     <!-- Custom style sheet to change -->
     <link href="/css/browseDivStyles.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/addPageStyles.css">
-    <?php echo '<script'; ?>
+    <!--<?php echo '<script'; ?>
  src="https://kit.fontawesome.com/125fe29883.js" crossorigin="anonymous"><?php echo '</script'; ?>
->
+>-->
 
 </head>
 
@@ -114,7 +114,7 @@ function content_6348b33df3e3b7_89359860 (Smarty_Internal_Template $_smarty_tpl)
         </li>
 
         <!-- Nav Item - Add Music Menu -->
-        <li class="nav-item">
+        <li class="nav-item active">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                aria-expanded="true" aria-controls="collapseTwo">
                 <i class="fas fa-music"></i>
@@ -239,15 +239,15 @@ function content_6348b33df3e3b7_89359860 (Smarty_Internal_Template $_smarty_tpl)
                 </div>
                 <!-- Add Artist forms and stuff-->
                 <div class="row">
-                    <form class="row" method="post" action="/addArtistToDB.php">
+                    <form class="row" action="/addArtist.php" method="post" enctype="multipart/form-data">
                         <div class="add-img-div">
-                            <img class="add-img" src="/img/pfp/blank.png" alt="">
-                            <input type="file" id="myFile" name="filename">
+                            <img class="add-img" id="artist-img" src="/img/pfp/blank.png" alt="">
+                            <input type="file" name="img" accept=".jpg,.jpeg,.png" required>
                         </div>
                         <div class="add-content-div">
                             <label class="add-label" for="artist-name">Artist Name:</label>
                             <br>
-                            <input class="add-input" name="artist" id="artist-name" type="text"/>
+                            <input class="add-input" name="artist" id="artist-name" type="text" required>
                             <br>
                             <input type="submit" value="Submit" class="add-submit">
                         </div>

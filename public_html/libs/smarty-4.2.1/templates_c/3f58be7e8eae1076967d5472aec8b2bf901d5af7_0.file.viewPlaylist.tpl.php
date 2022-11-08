@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-13 18:55:45
+/* Smarty version 4.2.1, created on 2022-10-26 16:43:20
   from 'C:\Users\kara3\PhpstormProjects\musicPlayer\public_html\templates\viewPlaylist.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_63489771674c07_74784569',
+  'unifunc' => 'content_63599be8975008_93888961',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3f58be7e8eae1076967d5472aec8b2bf901d5af7' => 
     array (
       0 => 'C:\\Users\\kara3\\PhpstormProjects\\musicPlayer\\public_html\\templates\\viewPlaylist.tpl',
-      1 => 1665701700,
+      1 => 1666816972,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63489771674c07_74784569 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63599be8975008_93888961 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -35,23 +35,26 @@ function content_63489771674c07_74784569 (Smarty_Internal_Template $_smarty_tpl)
     <title>Playlist Title</title>
 
     <!-- Custom fonts for this template-->
-    <link href="/public_html/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
             href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
             rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="/public_html/css/sb-admin-2.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/public_html/css/viewStyles.css">
-    <?php echo '<script'; ?>
+    <link href="/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="/css/starRating.css" rel="stylesheet">
+    <link href="/css/viewStyles.css" rel="stylesheet">
+    <link href="/css/browseDivStyles.css" rel="stylesheet">
+
+    <!--<?php echo '<script'; ?>
  src="https://kit.fontawesome.com/125fe29883.js" crossorigin="anonymous"><?php echo '</script'; ?>
->
+>-->
 
     <?php echo '<script'; ?>
 >
         // The function below will start the confirmation dialog
         function confirmAction() {
-            let confirmAction = confirm("Are you sure to delete this?");
+            let confirmAction = confirm("Are you sure you want to delete this?");
             if (confirmAction) {
                 alert("Playlist Deleted");
             } else {
@@ -72,7 +75,7 @@ function content_63489771674c07_74784569 (Smarty_Internal_Template $_smarty_tpl)
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
         <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../public_html/templates/explore.html">
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/explore.php">
             <div class="sidebar-brand-icon rotate-n-15">
                 <i class="fas fa-music"></i>
             </div>
@@ -84,12 +87,12 @@ function content_63489771674c07_74784569 (Smarty_Internal_Template $_smarty_tpl)
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item">
-            <a class="nav-link" href="../public_html/templates/library.html">
+            <a class="nav-link" href="/library.php">
                 <i class="fas fa-folder-open    "></i>
                 <span>My Library</span></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="../public_html/templates/profile.html">
+            <a class="nav-link" href="/profile.php">
                 <i class="fas fa-user fa-tachometer-alt"></i>
                 <span>My Profile</span></a>
         </li>
@@ -103,7 +106,7 @@ function content_63489771674c07_74784569 (Smarty_Internal_Template $_smarty_tpl)
 
         <!-- Nav Item - Utilities Collapse Menu -->
         <li class="nav-item">
-            <a class="nav-link" href="../public_html/templates/explore.html">
+            <a class="nav-link" href="/explore.php">
                 <i class="fas fa-compass"></i>
                 <span>Explore</span></a>
         </li>
@@ -118,8 +121,8 @@ function content_63489771674c07_74784569 (Smarty_Internal_Template $_smarty_tpl)
             <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Browse All:</h6>
-                    <a class="collapse-item" href="browseArtists.tpl">Artists</a>
-                    <a class="collapse-item" href="browseAlbums.tpl">Albums</a>
+                    <a class="collapse-item" href="/browseArtists.php">Artists</a>
+                    <a class="collapse-item" href="/browseAlbums.php">Albums</a>
                 </div>
             </div>
         </li>
@@ -134,9 +137,9 @@ function content_63489771674c07_74784569 (Smarty_Internal_Template $_smarty_tpl)
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Add Music:</h6>
-                    <a class="collapse-item" href="../public_html/templates/addArtist.html">Artist</a>
-                    <a class="collapse-item" href="../public_html/templates/addAlbum.html">Album</a>
-                    <a class="collapse-item" href="../public_html/templates/addSong.html">Song</a>
+                    <a class="collapse-item" href="/addArtist.php">Artist</a>
+                    <a class="collapse-item" href="/addAlbum.php">Album</a>
+                    <a class="collapse-item" href="/addSong.php">Song</a>
                 </div>
             </div>
         </li>
@@ -216,7 +219,7 @@ function content_63489771674c07_74784569 (Smarty_Internal_Template $_smarty_tpl)
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="mr-2 d-none d-lg-inline text-gray-600 small">User</span>
                             <img class="img-profile rounded-circle"
-                                 src="/public_html/img/pfp/blank.png">
+                                 src="/img/pfp/blank.png">
                         </a>
                         <!-- Dropdown - User Information -->
                         <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -248,63 +251,40 @@ function content_63489771674c07_74784569 (Smarty_Internal_Template $_smarty_tpl)
                 <!--Delete button -->
                 <div class="float-right relative-top">
                     <a onclick="confirmAction()">
-                        <img src="../public_html/img/trashcan.png" alt="white trash can image" height="30" width="30">
+                        <img src="/img/trashcan.png" alt="white trash can image" height="30" width="30">
                     </a>
                 </div>
 
                 <!-- Playlist Information -->
-                <div class="album-header row">
-                    <div class="col-sm-3 pl-0 ml-3">
-                        <img class="artwork" src="/public_html/img/empty-playlist.jpg" alt="">
-                    </div>
-                    <div class="album-metadata col-sm-3" style="height: 300px;">
+                <div class="row ml-md-2">
+                    <div class="album-metadata col-sm-12 p-0">
+                        <img src="/img/empty-playlist.jpg" class="img-responsive artwork float-md-left" alt="">
                         <h1>TESTING</h1>
                         <h2>User</h2>
-                        <h6>Here the user will add a description of the playlist if so desired.</h6>
-                        <a class="mb-7 add-music-button" href="../public_html/templates/addSong.html">Edit Playlist Details</a><br>
-                        <a class="mb-7 add-music-button" href="../public_html/templates/addSong.html">Add Song</a>
+                        <h6>Playlist description</h6>
+                        <div style="height: 5px;"></div>
+                        <a class="mb-7 add-music-button" href="addSong.php">Edit Album Details</a>
+                        <br>
+                        <a class="mb-7 add-music-button" href="addSong.php">Add Song</a>
                     </div>
+                    <div class="col-sm-6"></div>
                 </div>
+
                 <!-- Playlist Tracklist -->
                 <div class="album-tracklist row">
-                    <div class="col-sm-12">
-                        <ul>
-                            <li class="row item">
-                                <div class="col-sm-11">
-                                    <h1>Distorted Records</h1>
-                                    <p>A$AP Rocky • TESTING</p>
-                                </div>
-
-                                <!-- Topbar Navbar -->
+                    <div class="col">
+                        <div class="row container playlist-song justify-content-between">
+                            <div class="p-song-info">
+                                <h1>Distorted Records</h1>
+                                <p>A$AP Rocky • TESTING</p>
+                            </div>
+                            <div class="dropdown">
                                 <ul class="navbar-nav ml-auto">
-
-                                    <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-                                    <li class="nav-item dropdown no-arrow d-sm-none">
-                                        <!-- Dropdown - Messages -->
-                                        <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                                             aria-labelledby="searchDropdown0">
-                                            <form class="form-inline mr-auto w-100 navbar-search">
-                                                <div class="input-group">
-                                                    <input type="text" class="form-control bg-light border-0 small"
-                                                           placeholder="Search music..." aria-label="Search"
-                                                           aria-describedby="basic-addon2">
-                                                    <div class="input-group-append">
-                                                        <button class="btn btn-primary" type="button">
-                                                            <i class="fas fa-search fa-sm"></i>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </li>
-
-                                    <div class="topbar-divider d-none d-sm-block"></div>
-
                                     <!-- Nav Item - Song Information -->
-                                    <li class="nav-item dropdown no-arrow">
-                                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown0" role="button"
+                                    <li class="nav-item dropdown no-arrow" style="border: none;">
+                                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">. . .</span>
+                                            <span class="mr-2 d-none d-lg-inline text-secondary " style="border: none;">• • •</span>
                                         </a>
                                         <!-- Dropdown - Song Information -->
                                         <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -313,33 +293,296 @@ function content_63489771674c07_74784569 (Smarty_Internal_Template $_smarty_tpl)
                                                 <i class="fa fa-comments-o fa-sm fa-fw mr-2 text-gray-400"></i>
                                                 View Comments
                                             </a>
-                                            <a class="dropdown-item" href="viewArtist.html">
+                                            <a class="dropdown-item" href="/viewAlbum.php">
+                                                <i class="fas fa-folder-open fa-sm fa-fw mr-2 text-gray-400"></i>
+                                                <i class="fa fa-folder-o fa-sm fa-fw mr-2 text-gray-400"></i>
+                                                View Album
+                                            </a>
+                                            <a class="dropdown-item" href="/viewArtist.php">
                                                 <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                                 View Artist
                                             </a>
-                                            <a class="dropdown-item" href="addSong.html">
+                                            <a class="dropdown-item" href="/addSong.php">
                                                 <i class="fa fa-plus fa-sm fa-fw mr-2 text-gray-400"></i>
                                                 Add to playlist
                                             </a>
                                             <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                            <a class="dropdown-item" href="#">
                                                 <i class="fa fa-minus fa-sm fa-fw mr-2 text-gray-400"></i>
                                                 Remove from playlist
                                             </a>
                                         </div>
                                     </li>
                                 </ul>
-
-                            </li>
-                        </ul>
+                            </div>
+                        </div>
+                        <div class="row container playlist-song justify-content-between">
+                            <div class="p-song-info">
+                                <h1>Distorted Records</h1>
+                                <p>A$AP Rocky • TESTING</p>
+                            </div>
+                            <div class="dropdown">
+                                <ul class="navbar-nav ml-auto">
+                                    <!-- Nav Item - Song Information -->
+                                    <li class="nav-item dropdown no-arrow" style="border: none;">
+                                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <span class="mr-2 d-none d-lg-inline text-secondary " style="border: none;">• • •</span>
+                                        </a>
+                                        <!-- Dropdown - Song Information -->
+                                        <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                             aria-labelledby="userDropdown0">
+                                            <a class="dropdown-item" href="#">
+                                                <i class="fa fa-comments-o fa-sm fa-fw mr-2 text-gray-400"></i>
+                                                View Comments
+                                            </a>
+                                            <a class="dropdown-item" href="/viewAlbum.php">
+                                                <i class="fas fa-folder-open fa-sm fa-fw mr-2 text-gray-400"></i>
+                                                <i class="fa fa-folder-o fa-sm fa-fw mr-2 text-gray-400"></i>
+                                                View Album
+                                            </a>
+                                            <a class="dropdown-item" href="/viewArtist.php">
+                                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                                View Artist
+                                            </a>
+                                            <a class="dropdown-item" href="/addSong.php">
+                                                <i class="fa fa-plus fa-sm fa-fw mr-2 text-gray-400"></i>
+                                                Add to playlist
+                                            </a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="#">
+                                                <i class="fa fa-minus fa-sm fa-fw mr-2 text-gray-400"></i>
+                                                Remove from playlist
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row container playlist-song justify-content-between">
+                            <div class="p-song-info">
+                                <h1>Distorted Records</h1>
+                                <p>A$AP Rocky • TESTING</p>
+                            </div>
+                            <div class="dropdown">
+                                <ul class="navbar-nav ml-auto">
+                                    <!-- Nav Item - Song Information -->
+                                    <li class="nav-item dropdown no-arrow" style="border: none;">
+                                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <span class="mr-2 d-none d-lg-inline text-secondary " style="border: none;">• • •</span>
+                                        </a>
+                                        <!-- Dropdown - Song Information -->
+                                        <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                             aria-labelledby="userDropdown0">
+                                            <a class="dropdown-item" href="#">
+                                                <i class="fa fa-comments-o fa-sm fa-fw mr-2 text-gray-400"></i>
+                                                View Comments
+                                            </a>
+                                            <a class="dropdown-item" href="/viewAlbum.php">
+                                                <i class="fas fa-folder-open fa-sm fa-fw mr-2 text-gray-400"></i>
+                                                <i class="fa fa-folder-o fa-sm fa-fw mr-2 text-gray-400"></i>
+                                                View Album
+                                            </a>
+                                            <a class="dropdown-item" href="/viewArtist.php">
+                                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                                View Artist
+                                            </a>
+                                            <a class="dropdown-item" href="/addSong.php">
+                                                <i class="fa fa-plus fa-sm fa-fw mr-2 text-gray-400"></i>
+                                                Add to playlist
+                                            </a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="#">
+                                                <i class="fa fa-minus fa-sm fa-fw mr-2 text-gray-400"></i>
+                                                Remove from playlist
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row container playlist-song justify-content-between">
+                            <div class="p-song-info">
+                                <h1>Distorted Records</h1>
+                                <p>A$AP Rocky • TESTING</p>
+                            </div>
+                            <div class="dropdown">
+                                <ul class="navbar-nav ml-auto">
+                                    <!-- Nav Item - Song Information -->
+                                    <li class="nav-item dropdown no-arrow" style="border: none;">
+                                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <span class="mr-2 d-none d-lg-inline text-secondary " style="border: none;">• • •</span>
+                                        </a>
+                                        <!-- Dropdown - Song Information -->
+                                        <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                             aria-labelledby="userDropdown0">
+                                            <a class="dropdown-item" href="#">
+                                                <i class="fa fa-comments-o fa-sm fa-fw mr-2 text-gray-400"></i>
+                                                View Comments
+                                            </a>
+                                            <a class="dropdown-item" href="/viewAlbum.php">
+                                                <i class="fas fa-folder-open fa-sm fa-fw mr-2 text-gray-400"></i>
+                                                <i class="fa fa-folder-o fa-sm fa-fw mr-2 text-gray-400"></i>
+                                                View Album
+                                            </a>
+                                            <a class="dropdown-item" href="/viewArtist.php">
+                                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                                View Artist
+                                            </a>
+                                            <a class="dropdown-item" href="/addSong.php">
+                                                <i class="fa fa-plus fa-sm fa-fw mr-2 text-gray-400"></i>
+                                                Add to playlist
+                                            </a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="#">
+                                                <i class="fa fa-minus fa-sm fa-fw mr-2 text-gray-400"></i>
+                                                Remove from playlist
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row container playlist-song justify-content-between">
+                            <div class="p-song-info">
+                                <h1>Distorted Records</h1>
+                                <p>A$AP Rocky • TESTING</p>
+                            </div>
+                            <div class="dropdown">
+                                <ul class="navbar-nav ml-auto">
+                                    <!-- Nav Item - Song Information -->
+                                    <li class="nav-item dropdown no-arrow" style="border: none;">
+                                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <span class="mr-2 d-none d-lg-inline text-secondary " style="border: none;">• • •</span>
+                                        </a>
+                                        <!-- Dropdown - Song Information -->
+                                        <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                             aria-labelledby="userDropdown0">
+                                            <a class="dropdown-item" href="#">
+                                                <i class="fa fa-comments-o fa-sm fa-fw mr-2 text-gray-400"></i>
+                                                View Comments
+                                            </a>
+                                            <a class="dropdown-item" href="/viewAlbum.php">
+                                                <i class="fas fa-folder-open fa-sm fa-fw mr-2 text-gray-400"></i>
+                                                <i class="fa fa-folder-o fa-sm fa-fw mr-2 text-gray-400"></i>
+                                                View Album
+                                            </a>
+                                            <a class="dropdown-item" href="/viewArtist.php">
+                                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                                View Artist
+                                            </a>
+                                            <a class="dropdown-item" href="/addSong.php">
+                                                <i class="fa fa-plus fa-sm fa-fw mr-2 text-gray-400"></i>
+                                                Add to playlist
+                                            </a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="#">
+                                                <i class="fa fa-minus fa-sm fa-fw mr-2 text-gray-400"></i>
+                                                Remove from playlist
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row container playlist-song justify-content-between">
+                            <div class="p-song-info">
+                                <h1>Distorted Records</h1>
+                                <p>A$AP Rocky • TESTING</p>
+                            </div>
+                            <div class="dropdown">
+                                <ul class="navbar-nav ml-auto">
+                                    <!-- Nav Item - Song Information -->
+                                    <li class="nav-item dropdown no-arrow" style="border: none;">
+                                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <span class="mr-2 d-none d-lg-inline text-secondary " style="border: none;">• • •</span>
+                                        </a>
+                                        <!-- Dropdown - Song Information -->
+                                        <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                             aria-labelledby="userDropdown0">
+                                            <a class="dropdown-item" href="#">
+                                                <i class="fa fa-comments-o fa-sm fa-fw mr-2 text-gray-400"></i>
+                                                View Comments
+                                            </a>
+                                            <a class="dropdown-item" href="/viewAlbum.php">
+                                                <i class="fas fa-folder-open fa-sm fa-fw mr-2 text-gray-400"></i>
+                                                <i class="fa fa-folder-o fa-sm fa-fw mr-2 text-gray-400"></i>
+                                                View Album
+                                            </a>
+                                            <a class="dropdown-item" href="/viewArtist.php">
+                                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                                View Artist
+                                            </a>
+                                            <a class="dropdown-item" href="/addSong.php">
+                                                <i class="fa fa-plus fa-sm fa-fw mr-2 text-gray-400"></i>
+                                                Add to playlist
+                                            </a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="#">
+                                                <i class="fa fa-minus fa-sm fa-fw mr-2 text-gray-400"></i>
+                                                Remove from playlist
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row container playlist-song justify-content-between">
+                            <div class="p-song-info">
+                                <h1>Distorted Records</h1>
+                                <p>A$AP Rocky • TESTING</p>
+                            </div>
+                            <div class="dropdown">
+                                <ul class="navbar-nav ml-auto">
+                                    <!-- Nav Item - Song Information -->
+                                    <li class="nav-item dropdown no-arrow" style="border: none;">
+                                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <span class="mr-2 d-none d-lg-inline text-secondary " style="border: none;">• • •</span>
+                                        </a>
+                                        <!-- Dropdown - Song Information -->
+                                        <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                             aria-labelledby="userDropdown0">
+                                            <a class="dropdown-item" href="#">
+                                                <i class="fa fa-comments-o fa-sm fa-fw mr-2 text-gray-400"></i>
+                                                View Comments
+                                            </a>
+                                            <a class="dropdown-item" href="/viewAlbum.php">
+                                                <i class="fas fa-folder-open fa-sm fa-fw mr-2 text-gray-400"></i>
+                                                <i class="fa fa-folder-o fa-sm fa-fw mr-2 text-gray-400"></i>
+                                                View Album
+                                            </a>
+                                            <a class="dropdown-item" href="/viewArtist.php">
+                                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                                View Artist
+                                            </a>
+                                            <a class="dropdown-item" href="/addSong.php">
+                                                <i class="fa fa-plus fa-sm fa-fw mr-2 text-gray-400"></i>
+                                                Add to playlist
+                                            </a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="#">
+                                                <i class="fa fa-minus fa-sm fa-fw mr-2 text-gray-400"></i>
+                                                Remove from playlist
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <!-- /.container-fluid -->
 
             </div>
-            <!-- /.container-fluid -->
+            <!-- End of Main Content -->
 
         </div>
-        <!-- End of Main Content -->
+        <!-- End of Content Wrapper -->
 
         <!-- Footer -->
         <footer class="sticky-footer bg-darker">
@@ -352,52 +595,49 @@ function content_63489771674c07_74784569 (Smarty_Internal_Template $_smarty_tpl)
         <!-- End of Footer -->
 
     </div>
-    <!-- End of Content Wrapper -->
+    <!-- End of Page Wrapper -->
 
-</div>
-<!-- End of Page Wrapper -->
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
 
-<!-- Scroll to Top Button-->
-<a class="scroll-to-top rounded" href="#page-top">
-    <i class="fas fa-angle-up"></i>
-</a>
-
-<!-- Logout Modal-->
-<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-     aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                </button>
-            </div>
-            <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-            <div class="modal-footer">
-                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                <a class="btn btn-primary" href="userLogin.html">Logout</a>
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="userLogin.html">Logout</a>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<!-- Bootstrap core JavaScript-->
-<?php echo '<script'; ?>
- src="/public_html/vendor/jquery/jquery.min.js"><?php echo '</script'; ?>
+    <!-- Bootstrap core JavaScript-->
+    <?php echo '<script'; ?>
+ src="/vendor/jquery/jquery.min.js"><?php echo '</script'; ?>
 >
-<?php echo '<script'; ?>
- src="/public_html/vendor/bootstrap/js/bootstrap.bundle.min.js"><?php echo '</script'; ?>
->
-
-<!-- Core plugin JavaScript-->
-<?php echo '<script'; ?>
- src="/public_html/vendor/jquery-easing/jquery.easing.min.js"><?php echo '</script'; ?>
+    <?php echo '<script'; ?>
+ src="/vendor/bootstrap/js/bootstrap.bundle.min.js"><?php echo '</script'; ?>
 >
 
-<!-- Custom scripts for all pages-->
-<?php echo '<script'; ?>
- src="/public_html/js/sb-admin-2.min.js"><?php echo '</script'; ?>
+    <!-- Core plugin JavaScript-->
+    <?php echo '<script'; ?>
+ src="/vendor/jquery-easing/jquery.easing.min.js"><?php echo '</script'; ?>
+>
+
+    <!-- Custom scripts for all pages-->
+    <?php echo '<script'; ?>
+ src="/js/sb-admin-2.min.js"><?php echo '</script'; ?>
 >
 
 </body>
