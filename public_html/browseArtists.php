@@ -20,14 +20,11 @@ if (!isset($_SESSION['logged']) || $_SESSION['logged'] == 0) {
     $stmt->execute();
 
 
-    foreach ($stmt as $row) {
-        $artists[] = $row;
+    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+        $artists[$row['Artist_Name']] = $row;
     }
 
-    $artists = alphabetizeArtists($artists);
-
-
-//print("<pre>".print_r($artists,true)."</pre>");
+    ksort($artists);
     $smarty->assign('artists', $artists);
 
     $smarty->display("browseArtists.tpl");

@@ -9,8 +9,8 @@
         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Browse All:</h6>
-                <a class="collapse-item" href="browseArtists.php">Artists</a>
-                <a class="collapse-item active" href="browseAlbums.php">Albums</a>
+                <a class="collapse-item active" href="browseArtists.php">Artists</a>
+                <a class="collapse-item" href="browseAlbums.php">Albums</a>
             </div>
         </div>
     </li>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-11-08 22:50:11
+/* Smarty version 4.2.1, created on 2022-11-08 23:16:33
   from '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/browseArtists.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_636b2373280800_10089950',
+  'unifunc' => 'content_636b29a1b4dfa6_04865221',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '44310d3d33387b0a08a2a0b9fad935195db9fc0a' => 
     array (
       0 => '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/browseArtists.tpl',
-      1 => 1667965803,
+      1 => 1667967380,
       2 => 'file',
     ),
   ),
@@ -20,26 +20,26 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_636b2373280800_10089950 (Smarty_Internal_Template $_smarty_tpl) {
+function content_636b29a1b4dfa6_04865221 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1472982098636b237325af76_07660350', "browse");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1811355227636b29a1b2a1d4_02371133', "browse");
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_641928535636b237325eb34_70168399', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1681789548636b29a1b2da45_48493282', "content");
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "template.tpl");
 }
 /* {block "browse"} */
-class Block_1472982098636b237325af76_07660350 extends Smarty_Internal_Block
+class Block_1811355227636b29a1b2a1d4_02371133 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'browse' => 
   array (
-    0 => 'Block_1472982098636b237325af76_07660350',
+    0 => 'Block_1811355227636b29a1b2a1d4_02371133',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -54,8 +54,8 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Browse All:</h6>
-                <a class="collapse-item" href="browseArtists.php">Artists</a>
-                <a class="collapse-item active" href="browseAlbums.php">Albums</a>
+                <a class="collapse-item active" href="browseArtists.php">Artists</a>
+                <a class="collapse-item" href="browseAlbums.php">Albums</a>
             </div>
         </div>
     </li>
@@ -64,12 +64,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "browse"} */
 /* {block "content"} */
-class Block_641928535636b237325eb34_70168399 extends Smarty_Internal_Block
+class Block_1681789548636b29a1b2da45_48493282 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_641928535636b237325eb34_70168399',
+    0 => 'Block_1681789548636b29a1b2da45_48493282',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {

@@ -17,14 +17,13 @@ if (!isset($_SESSION['logged']) || $_SESSION['logged'] == 0) {
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
 
-    foreach ($stmt as $row) {
-        $artists[] = $row;
+    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+        $artists[$row['Artist_Name']] = $row;
     }
 
-    $artists = alphabetizeArtists($artists);
+    ksort($artists);
 
     if (isset($_POST['album'])) {
-        echo '<script>alert("Starting upload")</script>';
         $album_name = "";
         $album_img = "";
         $release_year = 0;
@@ -39,7 +38,7 @@ if (!isset($_SESSION['logged']) || $_SESSION['logged'] == 0) {
             }
         }
 
-        $artists = alphabetizeArtists($artists);
+        ksort($artists);
 
         if (isset($_POST['album'])) {
             $album_name = "";
