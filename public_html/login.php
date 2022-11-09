@@ -40,5 +40,4 @@ if (isset($_POST['email'])) {
     exit();
 }
 
-
 $smarty->display("userLogin.tpl");

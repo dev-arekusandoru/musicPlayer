@@ -104,5 +104,7 @@ if (!isset($_SESSION['logged']) || $_SESSION['logged'] == 0) {
 
         }
     }
+
+    $smarty->assign("artists", $artists);
     $smarty->display("addAlbum.tpl");
 }

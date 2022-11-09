@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-19 11:35:15
+/* Smarty version 4.2.1, created on 2022-11-08 20:49:05
   from '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/viewAlbum.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_63501933d64ea3_97407356',
+  'unifunc' => 'content_636b0711543d35_97481928',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ec88983db589af83ded1515fe17bce1d59ee7b24' => 
     array (
       0 => '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/viewAlbum.tpl',
-      1 => 1666193713,
+      1 => 1667958544,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63501933d64ea3_97407356 (Smarty_Internal_Template $_smarty_tpl) {
+function content_636b0711543d35_97481928 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -35,16 +35,16 @@ function content_63501933d64ea3_97407356 (Smarty_Internal_Template $_smarty_tpl)
     <title>Album Title</title>
 
     <!-- Custom fonts for this template-->
-    <link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
             href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
             rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="/css/sb-admin-2.min.css" rel="stylesheet">
-    <link href="/css/starRating.css" rel="stylesheet">
-    <link href="/css/viewStyles.css" rel="stylesheet">
-    <link href="/css/browseDivStyles.css" rel="stylesheet">
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="css/starRating.css" rel="stylesheet">
+    <link href="css/viewStyles.css" rel="stylesheet">
+    <link href="css/browseDivStyles.css" rel="stylesheet">
 
     <!--<?php echo '<script'; ?>
  src="https://kit.fontawesome.com/125fe29883.js" crossorigin="anonymous"><?php echo '</script'; ?>
@@ -75,7 +75,7 @@ function content_63501933d64ea3_97407356 (Smarty_Internal_Template $_smarty_tpl)
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
         <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/explore.php">
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="explore.php">
             <div class="sidebar-brand-icon rotate-n-15">
                 <i class="fas fa-music"></i>
             </div>
@@ -87,12 +87,12 @@ function content_63501933d64ea3_97407356 (Smarty_Internal_Template $_smarty_tpl)
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item">
-            <a class="nav-link" href="/library.php">
+            <a class="nav-link" href="library.php">
                 <i class="fas fa-folder-open    "></i>
                 <span>My Library</span></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="/profile.php">
+            <a class="nav-link" href="profile.php">
                 <i class="fas fa-user fa-tachometer-alt"></i>
                 <span>My Profile</span></a>
         </li>
@@ -106,7 +106,7 @@ function content_63501933d64ea3_97407356 (Smarty_Internal_Template $_smarty_tpl)
 
         <!-- Nav Item - Utilities Collapse Menu -->
         <li class="nav-item">
-            <a class="nav-link" href="/explore.php">
+            <a class="nav-link" href="explore.php">
                 <i class="fas fa-compass"></i>
                 <span>Explore</span></a>
         </li>
@@ -121,8 +121,8 @@ function content_63501933d64ea3_97407356 (Smarty_Internal_Template $_smarty_tpl)
             <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Browse All:</h6>
-                    <a class="collapse-item" href="/browseArtists.php">Artists</a>
-                    <a class="collapse-item" href="/browseAlbums.php">Albums</a>
+                    <a class="collapse-item" href="browseArtists.php">Artists</a>
+                    <a class="collapse-item" href="browseAlbums.php">Albums</a>
                 </div>
             </div>
         </li>
@@ -137,9 +137,9 @@ function content_63501933d64ea3_97407356 (Smarty_Internal_Template $_smarty_tpl)
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Add Music:</h6>
-                    <a class="collapse-item" href="/addArtist.php">Artist</a>
-                    <a class="collapse-item" href="/addAlbum.php">Album</a>
-                    <a class="collapse-item" href="/addSong.php">Song</a>
+                    <a class="collapse-item" href="addArtist.php">Artist</a>
+                    <a class="collapse-item" href="addAlbum.php">Album</a>
+                    <a class="collapse-item" href="addSong.php">Song</a>
                 </div>
             </div>
         </li>
@@ -219,7 +219,7 @@ function content_63501933d64ea3_97407356 (Smarty_Internal_Template $_smarty_tpl)
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="mr-2 d-none d-lg-inline text-gray-600 small">User</span>
                             <img class="img-profile rounded-circle"
-                                 src="/img/pfp/blank.png" alt="profile">
+                                 src="img/pfp/blank.png" alt="profile">
                         </a>
                         <!-- Dropdown - User Information -->
                         <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -246,42 +246,54 @@ function content_63501933d64ea3_97407356 (Smarty_Internal_Template $_smarty_tpl)
             <!-- End of Topbar -->
 
             <!-- Begin Page Content -->
-            <div class="container-fluid">
+            <div class="container-fluid" >
 
                 <!--Delete button -->
-                <div class="float-right relative-top">
+               <!-- <div class="float-right relative-top">
                     <a onclick="confirmAction()">
-                        <img src="/img/trashcan.png" alt="white trash can image" height="30" width="30">
+                        <img src="img/trashcan.png" alt="white trash can image" height="30" width="30">
                     </a>
-                </div>
-
+                </div>-->
                 <!-- Album header like metadata and stuff -->
                 <div class="row ml-md-2">
-                    <div class="album-metadata col-sm-12 p-0">
-                        <img src="/img/album-imgs/testing-asap-rocky.jpeg" class="img-responsive artwork float-md-left" alt="">
-                        <h1>TESTING</h1>
-                        <a href="/viewArtist.php" class="link-to">A$AP Rocky</a>
-                        <h6>HIP-HOP/RAP • 2018</h6>
+                    <div class="album-metadata col-sm-12 p-0" >
+                        <img src="img/album-imgs/<?php echo $_smarty_tpl->tpl_vars['albumInfo']->value['Image_URL'];?>
+" class="img-responsive artwork float-md-left mr-2" alt="">
+                        <h1><?php echo $_smarty_tpl->tpl_vars['albumInfo']->value['Album_Name'];?>
+</h1>
+                        <a href="viewArtist.php?id=<?php echo $_smarty_tpl->tpl_vars['albumInfo']->value['Artist_ID'];?>
+" class="link-to"><?php echo $_smarty_tpl->tpl_vars['albumInfo']->value['Artist_Name'];?>
+</a>
+                        <h6>GENRE • <?php echo $_smarty_tpl->tpl_vars['albumInfo']->value['Release_Year'];?>
+</h6>
                         <div class=" ml-0 pl-0">
-                            <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                            <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                            <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                            <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                            <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                            <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                            <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                            <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                            <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                            <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
                         </div>
                         <div style="height: 15px;"></div>
                         <a class="mb-7 add-music-button" href="addSong.php">Edit Album Details</a>
                         <br>
                         <a class="mb-7 add-music-button" href="addSong.php">Add Song</a>
+                        <br>
                     </div>
                     <div class="col-sm-6"></div>
                 </div>
                 <!-- Album body like song names -->
                 <div class="album-tracklist row">
                     <div class="col-12">
+                        <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['songs']->value, 'song');
+$_smarty_tpl->tpl_vars['song']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['song']->value) {
+$_smarty_tpl->tpl_vars['song']->do_else = false;
+?>
                         <div class="row album-song justify-content-between">
                             <div class="a-song-info">
-                                <h1>Distorted Records</h1>
+                                <h1><?php echo $_smarty_tpl->tpl_vars['song']->value['Title'];?>
+</h1>
                             </div>
                             <div class="dropdown">
                                 <ul class="navbar-nav ml-auto">
@@ -298,16 +310,16 @@ function content_63501933d64ea3_97407356 (Smarty_Internal_Template $_smarty_tpl)
                                                 <i class="fa fa-comments-o fa-sm fa-fw mr-2 text-gray-400"></i>
                                                 View Comments
                                             </a>
-                                            <a class="dropdown-item" href="/viewAlbum.php">
+                                            <a class="dropdown-item" href="viewAlbum.php">
                                                 <i class="fas fa-folder-open fa-sm fa-fw mr-2 text-gray-400"></i>
                                                 <i class="fa fa-folder-o fa-sm fa-fw mr-2 text-gray-400"></i>
                                                 View Album
                                             </a>
-                                            <a class="dropdown-item" href="/viewArtist.php">
+                                            <a class="dropdown-item" href="viewArtist.php">
                                                 <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                                 View Artist
                                             </a>
-                                            <a class="dropdown-item" href="/addSong.php">
+                                            <a class="dropdown-item" href="addSong.php">
                                                 <i class="fa fa-plus fa-sm fa-fw mr-2 text-gray-400"></i>
                                                 Add to playlist
                                             </a>
@@ -321,216 +333,9 @@ function content_63501933d64ea3_97407356 (Smarty_Internal_Template $_smarty_tpl)
                                 </ul>
                             </div>
                         </div>
-                        <div class="row album-song justify-content-between">
-                            <div class="a-song-info">
-                                <h1>A$AP Forever Remix</h1>
-                            </div>
-                            <div class="dropdown">
-                                <ul class="navbar-nav ml-auto">
-                                    <!-- Nav Item - Song Information -->
-                                    <li class="nav-item dropdown no-arrow" style="border: none;">
-                                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="fa fa-ellipsis-h"></i>
-                                        </a>
-                                        <!-- Dropdown - Song Information -->
-                                        <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                             aria-labelledby="userDropdown0">
-                                            <a class="dropdown-item" href="#">
-                                                <i class="fa fa-comments-o fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                View Comments
-                                            </a>
-                                            <a class="dropdown-item" href="/viewAlbum.php">
-                                                <i class="fas fa-folder-open fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                <i class="fa fa-folder-o fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                View Album
-                                            </a>
-                                            <a class="dropdown-item" href="/viewArtist.php">
-                                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                View Artist
-                                            </a>
-                                            <a class="dropdown-item" href="/addSong.php">
-                                                <i class="fa fa-plus fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                Add to playlist
-                                            </a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">
-                                                <i class="fa fa-minus fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                Remove from playlist
-                                            </a>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="row album-song justify-content-between">
-                            <div class="a-song-info">
-                                <h1>Tony Tone</h1>
-                            </div>
-                            <div class="dropdown">
-                                <ul class="navbar-nav ml-auto">
-                                    <!-- Nav Item - Song Information -->
-                                    <li class="nav-item dropdown no-arrow" style="border: none;">
-                                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <span class="mr-2 d-none d-lg-inline text-secondary " style="border: none;">• • •</span>
-                                        </a>
-                                        <!-- Dropdown - Song Information -->
-                                        <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                             aria-labelledby="userDropdown0">
-                                            <a class="dropdown-item" href="#">
-                                                <i class="fa fa-comments-o fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                View Comments
-                                            </a>
-                                            <a class="dropdown-item" href="/viewAlbum.php">
-                                                <i class="fas fa-folder-open fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                <i class="fa fa-folder-o fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                View Album
-                                            </a>
-                                            <a class="dropdown-item" href="/viewArtist.php">
-                                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                View Artist
-                                            </a>
-                                            <a class="dropdown-item" href="/addSong.php">
-                                                <i class="fa fa-plus fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                Add to playlist
-                                            </a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">
-                                                <i class="fa fa-minus fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                Remove from playlist
-                                            </a>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="row album-song justify-content-between">
-                            <div class="a-song-info">
-                                <h1>Fukk Sleep</h1>
-                            </div>
-                            <div class="dropdown">
-                                <ul class="navbar-nav ml-auto">
-                                    <!-- Nav Item - Song Information -->
-                                    <li class="nav-item dropdown no-arrow" style="border: none;">
-                                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <span class="mr-2 d-none d-lg-inline text-secondary " style="border: none;">• • •</span>
-                                        </a>
-                                        <!-- Dropdown - Song Information -->
-                                        <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                             aria-labelledby="userDropdown0">
-                                            <a class="dropdown-item" href="#">
-                                                <i class="fa fa-comments-o fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                View Comments
-                                            </a>
-                                            <a class="dropdown-item" href="/viewAlbum.php">
-                                                <i class="fas fa-folder-open fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                <i class="fa fa-folder-o fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                View Album
-                                            </a>
-                                            <a class="dropdown-item" href="/viewArtist.php">
-                                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                View Artist
-                                            </a>
-                                            <a class="dropdown-item" href="/addSong.php">
-                                                <i class="fa fa-plus fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                Add to playlist
-                                            </a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">
-                                                <i class="fa fa-minus fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                Remove from playlist
-                                            </a>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="row album-song justify-content-between">
-                            <div class="a-song-info">
-                                <h1>Praise The Lord (Da Shine)</h1>
-                            </div>
-                            <div class="dropdown">
-                                <ul class="navbar-nav ml-auto">
-                                    <!-- Nav Item - Song Information -->
-                                    <li class="nav-item dropdown no-arrow" style="border: none;">
-                                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <span class="mr-2 d-none d-lg-inline text-secondary " style="border: none;">• • •</span>
-                                        </a>
-                                        <!-- Dropdown - Song Information -->
-                                        <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                             aria-labelledby="userDropdown0">
-                                            <a class="dropdown-item" href="#">
-                                                <i class="fa fa-comments-o fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                View Comments
-                                            </a>
-                                            <a class="dropdown-item" href="/viewAlbum.php">
-                                                <i class="fas fa-folder-open fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                <i class="fa fa-folder-o fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                View Album
-                                            </a>
-                                            <a class="dropdown-item" href="/viewArtist.php">
-                                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                View Artist
-                                            </a>
-                                            <a class="dropdown-item" href="/addSong.php">
-                                                <i class="fa fa-plus fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                Add to playlist
-                                            </a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">
-                                                <i class="fa fa-minus fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                Remove from playlist
-                                            </a>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="row album-song justify-content-between">
-                            <div class="a-song-info">
-                                <h1>CALLDROPS</h1>
-                            </div>
-                            <div class="dropdown">
-                                <ul class="navbar-nav ml-auto">
-                                    <!-- Nav Item - Song Information -->
-                                    <li class="nav-item dropdown no-arrow" style="border: none;">
-                                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <span class="mr-2 d-none d-lg-inline text-secondary " style="border: none;">• • •</span>
-                                        </a>
-                                        <!-- Dropdown - Song Information -->
-                                        <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                             aria-labelledby="userDropdown0">
-                                            <a class="dropdown-item" href="#">
-                                                <i class="fa fa-comments-o fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                View Comments
-                                            </a>
-                                            <a class="dropdown-item" href="/viewAlbum.php">
-                                                <i class="fas fa-folder-open fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                <i class="fa fa-folder-o fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                View Album
-                                            </a>
-                                            <a class="dropdown-item" href="/viewArtist.php">
-                                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                View Artist
-                                            </a>
-                                            <a class="dropdown-item" href="/addSong.php">
-                                                <i class="fa fa-plus fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                Add to playlist
-                                            </a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">
-                                                <i class="fa fa-minus fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                Remove from playlist
-                                            </a>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                        <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                     </div>
                 </div>
 
@@ -545,11 +350,11 @@ function content_63501933d64ea3_97407356 (Smarty_Internal_Template $_smarty_tpl)
                             <h1 class="row container ml-0 pl-0">User</h1>
                             <div class="row container ml-0 pl-0">
                                 <h2 style="line-height: 27px" class="mr-1">Rating: </h2>
-                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
                             </div>
                         </div>
                         <div class="comment-body">
@@ -564,11 +369,11 @@ function content_63501933d64ea3_97407356 (Smarty_Internal_Template $_smarty_tpl)
                             <h1 class="row container ml-0 pl-0">User</h1>
                             <div class="row container ml-0 pl-0">
                                 <h2 style="line-height: 27px" class="mr-1">Rating: </h2>
-                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
                             </div>
                         </div>
                         <div class="comment-body">
@@ -583,11 +388,11 @@ function content_63501933d64ea3_97407356 (Smarty_Internal_Template $_smarty_tpl)
                             <h1 class="row container ml-0 pl-0">User</h1>
                             <div class="row container ml-0 pl-0">
                                 <h2 style="line-height: 27px" class="mr-1">Rating: </h2>
-                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
                             </div>
                         </div>
                         <div class="comment-body">
@@ -602,11 +407,11 @@ function content_63501933d64ea3_97407356 (Smarty_Internal_Template $_smarty_tpl)
                             <h1 class="row container ml-0 pl-0">User</h1>
                             <div class="row container ml-0 pl-0">
                                 <h2 style="line-height: 27px" class="mr-1">Rating: </h2>
-                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
                             </div>
                         </div>
                         <div class="comment-body">
@@ -621,11 +426,11 @@ function content_63501933d64ea3_97407356 (Smarty_Internal_Template $_smarty_tpl)
                             <h1 class="row container ml-0 pl-0">User</h1>
                             <div class="row container ml-0 pl-0">
                                 <h2 style="line-height: 27px" class="mr-1">Rating: </h2>
-                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                                <img src="/img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
                             </div>
                         </div>
                         <div class="comment-body">
@@ -747,7 +552,7 @@ function content_63501933d64ea3_97407356 (Smarty_Internal_Template $_smarty_tpl)
             <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
             <div class="modal-footer">
                 <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                <a class="btn btn-primary" href="/login.php">Logout</a>
+                <a class="btn btn-primary" href="login.php">Logout</a>
             </div>
         </div>
     </div>
@@ -755,23 +560,23 @@ function content_63501933d64ea3_97407356 (Smarty_Internal_Template $_smarty_tpl)
 
 <!-- Bootstrap core JavaScript-->
 <?php echo '<script'; ?>
- src="/vendor/jquery/jquery.min.js"><?php echo '</script'; ?>
+ src="vendor/jquery/jquery.min.js"><?php echo '</script'; ?>
 >
 <?php echo '<script'; ?>
- src="/vendor/bootstrap/js/bootstrap.bundle.min.js"><?php echo '</script'; ?>
+ src="vendor/bootstrap/js/bootstrap.bundle.min.js"><?php echo '</script'; ?>
 >
 
 <!-- Core plugin JavaScript-->
 <?php echo '<script'; ?>
- src="/vendor/jquery-easing/jquery.easing.min.js"><?php echo '</script'; ?>
+ src="vendor/jquery-easing/jquery.easing.min.js"><?php echo '</script'; ?>
 >
 
 <!-- Custom scripts for all pages-->
 <?php echo '<script'; ?>
- src="/js/sb-admin-2.min.js"><?php echo '</script'; ?>
+ src="js/sb-admin-2.min.js"><?php echo '</script'; ?>
 >
 <?php echo '<script'; ?>
- src="/js/starRating.js"><?php echo '</script'; ?>
+ src="js/starRating.js"><?php echo '</script'; ?>
 >
 
 </body>

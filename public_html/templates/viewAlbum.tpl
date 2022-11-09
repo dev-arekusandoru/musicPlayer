@@ -219,22 +219,21 @@
             <!-- End of Topbar -->
 
             <!-- Begin Page Content -->
-            <div class="container-fluid">
+            <div class="container-fluid" >
 
                 <!--Delete button -->
-                <div class="float-right relative-top">
+               <!-- <div class="float-right relative-top">
                     <a onclick="confirmAction()">
                         <img src="img/trashcan.png" alt="white trash can image" height="30" width="30">
                     </a>
-                </div>
-
+                </div>-->
                 <!-- Album header like metadata and stuff -->
                 <div class="row ml-md-2">
-                    <div class="album-metadata col-sm-12 p-0">
-                        <img src="img/album-imgs/testing-asap-rocky.jpeg" class="img-responsive artwork float-md-left" alt="">
-                        <h1>TESTING</h1>
-                        <a href="viewArtist.php" class="link-to">A$AP Rocky</a>
-                        <h6>HIP-HOP/RAP • 2018</h6>
+                    <div class="album-metadata col-sm-12 p-0" >
+                        <img src="img/album-imgs/{$albumInfo['Image_URL']}" class="img-responsive artwork float-md-left mr-2" alt="">
+                        <h1>{$albumInfo['Album_Name']}</h1>
+                        <a href="viewArtist.php?id={$albumInfo['Artist_ID']}" class="link-to">{$albumInfo['Artist_Name']}</a>
+                        <h6>GENRE • {$albumInfo['Release_Year']}</h6>
                         <div class=" ml-0 pl-0">
                             <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
                             <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
@@ -246,15 +245,17 @@
                         <a class="mb-7 add-music-button" href="addSong.php">Edit Album Details</a>
                         <br>
                         <a class="mb-7 add-music-button" href="addSong.php">Add Song</a>
+                        <br>
                     </div>
                     <div class="col-sm-6"></div>
                 </div>
                 <!-- Album body like song names -->
                 <div class="album-tracklist row">
                     <div class="col-12">
+                        {foreach $songs as $song}
                         <div class="row album-song justify-content-between">
                             <div class="a-song-info">
-                                <h1>Distorted Records</h1>
+                                <h1>{$song['Title']}</h1>
                             </div>
                             <div class="dropdown">
                                 <ul class="navbar-nav ml-auto">
@@ -294,216 +295,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="row album-song justify-content-between">
-                            <div class="a-song-info">
-                                <h1>A$AP Forever Remix</h1>
-                            </div>
-                            <div class="dropdown">
-                                <ul class="navbar-nav ml-auto">
-                                    <!-- Nav Item - Song Information -->
-                                    <li class="nav-item dropdown no-arrow" style="border: none;">
-                                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="fa fa-ellipsis-h"></i>
-                                        </a>
-                                        <!-- Dropdown - Song Information -->
-                                        <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                             aria-labelledby="userDropdown0">
-                                            <a class="dropdown-item" href="#">
-                                                <i class="fa fa-comments-o fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                View Comments
-                                            </a>
-                                            <a class="dropdown-item" href="viewAlbum.php">
-                                                <i class="fas fa-folder-open fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                <i class="fa fa-folder-o fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                View Album
-                                            </a>
-                                            <a class="dropdown-item" href="viewArtist.php">
-                                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                View Artist
-                                            </a>
-                                            <a class="dropdown-item" href="addSong.php">
-                                                <i class="fa fa-plus fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                Add to playlist
-                                            </a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">
-                                                <i class="fa fa-minus fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                Remove from playlist
-                                            </a>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="row album-song justify-content-between">
-                            <div class="a-song-info">
-                                <h1>Tony Tone</h1>
-                            </div>
-                            <div class="dropdown">
-                                <ul class="navbar-nav ml-auto">
-                                    <!-- Nav Item - Song Information -->
-                                    <li class="nav-item dropdown no-arrow" style="border: none;">
-                                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <span class="mr-2 d-none d-lg-inline text-secondary " style="border: none;">• • •</span>
-                                        </a>
-                                        <!-- Dropdown - Song Information -->
-                                        <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                             aria-labelledby="userDropdown0">
-                                            <a class="dropdown-item" href="#">
-                                                <i class="fa fa-comments-o fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                View Comments
-                                            </a>
-                                            <a class="dropdown-item" href="viewAlbum.php">
-                                                <i class="fas fa-folder-open fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                <i class="fa fa-folder-o fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                View Album
-                                            </a>
-                                            <a class="dropdown-item" href="viewArtist.php">
-                                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                View Artist
-                                            </a>
-                                            <a class="dropdown-item" href="addSong.php">
-                                                <i class="fa fa-plus fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                Add to playlist
-                                            </a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">
-                                                <i class="fa fa-minus fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                Remove from playlist
-                                            </a>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="row album-song justify-content-between">
-                            <div class="a-song-info">
-                                <h1>Fukk Sleep</h1>
-                            </div>
-                            <div class="dropdown">
-                                <ul class="navbar-nav ml-auto">
-                                    <!-- Nav Item - Song Information -->
-                                    <li class="nav-item dropdown no-arrow" style="border: none;">
-                                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <span class="mr-2 d-none d-lg-inline text-secondary " style="border: none;">• • •</span>
-                                        </a>
-                                        <!-- Dropdown - Song Information -->
-                                        <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                             aria-labelledby="userDropdown0">
-                                            <a class="dropdown-item" href="#">
-                                                <i class="fa fa-comments-o fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                View Comments
-                                            </a>
-                                            <a class="dropdown-item" href="viewAlbum.php">
-                                                <i class="fas fa-folder-open fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                <i class="fa fa-folder-o fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                View Album
-                                            </a>
-                                            <a class="dropdown-item" href="viewArtist.php">
-                                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                View Artist
-                                            </a>
-                                            <a class="dropdown-item" href="addSong.php">
-                                                <i class="fa fa-plus fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                Add to playlist
-                                            </a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">
-                                                <i class="fa fa-minus fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                Remove from playlist
-                                            </a>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="row album-song justify-content-between">
-                            <div class="a-song-info">
-                                <h1>Praise The Lord (Da Shine)</h1>
-                            </div>
-                            <div class="dropdown">
-                                <ul class="navbar-nav ml-auto">
-                                    <!-- Nav Item - Song Information -->
-                                    <li class="nav-item dropdown no-arrow" style="border: none;">
-                                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <span class="mr-2 d-none d-lg-inline text-secondary " style="border: none;">• • •</span>
-                                        </a>
-                                        <!-- Dropdown - Song Information -->
-                                        <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                             aria-labelledby="userDropdown0">
-                                            <a class="dropdown-item" href="#">
-                                                <i class="fa fa-comments-o fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                View Comments
-                                            </a>
-                                            <a class="dropdown-item" href="viewAlbum.php">
-                                                <i class="fas fa-folder-open fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                <i class="fa fa-folder-o fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                View Album
-                                            </a>
-                                            <a class="dropdown-item" href="viewArtist.php">
-                                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                View Artist
-                                            </a>
-                                            <a class="dropdown-item" href="addSong.php">
-                                                <i class="fa fa-plus fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                Add to playlist
-                                            </a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">
-                                                <i class="fa fa-minus fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                Remove from playlist
-                                            </a>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="row album-song justify-content-between">
-                            <div class="a-song-info">
-                                <h1>CALLDROPS</h1>
-                            </div>
-                            <div class="dropdown">
-                                <ul class="navbar-nav ml-auto">
-                                    <!-- Nav Item - Song Information -->
-                                    <li class="nav-item dropdown no-arrow" style="border: none;">
-                                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <span class="mr-2 d-none d-lg-inline text-secondary " style="border: none;">• • •</span>
-                                        </a>
-                                        <!-- Dropdown - Song Information -->
-                                        <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                             aria-labelledby="userDropdown0">
-                                            <a class="dropdown-item" href="#">
-                                                <i class="fa fa-comments-o fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                View Comments
-                                            </a>
-                                            <a class="dropdown-item" href="viewAlbum.php">
-                                                <i class="fas fa-folder-open fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                <i class="fa fa-folder-o fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                View Album
-                                            </a>
-                                            <a class="dropdown-item" href="viewArtist.php">
-                                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                View Artist
-                                            </a>
-                                            <a class="dropdown-item" href="addSong.php">
-                                                <i class="fa fa-plus fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                Add to playlist
-                                            </a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">
-                                                <i class="fa fa-minus fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                Remove from playlist
-                                            </a>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                        {/foreach}
                     </div>
                 </div>
 

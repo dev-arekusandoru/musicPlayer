@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-11-02 23:15:51
+/* Smarty version 4.2.1, created on 2022-11-08 20:28:39
   from '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/viewArtist.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_63633267f2a035_05412924',
+  'unifunc' => 'content_636b02476104d4_97499584',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e2b14ea7dd71a160b30b37d168ebd7b222e10214' => 
     array (
       0 => '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/viewArtist.tpl',
-      1 => 1667315208,
+      1 => 1667957316,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63633267f2a035_05412924 (Smarty_Internal_Template $_smarty_tpl) {
+function content_636b02476104d4_97499584 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 

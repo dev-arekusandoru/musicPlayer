@@ -1,27 +1,4 @@
-<?php
-/* Smarty version 4.2.1, created on 2022-11-08 22:37:24
-  from '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/addAlbum.tpl' */
-
-/* @var Smarty_Internal_Template $_smarty_tpl */
-if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
-  'version' => '4.2.1',
-  'unifunc' => 'content_636b207472f6a8_78473804',
-  'has_nocache_code' => false,
-  'file_dependency' => 
-  array (
-    'ac058fcb0714b6fd144836c48806c66e7ca6ff14' => 
-    array (
-      0 => '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/addAlbum.tpl',
-      1 => 1667956168,
-      2 => 'file',
-    ),
-  ),
-  'includes' => 
-  array (
-  ),
-),false)) {
-function content_636b207472f6a8_78473804 (Smarty_Internal_Template $_smarty_tpl) {
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -32,7 +9,7 @@ function content_636b207472f6a8_78473804 (Smarty_Internal_Template $_smarty_tpl)
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Add Album</title>
+    <title>{block "title"}Tau Tunes{/block}</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -42,13 +19,13 @@ function content_636b207472f6a8_78473804 (Smarty_Internal_Template $_smarty_tpl)
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
-
-    <!-- Custom style sheet to change -->
     <link href="css/browseDivStyles.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/addPageStyles.css">
-    <!--<?php echo '<script'; ?>
- src="https://kit.fontawesome.com/125fe29883.js" crossorigin="anonymous"><?php echo '</script'; ?>
->-->
+    <link href="css/addPageStyles.css" rel="stylesheet">
+    <link href="css/profile.css" rel="stylesheet">
+    <link href="css/viewStyles.css" rel="stylesheet">
+    <link href="css/starRating.css" rel="stylesheet">
+    <!--<script src="https://kit.fontawesome.com/125fe29883.js" crossorigin="anonymous"></script>-->
+
 
 </head>
 
@@ -72,16 +49,20 @@ function content_636b207472f6a8_78473804 (Smarty_Internal_Template $_smarty_tpl)
         <hr class="sidebar-divider my-0">
 
         <!-- Nav Item - Dashboard -->
-        <li class="nav-item">
-            <a class="nav-link" href="library.php">
-                <i class="fas fa-folder-open    "></i>
-                <span>My Library</span></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="profile.php">
-                <i class="fas fa-user fa-tachometer-alt"></i>
-                <span>My Profile</span></a>
-        </li>
+        {block "library"}
+            <li class="nav-item">
+                <a class="nav-link" href="library.php">
+                    <i class="fas fa-folder-open    "></i>
+                    <span>My Library</span></a>
+            </li>
+        {/block}
+        {block "profile"}
+            <li class="nav-item">
+                <a class="nav-link" href="profile.php">
+                    <i class="fas fa-user fa-tachometer-alt"></i>
+                    <span>My Profile</span></a>
+            </li>
+        {/block}
 
         <!-- Divider -->
         <hr class="sidebar-divider">
@@ -91,13 +72,17 @@ function content_636b207472f6a8_78473804 (Smarty_Internal_Template $_smarty_tpl)
         </div>
 
         <!-- Nav Item - Utilities Collapse Menu -->
+        {block "explore"}
         <li class="nav-item">
             <a class="nav-link" href="explore.php">
                 <i class="fas fa-compass"></i>
                 <span>Explore</span></a>
         </li>
+        {/block}
+
 
         <!-- Nav Item - Browse Music Menu -->
+        {block "browse"}
         <li class="nav-item">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseOne"
                aria-expanded="true" aria-controls="collapseOne">
@@ -112,23 +97,25 @@ function content_636b207472f6a8_78473804 (Smarty_Internal_Template $_smarty_tpl)
                 </div>
             </div>
         </li>
-
+        {/block}
         <!-- Nav Item - Add Music Menu -->
-        <li class="nav-item active">
+        {block "add"}
+        <li class="nav-item">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                aria-expanded="true" aria-controls="collapseTwo">
                 <i class="fas fa-music"></i>
                 <span>Add Music</span>
             </a>
-            <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Add Music:</h6>
                     <a class="collapse-item" href="addArtist.php">Artist</a>
-                    <a class="collapse-item active" href="addAlbum.php">Album</a>
+                    <a class="collapse-item" href="addAlbum.php">Album</a>
                     <a class="collapse-item" href="addSong.php">Song</a>
                 </div>
             </div>
         </li>
+        {/block}
 
         <!-- Divider -->
         <hr class="sidebar-divider d-none d-md-block">
@@ -140,7 +127,6 @@ function content_636b207472f6a8_78473804 (Smarty_Internal_Template $_smarty_tpl)
 
     </ul>
     <!-- End of Sidebar -->
-
 
     <!-- Content Wrapper -->
     <div id="content-wrapper" class="d-flex flex-column bg-dark">
@@ -211,8 +197,8 @@ function content_636b207472f6a8_78473804 (Smarty_Internal_Template $_smarty_tpl)
                         <!-- Dropdown - User Information -->
                         <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                              aria-labelledby="userDropdown">
-                            <a class="dropdown-item active" href="#">
-                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400 active"></i>
+                            <a class="dropdown-item" href="#">
+                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                 Profile
                             </a>
                             <a class="dropdown-item" href="#">
@@ -232,51 +218,11 @@ function content_636b207472f6a8_78473804 (Smarty_Internal_Template $_smarty_tpl)
             </nav>
             <!-- End of Topbar -->
 
-            <!-- Begin Page Content -->
-            <div class="container-fluid">
-                <!-- Page Heading -->
-                <div class="row ml-1">
-                    <h1 class="content-title">Add Album</h1>
-                </div>
-                <!-- Add album content-->
-                <div class="row">
-                    <form class="row" method="post" action="addAlbum.php" enctype="multipart/form-data">
-                        <div class="add-img-div">
-                            <img class="add-img" src="img/pfp/blank.png" alt="album-cover">
-                            <input type="file" name="img" accept=".png,.jpg,.jpeg" required>
-                        </div>
-                        <div class="add-content-div">
-                            <label class="add-label" for="select-artist">Artist Name:</label>
-                            <br>
-                            <select required name="select-artist" class="add-dropdown" id="select-artist">
-                                <?php
-$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['artists']->value, 'artist');
-$_smarty_tpl->tpl_vars['artist']->do_else = true;
-if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['artist']->value) {
-$_smarty_tpl->tpl_vars['artist']->do_else = false;
-?>
-                                    <option value="<?php echo $_smarty_tpl->tpl_vars['artist']->value['Artist_ID'];?>
-"><?php echo $_smarty_tpl->tpl_vars['artist']->value['Artist_Name'];?>
-</option>
-                                <?php
-}
-$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
-                            </select>
-                            <br>
-                            <label class="add-label" for="album-name">Album Name:</label>
-                            <br>
-                            <input class="add-input" name="album" id="album-name" type="text" required>
-                            <br>
-                            <label class="add-label" for="release-year">Release Year:</label>
-                            <br>
-                            <input class="add-input" name="release-year" id="release-year" type="number" max="9999" min="1" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
-                            <br>
-                            <input type="submit" value="Submit" class="add-submit">
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <!-- /.container-fluid -->
+            {block "content"}
+                <!-- Begin Page Content -->
+                <div class="container-fluid"></div>
+                <!-- /.container-fluid -->
+            {/block}
 
         </div>
         <!-- End of Main Content -->
@@ -316,31 +262,22 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
             <div class="modal-footer">
                 <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                <a class="btn btn-primary" href="userLogin.html">Logout</a>
+                <a class="btn btn-primary" href="logout.php">Logout</a>
             </div>
         </div>
     </div>
 </div>
 
 <!-- Bootstrap core JavaScript-->
-<?php echo '<script'; ?>
- src="vendor/jquery/jquery.min.js"><?php echo '</script'; ?>
->
-<?php echo '<script'; ?>
- src="vendor/bootstrap/js/bootstrap.bundle.min.js"><?php echo '</script'; ?>
->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 <!-- Core plugin JavaScript-->
-<?php echo '<script'; ?>
- src="vendor/jquery-easing/jquery.easing.min.js"><?php echo '</script'; ?>
->
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
 <!-- Custom scripts for all pages-->
-<?php echo '<script'; ?>
- src="js/sb-admin-2.min.js"><?php echo '</script'; ?>
->
+<script src="js/sb-admin-2.min.js"></script>
 
 </body>
 
-</html><?php }
-}
+</html>
