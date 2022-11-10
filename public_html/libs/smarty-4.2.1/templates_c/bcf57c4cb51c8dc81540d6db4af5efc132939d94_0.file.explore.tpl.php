@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-11-08 23:54:48
+/* Smarty version 4.2.1, created on 2022-11-09 21:12:17
   from '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/explore.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_636b3298473a18_25638166',
+  'unifunc' => 'content_636c5e01268377_66845362',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'bcf57c4cb51c8dc81540d6db4af5efc132939d94' => 
     array (
       0 => '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/explore.tpl',
-      1 => 1667969680,
+      1 => 1668046330,
       2 => 'file',
     ),
   ),
@@ -20,30 +20,30 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_636b3298473a18_25638166 (Smarty_Internal_Template $_smarty_tpl) {
+function content_636c5e01268377_66845362 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_577022863636b3298439913_93066924', "title");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1457527890636c5e01212803_25960643', "title");
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_737675595636b329843e858_81404196', "explore");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_949036551636c5e01218639_99488723', "explore");
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1315564223636b3298441929_32008853', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_488594872636c5e0121b972_71956163', "content");
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "template.tpl");
 }
 /* {block "title"} */
-class Block_577022863636b3298439913_93066924 extends Smarty_Internal_Block
+class Block_1457527890636c5e01212803_25960643 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'title' => 
   array (
-    0 => 'Block_577022863636b3298439913_93066924',
+    0 => 'Block_1457527890636c5e01212803_25960643',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -55,12 +55,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "title"} */
 /* {block "explore"} */
-class Block_737675595636b329843e858_81404196 extends Smarty_Internal_Block
+class Block_949036551636c5e01218639_99488723 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'explore' => 
   array (
-    0 => 'Block_737675595636b329843e858_81404196',
+    0 => 'Block_949036551636c5e01218639_99488723',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -76,12 +76,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "explore"} */
 /* {block "content"} */
-class Block_1315564223636b3298441929_32008853 extends Smarty_Internal_Block
+class Block_488594872636c5e0121b972_71956163 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_1315564223636b3298441929_32008853',
+    0 => 'Block_488594872636c5e0121b972_71956163',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -156,66 +156,25 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         <!--Artists Content-->
         <div class="row pl-3 pr-3 justify-content-around">
             <!-- artist content divs-->
-            <div class="content">
+            <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['topArtists']->value, 'artist');
+$_smarty_tpl->tpl_vars['artist']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['artist']->value) {
+$_smarty_tpl->tpl_vars['artist']->do_else = false;
+?>
+            <a class="content" href="viewArtist.php?id=<?php echo $_smarty_tpl->tpl_vars['artist']->value['Artist_ID'];?>
+">
                 <div class="content-img">
-                    <img class="img-fluid" src="img/artist-imgs/Asap-Rocky.jpg" alt="A$AP Rocky">
+                    <img class="img-fluid" src="img/artist-imgs/<?php echo $_smarty_tpl->tpl_vars['artist']->value['Image_URL'];?>
+" alt="<?php echo $_smarty_tpl->tpl_vars['artist']->value['Artist_Name'];?>
+">
                 </div>
-                <h1>A$AP Rocky</h1>
-            </div>
-            <div class="content">
-                <div class="content-img">
-                    <img class="img-fluid" src="img/artist-imgs/Andy-Mineo.jpg" alt="The Beatles">
-                </div>
-                <h1>Andy Mineo</h1>
-            </div>
-            <div class="content">
-                <div class="content-img">
-                    <img class="img-fluid" src="img/artist-imgs/Arctic-Monkeys.jpeg" alt="The Beatles">
-                </div>
-                <h1>Arctic Monkeys</h1>
-            </div>
-            <div class="content">
-                <div class="content-img">
-                    <img class="img-fluid" src="img/artist-imgs/Baby-Keem.jpeg" alt="The Beatles">
-                </div>
-                <h1>Baby Keem</h1>
-            </div>
-            <div class="content">
-                <div class="content-img">
-                    <img class="img-fluid" src="img/artist-imgs/Backseat-Lovers.PNG" alt="The Beatles">
-                </div>
-                <h1>The Backseat Lovers</h1>
-            </div>
-            <div class="content">
-                <div class="content-img">
-                    <img class="img-fluid" src="img/artist-imgs/Bad-Bunny.jpeg" alt="The Beatles">
-                </div>
-                <h1>Bad Bunny</h1>
-            </div>
-            <div class="content">
-                <div class="content-img">
-                    <img class="img-fluid" src="img/artist-imgs/the-beatles.jpg" alt="The Beatles">
-                </div>
-                <h1>The Beatles</h1>
-            </div>
-            <div class="content">
-                <a class="content-img" href="viewAlbum.tpl">
-                    <img class="img-fluid" src="img/artist-imgs/Gorillaz.jpeg" alt="">
-                </a>
-                <h1>Gorillaz</h1>
-            </div>
-            <div class="content">
-                <a class="content-img" href="viewAlbum.tpl">
-                    <img class="img-fluid" src="img/artist-imgs/LivingTombstoneIcon.jpg" alt="">
-                </a>
-                <h1>The Living Tombstone</h1>
-            </div>
-            <div class="content">
-                <a class="content-img" href="viewAlbum.tpl">
-                    <img class="img-fluid" src="img/artist-imgs/TallyHall.jpg" alt="">
-                </a>
-                <h1>Tally Hall</h1>
-            </div>
+                <h1><?php echo $_smarty_tpl->tpl_vars['artist']->value['Artist_Name'];?>
+</h1>
+            </a>
+            <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         </div>
 
         <!--Content Splitter-->
@@ -226,133 +185,28 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         <!--Albums Content-->
         <div class="row pl-3 pr-3 justify-content-around">
             <!-- album content divs-->
-            <div class="content">
+            <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['topAlbums']->value, 'album');
+$_smarty_tpl->tpl_vars['album']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['album']->value) {
+$_smarty_tpl->tpl_vars['album']->do_else = false;
+?>
+            <a class="content" href="viewAlbum.php?id=<?php echo $_smarty_tpl->tpl_vars['album']->value['Album_ID'];?>
+">
                 <div class="content-img">
-                    <img class="img-fluid" src="img/album-imgs/testing-asap-rocky.jpeg" alt="The Beatles">
+                    <img class="img-fluid" src="img/album-imgs/<?php echo $_smarty_tpl->tpl_vars['album']->value['Image_URL'];?>
+" alt="<?php echo $_smarty_tpl->tpl_vars['album']->value['Album_Name'];?>
+">
                 </div>
-                <h1>TESTING</h1>
-                <h2>A$AP Rocky • 2018</h2>
-            </div>
-
-            <div class="content">
-                <div class="content-img">
-                    <img class="img-fluid" src="img/artist-imgs/Gorillaz.jpeg" alt="">
-                </div>
-                <h1>Cracker Island</h1>
-                <h2>Gorillaz • 2023</h2>
-            </div>
-
-            <div class="content">
-                <div class="content-img">
-                    <img class="img-fluid" src="img/album-imgs/MMMM.jpg" alt="The Beatles">
-                </div>
-                <h1>Marvin's Marvelous...</h1>
-                <h2>Tally Hall • 2005</h2>
-            </div>
-
-            <div class="content">
-                <div class="content-img">
-                    <img class="img-fluid" src="img/album-imgs/ZeroOne.jpg" alt="The Beatles">
-                </div>
-                <h1>zero_one</h1>
-                <h2>The Living Tombstone • 2020</h2>
-            </div>
-
-            <div class="content">
-                <div class="content-img">
-                    <img class="img-fluid" src="img/album-imgs/AbbeyRoad.jpg" alt="The Beatles">
-                </div>
-                <h1>Abbey Road</h1>
-                <h2>The Beatles • 1969</h2>
-            </div>
-
-            <div class="content">
-                <div class="content-img">
-                    <img class="img-fluid" src="img/album-imgs/MMMM.jpg" alt="The Beatles">
-                </div>
-                <h1>Marvin's Marvelous...</h1>
-                <h2>Tally Hall • 2005</h2>
-            </div>
-
-            <div class="content">
-                <div class="content-img">
-                    <img class="img-fluid" src="img/album-imgs/ZeroOne.jpg" alt="The Beatles">
-                </div>
-                <h1>zero_one</h1>
-                <h2>The Living Tombstone • 2020</h2>
-            </div>
-
-            <div class="content">
-                <div class="content-img">
-                    <img class="img-fluid" src="img/album-imgs/AbbeyRoad.jpg" alt="The Beatles">
-                </div>
-                <h1>Abbey Road</h1>
-                <h2>The Beatles • 1969</h2>
-            </div>
-
-            <div class="content">
-                <div class="content-img">
-                    <img class="img-fluid" src="img/album-imgs/testing-asap-rocky.jpeg" alt="The Beatles">
-                </div>
-                <h1>TESTING</h1>
-                <h2>A$AP Rocky • 2018</h2>
-            </div>
-
-            <div class="content">
-                <div class="content-img">
-                    <img class="img-fluid" src="img/artist-imgs/Gorillaz.jpeg" alt="">
-                </div>
-                <h1>Cracker Island</h1>
-                <h2>Gorillaz • 2023</h2>
-            </div>
-
-            <div class="content">
-                <div class="content-img">
-                    <img class="img-fluid" src="img/album-imgs/MMMM.jpg" alt="The Beatles">
-                </div>
-                <h1>Marvin's Marvelous...</h1>
-                <h2>Tally Hall • 2005</h2>
-            </div>
-
-            <div class="content">
-                <div class="content-img">
-                    <img class="img-fluid" src="img/album-imgs/ZeroOne.jpg" alt="The Beatles">
-                </div>
-                <h1>zero_one</h1>
-                <h2>The Living Tombstone • 2020</h2>
-            </div>
-
-            <div class="content">
-                <div class="content-img">
-                    <img class="img-fluid" src="img/album-imgs/AbbeyRoad.jpg" alt="The Beatles">
-                </div>
-                <h1>Abbey Road</h1>
-                <h2>The Beatles • 1969</h2>
-            </div>
-
-            <div class="content">
-                <div class="content-img">
-                    <img class="img-fluid" src="img/album-imgs/MMMM.jpg" alt="The Beatles">
-                </div>
-                <h1>Marvin's Marvelous...</h1>
-                <h2>Tally Hall • 2005</h2>
-            </div>
-
-            <div class="content">
-                <div class="content-img">
-                    <img class="img-fluid" src="img/album-imgs/ZeroOne.jpg" alt="The Beatles">
-                </div>
-                <h1>zero_one</h1>
-                <h2>The Living Tombstone • 2020</h2>
-            </div>
-
-            <div class="content">
-                <div class="content-img">
-                    <img class="img-fluid" src="img/album-imgs/AbbeyRoad.jpg" alt="The Beatles">
-                </div>
-                <h1>Abbey Road</h1>
-                <h2>The Beatles • 1969</h2>
-            </div>
+                <h1><?php echo $_smarty_tpl->tpl_vars['album']->value['Album_Name'];?>
+</h1>
+                <h2><?php echo $_smarty_tpl->tpl_vars['album']->value['Artist_Name'];?>
+ • <?php echo $_smarty_tpl->tpl_vars['album']->value['Release_Year'];?>
+</h2>
+            </a>
+            <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         </div>
 
 
