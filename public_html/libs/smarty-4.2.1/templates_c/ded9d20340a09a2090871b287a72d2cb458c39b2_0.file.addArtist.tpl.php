@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-11-08 23:16:27
+/* Smarty version 4.2.1, created on 2022-11-10 16:10:25
   from '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/addArtist.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_636b299b720453_03366351',
+  'unifunc' => 'content_636d68c14c5832_86842381',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ded9d20340a09a2090871b287a72d2cb458c39b2' => 
     array (
       0 => '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/addArtist.tpl',
-      1 => 1667967380,
+      1 => 1668114616,
       2 => 'file',
     ),
   ),
@@ -20,27 +20,27 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_636b299b720453_03366351 (Smarty_Internal_Template $_smarty_tpl) {
+function content_636d68c14c5832_86842381 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_429195437636b299b71aac8_99004757', "add");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_197801606636d68c14bcbc9_48968428', "add");
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2108619268636b299b71e781_88923653', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1492656452636d68c14c27c0_21301025', "content");
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "template.tpl");
 }
 /* {block "add"} */
-class Block_429195437636b299b71aac8_99004757 extends Smarty_Internal_Block
+class Block_197801606636d68c14bcbc9_48968428 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'add' => 
   array (
-    0 => 'Block_429195437636b299b71aac8_99004757',
+    0 => 'Block_197801606636d68c14bcbc9_48968428',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -67,12 +67,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "add"} */
 /* {block "content"} */
-class Block_2108619268636b299b71e781_88923653 extends Smarty_Internal_Block
+class Block_1492656452636d68c14c27c0_21301025 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_2108619268636b299b71e781_88923653',
+    0 => 'Block_1492656452636d68c14c27c0_21301025',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -88,8 +88,23 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
         <div class="row">
             <form class="row" action="addArtist.php" method="post" enctype="multipart/form-data">
                 <div class="add-img-div">
-                    <img class="add-img" id="artist-img" src="img/pfp/blank.png" alt="">
-                    <input type="file" name="img" accept=".jpg,.jpeg,.png" required>
+                    <img class="add-img" id="addArtistImg" src="img/pfp/blank.png" alt="">
+                    <input type="file" id="addArtistFile" name="img" accept=".jpg,.jpeg,.png" required onchange=file_changed()>
+                    <?php echo '<script'; ?>
+>
+                        function file_changed(){
+                            var selectedFile = document.getElementById('addArtistFile').files[0];
+                            var img = document.getElementById('addArtistImg')
+
+                            var reader = new FileReader();
+                            reader.onload = function(){
+                                img.src = this.result
+                            }
+                            reader.readAsDataURL(selectedFile);
+                        }
+
+                    <?php echo '</script'; ?>
+>
                 </div>
                 <div class="add-content-div">
                     <label class="add-label" for="artist-name">Artist Name:</label>

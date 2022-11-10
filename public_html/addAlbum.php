@@ -83,8 +83,8 @@ if (!isset($_SESSION['logged']) || $_SESSION['logged'] == 0) {
 // if everything is ok, try to upload file
             } else {
                 if (move_uploaded_file($_FILES["img"]["tmp_name"], $targetFile)) {
-                    $sql = "INSERT INTO Album (Album_Name, Image_URL, Release_Year, Artist_FK)
-            VALUES (:name, :img, :year, :afk)";
+                    $sql = "INSERT INTO Album (Album_Name, Image_URL, Release_Year, Artist_FK, Avg_Rating)
+            VALUES (:name, :img, :year, :afk, 0)";
 
                     $stmt = $pdo->prepare($sql);
                     $stmt->bindParam(":name", $album_name);

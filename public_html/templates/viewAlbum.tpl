@@ -2,7 +2,7 @@
 
 {block "content"}
     <!-- Begin Page Content -->
-    <div class="container-fluid" >
+    <div class="container-fluid">
 
         <!--Delete button -->
         <!-- <div class="float-right relative-top">
@@ -12,17 +12,21 @@
          </div>-->
         <!-- Album header like metadata and stuff -->
         <div class="row ml-md-2">
-            <div class="album-metadata col-sm-12 p-0" >
-                <img src="img/album-imgs/{$albumInfo['Image_URL']}" class="img-responsive artwork float-md-left mr-2" alt="">
+            <div class="album-metadata col-sm-12 p-0">
+                <img src="img/album-imgs/{$albumInfo['Image_URL']}" class="img-responsive artwork float-md-left mr-2"
+                     alt="">
                 <h1>{$albumInfo['Album_Name']}</h1>
                 <a href="viewArtist.php?id={$albumInfo['Artist_ID']}" class="link-to">{$albumInfo['Artist_Name']}</a>
                 <h6>GENRE • {$albumInfo['Release_Year']}</h6>
                 <div class=" ml-0 pl-0">
-                    <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                    <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                    <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                    <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                    <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                    {for $i = 0; $i < floor($albumInfo['Avg_Rating']/2); $i++}
+                        <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                    {/for}
+                    {if fmod($albumInfo['Avg_Rating'], 2) eq 1}
+                        <img src="img/HalfDisc.jpg" class="rating-disc" alt="HalfDisc">
+                    {elseif $albumInfo['Avg_Rating'] == 0}
+                        <h6>NO RATINGS</h6>
+                    {/if}
                 </div>
                 <div style="height: 15px;"></div>
                 <a class="mb-7 add-music-button" href="addSong.php">Edit Album Details</a>
@@ -89,27 +93,31 @@
         <div class="row comments justify-content-around">
             <!-- all the comments -->
             {foreach $reviews as $review}
-            <div class="comment col-md-6">
-                <div class="comment-header">
-                    <h1 class="row container ml-0 pl-0">{$smarty.session.username}</h1>
-                    <div class="row container ml-0 pl-0">
-                        <h2 style="line-height: 27px" class="mr-1">Rating: </h2>
-                        {for $i = 0; $i < $review['Stars']; $i++}
-                        <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                        {/for}
+                <div class="comment col-md-6">
+                    <div class="comment-header">
+                        <h1 class="row container ml-0 pl-0">{ucfirst($review['First_Name'])} {ucfirst($review['Last_Name'])}</h1>
+                        <div class="row container ml-0 pl-0">
+                            <h2 style="line-height: 27px" class="mr-1">Rating: </h2>
+                            {for $i = 0; $i < floor($review['Stars']/2); $i++}
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                            {/for}
+                            {if fmod($review['Stars'], 2) eq 1}
+                                <img src="img/HalfDisc.jpg" class="rating-disc" alt="HalfDisc">
+                            {/if}
+                        </div>
                     </div>
-                </div>
-                <div class="comment-body">
-                    <p>{$review['Comment']}</p>
-                </div>
+                    <div class="comment-body">
+                        <p>{$review['Comment']}</p>
+                    </div>
 
-            </div>
+                </div>
             {/foreach}
         </div>
 
         <!--Add review  button-->
         <div class="row add-comment justify-content-center mb-5">
-            <button type="button" class="btn btn-primary add-comment-button" data-toggle="modal" data-target="#exampleModal">
+            <button type="button" class="btn btn-primary add-comment-button" data-toggle="modal"
+                    data-target="#exampleModal">
                 Add Review
             </button>
         </div>
@@ -118,61 +126,37 @@
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
              aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="reviewModalLabel">Write Review</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <form>
-                            <div class="form-group">
-                                <!--                                        <label for="recipient-name" class="col-form-label">Rating:</label>-->
-                                <!--                                        <input type="text" class="form-control" id="recipient-name">-->
-                                <!--                                        Beginning Star Rating-->
-                                <span class="rating_stars rating_0">
-                                          <span class='s' data-low='0.5' data-high='1'><i class="fa fa-star-o"></i><i
-                                                      class="fa fa-star-half-o"></i><i class="fa fa-star"></i></span>
-                                          <span class='s' data-low='1.5' data-high='2'><i class="fa fa-star-o"></i><i
-                                                      class="fa fa-star-half-o"></i><i class="fa fa-star"></i></span>
-                                          <span class='s' data-low='2.5' data-high='3'><i class="fa fa-star-o"></i><i
-                                                      class="fa fa-star-half-o"></i><i class="fa fa-star"></i></span>
-                                          <span class='s' data-low='3.5' data-high='4'><i class="fa fa-star-o"></i><i
-                                                      class="fa fa-star-half-o"></i><i class="fa fa-star"></i></span>
-                                          <span class='s' data-low='4.5' data-high='5'><i class="fa fa-star-o"></i><i
-                                                      class="fa fa-star-half-o"></i><i class="fa fa-star"></i></span>
-
-                                          <span class='r r0_5' data-rating='1' data-value='0.5'></span>
-                                          <span class='r r1' data-rating='1' data-value='1'></span>
-                                          <span class='r r1_5' data-rating='15' data-value='1.5'></span>
-                                          <span class='r r2' data-rating='2' data-value='2'></span>
-                                          <span class='r r2_5' data-rating='25' data-value='2.5'></span>
-                                          <span class='r r3' data-rating='3' data-value='3'></span>
-                                          <span class='r r3_5' data-rating='35' data-value='3.5'></span>
-                                          <span class='r r4' data-rating='4' data-value='4'></span>
-                                          <span class='r r4_5' data-rating='45' data-value='4.5'></span>
-                                          <span class='r r5' data-rating='5' data-value='5'></span>
-                                        </span>
-
-                                <div class="values">
-                                    <div>
-                                        <label for="rating">Rating</label><input type="text" id="rating" value="0">
+                <form action="viewAlbum.php" method="post" enctype="multipart/form-data">
+                    <div class="modal-content">
+                        <div class="modal-header bg-darker" style="border: none;">
+                            <h5 class="modal-title text-light" id="reviewModalLabel">Write Review</h5>
+                            <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body bg-dark">
+                                <div class="form-group">
+                                    <div class="values">
+                                        <label for="rating">Rating:</label>
+                                        <input type="number" class="bg-dark text-light"
+                                               style="border: 1px solid #EBEBEB;"
+                                               name="rating" value="0" max="10" min="1" onkeydown="return false">
                                     </div>
                                 </div>
-                                <!--                                        End Star Rating-->
-                            </div>
-                            <div class="form-group">
-                                <label for="message-text" class="col-form-label">Review:</label>
-                                <textarea class="form-control" id="message-text"></textarea>
-                            </div>
-                        </form>
+                                <div class="form-group">
+                                    <label for="message-text" class="col-form-label">Review:</label>
+                                    <textarea class="form-control bg-dark" type="text" name="review" id="review-text"></textarea>
+                                </div>
+                        </div>
+                        <div class="modal-footer bg-darker" style="border: none;">
+                            <button type="button" class="btn btn-secondary bg-dark" style="border: 1px solid #EBEBEB;"
+                                    data-dismiss="modal">Cancel
+                            </button>
+                            <input type="submit" value="Submit Review" class="btn btn-primary">
+                        </div>
+                        <input type='hidden' name='albumID' value="{$albumInfo['Album_ID']}"/>
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                        <button type="button" class="btn btn-primary">Submit Review</button>
-                    </div>
-                </div>
+                </form>
             </div>
         </div>
         <!--End Album comment section-->

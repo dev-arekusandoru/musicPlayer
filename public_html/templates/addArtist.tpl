@@ -29,8 +29,21 @@
         <div class="row">
             <form class="row" action="addArtist.php" method="post" enctype="multipart/form-data">
                 <div class="add-img-div">
-                    <img class="add-img" id="artist-img" src="img/pfp/blank.png" alt="">
-                    <input type="file" name="img" accept=".jpg,.jpeg,.png" required>
+                    <img class="add-img" id="addArtistImg" src="img/pfp/blank.png" alt="">
+                    <input type="file" id="addArtistFile" name="img" accept=".jpg,.jpeg,.png" required onchange=file_changed()>
+                    <script>
+                        function file_changed(){
+                            var selectedFile = document.getElementById('addArtistFile').files[0];
+                            var img = document.getElementById('addArtistImg')
+
+                            var reader = new FileReader();
+                            reader.onload = function(){
+                                img.src = this.result
+                            }
+                            reader.readAsDataURL(selectedFile);
+                        }
+
+                    </script>
                 </div>
                 <div class="add-content-div">
                     <label class="add-label" for="artist-name">Artist Name:</label>
