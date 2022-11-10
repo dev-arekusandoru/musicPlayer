@@ -55,13 +55,13 @@ if (!isset($_SESSION['logged']) || $_SESSION['logged'] == 0) {
         $smarty->assign("songs", $songs);
         $smarty->assign("albumInfo", $album_info);
         $smarty->display("viewAlbum.tpl");
-    } else {
+    }
+    else {
         //display login if id is not valid
         header("Location: explore.php");
     }
 } else if (isset($_POST['review'])) {
     // if a rating was submitted, add it to the db
-    print_r("test2");
     if (!empty($_POST['review']) && !empty($_POST['rating'])) {
         $comment = $_POST['review'];
         $stars = $_POST['rating'];

@@ -13,14 +13,17 @@
 
         <!-- Page Heading -->
         <!-- Artist Information -->
-        <h1 class="h3 mb-0 content-title">{$artist_name}:</h1>
+        <h1 class="h3 mb-0 content-title">{$artist_info['Artist_Name']}:</h1>
         <h2 class="mb-1 artist-rating">Average Album Rating: </h2>
         <div class=" ml-0 pl-0">
-            <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-            <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-            <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-            <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-            <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+            {for $i = 0; $i < floor($artist_info['Average_Rating']/2); $i++}
+                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+            {/for}
+            {if fmod($artist_info['Average_Rating'], 2) eq 1}
+                <img src="img/HalfDisc.jpg" class="rating-disc" alt="HalfDisc">
+            {elseif $artist_info['Average_Rating'] == 0}
+                <h6>NO RATINGS</h6>
+            {/if}
         </div>
         <div style="height: 10px;"></div>
         <a class="mb-7 add-music-button" href="addAlbum.php">Add Album</a>
@@ -44,25 +47,26 @@
         <h1 class="h3 content-title">Reviews:</h1>
         <div class="row comments justify-content-around">
             <!-- all the comments -->
-            <div class="comment col-md-6">
-                <div class="comment-header">
-                    <h1 class="row container ml-0 pl-0">User</h1>
-                    <div class="row container ml-0 pl-0">
-                        <h2 style="line-height: 27px" class="mr-1">Rating: </h2>
-                        <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                        <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                        <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                        <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                        <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+            {foreach $reviews as $review}
+                <div class="comment col-md-6">
+                    <div class="comment-header">
+                        <h1 class="row container ml-0 pl-0">{ucfirst($review['First_Name'])} {ucfirst($review['Last_Name'])}</h1>
+                        <div class="row container ml-0 pl-0">
+                            <h2 style="line-height: 27px" class="mr-1">Rating: </h2>
+                            {for $i = 0; $i < floor($review['Stars']/2); $i++}
+                                <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                            {/for}
+                            {if fmod($review['Stars'], 2) eq 1}
+                                <img src="img/HalfDisc.jpg" class="rating-disc" alt="HalfDisc">
+                            {/if}
+                        </div>
                     </div>
-                </div>
-                <div class="comment-body">
-                    <p>This is where users will leave the details of their reviews,
-                        explaining why they did or didn't like a particular song/album/playlist.
-                        The user will also be able to edit their comments and delete them at any point</p>
-                </div>
+                    <div class="comment-body">
+                        <p>{$review['Comment']}</p>
+                    </div>
 
-            </div>
+                </div>
+            {/foreach}
         </div>
 
         <!--Add review  button-->
@@ -76,37 +80,40 @@
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
              aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
-                <form action="viewArtist.php" method="post" enctype="multipart/form-data"></form>
-                <div class="modal-content">
-                    <div class="modal-header bg-darker" style="border: none;">
-                        <h5 class="modal-title text-light" id="reviewModalLabel">Write Review</h5>
-                        <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body bg-dark">
-                        <form>
+                <form action="viewArtist.php" method="post" enctype="multipart/form-data">
+                    <div class="modal-content">
+                        <div class="modal-header bg-darker" style="border: none;">
+                            <h5 class="modal-title text-light" id="reviewModalLabel">Write Review</h5>
+                            <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body bg-dark">
                             <div class="form-group">
                                 <div class="values">
                                     <label for="rating">Rating:</label>
-                                    <input type="number" class="bg-dark text-light" style="border: 1px solid #EBEBEB;" name="rating" value="0" max="10" min="1" onkeydown="return false">
+                                    <input type="number" class="bg-dark text-light"
+                                           style="border: 1px solid #EBEBEB;"
+                                           name="rating" value="0" max="10" min="1" onkeydown="return false">
                                 </div>
-                                <!--                                        End Star Rating-->
                             </div>
                             <div class="form-group">
                                 <label for="message-text" class="col-form-label">Review:</label>
-                                <textarea class="form-control bg-dark" id="message-text"></textarea>
+                                <textarea class="form-control bg-dark" type="text" name="review" id="review-text"></textarea>
                             </div>
-                        </form>
+                        </div>
+                        <div class="modal-footer bg-darker" style="border: none;">
+                            <button type="button" class="btn btn-secondary bg-dark" style="border: 1px solid #EBEBEB;"
+                                    data-dismiss="modal">Cancel
+                            </button>
+                            <input type="submit" value="Submit Review" class="btn btn-primary">
+                        </div>
+                        <input type='hidden' name='artistID' value="{$artist_info['Artist_ID']}"/>
                     </div>
-                    <div class="modal-footer bg-darker" style="border: none;">
-                        <button type="button" class="btn btn-secondary bg-dark" style="border: 1px solid #EBEBEB;" data-dismiss="modal">Cancel</button>
-                        <input type="submit" value="Submit Review" class="btn btn-primary">
-                    </div>
-                </div>
+                </form>
             </div>
         </div>
-        <!--End Album comment section-->
+        <!--End Artist comment section-->
 
     </div>
     <!-- /.container-fluid -->
