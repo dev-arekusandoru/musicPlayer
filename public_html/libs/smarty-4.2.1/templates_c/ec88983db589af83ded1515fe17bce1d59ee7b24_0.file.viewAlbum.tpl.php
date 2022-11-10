@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-11-08 23:54:51
+/* Smarty version 4.2.1, created on 2022-11-10 11:44:53
   from '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/viewAlbum.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_636b329b944690_91817807',
+  'unifunc' => 'content_636d2a85aa04a5_96013629',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ec88983db589af83ded1515fe17bce1d59ee7b24' => 
     array (
       0 => '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/viewAlbum.tpl',
-      1 => 1667965976,
+      1 => 1668098693,
       2 => 'file',
     ),
   ),
@@ -20,23 +20,23 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_636b329b944690_91817807 (Smarty_Internal_Template $_smarty_tpl) {
+function content_636d2a85aa04a5_96013629 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_763214647636b329b922242_37864460', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1597494908636d2a85a67421_22155114', "content");
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "template.tpl");
 }
 /* {block "content"} */
-class Block_763214647636b329b922242_37864460 extends Smarty_Internal_Block
+class Block_1597494908636d2a85a67421_22155114 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_763214647636b329b922242_37864460',
+    0 => 'Block_1597494908636d2a85a67421_22155114',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -142,101 +142,39 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         <h1 class="h3 content-title">Reviews:</h1>
         <div class="row comments justify-content-around">
             <!-- all the comments -->
+            <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['reviews']->value, 'review');
+$_smarty_tpl->tpl_vars['review']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['review']->value) {
+$_smarty_tpl->tpl_vars['review']->do_else = false;
+?>
             <div class="comment col-md-6">
                 <div class="comment-header">
-                    <h1 class="row container ml-0 pl-0">User</h1>
+                    <h1 class="row container ml-0 pl-0"><?php echo $_SESSION['username'];?>
+</h1>
                     <div class="row container ml-0 pl-0">
                         <h2 style="line-height: 27px" class="mr-1">Rating: </h2>
+                        <?php
+$_smarty_tpl->tpl_vars['i'] = new Smarty_Variable(null, $_smarty_tpl->isRenderingCache);
+$_smarty_tpl->tpl_vars['i']->value = 0;
+if ($_smarty_tpl->tpl_vars['i']->value < $_smarty_tpl->tpl_vars['review']->value['Stars']) {
+for ($_foo=true;$_smarty_tpl->tpl_vars['i']->value < $_smarty_tpl->tpl_vars['review']->value['Stars']; $_smarty_tpl->tpl_vars['i']->value++) {
+?>
                         <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                        <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                        <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                        <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                        <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                        <?php }
+}
+?>
                     </div>
                 </div>
                 <div class="comment-body">
-                    <p>This is where users will leave the details of their reviews,
-                        explaining why they did or didn't like a particular song/album/playlist.
-                        The user will also be able to edit their comments and delete them at any point</p>
+                    <p><?php echo $_smarty_tpl->tpl_vars['review']->value['Comment'];?>
+</p>
                 </div>
 
             </div>
-            <div class="comment col-md-6">
-                <div class="comment-header">
-                    <h1 class="row container ml-0 pl-0">User</h1>
-                    <div class="row container ml-0 pl-0">
-                        <h2 style="line-height: 27px" class="mr-1">Rating: </h2>
-                        <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                        <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                        <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                        <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                        <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                    </div>
-                </div>
-                <div class="comment-body">
-                    <p>This is where users will leave the details of their reviews,
-                        explaining why they did or didn't like a particular song/album/playlist.
-                        The user will also be able to edit their comments and delete them at any point</p>
-                </div>
-
-            </div>
-            <div class="comment col-md-6">
-                <div class="comment-header">
-                    <h1 class="row container ml-0 pl-0">User</h1>
-                    <div class="row container ml-0 pl-0">
-                        <h2 style="line-height: 27px" class="mr-1">Rating: </h2>
-                        <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                        <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                        <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                        <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                        <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                    </div>
-                </div>
-                <div class="comment-body">
-                    <p>This is where users will leave the details of their reviews,
-                        explaining why they did or didn't like a particular song/album/playlist.
-                        The user will also be able to edit their comments and delete them at any point</p>
-                </div>
-
-            </div>
-            <div class="comment col-md-6">
-                <div class="comment-header">
-                    <h1 class="row container ml-0 pl-0">User</h1>
-                    <div class="row container ml-0 pl-0">
-                        <h2 style="line-height: 27px" class="mr-1">Rating: </h2>
-                        <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                        <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                        <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                        <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                        <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                    </div>
-                </div>
-                <div class="comment-body">
-                    <p>This is where users will leave the details of their reviews,
-                        explaining why they did or didn't like a particular song/album/playlist.
-                        The user will also be able to edit their comments and delete them at any point</p>
-                </div>
-
-            </div>
-            <div class="comment col-md-6">
-                <div class="comment-header">
-                    <h1 class="row container ml-0 pl-0">User</h1>
-                    <div class="row container ml-0 pl-0">
-                        <h2 style="line-height: 27px" class="mr-1">Rating: </h2>
-                        <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                        <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                        <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                        <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                        <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                    </div>
-                </div>
-                <div class="comment-body">
-                    <p>This is where users will leave the details of their reviews,
-                        explaining why they did or didn't like a particular song/album/playlist.
-                        The user will also be able to edit their comments and delete them at any point</p>
-                </div>
-
-            </div>
+            <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         </div>
 
         <!--Add review  button-->

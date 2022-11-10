@@ -48,23 +48,17 @@ if (isset($album_info['Album_Name'])) {
         $stmt->bindParam(':user', $user);
         $stmt->execute();
     }
+
 //SELECT * FROM Album_Review WHERE Album_FK = :id;
-    $sql = "SELECT * FROM Review";//WHERE Review_FK = :id;
+    $sql = "SELECT Comment, Stars FROM Album_Review JOIN Review ON Review_FK=Review.Review_ID JOIN User ON Review.User_FK=User.User_ID WHERE Album_FK=:id;";//WHERE Review_FK = :id;
     $stmt = $pdo->prepare($sql);
+    $stmt->bindParam(":id", $_GET['id']);
     $stmt->execute();
 
-    $smarty->display("viewAlbum.tpl");
     $reviews = array();
 
     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-        foreach ($row as $key => $value) {
-            $reviews[$row['Review_ID']] = array(
-                'id' => $row['Review_ID'],
-                'rating' => $row['Stars'],
-                'comment' => $row['Comment'],
-                'user' => $row['User_FK'],
-            );
-        }
+        $reviews[] = $row;
     }
 
     $smarty->assign('reviews',$reviews);

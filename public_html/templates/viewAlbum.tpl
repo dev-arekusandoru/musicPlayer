@@ -88,101 +88,23 @@
         <h1 class="h3 content-title">Reviews:</h1>
         <div class="row comments justify-content-around">
             <!-- all the comments -->
+            {foreach $reviews as $review}
             <div class="comment col-md-6">
                 <div class="comment-header">
-                    <h1 class="row container ml-0 pl-0">User</h1>
+                    <h1 class="row container ml-0 pl-0">{$smarty.session.username}</h1>
                     <div class="row container ml-0 pl-0">
                         <h2 style="line-height: 27px" class="mr-1">Rating: </h2>
+                        {for $i = 0; $i < $review['Stars']; $i++}
                         <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                        <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                        <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                        <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                        <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
+                        {/for}
                     </div>
                 </div>
                 <div class="comment-body">
-                    <p>This is where users will leave the details of their reviews,
-                        explaining why they did or didn't like a particular song/album/playlist.
-                        The user will also be able to edit their comments and delete them at any point</p>
+                    <p>{$review['Comment']}</p>
                 </div>
 
             </div>
-            <div class="comment col-md-6">
-                <div class="comment-header">
-                    <h1 class="row container ml-0 pl-0">User</h1>
-                    <div class="row container ml-0 pl-0">
-                        <h2 style="line-height: 27px" class="mr-1">Rating: </h2>
-                        <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                        <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                        <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                        <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                        <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                    </div>
-                </div>
-                <div class="comment-body">
-                    <p>This is where users will leave the details of their reviews,
-                        explaining why they did or didn't like a particular song/album/playlist.
-                        The user will also be able to edit their comments and delete them at any point</p>
-                </div>
-
-            </div>
-            <div class="comment col-md-6">
-                <div class="comment-header">
-                    <h1 class="row container ml-0 pl-0">User</h1>
-                    <div class="row container ml-0 pl-0">
-                        <h2 style="line-height: 27px" class="mr-1">Rating: </h2>
-                        <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                        <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                        <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                        <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                        <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                    </div>
-                </div>
-                <div class="comment-body">
-                    <p>This is where users will leave the details of their reviews,
-                        explaining why they did or didn't like a particular song/album/playlist.
-                        The user will also be able to edit their comments and delete them at any point</p>
-                </div>
-
-            </div>
-            <div class="comment col-md-6">
-                <div class="comment-header">
-                    <h1 class="row container ml-0 pl-0">User</h1>
-                    <div class="row container ml-0 pl-0">
-                        <h2 style="line-height: 27px" class="mr-1">Rating: </h2>
-                        <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                        <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                        <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                        <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                        <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                    </div>
-                </div>
-                <div class="comment-body">
-                    <p>This is where users will leave the details of their reviews,
-                        explaining why they did or didn't like a particular song/album/playlist.
-                        The user will also be able to edit their comments and delete them at any point</p>
-                </div>
-
-            </div>
-            <div class="comment col-md-6">
-                <div class="comment-header">
-                    <h1 class="row container ml-0 pl-0">User</h1>
-                    <div class="row container ml-0 pl-0">
-                        <h2 style="line-height: 27px" class="mr-1">Rating: </h2>
-                        <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                        <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                        <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                        <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                        <img src="img/FullDisc.jpg" class="rating-disc" alt="FullDisc">
-                    </div>
-                </div>
-                <div class="comment-body">
-                    <p>This is where users will leave the details of their reviews,
-                        explaining why they did or didn't like a particular song/album/playlist.
-                        The user will also be able to edit their comments and delete them at any point</p>
-                </div>
-
-            </div>
+            {/foreach}
         </div>
 
         <!--Add review  button-->

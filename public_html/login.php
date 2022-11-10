@@ -33,7 +33,7 @@ if (isset($_POST['email'])) {
     /* Valid user and password - go to the next screen */
     $_SESSION['logged'] = 1;
     $_SESSION['userid'] = $row['User_ID'];
-    $_SESSION['username'] = ucfirst($row['First_Name']);
+    $_SESSION['username'] = ucfirst($row['First_Name']) . ucfirst($row['Last_Name']);
     $_SESSION['isAdmin'] = $row['isAdmin'];
     if (!empty($_SESSION['page_to_load'])) {
         header("Location: " . $_SESSION['page_to_load']);
