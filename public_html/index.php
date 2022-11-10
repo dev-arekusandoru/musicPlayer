@@ -5,6 +5,4 @@
  */
 include "../private_html/config.php";
 
-session_unset();
-
-header("Location: login.php");
+header("Location: explore.php");

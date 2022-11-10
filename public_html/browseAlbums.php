@@ -17,21 +17,12 @@ if (!isset($_SESSION['logged']) || $_SESSION['logged'] == 0) {
     $stmt->execute();
 
     foreach ($stmt as $row) {
-        $albums[] = $row;
+        $albums[$row['Album_Name']] = $row;
     }
 
 //print("<pre>".print_r($albums,true)."</pre>");
 //organize albums alphabetically
-    for ($i = 0; $i < count($albums); $i++) {
-        for ($j = 0; $j < $i; $j++) {
-            if (strtolower($albums[$i]['Album_Name'][0]) < strtolower($albums[$j]['Album_Name'][0])) {
-                $temp = $albums[$i];
-                $albums[$i] = $albums[$j];
-                $albums[$j] = $temp;
-                break;
-            }
-        }
-    }
+    ksort($albums);
 
 //print("<pre>".print_r($albums,true)."</pre>");
     $smarty->assign('albums', $albums);
