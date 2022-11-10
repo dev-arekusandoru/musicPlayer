@@ -34,10 +34,43 @@ if (isset($album_info['Album_Name'])) {
 
 //print("<pre>" . print_r($songs, true) . "</pre>");
 
+
+    if (isset($_POST['review'])) {
+        $comment = $_POST['review'];
+        $stars = $_POST['rating'];
+//    $comment = "Good";
+//    $stars = 5;
+        $user = 1;
+        $sql = "INSERT INTO Review (Comment, Stars, User_FK) VALUES (:comment, :stars, :user)";
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindParam(':comment', $comment);
+        $stmt->bindParam(':stars', $stars);
+        $stmt->bindParam(':user', $user);
+        $stmt->execute();
+    }
+//SELECT * FROM Album_Review WHERE Album_FK = :id;
+    $sql = "SELECT * FROM Review";//WHERE Review_FK = :id;
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute();
+
+    $smarty->display("viewAlbum.tpl");
+    $reviews = array();
+
+    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+        foreach ($row as $key => $value) {
+            $reviews[$row['Review_ID']] = array(
+                'id' => $row['Review_ID'],
+                'rating' => $row['Stars'],
+                'comment' => $row['Comment'],
+                'user' => $row['User_FK'],
+            );
+        }
+    }
+
+    $smarty->assign('reviews',$reviews);
     $smarty->assign("songs", $songs);
     $smarty->assign("albumInfo", $album_info);
     $smarty->display("viewAlbum.tpl");
 } else {
     header("Location: explore.php");
 }
-
