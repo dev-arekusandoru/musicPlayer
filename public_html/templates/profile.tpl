@@ -224,14 +224,14 @@
 
                 <!-- change password popup -->
                 <div class="form-popup" id="myForm">
-                    <form class="form-container">
-                        <label for="oldpw"><b>Old password</b></label>
-                        <input type="password" placeholder="Enter old password" id="oldpw" name="oldpw" required>
+                    <form class="form-container" method="post" action="profile.php">
+                        <label for="newPassword"><b>Old password</b></label>
+                        <input type="password" placeholder="Enter New password" id="newPassword" name="newPassword" required>
 
-                        <label for="newpw"><b>New password</b></label>
-                        <input type="password" placeholder="Enter new password" id="newpw" name="newpw" required>
+                        <label for="verifyPassword"><b>New password</b></label>
+                        <input type="password" placeholder="Verify password" id="verifyPassword" name="verifyPassword" required>
 
-                        <button type="submit" class="btn">Change</button>
+                        <input type="submit" class="btn" value="submit" name="changepw">
                         <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
                     </form>
                 </div>

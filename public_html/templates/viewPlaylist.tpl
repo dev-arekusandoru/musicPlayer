@@ -279,9 +279,9 @@
                                                 Add to playlist
                                             </a>
                                             <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">
-                                                <i class="fa fa-minus fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                Remove from playlist
+                                            <a class="dropdown-item">
+                                                <i class="fa fa-minus fa-sm fa-fw mr-2 text-gray-400" ></i>
+                                                <p name="remove">Remove from playlist</p>
                                             </a>
                                         </div>
                                     </li>
