@@ -30,7 +30,7 @@ else if (isset($_GET['id'])) { // if viewing an album, not submiting a review
     if (isset($artist_info['Artist_Name'])) { // if artist db query was success
 
         // get album data and sort it
-        $sql = "SELECT Album_ID, Album_Name, Album.Image_URL, Release_Year, Artist_FK, Artist.Artist_ID, Artist.Artist_Name FROM Album, Artist WHERE Artist_ID=:id AND Artist_FK = :id;";
+        $sql = "SELECT Album_ID, Album_Name, Album.Image_URL, Release_Year, Artist_FK, Artist.Artist_ID, Artist.Artist_Name FROM Album, Artist WHERE Artist_ID=:id AND Artist_FK = :id ORDER BY Release_Year DESC;";
         $stmt = $pdo->prepare($sql);
         $stmt->bindParam(":id", $artistID);
         $stmt->execute();
