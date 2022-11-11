@@ -68,7 +68,7 @@
                             </form>
                             <hr>
                             <div class="text-center">
-                                <a class="small" href="forgotPassword.php">Forgot Password?</a>
+                                <a class="small" href="#">Forgot Password?</a>
                             </div>
                             <div class="text-center">
                                 <a class="small" href="login.php">Already have an account? Login!</a>

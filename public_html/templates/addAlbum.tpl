@@ -1,5 +1,5 @@
 {extends "template.tpl"}
-
+{block "title"}Add Album{/block}
 {block "add"}
     <!-- Nav Item - Add Music Menu -->
     <li class="nav-item active">

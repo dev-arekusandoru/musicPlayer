@@ -38,15 +38,16 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
         <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="explore.php">
+        <li><a class="sidebar-brand d-flex align-items-center justify-content-center" href="explore.php">
             <div class="sidebar-brand-icon rotate-n-15">
                 <i class="fas fa-music"></i>
             </div>
             <div class="sidebar-brand-text mx-3">Tau Tunes</div>
         </a>
+        </li>
 
         <!-- Divider -->
-        <hr class="sidebar-divider my-0">
+        <li><hr class="sidebar-divider my-0"></li>
 
         <!-- Nav Item - Dashboard -->
         {block "library"}
@@ -65,11 +66,11 @@
         {/block}
 
         <!-- Divider -->
-        <hr class="sidebar-divider">
+        <li><hr class="sidebar-divider"></li>
         <!-- Find Music Heading -->
-        <div class="sidebar-heading">
+        <li><div class="sidebar-heading">
             Find Music
-        </div>
+        </div></li>
 
         <!-- Nav Item - Utilities Collapse Menu -->
         {block "explore"}
@@ -89,7 +90,7 @@
                 <i class="fas fa-th-large"></i>
                 <span>Browse All</span>
             </a>
-            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionSidebar">
+            <div id="collapseOne" class="collapse"  data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Browse All:</h6>
                     <a class="collapse-item" href="browseArtists.php">Artists</a>
@@ -106,7 +107,7 @@
                 <i class="fas fa-music"></i>
                 <span>Add Music</span>
             </a>
-            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div id="collapseTwo" class="collapse"  data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Add Music:</h6>
                     <a class="collapse-item" href="addArtist.php">Artist</a>
@@ -118,12 +119,12 @@
         {/block}
 
         <!-- Divider -->
-        <hr class="sidebar-divider d-none d-md-block">
+        <li><hr class="sidebar-divider d-none d-md-block"></li>
 
         <!-- Sidebar Toggler (Sidebar) -->
-        <div class="text-center d-none d-md-inline">
+        <li class="text-center d-none d-md-inline">
             <button class="rounded-circle border-0" id="sidebarToggle"></button>
-        </div>
+        </li>
 
     </ul>
     <!-- End of Sidebar -->
@@ -146,7 +147,7 @@
                 <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search" method="get" action="search.php">
                     <div class="input-group">
                         <input type="text" name="search" class="form-control bg-dark border-1 small" placeholder="Search for..."
-                               aria-label="Search" aria-describedby="basic-addon2">
+                               aria-label="Search" >
                         <div class="input-group-append">
                             <button class="btn btn-primary"
                                     style="border: 1px solid rgb(235, 235, 235); border-left: none;" type="submit">
@@ -167,12 +168,11 @@
                         </a>
                         <!-- Dropdown - Messages -->
                         <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                             aria-labelledby="searchDropdown">
+                             >
                             <form class="form-inline mr-auto w-100 navbar-search">
                                 <div class="input-group">
                                     <input type="text" class="form-control bg-light border-0 small"
-                                           placeholder="Search music..." aria-label="Search"
-                                           aria-describedby="basic-addon2">
+                                           placeholder="Search music..." aria-label="Search">
                                     <div class="input-group-append">
                                         <button class="btn btn-primary" type="button">
                                             <i class="fas fa-search fa-sm"></i>
@@ -183,7 +183,7 @@
                         </div>
                     </li>
 
-                    <div class="topbar-divider d-none d-sm-block"></div>
+                    <li class="topbar-divider d-none d-sm-block"></li>
 
                     <!-- Nav Item - User Information -->
                     <li class="nav-item dropdown no-arrow">
@@ -191,11 +191,11 @@
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="mr-2 d-none d-lg-inline text-gray-600 small">{$smarty.session.username}</span>
                             <img class="img-profile rounded-circle"
-                                 src="img/pfp/blank.png">
+                                 src="img/pfp/blank.png" alt="User Image">
                         </a>
                         <!-- Dropdown - User Information -->
                         <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                             aria-labelledby="userDropdown">
+                             >
                             <a class="dropdown-item" href="#">
                                 <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                 Profile
@@ -248,7 +248,7 @@
 </a>
 
 <!-- Logout Modal-->
-<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog"
      aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">

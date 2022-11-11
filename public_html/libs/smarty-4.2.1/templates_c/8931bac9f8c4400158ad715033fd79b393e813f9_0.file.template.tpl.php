@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-11-09 16:24:14
+/* Smarty version 4.2.1, created on 2022-11-10 22:00:37
   from '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_636c1a7e8bb067_90955662',
+  'unifunc' => 'content_636dbad5617059_18278948',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8931bac9f8c4400158ad715033fd79b393e813f9' => 
     array (
       0 => '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/template.tpl',
-      1 => 1668028554,
+      1 => 1668135635,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_636c1a7e8bb067_90955662 (Smarty_Internal_Template $_smarty_tpl) {
+function content_636dbad5617059_18278948 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 ?>
@@ -36,7 +36,7 @@ $_smarty_tpl->inheritance->init($_smarty_tpl, false);
     <meta name="author" content="">
 
     <title><?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_652607453636c1a7e898bc6_79097950', "title");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1875511607636dbad55f6815_45836127', "title");
 ?>
 </title>
 
@@ -69,58 +69,59 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_652607453636c1a7e8
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
         <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="explore.php">
+        <li><a class="sidebar-brand d-flex align-items-center justify-content-center" href="explore.php">
             <div class="sidebar-brand-icon rotate-n-15">
                 <i class="fas fa-music"></i>
             </div>
             <div class="sidebar-brand-text mx-3">Tau Tunes</div>
         </a>
+        </li>
 
         <!-- Divider -->
-        <hr class="sidebar-divider my-0">
+        <li><hr class="sidebar-divider my-0"></li>
 
         <!-- Nav Item - Dashboard -->
         <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2094445860636c1a7e89e460_58943426', "library");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_645183164636dbad55fb071_12768059', "library");
 ?>
 
         <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1783548624636c1a7e8a1643_05943478', "profile");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1187354635636dbad55fe5a4_21601172', "profile");
 ?>
 
 
         <!-- Divider -->
-        <hr class="sidebar-divider">
+        <li><hr class="sidebar-divider"></li>
         <!-- Find Music Heading -->
-        <div class="sidebar-heading">
+        <li><div class="sidebar-heading">
             Find Music
-        </div>
+        </div></li>
 
         <!-- Nav Item - Utilities Collapse Menu -->
         <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1760103561636c1a7e8a4635_57413629', "explore");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_662377778636dbad56016c7_34555251', "explore");
 ?>
 
 
 
         <!-- Nav Item - Browse Music Menu -->
         <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1918653153636c1a7e8a7623_29163951', "browse");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1794943957636dbad56046e3_77878761', "browse");
 ?>
 
         <!-- Nav Item - Add Music Menu -->
         <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_748441132636c1a7e8aa6c9_24527901', "add");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_602215552636dbad56076d3_69809054', "add");
 ?>
 
 
         <!-- Divider -->
-        <hr class="sidebar-divider d-none d-md-block">
+        <li><hr class="sidebar-divider d-none d-md-block"></li>
 
         <!-- Sidebar Toggler (Sidebar) -->
-        <div class="text-center d-none d-md-inline">
+        <li class="text-center d-none d-md-inline">
             <button class="rounded-circle border-0" id="sidebarToggle"></button>
-        </div>
+        </li>
 
     </ul>
     <!-- End of Sidebar -->
@@ -180,7 +181,7 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_748441132636c1a7e8
                         </div>
                     </li>
 
-                    <div class="topbar-divider d-none d-sm-block"></div>
+                    <li class="topbar-divider d-none d-sm-block"></li>
 
                     <!-- Nav Item - User Information -->
                     <li class="nav-item dropdown no-arrow">
@@ -216,7 +217,7 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_748441132636c1a7e8
             <!-- End of Topbar -->
 
             <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_125024817636c1a7e8b7b88_74692545', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_314920703636dbad5613ae4_55251707', "content");
 ?>
 
 
@@ -286,12 +287,12 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_125024817636c1a7e8
 
 </html><?php }
 /* {block "title"} */
-class Block_652607453636c1a7e898bc6_79097950 extends Smarty_Internal_Block
+class Block_1875511607636dbad55f6815_45836127 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'title' => 
   array (
-    0 => 'Block_652607453636c1a7e898bc6_79097950',
+    0 => 'Block_1875511607636dbad55f6815_45836127',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -301,12 +302,12 @@ Tau Tunes<?php
 }
 /* {/block "title"} */
 /* {block "library"} */
-class Block_2094445860636c1a7e89e460_58943426 extends Smarty_Internal_Block
+class Block_645183164636dbad55fb071_12768059 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'library' => 
   array (
-    0 => 'Block_2094445860636c1a7e89e460_58943426',
+    0 => 'Block_645183164636dbad55fb071_12768059',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -322,12 +323,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "library"} */
 /* {block "profile"} */
-class Block_1783548624636c1a7e8a1643_05943478 extends Smarty_Internal_Block
+class Block_1187354635636dbad55fe5a4_21601172 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'profile' => 
   array (
-    0 => 'Block_1783548624636c1a7e8a1643_05943478',
+    0 => 'Block_1187354635636dbad55fe5a4_21601172',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -343,12 +344,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "profile"} */
 /* {block "explore"} */
-class Block_1760103561636c1a7e8a4635_57413629 extends Smarty_Internal_Block
+class Block_662377778636dbad56016c7_34555251 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'explore' => 
   array (
-    0 => 'Block_1760103561636c1a7e8a4635_57413629',
+    0 => 'Block_662377778636dbad56016c7_34555251',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -364,12 +365,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "explore"} */
 /* {block "browse"} */
-class Block_1918653153636c1a7e8a7623_29163951 extends Smarty_Internal_Block
+class Block_1794943957636dbad56046e3_77878761 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'browse' => 
   array (
-    0 => 'Block_1918653153636c1a7e8a7623_29163951',
+    0 => 'Block_1794943957636dbad56046e3_77878761',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -381,7 +382,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
                 <i class="fas fa-th-large"></i>
                 <span>Browse All</span>
             </a>
-            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionSidebar">
+            <div id="collapseOne" class="collapse"  data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Browse All:</h6>
                     <a class="collapse-item" href="browseArtists.php">Artists</a>
@@ -394,12 +395,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "browse"} */
 /* {block "add"} */
-class Block_748441132636c1a7e8aa6c9_24527901 extends Smarty_Internal_Block
+class Block_602215552636dbad56076d3_69809054 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'add' => 
   array (
-    0 => 'Block_748441132636c1a7e8aa6c9_24527901',
+    0 => 'Block_602215552636dbad56076d3_69809054',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -425,12 +426,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "add"} */
 /* {block "content"} */
-class Block_125024817636c1a7e8b7b88_74692545 extends Smarty_Internal_Block
+class Block_314920703636dbad5613ae4_55251707 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_125024817636c1a7e8b7b88_74692545',
+    0 => 'Block_314920703636dbad5613ae4_55251707',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {

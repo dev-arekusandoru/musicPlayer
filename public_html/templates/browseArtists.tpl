@@ -1,4 +1,5 @@
 {extends "template.tpl"}
+{block "title"}Browse Artists{/block}
 {block "browse"}
     <li class="nav-item active">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseOne"

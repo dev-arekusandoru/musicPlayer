@@ -1,5 +1,5 @@
 {extends "template.tpl"}
-
+{block "title"}{$artist_info['Artist_Name']}{/block}
 {block "content"}
     <!-- Begin Page Content -->
     <div class="container-fluid">

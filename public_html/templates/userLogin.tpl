@@ -44,7 +44,7 @@
                                 <form class="user" action="login.php" method="post">
                                     <div class="form-group">
                                         <input type="email" class="form-control form-control-user"
-                                               name="email" aria-describedby="emailHelp"
+                                               name="email"
                                                placeholder="Enter Email Address..." required>
                                     </div>
                                     <div class="form-group">
@@ -61,7 +61,7 @@
                                     <button type="submit" class="btn btn-primary btn-user btn-block">
                                         Login
                                     </button>
-                                </form method>
+                                </form>
                                 <hr>
                                 <div class="text-center">
                                     <a class="small" href="forgotPassword.php">Forgot Password?</a>
@@ -83,7 +83,7 @@
 
 <!-- Bootstrap core JavaScript
 <script src="vendor/jquery/jquery.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>-->
 
 <!-- Core plugin JavaScript-->
 <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
