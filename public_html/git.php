@@ -1,5 +1,6 @@
 <?php
-$output = shell_exec('./private_html/gitUpdate.sh');
-echo $output;
-
-// note
+$old_path = getcwd();
+chdir('/var/www/private_html');
+$output = shell_exec('./gitUpdate.sh');
+chdir($old_path);
+// notes
