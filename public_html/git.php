@@ -1,5 +1,5 @@
 <?php
-$output = shell_exec('../private_html/gitUpdate.sh');
+$output = shell_exec('./private_html/gitUpdate.sh');
 echo $output;
 
 // notes
