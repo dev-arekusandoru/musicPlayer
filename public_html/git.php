@@ -1,4 +1,3 @@
 <?php
-$output = shell_exec('./script.sh var1 var2');
-echo "test";
-echo "this works";
+$output = shell_exec('../private_html/gitUpdate.sh');
+echo $output;
