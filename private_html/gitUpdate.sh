@@ -1,3 +1,4 @@
 #!/bin/bash
-echo "Hello World"
+cd /var/www
+echo pwd
 
