@@ -7,6 +7,7 @@
 include "../private_html/config.php";
 include_once PRIVATE_PATH . "dbConfig.php";
 
+if(!isset($_SESSION['userid'])){
 error_reporting(0);
 if (isset($_POST['email'])) {
     /* The login form has been filled out and sent. */
@@ -44,3 +45,6 @@ if (isset($_POST['email'])) {
 }
 
 $smarty->display("userLogin.tpl");
+} else {
+    header("Login: explore.php");
+}
