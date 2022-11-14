@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-11-07 12:48:25
+/* Smarty version 4.2.1, created on 2022-11-13 21:24:21
   from '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/userLogin.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_636944e99ea9f0_32397165',
+  'unifunc' => 'content_6371a6d505d176_11532576',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1518b58e3c9f85be03e6fd33e19773ffffe719d3' => 
     array (
       0 => '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/userLogin.tpl',
-      1 => 1667496725,
+      1 => 1668392658,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_636944e99ea9f0_32397165 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6371a6d505d176_11532576 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -42,7 +42,7 @@ function content_636944e99ea9f0_32397165 (Smarty_Internal_Template $_smarty_tpl)
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
-
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
 </head>
 
 <body class="bg-gradient-primary">
@@ -67,7 +67,7 @@ function content_636944e99ea9f0_32397165 (Smarty_Internal_Template $_smarty_tpl)
                                 <form class="user" action="login.php" method="post">
                                     <div class="form-group">
                                         <input type="email" class="form-control form-control-user"
-                                               name="email" aria-describedby="emailHelp"
+                                               name="email"
                                                placeholder="Enter Email Address..." required>
                                     </div>
                                     <div class="form-group">
@@ -77,7 +77,7 @@ function content_636944e99ea9f0_32397165 (Smarty_Internal_Template $_smarty_tpl)
                                                                         <button type="submit" class="btn btn-primary btn-user btn-block">
                                         Login
                                     </button>
-                                </form method>
+                                </form>
                                 <hr>
                                 <div class="text-center">
                                     <a class="small" href="forgotPassword.php">Forgot Password?</a>
@@ -103,7 +103,7 @@ function content_636944e99ea9f0_32397165 (Smarty_Internal_Template $_smarty_tpl)
 >
 <?php echo '<script'; ?>
  src="vendor/bootstrap/js/bootstrap.bundle.min.js"><?php echo '</script'; ?>
->
+>-->
 
 <!-- Core plugin JavaScript-->
 <?php echo '<script'; ?>

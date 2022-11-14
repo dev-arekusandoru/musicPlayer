@@ -19,7 +19,7 @@
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
-
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
 </head>
 
 <body class="bg-gradient-primary">
