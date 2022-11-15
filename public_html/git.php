@@ -8,8 +8,8 @@ exec("ls -l", $items, $return_status);
 foreach ($items as $key => $item) {
     printf("%s]<br>", $item);
 }
-
-$run = exec('sh gitUpdate.sh', $out, $res);
+exec('git fetch');
+$run = exec('env -i git pull', $out, $res);
 var_dump($run);
 /*
 exec('sh gitUpdate.sh');
