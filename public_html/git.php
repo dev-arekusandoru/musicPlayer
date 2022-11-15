@@ -1,6 +1,8 @@
 <?php
 include "../private_html/config.php";
 
+exec('su csadmin');
+exec('3ng5ci');
 echo exec('whoami');
 /*
 $old_path = getcwd();
