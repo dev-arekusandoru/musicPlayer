@@ -3,9 +3,14 @@ include "../private_html/config.php";
 
 $old_path = getcwd();
 chdir('/var/www/private_html');
-echo exec('sudo ls');
+exec("ls -l", $items, $return_status);
+
+foreach ($items as $key => $item) {
+    printf("%s\n", $item);
+}
+/*
 exec('sh gitUpdate.sh');
 echo exec('sh gitUpdate.sh');
-chdir($old_path);
+chdir($old_path);*/
 
 //header("Location: explore.php");
