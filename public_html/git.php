@@ -11,9 +11,9 @@ foreach ($items as $key => $item) {
 exec('git fetch');
 $run = exec('env -i git pull', $out, $res);
 var_dump($run);
+
 /*
 exec('sh gitUpdate.sh');
-echo exec('sh gitUpdate.sh');
-chdir($old_path);*/
+chdir($old_path);
 
-//header("Location: explore.php");
+//header("Location: explore.php");*/
