@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-11-10 15:24:04
+/* Smarty version 4.2.1, created on 2022-11-14 20:59:56
   from '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/addAlbum.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_636d5de48ec5c9_75857152',
+  'unifunc' => 'content_6372f29c4ce9f1_29360467',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ac058fcb0714b6fd144836c48806c66e7ca6ff14' => 
     array (
       0 => '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/addAlbum.tpl',
-      1 => 1668111843,
+      1 => 1668477151,
       2 => 'file',
     ),
   ),
@@ -20,27 +20,45 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_636d5de48ec5c9_75857152 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6372f29c4ce9f1_29360467 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
-
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1309076806636d5de48c2194_92610672', "add");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_20802396526372f29c4abcc6_72273308', "title");
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1651162243636d5de48c9d18_40387132', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_13582357316372f29c4af8e4_93996363', "add");
+?>
+
+<?php 
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_8574176596372f29c4b29d0_15355847', "content");
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "template.tpl");
 }
+/* {block "title"} */
+class Block_20802396526372f29c4abcc6_72273308 extends Smarty_Internal_Block
+{
+public $subBlocks = array (
+  'title' => 
+  array (
+    0 => 'Block_20802396526372f29c4abcc6_72273308',
+  ),
+);
+public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
+?>
+Add Album<?php
+}
+}
+/* {/block "title"} */
 /* {block "add"} */
-class Block_1309076806636d5de48c2194_92610672 extends Smarty_Internal_Block
+class Block_13582357316372f29c4af8e4_93996363 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'add' => 
   array (
-    0 => 'Block_1309076806636d5de48c2194_92610672',
+    0 => 'Block_13582357316372f29c4af8e4_93996363',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -67,12 +85,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "add"} */
 /* {block "content"} */
-class Block_1651162243636d5de48c9d18_40387132 extends Smarty_Internal_Block
+class Block_8574176596372f29c4b29d0_15355847 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_1651162243636d5de48c9d18_40387132',
+    0 => 'Block_8574176596372f29c4b29d0_15355847',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -88,13 +106,13 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
         <div class="row">
             <form class="row" method="post" action="addAlbum.php" enctype="multipart/form-data">
                 <div class="add-img-div">
-                    <img class="add-img" id="addAlbumImg" src="img/pfp/blank.png" alt="album-cover" >
+                    <img class="add-img" id="add-img" src="img/pfp/blank.png" alt="album-cover" >
                     <input type="file" id="addAlbumFile" name="img" onchange=file_changed() accept=".png,.jpg,.jpeg" required>
                     <?php echo '<script'; ?>
 >
                         function file_changed(){
                             var selectedFile = document.getElementById('addAlbumFile').files[0];
-                            var img = document.getElementById('addAlbumImg')
+                            var img = document.getElementById('add-img')
 
                             var reader = new FileReader();
                             reader.onload = function(){
@@ -102,7 +120,6 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
                             }
                             reader.readAsDataURL(selectedFile);
                         }
-
                     <?php echo '</script'; ?>
 >
                 </div>

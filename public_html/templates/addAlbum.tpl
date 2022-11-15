@@ -29,12 +29,12 @@
         <div class="row">
             <form class="row" method="post" action="addAlbum.php" enctype="multipart/form-data">
                 <div class="add-img-div">
-                    <img class="add-img" id="addAlbumImg" src="img/pfp/blank.png" alt="album-cover" >
+                    <img class="add-img" id="add-img" src="img/pfp/blank.png" alt="album-cover" >
                     <input type="file" id="addAlbumFile" name="img" onchange=file_changed() accept=".png,.jpg,.jpeg" required>
                     <script>
                         function file_changed(){
                             var selectedFile = document.getElementById('addAlbumFile').files[0];
-                            var img = document.getElementById('addAlbumImg')
+                            var img = document.getElementById('add-img')
 
                             var reader = new FileReader();
                             reader.onload = function(){
@@ -42,7 +42,6 @@
                             }
                             reader.readAsDataURL(selectedFile);
                         }
-
                     </script>
                 </div>
                 <div class="add-content-div">

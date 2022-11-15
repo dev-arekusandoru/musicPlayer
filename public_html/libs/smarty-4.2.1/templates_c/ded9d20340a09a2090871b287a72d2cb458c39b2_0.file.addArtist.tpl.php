@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-11-10 16:10:25
+/* Smarty version 4.2.1, created on 2022-11-14 20:37:29
   from '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/addArtist.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_636d68c14c5832_86842381',
+  'unifunc' => 'content_6372ed59409f74_44094063',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ded9d20340a09a2090871b287a72d2cb458c39b2' => 
     array (
       0 => '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/addArtist.tpl',
-      1 => 1668114616,
+      1 => 1668394532,
       2 => 'file',
     ),
   ),
@@ -20,27 +20,45 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_636d68c14c5832_86842381 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6372ed59409f74_44094063 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
-
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_197801606636d68c14bcbc9_48968428', "add");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_16556411716372ed593ff4e8_23104393', "title");
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1492656452636d68c14c27c0_21301025', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_10493175126372ed59404283_11945042', "add");
+?>
+
+<?php 
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_3229716586372ed59407400_18130218', "content");
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "template.tpl");
 }
+/* {block "title"} */
+class Block_16556411716372ed593ff4e8_23104393 extends Smarty_Internal_Block
+{
+public $subBlocks = array (
+  'title' => 
+  array (
+    0 => 'Block_16556411716372ed593ff4e8_23104393',
+  ),
+);
+public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
+?>
+Add Artist<?php
+}
+}
+/* {/block "title"} */
 /* {block "add"} */
-class Block_197801606636d68c14bcbc9_48968428 extends Smarty_Internal_Block
+class Block_10493175126372ed59404283_11945042 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'add' => 
   array (
-    0 => 'Block_197801606636d68c14bcbc9_48968428',
+    0 => 'Block_10493175126372ed59404283_11945042',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -67,12 +85,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "add"} */
 /* {block "content"} */
-class Block_1492656452636d68c14c27c0_21301025 extends Smarty_Internal_Block
+class Block_3229716586372ed59407400_18130218 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_1492656452636d68c14c27c0_21301025',
+    0 => 'Block_3229716586372ed59407400_18130218',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -102,7 +120,6 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
                             }
                             reader.readAsDataURL(selectedFile);
                         }
-
                     <?php echo '</script'; ?>
 >
                 </div>

@@ -24,7 +24,8 @@
     <link href="css/profile.css" rel="stylesheet">
     <link href="css/viewStyles.css" rel="stylesheet">
     <link href="css/starRating.css" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link href="img/favicon.ico" rel="icon" type="image/x-icon">
+    <script src="js/jquery-3.6.1.min.js"></script>
     <!--<script src="https://kit.fontawesome.com/125fe29883.js" crossorigin="anonymous"></script>-->
 
 

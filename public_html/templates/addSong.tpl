@@ -1,3 +1,4 @@
+
 {extends "template.tpl"}
 {block "title"}Add Song{/block}
 {block "add"}
@@ -28,26 +29,71 @@
         <!-- Add song form content-->
         <form class="row" method="post" action="addSongToDB.php">
             <div class="add-img-div">
-                <img class="add-img" src="img/pfp/blank.png" alt="">
-                <input type="file" id="myFile" name="filename">
+                <img class="add-img" id="add-img" src="img/empty-playlist.jpg" alt="">
             </div>
             <div class="add-content-div">
                 <label class="add-label" for="select-artist">Artist Name:</label>
                 <br>
                 <select required name="select-artist" class="add-dropdown" id="select-artist">
-                    <option>A$AP Rocky</option>
-                    <option>Andy Mineo</option>
-                    <option>Arctic Monkeys</option>
-                    <option>Baby Keem</option>
-                    <option>The Backseat Lovers</option>
-                    <option>Bad Bunny</option>
+                    <option disabled>Select an Artist</option>
+                    {foreach $artists as $artist}
+                        <option value="{$artist['Artist_ID']}">{$artist['Artist_Name']}</option>
+                    {/foreach}
                 </select>
                 <br>
                 <label class="add-label" for="select-album">Album Name:</label>
                 <br>
-                <select required name="select-album" class="add-dropdown" id="select-album">
-                    <option>Testing</option>
+                <select required name="select-album" class="add-dropdown form-select" id="select-album" disabled="true">
                 </select>
+
+                <a href="addAlbum.php" class="add-music-button" id="add-btn" hidden="true">Add Album</a>
+                <script>
+                    $(document).ready(
+                        function () {
+                            $('#select-artist').on('change', function () {
+                                let artist = $("#select-artist option:selected")[0];
+                                $.ajax({
+                                    url: "ajaxArtistList.php",
+                                    type: "post",
+                                    data: {
+                                        "artistID": $(artist).val()
+                                    },
+                                    dataType: "html",
+                                    success: function (data) {
+                                        $('#select-album').html(data);
+                                        $('#select-album').prop('disabled', false);
+
+                                        $('#add-img').attr('src', "img/empty-playlist.jpg");
+
+
+                                        if(data === "<option disabled>No Albums</option>"){
+                                            $('#add-btn').prop('hidden', false)
+                                            $('#add-btn').attr("href", "addAlbum.php?id=" + $(artist).val());
+                                        }
+
+                                    }
+                                })
+                            });
+                            $('#select-album').on('change', function () {
+                                let album = $("#select-album option:selected")[0];
+                                $.ajax({
+                                    url: "ajaxArtistList.php",
+                                    type: "post",
+                                    data: {
+                                        "albumID": $(album).val()
+                                    },
+                                    dataType: "html",
+                                    success: function (data) {
+                                        console.log(data);
+                                        var newSrc = data;
+                                        $('#add-img').attr('src', newSrc);
+                                    }
+                                })
+                            });
+                        }
+                    );
+
+                </script>
                 <br>
                 <label class="add-label" for="song-name">Song Name:</label>
                 <br>

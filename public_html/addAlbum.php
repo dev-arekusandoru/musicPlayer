@@ -20,7 +20,6 @@ if (!isset($_SESSION['logged']) || $_SESSION['logged'] == 0) {
     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
         $artists[$row['Artist_Name']] = $row;
     }
-
     ksort($artists);
 
     if (isset($_POST['album'])) {
