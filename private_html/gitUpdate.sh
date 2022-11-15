@@ -1,5 +1,4 @@
 #!/bin/bash
 cd /var/www
-echo "$PWD"
-git fetch
-git pull
+env -i git fetch
+env -i git pull
