@@ -52,6 +52,12 @@
                             <option value="{$artist['Artist_ID']}">{$artist['Artist_Name']}</option>
                         {/foreach}
                     </select>
+                    <script>
+                        if({$setArtist} != null){
+                            let element = document.getElementById("select-artist");
+                            element.value = {$setArtist};
+                        }
+                    </script>
                     <br>
                     <label class="add-label" for="album-name">Album Name:</label>
                     <br>

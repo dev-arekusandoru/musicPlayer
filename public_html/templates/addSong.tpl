@@ -65,7 +65,6 @@
 
                                         $('#add-img').attr('src', "img/empty-playlist.jpg");
 
-
                                         if(data === "<option disabled>No Albums</option>"){
                                             $('#add-btn').prop('hidden', false)
                                             $('#add-btn').attr("href", "addAlbum.php?id=" + $(artist).val());

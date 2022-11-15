@@ -26,7 +26,7 @@
             {/if}
         </div>
         <div style="height: 10px;"></div>
-        <a class="mb-7 add-music-button" href="addAlbum.php">Add Album</a>
+        <a class="mb-7 add-music-button" href="addAlbum.php?id={$artist_info['Artist_ID']}">Add Album</a>
         <!--Page Content-->
         <!-- Artist Discography  -->
         <div class="row mt-4 pl-3 pr-3 justify-content-around">
