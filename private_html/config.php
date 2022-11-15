@@ -48,3 +48,4 @@ echo "Smarty: " . SMARTY . "<br><br>";
 exit();
 // */
 session_start();
+error_reporting(0);

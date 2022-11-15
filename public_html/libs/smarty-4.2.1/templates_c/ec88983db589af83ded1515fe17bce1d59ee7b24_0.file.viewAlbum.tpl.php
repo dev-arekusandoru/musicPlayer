@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-11-10 17:30:52
+/* Smarty version 4.2.1, created on 2022-11-14 22:40:03
   from '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/viewAlbum.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_636d7b9c854df0_86150134',
+  'unifunc' => 'content_63730a133bbad5_70346429',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ec88983db589af83ded1515fe17bce1d59ee7b24' => 
     array (
       0 => '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/viewAlbum.tpl',
-      1 => 1668119451,
+      1 => 1668483596,
       2 => 'file',
     ),
   ),
@@ -20,23 +20,40 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_636d7b9c854df0_86150134 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63730a133bbad5_70346429 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
+<?php 
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_56780914363730a1334ba23_14679326', "title");
+?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1342700547636d7b9c7fe888_30996148', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_98298906863730a133592d1_23265074', "content");
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "template.tpl");
 }
+/* {block "title"} */
+class Block_56780914363730a1334ba23_14679326 extends Smarty_Internal_Block
+{
+public $subBlocks = array (
+  'title' => 
+  array (
+    0 => 'Block_56780914363730a1334ba23_14679326',
+  ),
+);
+public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
+echo $_smarty_tpl->tpl_vars['albumInfo']->value['Album_Name'];
+}
+}
+/* {/block "title"} */
 /* {block "content"} */
-class Block_1342700547636d7b9c7fe888_30996148 extends Smarty_Internal_Block
+class Block_98298906863730a133592d1_23265074 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_1342700547636d7b9c7fe888_30996148',
+    0 => 'Block_98298906863730a133592d1_23265074',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -82,9 +99,11 @@ for ($_foo=true;$_smarty_tpl->tpl_vars['i']->value < floor($_smarty_tpl->tpl_var
                     <?php }?>
                 </div>
                 <div style="height: 15px;"></div>
-                <a class="mb-7 add-music-button" href="addSong.php">Edit Album Details</a>
+                <a class="mb-7 add-music-button" href="#">Edit Album Details</a>
                 <br>
-                <a class="mb-7 add-music-button" href="addSong.php">Add Song</a>
+                <a class="mb-7 add-music-button" href="addSong.php?arid=<?php echo $_smarty_tpl->tpl_vars['albumInfo']->value['Artist_ID'];?>
+&abid=<?php echo $_smarty_tpl->tpl_vars['albumInfo']->value['Album_ID'];?>
+">Add Song</a>
                 <br>
             </div>
             <div class="col-sm-6"></div>

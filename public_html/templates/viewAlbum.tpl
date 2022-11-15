@@ -29,9 +29,9 @@
                     {/if}
                 </div>
                 <div style="height: 15px;"></div>
-                <a class="mb-7 add-music-button" href="addSong.php">Edit Album Details</a>
+                <a class="mb-7 add-music-button" href="#">Edit Album Details</a>
                 <br>
-                <a class="mb-7 add-music-button" href="addSong.php">Add Song</a>
+                <a class="mb-7 add-music-button" href="addSong.php?arid={$albumInfo['Artist_ID']}&abid={$albumInfo['Album_ID']}">Add Song</a>
                 <br>
             </div>
             <div class="col-sm-6"></div>
