@@ -29,7 +29,7 @@
         <div class="row">
             <form class="row" method="post" action="addAlbum.php" enctype="multipart/form-data">
                 <div class="add-img-div">
-                    <img class="add-img" id="add-img" src="img/pfp/blank.png" alt="album-cover" >
+                    <img class="add-img" id="add-img" src="img/empty-playlist.jpg" alt="album-cover" >
                     <input type="file" id="addAlbumFile" name="img" onchange=file_changed() accept=".png,.jpg,.jpeg" required>
                     <script>
                         function file_changed(){

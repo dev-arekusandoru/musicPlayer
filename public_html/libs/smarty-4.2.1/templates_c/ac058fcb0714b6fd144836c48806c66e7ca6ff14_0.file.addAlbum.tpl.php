@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-11-14 21:08:57
+/* Smarty version 4.2.1, created on 2022-11-15 11:27:08
   from '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/addAlbum.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_6372f4b93518a1_80357261',
+  'unifunc' => 'content_6373bddccbea10_97977622',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ac058fcb0714b6fd144836c48806c66e7ca6ff14' => 
     array (
       0 => '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/addAlbum.tpl',
-      1 => 1668478135,
+      1 => 1668529627,
       2 => 'file',
     ),
   ),
@@ -20,30 +20,30 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6372f4b93518a1_80357261 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6373bddccbea10_97977622 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1016246826372f4b93168a5_29954772', "title");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_5717478006373bddcc90087_29524379', "title");
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_14476210846372f4b931a3a9_02307186', "add");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_4388990756373bddcc965a1_12900990', "add");
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_17367859836372f4b931d6c8_46432476', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_15556737656373bddcc9a771_46287105', "content");
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "template.tpl");
 }
 /* {block "title"} */
-class Block_1016246826372f4b93168a5_29954772 extends Smarty_Internal_Block
+class Block_5717478006373bddcc90087_29524379 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'title' => 
   array (
-    0 => 'Block_1016246826372f4b93168a5_29954772',
+    0 => 'Block_5717478006373bddcc90087_29524379',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -53,12 +53,12 @@ Add Album<?php
 }
 /* {/block "title"} */
 /* {block "add"} */
-class Block_14476210846372f4b931a3a9_02307186 extends Smarty_Internal_Block
+class Block_4388990756373bddcc965a1_12900990 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'add' => 
   array (
-    0 => 'Block_14476210846372f4b931a3a9_02307186',
+    0 => 'Block_4388990756373bddcc965a1_12900990',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -85,12 +85,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "add"} */
 /* {block "content"} */
-class Block_17367859836372f4b931d6c8_46432476 extends Smarty_Internal_Block
+class Block_15556737656373bddcc9a771_46287105 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_17367859836372f4b931d6c8_46432476',
+    0 => 'Block_15556737656373bddcc9a771_46287105',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -106,7 +106,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
         <div class="row">
             <form class="row" method="post" action="addAlbum.php" enctype="multipart/form-data">
                 <div class="add-img-div">
-                    <img class="add-img" id="add-img" src="img/pfp/blank.png" alt="album-cover" >
+                    <img class="add-img" id="add-img" src="img/empty-playlist.jpg" alt="album-cover" >
                     <input type="file" id="addAlbumFile" name="img" onchange=file_changed() accept=".png,.jpg,.jpeg" required>
                     <?php echo '<script'; ?>
 >
