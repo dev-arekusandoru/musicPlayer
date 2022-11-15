@@ -26,7 +26,7 @@ if (!isset($_SESSION['logged']) || $_SESSION['logged'] == 0) {
                 $stmt->bindParam(":artist", $artistFK);
                 $stmt->execute();
 
-                echo '<script>alert("Upload successful.")</script>';
+                header("Location: addSong.php?arid=".$artistFK."&abid=".$albumFK);
             } else {
                 echo '<script>alert("Please enter a song name.")</script>';
             }

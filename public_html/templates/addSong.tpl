@@ -28,9 +28,9 @@
         <!-- Add song form content-->
         <div class="row">
             <form class="row" method="post" action="addSong.php" enctype="multipart/form-data">
-                <div class="add-img-div">
+                <a class="add-img-div" href="#" id="add-img-div" style="cursor: pointer;">
                     <img class="add-img" id="add-img" src="img/empty-playlist.jpg" alt="">
-                </div>
+                </a>
                 <div class="add-content-div">
                     <label class="add-label" for="select-artist">Artist Name:</label>
                     <br>
@@ -72,11 +72,8 @@
                                             $('#select-album').prop('disabled', false);
 
                                             $('#add-img').attr('src', "img/empty-playlist.jpg");
-
-                                            if (data === "<option disabled>No Albums</option>") {
-                                                $('#add-btn').prop('hidden', false)
-                                                $('#add-btn').attr("href", "addAlbum.php?id=" + $(artist).val());
-                                            }
+                                            $('#add-btn').prop('hidden', false);
+                                            $('#add-btn').attr("href", "addAlbum.php?id=" + $(artist).val());
 
                                         }
                                     })
@@ -92,8 +89,11 @@
                                         dataType: "html",
                                         success: function (data) {
                                             $('#add-img').attr('src', data);
+
                                         }
                                     })
+                                    $('#add-img-div').attr("href", "viewAlbum.php?id=" + $(album).val());
+                                    $('#add-btn').prop('hidden', true);
                                 });
                                 {if isset($setAlbum)}
                                 if ({$setAlbum} != null) {
@@ -122,6 +122,7 @@
                                             $('#add-img').attr('src', data);
                                         }
                                     })
+                                    $('#add-img-div').attr("href", "viewAlbum.php?id=" + {$setAlbum});
                                 }
                                 {/if}
                             }

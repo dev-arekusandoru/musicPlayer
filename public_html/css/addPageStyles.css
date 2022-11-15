@@ -46,6 +46,8 @@
 #add-img {
     height: 250px;
     margin-bottom: 15px;
+    border: 1px solid #EBEBEB;
+    border-radius: 5px;
 }
 
 /*content submission style*/

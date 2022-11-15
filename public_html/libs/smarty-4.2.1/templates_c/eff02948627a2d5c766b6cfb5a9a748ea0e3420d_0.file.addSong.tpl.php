@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-11-14 23:19:58
+/* Smarty version 4.2.1, created on 2022-11-15 11:22:08
   from '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/addSong.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_6373136e899016_42607244',
+  'unifunc' => 'content_6373bcb0ee5c43_11041793',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'eff02948627a2d5c766b6cfb5a9a748ea0e3420d' => 
     array (
       0 => '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/addSong.tpl',
-      1 => 1668485997,
+      1 => 1668529327,
       2 => 'file',
     ),
   ),
@@ -20,30 +20,30 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6373136e899016_42607244 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6373bcb0ee5c43_11041793 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_9039087446373136e862333_77168391', "title");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_3019077456373bcb0e98a61_06959960', "title");
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_21001144326373136e865e05_59149713', "add");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2176125176373bcb0e9d2a4_72842067', "add");
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_15999756836373136e869ae6_69954576', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_13610809566373bcb0eadfe9_21712195', "content");
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "template.tpl");
 }
 /* {block "title"} */
-class Block_9039087446373136e862333_77168391 extends Smarty_Internal_Block
+class Block_3019077456373bcb0e98a61_06959960 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'title' => 
   array (
-    0 => 'Block_9039087446373136e862333_77168391',
+    0 => 'Block_3019077456373bcb0e98a61_06959960',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -53,12 +53,12 @@ Add Song<?php
 }
 /* {/block "title"} */
 /* {block "add"} */
-class Block_21001144326373136e865e05_59149713 extends Smarty_Internal_Block
+class Block_2176125176373bcb0e9d2a4_72842067 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'add' => 
   array (
-    0 => 'Block_21001144326373136e865e05_59149713',
+    0 => 'Block_2176125176373bcb0e9d2a4_72842067',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -85,12 +85,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "add"} */
 /* {block "content"} */
-class Block_15999756836373136e869ae6_69954576 extends Smarty_Internal_Block
+class Block_13610809566373bcb0eadfe9_21712195 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_15999756836373136e869ae6_69954576',
+    0 => 'Block_13610809566373bcb0eadfe9_21712195',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -105,9 +105,9 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
         <!-- Add song form content-->
         <div class="row">
             <form class="row" method="post" action="addSong.php" enctype="multipart/form-data">
-                <div class="add-img-div">
+                <a class="add-img-div" href="#" id="add-img-div" style="cursor: pointer;">
                     <img class="add-img" id="add-img" src="img/empty-playlist.jpg" alt="">
-                </div>
+                </a>
                 <div class="add-content-div">
                     <label class="add-label" for="select-artist">Artist Name:</label>
                     <br>
@@ -163,11 +163,8 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                                             $('#select-album').prop('disabled', false);
 
                                             $('#add-img').attr('src', "img/empty-playlist.jpg");
-
-                                            if (data === "<option disabled>No Albums</option>") {
-                                                $('#add-btn').prop('hidden', false)
-                                                $('#add-btn').attr("href", "addAlbum.php?id=" + $(artist).val());
-                                            }
+                                            $('#add-btn').prop('hidden', false);
+                                            $('#add-btn').attr("href", "addAlbum.php?id=" + $(artist).val());
 
                                         }
                                     })
@@ -183,8 +180,11 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                                         dataType: "html",
                                         success: function (data) {
                                             $('#add-img').attr('src', data);
+
                                         }
                                     })
+                                    $('#add-img-div').attr("href", "viewAlbum.php?id=" + $(album).val());
+                                    $('#add-btn').prop('hidden', true);
                                 });
                                 <?php if ((isset($_smarty_tpl->tpl_vars['setAlbum']->value))) {?>
                                 if (<?php echo $_smarty_tpl->tpl_vars['setAlbum']->value;?>
@@ -216,6 +216,8 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                                             $('#add-img').attr('src', data);
                                         }
                                     })
+                                    $('#add-img-div').attr("href", "viewAlbum.php?id=" + <?php echo $_smarty_tpl->tpl_vars['setAlbum']->value;?>
+);
                                 }
                                 <?php }?>
                             }
