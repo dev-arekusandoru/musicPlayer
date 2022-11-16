@@ -36,8 +36,9 @@ if(isset($_POST['email'])) {
         $lname = $_POST['lname'];
         $pass = $_POST['password'];
         $vpass = $_POST['vpassword'];
-        $salt = "09ebb83935e7cdc3d96d43aae2af9a30";
-        $hashedPassword = hash("sha512", "09ebb83935e7cdc3d96d43aae2af9a30" . $pass);
+        $salt = random_bytes(32);
+
+        $hashedPassword = hash("sha512", $salt . $pass);
         if(strcmp($pass, $vpass) == 0) {
             $sql = "INSERT INTO User (First_Name, Last_Name, Email, Password, Salt) VALUES (:fname, :lname, :email, :pass, :salt)";
             $stmt = $pdo->prepare($sql);

@@ -92,8 +92,21 @@ if (!isset($_SESSION['logged']) || $_SESSION['logged'] == 0) {
                     $stmt->bindParam(":afk", $artist_fk);
                     try {
                         $stmt->execute();
+
+                        //find the id of the review
+                        $sql = "SELECT Album_ID FROM Album ORDER BY Album_ID DESC LIMIT 1;";
+                        $stmt = $pdo->prepare($sql);
+                        $stmt->execute();
+                        $albumID = $stmt->fetch(PDO::FETCH_ASSOC)['Album_ID'];
+
+                        $sql = "INSERT INTO User_Album (User_FK, Album_FK, Date_Added) VALUES (:uid, :aid, curdate())";
+                        $stmt = $pdo->prepare($sql);
+                        $stmt->bindParam(":uid", $_SESSION['userid']);
+                        $stmt->bindParam(":aid", $albumID);
+                        $stmt->execute();
+
                     } catch (Exception $exception) {
-                        echo '<script>alert("Sorry, your submission was not uploaded. Make sure the artist does not already exist. ")</script>';
+                        echo '<script>alert("Sorry, your submission was not uploaded. Make sure the album does not already exist. ")</script>';
                         exit;
                     }
                     echo '<script>alert("Upload Successful!")</script>';
