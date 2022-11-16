@@ -57,6 +57,19 @@ if (!isset($_SESSION['logged']) || $_SESSION['logged'] == 0) {
                 $stmt->bindParam(":img", $artist_img);
                 try {
                     $stmt->execute();
+
+                    //find the id of the review
+                    $sql = "SELECT Artist_ID FROM Artist ORDER BY Artist_ID DESC LIMIT 1;";
+                    $stmt = $pdo->prepare($sql);
+                    $stmt->execute();
+                    $artistID = $stmt->fetch(PDO::FETCH_ASSOC)['Artist_ID'];
+
+                    $sql = "INSERT INTO User_Artist (User_FK, Artist_FK, Date_Added) VALUES (:uid, :aid, curdate())";
+                    $stmt = $pdo->prepare($sql);
+                    $stmt->bindParam(":uid", $_SESSION['userid']);
+                    $stmt->bindParam(":aid", $artistID);
+                    $stmt->execute();
+
                 } catch (Exception $exception) {
                     echo '<script>alert("Sorry, your submission was not uploaded. Make sure the artist does not already exist. ")</script>';
                 }

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-11-07 12:53:28
+/* Smarty version 4.2.1, created on 2022-11-16 17:03:36
   from '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/userRegister.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_636946181d8264_66138258',
+  'unifunc' => 'content_63755e38ece182_64842140',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9249f88c378d1f7ab8481e6005669598eb5b4913' => 
     array (
       0 => '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/userRegister.tpl',
-      1 => 1667843601,
+      1 => 1668392658,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_636946181d8264_66138258 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63755e38ece182_64842140 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -42,6 +42,7 @@ function content_636946181d8264_66138258 (Smarty_Internal_Template $_smarty_tpl)
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <?php echo '<script'; ?>
  src="https://kit.fontawesome.com/125fe29883.js" crossorigin="anonymous"><?php echo '</script'; ?>
 >
@@ -93,10 +94,11 @@ function content_636946181d8264_66138258 (Smarty_Internal_Template $_smarty_tpl)
                             </form>
                             <hr>
                             <div class="text-center">
-                                <a class="small" href="forgotPassword.php">Forgot Password?</a>
+                                <a class="small" href="#">Forgot Password?</a>
                             </div>
                             <div class="text-center">
                                 <a class="small" href="login.php">Already have an account? Login!</a>
+
                             </div>
                         </div>
                     </div>
@@ -123,6 +125,7 @@ function content_636946181d8264_66138258 (Smarty_Internal_Template $_smarty_tpl)
     <?php echo '<script'; ?>
  src="js/sb-admin-2.min.js"><?php echo '</script'; ?>
 >
+
 
 </body>
 

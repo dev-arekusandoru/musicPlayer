@@ -5,6 +5,7 @@
  */
 include "../private_html/config.php";
 include_once PRIVATE_PATH . "dbConfig.php";
+include_once PRIVATE_PATH . "functions.php";
 
 $fname = "";
 $lname = "";
@@ -36,7 +37,7 @@ if(isset($_POST['email'])) {
         $lname = $_POST['lname'];
         $pass = $_POST['password'];
         $vpass = $_POST['vpassword'];
-        $salt = random_bytes(32);
+        $salt = RandomString(32);
 
         $hashedPassword = hash("sha512", $salt . $pass);
         if(strcmp($pass, $vpass) == 0) {
@@ -47,9 +48,10 @@ if(isset($_POST['email'])) {
             $stmt->bindParam(":email", $email);
             $stmt->bindParam(":pass", $hashedPassword);
             $stmt->bindParam(":salt", $salt);
-
+            print_r($stmt);
             $stmt->execute();
 
+            print_r("here");
             header("Location: login.php");
             echo '<script>alert("Registration successful. You may now login.")</script>';
         } else {
