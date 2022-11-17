@@ -11,9 +11,8 @@ if (!isset($_SESSION['logged']) || $_SESSION['logged'] == 0) {
     $_SESSION['page_to_load'] = "addSong.php";
     $smarty->display("userLogin.tpl");
 } else {
-
-    if(isset($_POST['select-artist'])) {
-        if(isset($_POST['select-album'])) {
+    if (isset($_POST['select-artist'])) {
+        if (isset($_POST['select-album'])) {
             if (!empty($_POST['song-name'])) {
                 $artistFK = intval($_POST['select-artist']);
                 $albumFK = intval($_POST['select-album']);
@@ -26,7 +25,20 @@ if (!isset($_SESSION['logged']) || $_SESSION['logged'] == 0) {
                 $stmt->bindParam(":artist", $artistFK);
                 $stmt->execute();
 
-                header("Location: addSong.php?arid=".$artistFK."&abid=".$albumFK);
+                //find the id of the song
+                $sql = "SELECT Song_ID FROM Song ORDER BY Song_ID DESC LIMIT 1;";
+                $stmt = $pdo->prepare($sql);
+                $stmt->execute();
+                $songID = $stmt->fetch(PDO::FETCH_ASSOC)['Artist_ID'];
+
+                $sql = "INSERT INTO User_Song (User_FK, Song_FK, Date_Added) VALUES (:id, :sid, curdate());";
+                $stmt = $pdo->prepare($sql);
+                $stmt->bindParam(":uid", $_SESSION['userid']);
+                $stmt->bindParam(":sid", $songID);
+                $stmt->execute();
+
+
+                header("Location: addSong.php?arid=" . $artistFK . "&abid=" . $albumFK);
             } else {
                 echo '<script>alert("Please enter a song name.")</script>';
             }
@@ -48,7 +60,7 @@ if (!isset($_SESSION['logged']) || $_SESSION['logged'] == 0) {
     ksort($artists);
 
 
-    if(isset($_GET['arid'])) {
+    if (isset($_GET['arid'])) {
         $smarty->assign("setArtist", $_GET['arid']);
         $smarty->assign("setAlbum", $_GET['abid']);
     }

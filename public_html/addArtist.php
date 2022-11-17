@@ -58,7 +58,7 @@ if (!isset($_SESSION['logged']) || $_SESSION['logged'] == 0) {
                 try {
                     $stmt->execute();
 
-                    //find the id of the review
+                    //find the id of the song
                     $sql = "SELECT Artist_ID FROM Artist ORDER BY Artist_ID DESC LIMIT 1;";
                     $stmt = $pdo->prepare($sql);
                     $stmt->execute();
