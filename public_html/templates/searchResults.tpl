@@ -54,7 +54,7 @@
                         <img class="img-fluid" src="img/album-imgs/{$song['Image_URL']}" alt="{$song['Album_Name']}">
                     </div>
                     <h1>{$song['Title']}</h1>
-                    <h2>{$song['Artist_Name']} • {$album['Album_Name']}</h2>
+                    <h2>{$song['Artist_Name']} • {$song['Album_Name']}</h2>
                 </a>
             {/foreach}
         </div>

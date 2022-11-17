@@ -100,6 +100,31 @@
             {/if}
         </div>
 
+        <h1 class="h3 mb-4 content-title">My Song Uploads:</h1>
+        <!--Albums Content-->
+        <div class="row pl-3 pr-3 justify-content-around">
+            <!-- album content divs-->
+            {if !empty($userSongs)}
+                {foreach $userSongs as $song}
+                    <a class="content" href="viewAlbum.php">
+                        <div class="content-img">
+                            <img class="img-fluid" src="img/album-imgs/{$song['Image_URL']}" alt="{$song['Album_Name']}">
+                        </div>
+                        <h1>{$song['Title']}</h1>
+                        <h2>{$song['Artist_Name']} • {$song['Album_Name']}</h2>
+                    </a>
+                {/foreach}
+            {else}
+                <div class="content">
+                    <div class="content-img">
+                        <img class="img-fluid" src="img/empty-playlist.jpg" alt="No Albums">
+                    </div>
+                    <h1>No Songs</h1>
+                </div>
+            {/if}
+        </div>
+
+
 
     </div>
     <!-- /.container-fluid -->
