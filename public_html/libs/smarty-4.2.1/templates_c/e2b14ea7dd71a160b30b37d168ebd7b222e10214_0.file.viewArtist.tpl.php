@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-11-14 21:17:02
+/* Smarty version 4.2.1, created on 2022-11-17 00:03:33
   from '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/viewArtist.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_6372f69e32fe97_23661003',
+  'unifunc' => 'content_6375c0a5d38582_45105100',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e2b14ea7dd71a160b30b37d168ebd7b222e10214' => 
     array (
       0 => '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/viewArtist.tpl',
-      1 => 1668478617,
+      1 => 1668661412,
       2 => 'file',
     ),
   ),
@@ -20,26 +20,26 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6372f69e32fe97_23661003 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6375c0a5d38582_45105100 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_20983536346372f69e2cbc51_12643569', "title");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_19946822446375c0a5cd4d62_41091409', "title");
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_19134191426372f69e2d7cc7_02413924', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_19474667206375c0a5cdfde3_90125503', "content");
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "template.tpl");
 }
 /* {block "title"} */
-class Block_20983536346372f69e2cbc51_12643569 extends Smarty_Internal_Block
+class Block_19946822446375c0a5cd4d62_41091409 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'title' => 
   array (
-    0 => 'Block_20983536346372f69e2cbc51_12643569',
+    0 => 'Block_19946822446375c0a5cd4d62_41091409',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -48,12 +48,12 @@ echo $_smarty_tpl->tpl_vars['artist_info']->value['Artist_Name'];
 }
 /* {/block "title"} */
 /* {block "content"} */
-class Block_19134191426372f69e2d7cc7_02413924 extends Smarty_Internal_Block
+class Block_19474667206375c0a5cdfde3_90125503 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_19134191426372f69e2d7cc7_02413924',
+    0 => 'Block_19474667206375c0a5cdfde3_90125503',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -189,8 +189,8 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                                 <div class="values">
                                     <label for="rating">Rating:</label>
                                     <input type="number" class="bg-dark text-light"
-                                           style="border: 1px solid #EBEBEB;"
-                                           name="rating" value="0" max="10" min="1" onkeydown="return false">
+                                           style="border: 1px solid #EBEBEB;" placeholder="1-10"
+                                           name="rating" max="10" min="1" onkeydown="return false">
                                 </div>
                             </div>
                             <div class="form-group">

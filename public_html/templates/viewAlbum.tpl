@@ -139,8 +139,8 @@
                                     <div class="values">
                                         <label for="rating">Rating:</label>
                                         <input type="number" class="bg-dark text-light"
-                                               style="border: 1px solid #EBEBEB;"
-                                               name="rating" value="0" max="10" min="1" onkeydown="return false">
+                                               style="border: 1px solid #EBEBEB;" placeholder="1-10"
+                                               name="rating" max="10" min="1" onkeydown="return false">
                                     </div>
                                 </div>
                                 <div class="form-group">
