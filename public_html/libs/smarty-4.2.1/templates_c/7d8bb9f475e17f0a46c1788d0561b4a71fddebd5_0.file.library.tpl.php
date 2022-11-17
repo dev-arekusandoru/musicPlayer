@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-11-16 23:48:28
+/* Smarty version 4.2.1, created on 2022-11-17 15:36:38
   from '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/library.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_6375bd1cd68d24_70858610',
+  'unifunc' => 'content_63769b56d00ef0_41565965',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7d8bb9f475e17f0a46c1788d0561b4a71fddebd5' => 
     array (
       0 => '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/library.tpl',
-      1 => 1668660506,
+      1 => 1668717356,
       2 => 'file',
     ),
   ),
@@ -20,30 +20,30 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6375bd1cd68d24_70858610 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63769b56d00ef0_41565965 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_6574923536375bd1ccf5b38_65267795', "title");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_146236990063769b56c99920_63862421', "title");
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_5223081996375bd1ccfac33_65963387', "library");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_85417527463769b56c9f791_73024009', "library");
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_8480030466375bd1cd01a85_49051675', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_189575001963769b56ca2a72_17566103', "content");
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "template.tpl");
 }
 /* {block "title"} */
-class Block_6574923536375bd1ccf5b38_65267795 extends Smarty_Internal_Block
+class Block_146236990063769b56c99920_63862421 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'title' => 
   array (
-    0 => 'Block_6574923536375bd1ccf5b38_65267795',
+    0 => 'Block_146236990063769b56c99920_63862421',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -53,12 +53,12 @@ My Library<?php
 }
 /* {/block "title"} */
 /* {block "library"} */
-class Block_5223081996375bd1ccfac33_65963387 extends Smarty_Internal_Block
+class Block_85417527463769b56c9f791_73024009 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'library' => 
   array (
-    0 => 'Block_5223081996375bd1ccfac33_65963387',
+    0 => 'Block_85417527463769b56c9f791_73024009',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -74,12 +74,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "library"} */
 /* {block "content"} */
-class Block_8480030466375bd1cd01a85_49051675 extends Smarty_Internal_Block
+class Block_189575001963769b56ca2a72_17566103 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_8480030466375bd1cd01a85_49051675',
+    0 => 'Block_189575001963769b56ca2a72_17566103',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -137,7 +137,8 @@ $_smarty_tpl->tpl_vars['a']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['a']->value) {
 $_smarty_tpl->tpl_vars['a']->do_else = false;
 ?>
-                    <div class="content">
+                    <a class="content" href="viewArtist.php?id=<?php echo $_smarty_tpl->tpl_vars['a']->value['Artist_ID'];?>
+">
                         <div class="content-img">
                             <img class="img-fluid" src="img/artist-imgs/<?php echo $_smarty_tpl->tpl_vars['a']->value['Image_URL'];?>
 " alt="<?php echo $_smarty_tpl->tpl_vars['a']->value['Artist_Name'];?>
@@ -145,7 +146,7 @@ $_smarty_tpl->tpl_vars['a']->do_else = false;
                         </div>
                         <h1><?php echo $_smarty_tpl->tpl_vars['a']->value['Artist_Name'];?>
 </h1>
-                    </div>
+                    </a>
                 <?php
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
@@ -174,7 +175,8 @@ $_smarty_tpl->tpl_vars['a']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['a']->value) {
 $_smarty_tpl->tpl_vars['a']->do_else = false;
 ?>
-                <div class="content">
+                <a class="content" href="viewAlbum.php?id=<?php echo $_smarty_tpl->tpl_vars['a']->value['Album_ID'];?>
+">
                     <div class="content-img">
                         <img class="img-fluid" src="img/album-imgs/<?php echo $_smarty_tpl->tpl_vars['a']->value['Image_URL'];?>
 " alt="<?php echo $_smarty_tpl->tpl_vars['a']->value['Album_Name'];?>
@@ -185,7 +187,7 @@ $_smarty_tpl->tpl_vars['a']->do_else = false;
                     <h2><?php echo $_smarty_tpl->tpl_vars['a']->value['Artist_Name'];?>
  • <?php echo $_smarty_tpl->tpl_vars['a']->value['Release_Year'];?>
 </h2>
-                </div>
+                </a>
             <?php
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
@@ -199,10 +201,13 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             <?php }?>
         </div>
 
+        <!--Content Splitter-->
+        <div class="content-splitter ml-1"></div>
+
         <h1 class="h3 mb-4 content-title">My Song Uploads:</h1>
-        <!--Albums Content-->
+        <!--Songs Content-->
         <div class="row pl-3 pr-3 justify-content-around">
-            <!-- album content divs-->
+            <!-- song content divs-->
             <?php if (!empty($_smarty_tpl->tpl_vars['userSongs']->value)) {?>
                 <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['userSongs']->value, 'song');
@@ -210,7 +215,8 @@ $_smarty_tpl->tpl_vars['song']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['song']->value) {
 $_smarty_tpl->tpl_vars['song']->do_else = false;
 ?>
-                    <a class="content" href="viewAlbum.php">
+                    <a class="content" href="viewAlbum.php?id=<?php echo $_smarty_tpl->tpl_vars['song']->value['Album_ID'];?>
+">
                         <div class="content-img">
                             <img class="img-fluid" src="img/album-imgs/<?php echo $_smarty_tpl->tpl_vars['song']->value['Image_URL'];?>
 " alt="<?php echo $_smarty_tpl->tpl_vars['song']->value['Album_Name'];?>

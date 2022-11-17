@@ -55,12 +55,12 @@
 
             {if !empty($userArtists)}
                 {foreach $userArtists as $a}
-                    <div class="content">
+                    <a class="content" href="viewArtist.php?id={$a['Artist_ID']}">
                         <div class="content-img">
                             <img class="img-fluid" src="img/artist-imgs/{$a['Image_URL']}" alt="{$a['Artist_Name']}">
                         </div>
                         <h1>{$a['Artist_Name']}</h1>
-                    </div>
+                    </a>
                 {/foreach}
             {else}
                 <div class="content">
@@ -82,13 +82,13 @@
             <!-- album content divs-->
             {if !empty($userAlbums)}
             {foreach $userAlbums as $a}
-                <div class="content">
+                <a class="content" href="viewAlbum.php?id={$a['Album_ID']}">
                     <div class="content-img">
                         <img class="img-fluid" src="img/album-imgs/{$a['Image_URL']}" alt="{$a['Album_Name']}">
                     </div>
                     <h1>{$a['Album_Name']}</h1>
                     <h2>{$a['Artist_Name']} • {$a['Release_Year']}</h2>
-                </div>
+                </a>
             {/foreach}
                 {else}
                 <div class="content">
@@ -100,13 +100,16 @@
             {/if}
         </div>
 
+        <!--Content Splitter-->
+        <div class="content-splitter ml-1"></div>
+
         <h1 class="h3 mb-4 content-title">My Song Uploads:</h1>
-        <!--Albums Content-->
+        <!--Songs Content-->
         <div class="row pl-3 pr-3 justify-content-around">
-            <!-- album content divs-->
+            <!-- song content divs-->
             {if !empty($userSongs)}
                 {foreach $userSongs as $song}
-                    <a class="content" href="viewAlbum.php">
+                    <a class="content" href="viewAlbum.php?id={$song['Album_ID']}">
                         <div class="content-img">
                             <img class="img-fluid" src="img/album-imgs/{$song['Image_URL']}" alt="{$song['Album_Name']}">
                         </div>

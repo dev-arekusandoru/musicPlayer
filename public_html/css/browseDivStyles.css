@@ -12,19 +12,28 @@ body {
 
 /*main content div style*/
 .content {
-    margin-bottom: 40px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-bottom: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
     text-align: center;
     text-decoration: none;
+    height: 290px;
+    width: 245px;
+    border-radius: 10px;
+    transition: 0.4s ease all;
+    border: 1px solid #262626;
 }
 .content:hover {
     text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(235, 235, 235, 0.05);
+    box-shadow: -5px 5px rgba(34, 34, 34, 0.8);
 }
 
 /*album cover art style*/
 .content-img img {
-    height: 250px;
+    margin-top: 10px;
+    height: 220px;
     border-radius: 20px;
 }
 .content-img img:hover {
@@ -36,7 +45,7 @@ body {
     color: rgb(235, 235, 235);
 }
 .content h1 {
-    padding-top: 7px;
+    padding-top: 10px;
     font-size: 20px;
     margin-bottom: 0;
     color: rgb(235, 235, 235);

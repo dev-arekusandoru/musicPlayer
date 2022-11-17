@@ -53,7 +53,6 @@ if (!isset($_SESSION['logged']) || $_SESSION['logged'] == 0) {
     }
     ksort($userSongs);
 
-
     $smarty->assign("userArtists", $userArtists);
     $smarty->assign("userAlbums", $userAlbums);
     $smarty->assign("userSongs", $userSongs);

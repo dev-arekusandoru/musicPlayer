@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-11-15 22:05:39
+/* Smarty version 4.2.1, created on 2022-11-17 14:57:00
   from '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/viewAlbum.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_6374538313ced4_41719796',
+  'unifunc' => 'content_6376920ce74619_68414439',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ec88983db589af83ded1515fe17bce1d59ee7b24' => 
     array (
       0 => '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/viewAlbum.tpl',
-      1 => 1668567913,
+      1 => 1668715019,
       2 => 'file',
     ),
   ),
@@ -20,26 +20,26 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6374538313ced4_41719796 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6376920ce74619_68414439 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1715726572637453830d1835_88772659', "title");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_17658760526376920cdc44d3_04192230', "title");
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1100424243637453830dcbe6_36693097', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_7473057046376920cdcfbf3_37667996', "content");
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "template.tpl");
 }
 /* {block "title"} */
-class Block_1715726572637453830d1835_88772659 extends Smarty_Internal_Block
+class Block_17658760526376920cdc44d3_04192230 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'title' => 
   array (
-    0 => 'Block_1715726572637453830d1835_88772659',
+    0 => 'Block_17658760526376920cdc44d3_04192230',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -48,12 +48,12 @@ echo $_smarty_tpl->tpl_vars['albumInfo']->value['Album_Name'];
 }
 /* {/block "title"} */
 /* {block "content"} */
-class Block_1100424243637453830dcbe6_36693097 extends Smarty_Internal_Block
+class Block_7473057046376920cdcfbf3_37667996 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_1100424243637453830dcbe6_36693097',
+    0 => 'Block_7473057046376920cdcfbf3_37667996',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -133,16 +133,18 @@ $_smarty_tpl->tpl_vars['song']->do_else = false;
                                     <!-- Dropdown - Song Information -->
                                     <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                          aria-labelledby="userDropdown0">
-                                        <a class="dropdown-item" href="#">
+                                        <?php if ($_SESSION['isAdmin'] == 1) {?>
+                                        <a class="dropdown-item"
+                                           href="addSong.tpl?arid=<?php echo $_smarty_tpl->tpl_vars['albumInfo']->value['Artist_ID'];?>
+&abid=<?php echo $_smarty_tpl->tpl_vars['albumInfo']->value['Album_ID'];?>
+&sid=<?php echo $_smarty_tpl->tpl_vars['song']->value['Song_ID'];?>
+">
                                             <i class="fa fa-comments-o fa-sm fa-fw mr-2 text-gray-400"></i>
-                                            View Comments
+                                            Edit Song Details
                                         </a>
-                                        <a class="dropdown-item" href="viewAlbum.php">
-                                            <i class="fas fa-folder-open fa-sm fa-fw mr-2 text-gray-400"></i>
-                                            <i class="fa fa-folder-o fa-sm fa-fw mr-2 text-gray-400"></i>
-                                            View Album
-                                        </a>
-                                        <a class="dropdown-item" href="viewArtist.php">
+                                        <?php }?>
+                                        <a class="dropdown-item" href="viewArtist.php?id=<?php echo $_smarty_tpl->tpl_vars['albumInfo']->value['Artist_ID'];?>
+">
                                             <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                             View Artist
                                         </a>
@@ -150,11 +152,15 @@ $_smarty_tpl->tpl_vars['song']->do_else = false;
                                             <i class="fa fa-plus fa-sm fa-fw mr-2 text-gray-400"></i>
                                             Add to playlist
                                         </a>
+                                        <?php if ($_SESSION['isAdmin'] == 1) {?>
                                         <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="#">
+                                        <a class="dropdown-item" href="deleteSong.php?id=<?php echo $_smarty_tpl->tpl_vars['']->value;?>
+">
                                             <i class="fa fa-minus fa-sm fa-fw mr-2 text-gray-400"></i>
-                                            Remove from playlist
+                                            Remove from Album
                                         </a>
+                                        <?php }?>
+
                                     </div>
                                 </li>
                             </ul>
@@ -236,8 +242,8 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                                     <div class="values">
                                         <label for="rating">Rating:</label>
                                         <input type="number" class="bg-dark text-light"
-                                               style="border: 1px solid #EBEBEB;"
-                                               name="rating" value="0" max="10" min="1" onkeydown="return false">
+                                               style="border: 1px solid #EBEBEB;" placeholder="1-10"
+                                               name="rating" max="10" min="1" onkeydown="return false">
                                     </div>
                                 </div>
                                 <div class="form-group">

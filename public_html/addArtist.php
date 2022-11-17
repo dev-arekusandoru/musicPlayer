@@ -78,5 +78,6 @@ if (!isset($_SESSION['logged']) || $_SESSION['logged'] == 0) {
         }
     }
 
+
     $smarty->display("addArtist.tpl");
 }

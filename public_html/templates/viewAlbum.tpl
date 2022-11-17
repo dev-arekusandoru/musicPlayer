@@ -55,16 +55,14 @@
                                     <!-- Dropdown - Song Information -->
                                     <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                          aria-labelledby="userDropdown0">
-                                        <a class="dropdown-item" href="#">
+                                        {if $smarty.session.isAdmin eq 1}
+                                        <a class="dropdown-item"
+                                           href="addSong.tpl?arid={$albumInfo['Artist_ID']}&abid={$albumInfo['Album_ID']}&sid={$song['Song_ID']}">
                                             <i class="fa fa-comments-o fa-sm fa-fw mr-2 text-gray-400"></i>
-                                            View Comments
+                                            Edit Song Details
                                         </a>
-                                        <a class="dropdown-item" href="viewAlbum.php">
-                                            <i class="fas fa-folder-open fa-sm fa-fw mr-2 text-gray-400"></i>
-                                            <i class="fa fa-folder-o fa-sm fa-fw mr-2 text-gray-400"></i>
-                                            View Album
-                                        </a>
-                                        <a class="dropdown-item" href="viewArtist.php">
+                                        {/if}
+                                        <a class="dropdown-item" href="viewArtist.php?id={$albumInfo['Artist_ID']}">
                                             <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                             View Artist
                                         </a>
@@ -72,11 +70,14 @@
                                             <i class="fa fa-plus fa-sm fa-fw mr-2 text-gray-400"></i>
                                             Add to playlist
                                         </a>
+                                        {if $smarty.session.isAdmin eq 1}
                                         <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="#">
+                                        <a class="dropdown-item" href="deleteSong.php?id={$}">
                                             <i class="fa fa-minus fa-sm fa-fw mr-2 text-gray-400"></i>
-                                            Remove from playlist
+                                            Remove from Album
                                         </a>
+                                        {/if}
+
                                     </div>
                                 </li>
                             </ul>

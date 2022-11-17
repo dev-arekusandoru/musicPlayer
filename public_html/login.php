@@ -35,7 +35,7 @@ if (isset($_POST['email'])) {
     $_SESSION['logged'] = 1;
     $_SESSION['userid'] = $row['User_ID'];
     $_SESSION['username'] = ucfirst($row['First_Name']) . " " . ucfirst($row['Last_Name']);
-    $_SESSION['isAdmin'] = $row['isAdmin'];
+    $_SESSION['isAdmin'] = $row['Is_Admin'];
     if (!empty($_SESSION['page_to_load'])) {
         header("Location: " . $_SESSION['page_to_load']);
     } else {

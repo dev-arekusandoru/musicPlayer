@@ -11,6 +11,7 @@ if (!isset($_SESSION['logged']) || $_SESSION['logged'] == 0) {
     $_SESSION['page_to_load'] = "addSong.php";
     $smarty->display("userLogin.tpl");
 } else {
+    //Add the song to the DB
     if (isset($_POST['select-artist'])) {
         if (isset($_POST['select-album'])) {
             if (!empty($_POST['song-name'])) {
@@ -43,9 +44,10 @@ if (!isset($_SESSION['logged']) || $_SESSION['logged'] == 0) {
                 echo '<script>alert("Please enter a song name.")</script>';
             }
         } else {
-            echo '<script>alert("Please select and album.")</script>';
+            echo '<script>alert("Please select an album.")</script>';
         }
     }
+
 
 
     // set up and display page
@@ -59,8 +61,8 @@ if (!isset($_SESSION['logged']) || $_SESSION['logged'] == 0) {
     }
     ksort($artists);
 
-
-    if (isset($_GET['arid'])) {
+    //if artist/album ids are passed, load that on the page
+    if (isset($_GET['arid']) && isset($_GET['abid'])) {
         $smarty->assign("setArtist", $_GET['arid']);
         $smarty->assign("setAlbum", $_GET['abid']);
     }
