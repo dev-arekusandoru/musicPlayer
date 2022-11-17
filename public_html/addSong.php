@@ -29,11 +29,11 @@ if (!isset($_SESSION['logged']) || $_SESSION['logged'] == 0) {
                 $sql = "SELECT Song_ID FROM Song ORDER BY Song_ID DESC LIMIT 1;";
                 $stmt = $pdo->prepare($sql);
                 $stmt->execute();
-                $songID = $stmt->fetch(PDO::FETCH_ASSOC)['Artist_ID'];
+                $songID = $stmt->fetch(PDO::FETCH_ASSOC)['Song_ID'];
 
                 $sql = "INSERT INTO User_Song (User_FK, Song_FK, Date_Added) VALUES (:id, :sid, curdate());";
                 $stmt = $pdo->prepare($sql);
-                $stmt->bindParam(":uid", $_SESSION['userid']);
+                $stmt->bindParam(":id", $_SESSION['userid']);
                 $stmt->bindParam(":sid", $songID);
                 $stmt->execute();
 
