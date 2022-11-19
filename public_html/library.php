@@ -13,13 +13,13 @@ if (!isset($_SESSION['logged']) || $_SESSION['logged'] == 0) {
 
     $userID = $_SESSION['userid'];
 
-    $sql = "SELECT Artist_ID, Artist_Name, Image_URL FROM Artist JOIN User_Artist ON Artist_ID=User_Artist.Artist_FK WHERE User_Artist.User_FK=:id;";
+    $sql = "SELECT Playlist_ID, Playlist_Name, Image_URL, Song_Count FROM Playlist JOIN User_Playlist ON Playlist.Playlist_ID=User_Playlist.Playlist_FK WHERE User_Playlist.User_FK=:id;";
     $stmt = $pdo->prepare($sql);
     $stmt->bindParam(":id", $userID);
     $stmt->execute();
     $userPlaylists = [];
     foreach ($stmt as $row) {
-        $userPlaylists[$row['Artist_Name']] = $row;
+        $userPlaylists[$row['Playlist_Name']] = $row;
     }
     ksort($userPlaylists);
 
@@ -53,6 +53,7 @@ if (!isset($_SESSION['logged']) || $_SESSION['logged'] == 0) {
     }
     ksort($userSongs);
 
+    $smarty->assign("userPlaylists", $userPlaylists);
     $smarty->assign("userArtists", $userArtists);
     $smarty->assign("userAlbums", $userAlbums);
     $smarty->assign("userSongs", $userSongs);

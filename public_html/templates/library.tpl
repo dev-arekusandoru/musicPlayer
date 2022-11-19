@@ -18,29 +18,19 @@
         <!--Playlist Content-->
         <div class="row pl-3 pr-3 justify-content-around">
             <!-- playlist content divs-->
-            <a class="content" href="viewPlaylist.php">
-                <div class="content-img">
-                    <img class="img-fluid" src="img/empty-playlist.jpg" alt="The Beatles">
-                </div>
-                <h1>User's Playlist</h1>
-                <h2>User • 3 Songs</h2>
-            </a>
-
-            <div class="content">
-                <div class="content-img">
-                    <img class="img-fluid" src="img/empty-playlist.jpg" alt="">
-                </div>
-                <h1>User's Playlist</h1>
-                <h2>User • 43 Songs</h2>
-            </div>
-
-            <div class="content">
-                <div class="content-img">
-                    <img class="img-fluid" src="img/empty-playlist.jpg" alt="The Beatles">
-                </div>
-                <h1>User's Playlist</h1>
-                <h2>User • 15 Songs</h2>
-            </div>
+            {foreach $userPlaylists as $p}
+                <a class="content" href="viewPlaylist.php?id={$p['Playlist_ID']}">
+                    <div class="content-img">
+                        <img class="img-fluid" src="img/playlist-imgs/{$p['Image_URL']}" alt="{$p['Playlist_Name']}">
+                    </div>
+                    <h1>{$p['Playlist_Name']}</h1>
+                    {if $p['Song_Count'] == 1}
+                        <h2>{$p['Song_Count']} Song</h2>
+                    {else}
+                        <h2>{$p['Song_Count']} Songs</h2>
+                    {/if}
+                </a>
+            {/foreach}
         </div>
 
         <!--Content Splitter-->
@@ -81,16 +71,16 @@
         <div class="row pl-3 pr-3 justify-content-around">
             <!-- album content divs-->
             {if !empty($userAlbums)}
-            {foreach $userAlbums as $a}
-                <a class="content" href="viewAlbum.php?id={$a['Album_ID']}">
-                    <div class="content-img">
-                        <img class="img-fluid" src="img/album-imgs/{$a['Image_URL']}" alt="{$a['Album_Name']}">
-                    </div>
-                    <h1>{$a['Album_Name']}</h1>
-                    <h2>{$a['Artist_Name']} • {$a['Release_Year']}</h2>
-                </a>
-            {/foreach}
-                {else}
+                {foreach $userAlbums as $a}
+                    <a class="content" href="viewAlbum.php?id={$a['Album_ID']}">
+                        <div class="content-img">
+                            <img class="img-fluid" src="img/album-imgs/{$a['Image_URL']}" alt="{$a['Album_Name']}">
+                        </div>
+                        <h1>{$a['Album_Name']}</h1>
+                        <h2>{$a['Artist_Name']} • {$a['Release_Year']}</h2>
+                    </a>
+                {/foreach}
+            {else}
                 <div class="content">
                     <div class="content-img">
                         <img class="img-fluid" src="img/empty-playlist.jpg" alt="No Albums">
@@ -111,7 +101,8 @@
                 {foreach $userSongs as $song}
                     <a class="content" href="viewAlbum.php?id={$song['Album_ID']}">
                         <div class="content-img">
-                            <img class="img-fluid" src="img/album-imgs/{$song['Image_URL']}" alt="{$song['Album_Name']}">
+                            <img class="img-fluid" src="img/album-imgs/{$song['Image_URL']}"
+                                 alt="{$song['Album_Name']}">
                         </div>
                         <h1>{$song['Title']}</h1>
                         <h2>{$song['Artist_Name']} • {$song['Album_Name']}</h2>
@@ -126,7 +117,6 @@
                 </div>
             {/if}
         </div>
-
 
 
     </div>

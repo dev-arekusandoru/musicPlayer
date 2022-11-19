@@ -43,6 +43,7 @@ if (!isset($_SESSION['logged']) || $_SESSION['logged'] == 0) {
         if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif") {
             $uploadOK = 0;
         }
+
         if ($uploadOK == 0) {
             echo '<script>alert("Sorry, your submission was not uploaded. Make sure your image is valid and the artist does not already exist.")</script>';
 // if everything is ok, try to upload file

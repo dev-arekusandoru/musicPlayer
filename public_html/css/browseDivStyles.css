@@ -20,7 +20,7 @@ body {
     height: 290px;
     width: 245px;
     border-radius: 10px;
-    transition: 0.4s ease all;
+    transition: 0.3s ease all;
     border: 1px solid #262626;
 }
 .content:hover {
