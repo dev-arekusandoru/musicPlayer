@@ -36,7 +36,7 @@ if (!isset($_SESSION['logged']) || $_SESSION['logged'] == 0) {
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
             $songs[] = $row;
         }
-        
+
         // assign all variables before displaying page
         $smarty->assign("songs", $songs);
         $smarty->assign("playlistInfo", $playlist_info);
