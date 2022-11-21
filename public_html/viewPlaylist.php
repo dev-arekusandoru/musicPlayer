@@ -16,7 +16,6 @@ if (!isset($_SESSION['logged']) || $_SESSION['logged'] == 0) {
     $playlistID = $_GET['id'];
     $songs = array();
     $playlist_info = [];
-    //updateplaylistAverageRating($playlistID);
 
     // get info to display playlist header
     $sql = "SELECT Playlist_ID, Playlist_Name, Image_URL, Description, Song_Count, User_ID, First_Name, Last_Name FROM Playlist JOIN User_Playlist ON User_Playlist.Playlist_FK=Playlist_ID JOIN User ON User.User_ID = User_Playlist.User_Fk WHERE Playlist_ID=:id;";
