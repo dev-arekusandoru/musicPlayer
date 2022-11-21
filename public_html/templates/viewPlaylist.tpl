@@ -4,24 +4,18 @@
     <!-- Begin Page Content -->
     <div class="container-fluid">
 
-        <!--Delete button -->
-        <div class="float-right relative-top">
-            <a onclick="confirmAction()">
-                <img src="img/trashcan.png" alt="white trash can image" height="30" width="30">
-            </a>
-        </div>
-
         <!-- Playlist Information -->
         <div class="row ml-md-2">
             <div class="album-metadata col-sm-12 p-0">
-                <img src="img/empty-playlist.jpg" class="img-responsive artwork float-md-left" alt="">
-                <h1>TESTING</h1>
-                <h2>User</h2>
-                <h6>Playlist description</h6>
-                <div style="height: 5px;"></div>
-                <a class="mb-7 add-music-button" href="addSong.php">Edit Album Details</a>
+                <img src="img/playlist-imgs/{$playlistInfo['Image_URL']}" class="img-responsive artwork float-md-left mr-2"
+                     alt="">
+                <h1>{$playlistInfo['Playlist_Name']}</h1>
+                <h2>{$playlistInfo['First_Name']} {$playlistInfo['Last_Name']}</h2>
+                <h6>{$playlistInfo['Description']}</h6>
+                <a class="mb-7 add-music-button" href="#">Edit Details</a>
                 <br>
-                <a class="mb-7 add-music-button" href="addSong.php">Add Song</a>
+                <a class="mb-7 add-music-button" href="">Add Song</a>
+                <br>
             </div>
             <div class="col-sm-6"></div>
         </div>
@@ -29,10 +23,11 @@
         <!-- Playlist Tracklist -->
         <div class="album-tracklist row">
             <div class="col">
+                {foreach $songs as $s}
                 <div class="row container playlist-song justify-content-between">
                     <div class="p-song-info">
-                        <h1>Distorted Records</h1>
-                        <p>A$AP Rocky • TESTING</p>
+                        <h1>{$s['Title']}</h1>
+                        <p>{$s['Artist_Name']} • {$s['Album_Name']}</p>
                     </div>
                     <div class="dropdown">
                         <ul class="navbar-nav ml-auto">
@@ -45,15 +40,14 @@
                                 <!-- Dropdown - Song Information -->
                                 <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                      aria-labelledby="userDropdown0">
-                                    <a class="dropdown-item" href="#">
-                                        <i class="fa fa-comments-o fa-sm fa-fw mr-2 text-gray-400"></i>
-                                        View Comments
-                                    </a>
-                                    <a class="dropdown-item" href="viewAlbum.php">
-                                        <i class="fas fa-folder-open fa-sm fa-fw mr-2 text-gray-400"></i>
-                                        View Album
-                                    </a>
-                                    <a class="dropdown-item" href="viewArtist.php">
+                                    {if $smarty.session.isAdmin eq 1}
+                                        <a class="dropdown-item"
+                                           href="addSong.tpl?arid={$playlistInfo['Artist_ID']}&abid={$playlistInfo['Album_ID']}&sid={$song['Song_ID']}">
+                                            <i class="fa fa-comments-o fa-sm fa-fw mr-2 text-gray-400"></i>
+                                            Edit Song Details
+                                        </a>
+                                    {/if}
+                                    <a class="dropdown-item" href="viewArtist.php?id={$albumInfo['Artist_ID']}">
                                         <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                         View Artist
                                     </a>
@@ -61,20 +55,21 @@
                                         <i class="fa fa-plus fa-sm fa-fw mr-2 text-gray-400"></i>
                                         Add to playlist
                                     </a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item">
-                                        <i class="fa fa-minus fa-sm fa-fw mr-2 text-gray-400" ></i>
-                                        <p name="remove">Remove from playlist</p>
-                                    </a>
+                                    {if $smarty.session.isAdmin eq 1}
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="deleteSong.php?id={$playlistInfo['Song_ID']}">
+                                            <i class="fa fa-minus fa-sm fa-fw mr-2 text-gray-400"></i>
+                                            Delete Song
+                                        </a>
+                                    {/if}
                                 </div>
                             </li>
                         </ul>
                     </div>
                 </div>
+                {/foreach}
             </div>
         </div>
         <!-- /.container-fluid -->
-
     </div>
-    <!-- End of Main Content -->
 {/block}

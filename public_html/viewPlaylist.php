@@ -29,67 +29,20 @@ if (!isset($_SESSION['logged']) || $_SESSION['logged'] == 0) {
     //if playlist sql request was valid, pull all songs under the playlist
     if (isset($playlist_info['Playlist_Name'])) {
         // get songs from album
-        $sql = "SELECT * FROM Song JOIN Song_In_Playlist ON Song_In_Playlist.Song_FK=Song_ID JOIN Playlist ON Song_In_Playlist.Playlist_FK=:id";
+        $sql = "SELECT Song_ID, Title, Album_Name, Artist_Name, Album_ID FROM Song JOIN Song_In_Playlist ON Song_ID=Song_In_Playlist.Song_FK JOIN Artist ON Artist_FK = Artist.Artist_ID JOIN Album ON Album.Album_ID=Album_FK WHERE Song_In_Playlist.Playlist_FK=:id ORDER BY Order_Number ASC;";
         $stmt = $pdo->prepare($sql);
-        $stmt->bindParam(":artist", $album_info['Artist_ID']);
+        $stmt->bindParam(":id", $playlistID);
         $stmt->execute();
-
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
             $songs[] = $row;
         }
-
-        // get reviews from album
-        $sql = "SELECT Comment, Stars, First_Name, Last_Name FROM Album_Review JOIN Review ON Review_FK=Review.Review_ID JOIN User ON Review.User_FK=User.User_ID WHERE Album_FK=:id;";
-        $stmt = $pdo->prepare($sql);
-        $stmt->bindParam(":id", $_GET['id']);
-        $stmt->execute();
-        $reviews = [];
-
-        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-            $reviews[] = $row;
-        }
-
+        
         // assign all variables before displaying page
-        $smarty->assign('reviews', $reviews);
         $smarty->assign("songs", $songs);
-        $smarty->assign("albumInfo", $album_info);
-        $smarty->display("viewAlbum.tpl");
-    }
-    else {
-        //display login if id is not valid
-        header("Location: explore.php");
-    }
-} else if (isset($_POST['review'])) {
-    // if a rating was submitted, add it to the db
-    if (!empty($_POST['review']) && !empty($_POST['rating'])) {
-        $comment = $_POST['review'];
-        $stars = $_POST['rating'];
-
-        // add the review
-        $sql = "INSERT INTO Review (Comment, Stars, User_FK) VALUES (:comment, :stars, :user)";
-        $stmt = $pdo->prepare($sql);
-        $stmt->bindParam(':comment', $comment);
-        $stmt->bindParam(':stars', $stars);
-        $stmt->bindParam(':user', $_SESSION['userid']);
-        $stmt->execute();
-
-        //find the id of the review
-        $sql = "SELECT Review_ID FROM Review ORDER BY Review_ID DESC LIMIT 1;";
-        $stmt = $pdo->prepare($sql);
-        $stmt->execute();
-        $reviewID = $stmt->fetch(PDO::FETCH_ASSOC)['Review_ID'];
-
-        // use the ids to create the linking row in the Album_Review Table
-        $sql = "INSERT INTO Album_Review (Album_FK, Review_FK) VALUES (:aid, :rid);";
-        $stmt = $pdo->prepare($sql);
-        $stmt->bindParam(':aid', $_POST['albumID']);
-        $stmt->bindParam(':rid', $reviewID);
-        $stmt->execute();
-
-        // reload the page for the same album
-        header("Location: viewAlbum.php?id=" . $_POST['albumID']);
+        $smarty->assign("playlistInfo", $playlist_info);
+        $smarty->display("viewPlaylist.tpl");
     } else {
-        // if anything weird happens, send them to the explore page
+        //display login if id is not valid
         header("Location: explore.php");
     }
 } else {

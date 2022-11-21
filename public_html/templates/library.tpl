@@ -18,19 +18,24 @@
         <!--Playlist Content-->
         <div class="row pl-3 pr-3 justify-content-around">
             <!-- playlist content divs-->
-            {foreach $userPlaylists as $p}
-                <a class="content" href="viewPlaylist.php?id={$p['Playlist_ID']}">
-                    <div class="content-img">
-                        <img class="img-fluid" src="img/playlist-imgs/{$p['Image_URL']}" alt="{$p['Playlist_Name']}">
-                    </div>
-                    <h1>{$p['Playlist_Name']}</h1>
-                    {if $p['Song_Count'] == 1}
-                        <h2>{$p['Song_Count']} Song</h2>
-                    {else}
-                        <h2>{$p['Song_Count']} Songs</h2>
-                    {/if}
-                </a>
-            {/foreach}
+            {if !empty($userPlaylists)}
+                {foreach $userPlaylists as $p}
+                    <a class="content" href="viewPlaylist.php?id={$p['Playlist_ID']}">
+                        <div class="content-img">
+                            <img class="img-fluid" src="img/playlist-imgs/{$p['Image_URL']}"
+                                 alt="{$p['Playlist_Name']}">
+                        </div>
+                        <h1>{$p['Playlist_Name']}</h1>
+                        {if $p['Song_Count'] == 1}
+                            <h2>{$p['Song_Count']} Song</h2>
+                        {else}
+                            <h2>{$p['Song_Count']} Songs</h2>
+                        {/if}
+                    </a>
+                {/foreach}
+            {else}
+                <h4 style="margin: 40px 0 70px 0;">No Playlists</h4>
+            {/if}
         </div>
 
         <!--Content Splitter-->
@@ -53,12 +58,7 @@
                     </a>
                 {/foreach}
             {else}
-                <div class="content">
-                    <div class="content-img">
-                        <img class="img-fluid" src="img/empty-playlist.jpg" alt="Empty Album">
-                    </div>
-                    <h1>No Artists</h1>
-                </div>
+                <h4 style="margin: 40px 0 70px 0;">No Artists</h4>
             {/if}
         </div>
 
@@ -81,12 +81,7 @@
                     </a>
                 {/foreach}
             {else}
-                <div class="content">
-                    <div class="content-img">
-                        <img class="img-fluid" src="img/empty-playlist.jpg" alt="No Albums">
-                    </div>
-                    <h1>No Albums</h1>
-                </div>
+                <h4 style="margin: 40px 0 70px 0;">No Albums</h4>
             {/if}
         </div>
 
@@ -109,12 +104,7 @@
                     </a>
                 {/foreach}
             {else}
-                <div class="content">
-                    <div class="content-img">
-                        <img class="img-fluid" src="img/empty-playlist.jpg" alt="No Albums">
-                    </div>
-                    <h1>No Songs</h1>
-                </div>
+                <h4 style="margin: 40px 0 70px 0;">No Songs</h4>
             {/if}
         </div>
 

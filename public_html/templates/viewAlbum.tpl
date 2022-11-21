@@ -72,12 +72,11 @@
                                         </a>
                                         {if $smarty.session.isAdmin eq 1}
                                         <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="deleteSong.php?id={$}">
+                                        <a class="dropdown-item" href="deleteSong.php?id={$albumInfo['Song_ID']}">
                                             <i class="fa fa-minus fa-sm fa-fw mr-2 text-gray-400"></i>
-                                            Remove from Album
+                                            Delete Song
                                         </a>
                                         {/if}
-
                                     </div>
                                 </li>
                             </ul>

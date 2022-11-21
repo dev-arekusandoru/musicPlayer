@@ -19,7 +19,7 @@
         <div class="row pl-3 pr-3 justify-content-around">
             <!-- artist content divs-->
             {foreach $recentArtists as $ra}
-            <a class="content" href="viewArtist.php?id={$ra['Artist_ID']}">
+            <a class="content artist" href="viewArtist.php?id={$ra['Artist_ID']}">
                 <div class="content-img">
                     <img class="img-fluid" src="img/artist-imgs/{$ra['Image_URL']}" alt="{$ra['Artist_Name']}">
                 </div>
