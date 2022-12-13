@@ -11,6 +11,9 @@ body {
 }
 
 /*album metadata styles*/
+.album-metadata {
+
+}
 .album-metadata h1 {
     color: #EBEBEB;
     font-size: 30px;

@@ -1,5 +1,12 @@
 {extends "template.tpl"}
 {block "title"}Add Playlist{/block}
+{block "playlist"}
+    <li class="nav-item active">
+        <a class="nav-link" href="addPlaylist.php">
+            <i class="fas fa-plus-circle"></i>
+            <span>Create Playlist</span></a>
+    </li>
+{/block}
 {block "content"}
     <!-- Begin Page Content -->
     <div class="container-fluid">

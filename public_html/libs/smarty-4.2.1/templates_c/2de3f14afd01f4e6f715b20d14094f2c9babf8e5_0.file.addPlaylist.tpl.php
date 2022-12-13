@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-11-17 22:39:22
+/* Smarty version 4.2.1, created on 2022-11-22 10:47:33
   from '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/addPlaylist.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_6376fe6a7b78a5_47331825',
+  'unifunc' => 'content_637cef15d434b1_78843186',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2de3f14afd01f4e6f715b20d14094f2c9babf8e5' => 
     array (
       0 => '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/addPlaylist.tpl',
-      1 => 1668742748,
+      1 => 1669132053,
       2 => 'file',
     ),
   ),
@@ -20,26 +20,30 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6376fe6a7b78a5_47331825 (Smarty_Internal_Template $_smarty_tpl) {
+function content_637cef15d434b1_78843186 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_753964076376fe6a7b0ad4_01766779', "title");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1298244236637cef15d3a0f8_58613000', "title");
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_15329828556376fe6a7b4c64_08694761', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1696770191637cef15d3da32_54401084', "playlist");
+?>
+
+<?php 
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1510824444637cef15d40a95_81339653', "content");
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "template.tpl");
 }
 /* {block "title"} */
-class Block_753964076376fe6a7b0ad4_01766779 extends Smarty_Internal_Block
+class Block_1298244236637cef15d3a0f8_58613000 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'title' => 
   array (
-    0 => 'Block_753964076376fe6a7b0ad4_01766779',
+    0 => 'Block_1298244236637cef15d3a0f8_58613000',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -48,13 +52,34 @@ Add Playlist<?php
 }
 }
 /* {/block "title"} */
+/* {block "playlist"} */
+class Block_1696770191637cef15d3da32_54401084 extends Smarty_Internal_Block
+{
+public $subBlocks = array (
+  'playlist' => 
+  array (
+    0 => 'Block_1696770191637cef15d3da32_54401084',
+  ),
+);
+public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
+?>
+
+    <li class="nav-item active">
+        <a class="nav-link" href="addPlaylist.php">
+            <i class="fas fa-plus-circle"></i>
+            <span>Create Playlist</span></a>
+    </li>
+<?php
+}
+}
+/* {/block "playlist"} */
 /* {block "content"} */
-class Block_15329828556376fe6a7b4c64_08694761 extends Smarty_Internal_Block
+class Block_1510824444637cef15d40a95_81339653 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_15329828556376fe6a7b4c64_08694761',
+    0 => 'Block_1510824444637cef15d40a95_81339653',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {

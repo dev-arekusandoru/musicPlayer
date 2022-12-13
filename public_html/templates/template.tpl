@@ -28,28 +28,27 @@
     <script src="js/jquery-3.6.1.min.js"></script>
     <!--<script src="https://kit.fontawesome.com/125fe29883.js" crossorigin="anonymous"></script>-->
 
-
 </head>
 
 <body id="page-top">
-
 <!-- Page Wrapper -->
 <div id="wrapper">
 
     <!-- Sidebar -->
-    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion " id="accordionSidebar">
         <!-- Sidebar - Brand -->
         <li><a class="sidebar-brand d-flex align-items-center justify-content-center" href="explore.php">
-            <div class="sidebar-brand-icon rotate-n-15">
-                <i class="fas fa-music"></i>
-            </div>
-            <div class="sidebar-brand-text mx-3">Tau Tunes</div>
-        </a>
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fas fa-music"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">Tau Tunes</div>
+            </a>
         </li>
 
         <!-- Divider -->
-        <li><hr class="sidebar-divider my-0"></li>
+        <li>
+            <hr class="sidebar-divider my-0">
+        </li>
 
         <!-- Nav Item - Dashboard -->
         {block "library"}
@@ -68,60 +67,86 @@
         {/block}
 
         <!-- Divider -->
-        <li><hr class="sidebar-divider"></li>
+        <li>
+            <hr class="sidebar-divider">
+        </li>
         <!-- Find Music Heading -->
-        <li><div class="sidebar-heading">
-            Find Music
-        </div></li>
+        <li>
+            <div class="sidebar-heading">
+                Find Music
+            </div>
+        </li>
 
         <!-- Nav Item - Utilities Collapse Menu -->
         {block "explore"}
-        <li class="nav-item">
-            <a class="nav-link" href="explore.php">
-                <i class="fas fa-compass"></i>
-                <span>Explore</span></a>
-        </li>
+            <li class="nav-item">
+                <a class="nav-link" href="explore.php">
+                    <i class="fas fa-compass"></i>
+                    <span>Explore</span></a>
+            </li>
         {/block}
 
 
         <!-- Nav Item - Browse Music Menu -->
         {block "browse"}
-        <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseOne"
-               aria-expanded="true" aria-controls="collapseOne">
-                <i class="fas fa-th-large"></i>
-                <span>Browse All</span>
-            </a>
-            <div id="collapseOne" class="collapse"  data-parent="#accordionSidebar">
-                <div class="bg-white py-2 collapse-inner rounded">
-                    <h6 class="collapse-header">Browse All:</h6>
-                    <a class="collapse-item" href="browseArtists.php">Artists</a>
-                    <a class="collapse-item" href="browseAlbums.php">Albums</a>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseOne"
+                   aria-expanded="true" aria-controls="collapseOne">
+                    <i class="fas fa-th-large"></i>
+                    <span>Browse All</span>
+                </a>
+                <div id="collapseOne" class="collapse" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Browse All:</h6>
+                        <a class="collapse-item" href="browseArtists.php">Artists</a>
+                        <a class="collapse-item" href="browseAlbums.php">Albums</a>
+                    </div>
                 </div>
-            </div>
-        </li>
-        {/block}
-        <!-- Nav Item - Add Music Menu -->
-        {block "add"}
-        <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-               aria-expanded="true" aria-controls="collapseTwo">
-                <i class="fas fa-music"></i>
-                <span>Add Music</span>
-            </a>
-            <div id="collapseTwo" class="collapse"  data-parent="#accordionSidebar">
-                <div class="bg-white py-2 collapse-inner rounded">
-                    <h6 class="collapse-header">Add Music:</h6>
-                    <a class="collapse-item" href="addArtist.php">Artist</a>
-                    <a class="collapse-item" href="addAlbum.php">Album</a>
-                    <a class="collapse-item" href="addSong.php">Song</a>
-                </div>
-            </div>
-        </li>
+            </li>
         {/block}
 
         <!-- Divider -->
-        <li><hr class="sidebar-divider d-none d-md-block"></li>
+        <li>
+            <hr class="sidebar-divider">
+        </li>
+        <!-- Find Music Heading -->
+        <li>
+            <div class="sidebar-heading">
+                Add
+            </div>
+        </li>
+
+        <!-- Nav Item - Add Music Menu -->
+        {block "add"}
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                   aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-music"></i>
+                    <span>Add Music</span>
+                </a>
+                <div id="collapseTwo" class="collapse" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Add Music:</h6>
+                        <a class="collapse-item" href="addArtist.php">Artist</a>
+                        <a class="collapse-item" href="addAlbum.php">Album</a>
+                        <a class="collapse-item" href="addSong.php">Song</a>
+                    </div>
+                </div>
+            </li>
+        {/block}
+
+        {block "playlist"}
+            <li class="nav-item">
+                <a class="nav-link" href="addPlaylist.php">
+                    <i class="fas fa-plus-circle"></i>
+                    <span>Create Playlist</span></a>
+            </li>
+        {/block}
+
+        <!-- Divider -->
+        <li>
+            <hr class="sidebar-divider d-none d-md-block">
+        </li>
 
         <!-- Sidebar Toggler (Sidebar) -->
         <li class="text-center d-none d-md-inline">
@@ -146,10 +171,12 @@
                 </button>
 
                 <!-- Topbar Search -->
-                <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search" method="get" action="search.php">
+                <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search"
+                      method="get" action="search.php">
                     <div class="input-group">
-                        <input type="text" name="search" class="form-control bg-dark border-1 small" placeholder="Search for..."
-                               aria-label="Search" >
+                        <input type="text" name="search" class="form-control bg-dark border-1 small"
+                               placeholder="Search for..."
+                               aria-label="Search">
                         <div class="input-group-append">
                             <button class="btn btn-primary"
                                     style="border: 1px solid rgb(235, 235, 235); border-left: none;" type="submit">
@@ -170,7 +197,7 @@
                         </a>
                         <!-- Dropdown - Messages -->
                         <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                             >
+                        >
                             <form class="form-inline mr-auto w-100 navbar-search">
                                 <div class="input-group">
                                     <input type="text" class="form-control bg-light border-0 small"
@@ -197,7 +224,7 @@
                         </a>
                         <!-- Dropdown - User Information -->
                         <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                             >
+                        >
                             <a class="dropdown-item" href="profile.php">
                                 <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                 Profile

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-11-18 17:04:07
+/* Smarty version 4.2.1, created on 2022-11-22 11:05:02
   from '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/library.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_63780157dcd950_19199486',
+  'unifunc' => 'content_637cf32ee55997_83010945',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7d8bb9f475e17f0a46c1788d0561b4a71fddebd5' => 
     array (
       0 => '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/library.tpl',
-      1 => 1668809047,
+      1 => 1669133094,
       2 => 'file',
     ),
   ),
@@ -20,30 +20,30 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63780157dcd950_19199486 (Smarty_Internal_Template $_smarty_tpl) {
+function content_637cf32ee55997_83010945 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_73514305663780157d5a757_23198678', "title");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_136113992637cf32edd8100_81948362', "title");
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_38158276663780157d5e8d9_74815370', "library");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1318139362637cf32eddc253_23303200', "library");
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_134841939863780157d62675_00371450', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1875920720637cf32ede00c9_27263800', "content");
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "template.tpl");
 }
 /* {block "title"} */
-class Block_73514305663780157d5a757_23198678 extends Smarty_Internal_Block
+class Block_136113992637cf32edd8100_81948362 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'title' => 
   array (
-    0 => 'Block_73514305663780157d5a757_23198678',
+    0 => 'Block_136113992637cf32edd8100_81948362',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -53,12 +53,12 @@ My Library<?php
 }
 /* {/block "title"} */
 /* {block "library"} */
-class Block_38158276663780157d5e8d9_74815370 extends Smarty_Internal_Block
+class Block_1318139362637cf32eddc253_23303200 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'library' => 
   array (
-    0 => 'Block_38158276663780157d5e8d9_74815370',
+    0 => 'Block_1318139362637cf32eddc253_23303200',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -74,12 +74,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "library"} */
 /* {block "content"} */
-class Block_134841939863780157d62675_00371450 extends Smarty_Internal_Block
+class Block_1875920720637cf32ede00c9_27263800 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_134841939863780157d62675_00371450',
+    0 => 'Block_1875920720637cf32ede00c9_27263800',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -90,37 +90,41 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 
 
         <!-- Playlists Heading -->
-        <h1 class="h3 content-title">My Playlists:</h1>
-        <a class="mb-4" href="addPlaylist.php">Create new</a>
+        <h1 class="h3 mb-4 content-title">My Playlists:</h1>
         <!--Playlist Content-->
         <div class="row pl-3 pr-3 justify-content-around">
             <!-- playlist content divs-->
-            <?php
+            <?php if (!empty($_smarty_tpl->tpl_vars['userPlaylists']->value)) {?>
+                <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['userPlaylists']->value, 'p');
 $_smarty_tpl->tpl_vars['p']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['p']->value) {
 $_smarty_tpl->tpl_vars['p']->do_else = false;
 ?>
-                <a class="content" href="viewPlaylist.php?id=<?php echo $_smarty_tpl->tpl_vars['p']->value['Playlist_ID'];?>
+                    <a class="content" href="viewPlaylist.php?id=<?php echo $_smarty_tpl->tpl_vars['p']->value['Playlist_ID'];?>
 ">
-                    <div class="content-img">
-                        <img class="img-fluid" src="img/playlist-imgs/<?php echo $_smarty_tpl->tpl_vars['p']->value['Image_URL'];?>
-" alt="<?php echo $_smarty_tpl->tpl_vars['p']->value['Playlist_Name'];?>
+                        <div class="content-img">
+                            <img class="img-fluid" src="img/playlist-imgs/<?php echo $_smarty_tpl->tpl_vars['p']->value['Image_URL'];?>
+"
+                                 alt="<?php echo $_smarty_tpl->tpl_vars['p']->value['Playlist_Name'];?>
 ">
-                    </div>
-                    <h1><?php echo $_smarty_tpl->tpl_vars['p']->value['Playlist_Name'];?>
+                        </div>
+                        <h1><?php echo $_smarty_tpl->tpl_vars['p']->value['Playlist_Name'];?>
 </h1>
-                    <?php if ($_smarty_tpl->tpl_vars['p']->value['Song_Count'] == 1) {?>
-                        <h2><?php echo $_smarty_tpl->tpl_vars['p']->value['Song_Count'];?>
+                        <?php if ($_smarty_tpl->tpl_vars['p']->value['Song_Count'] == 1) {?>
+                            <h2><?php echo $_smarty_tpl->tpl_vars['p']->value['Song_Count'];?>
  Song</h2>
-                    <?php } else { ?>
-                        <h2><?php echo $_smarty_tpl->tpl_vars['p']->value['Song_Count'];?>
+                        <?php } else { ?>
+                            <h2><?php echo $_smarty_tpl->tpl_vars['p']->value['Song_Count'];?>
  Songs</h2>
-                    <?php }?>
-                </a>
-            <?php
+                        <?php }?>
+                    </a>
+                <?php
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+            <?php } else { ?>
+                <h4 style="margin: 40px 0 70px 0;">No Playlists</h4>
+            <?php }?>
         </div>
 
         <!--Content Splitter-->
@@ -154,12 +158,7 @@ $_smarty_tpl->tpl_vars['a']->do_else = false;
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             <?php } else { ?>
-                <div class="content">
-                    <div class="content-img">
-                        <img class="img-fluid" src="img/empty-playlist.jpg" alt="Empty Album">
-                    </div>
-                    <h1>No Artists</h1>
-                </div>
+                <h4 style="margin: 40px 0 70px 0;">No Artists</h4>
             <?php }?>
         </div>
 
@@ -195,12 +194,7 @@ $_smarty_tpl->tpl_vars['a']->do_else = false;
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             <?php } else { ?>
-                <div class="content">
-                    <div class="content-img">
-                        <img class="img-fluid" src="img/empty-playlist.jpg" alt="No Albums">
-                    </div>
-                    <h1>No Albums</h1>
-                </div>
+                <h4 style="margin: 40px 0 70px 0;">No Albums</h4>
             <?php }?>
         </div>
 
@@ -236,12 +230,7 @@ $_smarty_tpl->tpl_vars['song']->do_else = false;
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             <?php } else { ?>
-                <div class="content">
-                    <div class="content-img">
-                        <img class="img-fluid" src="img/empty-playlist.jpg" alt="No Albums">
-                    </div>
-                    <h1>No Songs</h1>
-                </div>
+                <h4 style="margin: 40px 0 70px 0;">No Songs</h4>
             <?php }?>
         </div>
 

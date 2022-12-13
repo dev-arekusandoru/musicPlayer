@@ -20,11 +20,10 @@ if (!isset($_SESSION['logged']) || $_SESSION['logged'] == 0) {
         $albums[$row['Album_Name']] = $row;
     }
 
-//print("<pre>".print_r($albums,true)."</pre>");
+
 //organize albums alphabetically
     ksort($albums);
 
-//print("<pre>".print_r($albums,true)."</pre>");
     $smarty->assign('albums', $albums);
 
     $smarty->display("browseAlbums.tpl");

@@ -13,8 +13,7 @@
 
 
         <!-- Playlists Heading -->
-        <h1 class="h3 content-title">My Playlists:</h1>
-        <a class="mb-4" href="addPlaylist.php">Create new</a>
+        <h1 class="h3 mb-4 content-title">My Playlists:</h1>
         <!--Playlist Content-->
         <div class="row pl-3 pr-3 justify-content-around">
             <!-- playlist content divs-->

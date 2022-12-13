@@ -34,7 +34,6 @@
                 <a class="mb-7 add-music-button" href="addSong.php?arid={$albumInfo['Artist_ID']}&abid={$albumInfo['Album_ID']}">Add Song</a>
                 <br>
             </div>
-            <div class="col-sm-6"></div>
         </div>
         <!-- Album body like song names -->
         <div class="album-tracklist row">
