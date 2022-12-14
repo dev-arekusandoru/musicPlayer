@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-12-13 16:33:17
+/* Smarty version 4.2.1, created on 2022-12-13 21:22:42
   from '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/viewAlbum.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_6398ef9d2caf45_43465982',
+  'unifunc' => 'content_63993372644e33_44968121',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ec88983db589af83ded1515fe17bce1d59ee7b24' => 
     array (
       0 => '/Users/Arekusandoru/Programming/PhpStormProjects/musicPlayer/public_html/templates/viewAlbum.tpl',
-      1 => 1670967194,
+      1 => 1670984551,
       2 => 'file',
     ),
   ),
@@ -20,26 +20,26 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6398ef9d2caf45_43465982 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63993372644e33_44968121 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_5959809246398ef9d21c408_76124230', "title");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_970534019639933725aed86_67862032', "title");
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_7664639656398ef9d22cd31_62543980', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_981180397639933725bd643_44427507', "content");
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "template.tpl");
 }
 /* {block "title"} */
-class Block_5959809246398ef9d21c408_76124230 extends Smarty_Internal_Block
+class Block_970534019639933725aed86_67862032 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'title' => 
   array (
-    0 => 'Block_5959809246398ef9d21c408_76124230',
+    0 => 'Block_970534019639933725aed86_67862032',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -48,12 +48,12 @@ echo $_smarty_tpl->tpl_vars['albumInfo']->value['Album_Name'];
 }
 /* {/block "title"} */
 /* {block "content"} */
-class Block_7664639656398ef9d22cd31_62543980 extends Smarty_Internal_Block
+class Block_981180397639933725bd643_44427507 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_7664639656398ef9d22cd31_62543980',
+    0 => 'Block_981180397639933725bd643_44427507',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -134,7 +134,7 @@ $_smarty_tpl->tpl_vars['song']->do_else = false;
                                          aria-labelledby="userDropdown0">
                                         <?php if ($_SESSION['isAdmin'] == 1) {?>
                                         <a class="dropdown-item"
-                                           href="addSong.tpl?arid=<?php echo $_smarty_tpl->tpl_vars['albumInfo']->value['Artist_ID'];?>
+                                           href="editSong.php?arid=<?php echo $_smarty_tpl->tpl_vars['albumInfo']->value['Artist_ID'];?>
 &abid=<?php echo $_smarty_tpl->tpl_vars['albumInfo']->value['Album_ID'];?>
 &sid=<?php echo $_smarty_tpl->tpl_vars['song']->value['Song_ID'];?>
 ">

@@ -56,7 +56,7 @@
                                          aria-labelledby="userDropdown0">
                                         {if $smarty.session.isAdmin eq 1}
                                         <a class="dropdown-item"
-                                           href="addSong.tpl?arid={$albumInfo['Artist_ID']}&abid={$albumInfo['Album_ID']}&sid={$song['Song_ID']}">
+                                           href="editSong.php?arid={$albumInfo['Artist_ID']}&abid={$albumInfo['Album_ID']}&sid={$song['Song_ID']}">
                                             <i class="fa fa-comments-o fa-sm fa-fw mr-2 text-gray-400"></i>
                                             Edit Song Details
                                         </a>
